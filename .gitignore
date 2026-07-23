@@ -1,0 +1,44 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Env (rahasia: DB password dll). .env.example tetap ikut.
+.env
+.env.local
+.env.*.local
+
+# Node
+node_modules/
+dist/
+.vite/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs & temporary
+*.log
+*.tmp
+
+# Evaluation outputs
+evaluation/results/*
+!evaluation/results/.gitkeep
+dataset/debug_output/*
+!dataset/debug_output/.gitkeep

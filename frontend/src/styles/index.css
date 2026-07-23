@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Latar mesh-gradient gelap dipakai sebagai kanvas glassmorphism (mengikuti
+   docs/notes/design_tokens.md). Dipasang di body agar area overscroll ikut
+   gelap, bukan putih. */
+@layer base {
+  body {
+    background:
+      radial-gradient(circle at 12% 8%, #4f8bff 0, rgba(79, 139, 255, 0) 42%),
+      radial-gradient(circle at 88% 12%, #f2b94d 0, rgba(242, 185, 77, 0) 38%),
+      radial-gradient(circle at 78% 92%, #2f9e6e 0, rgba(47, 158, 110, 0) 42%),
+      radial-gradient(circle at 20% 96%, #7a5cff 0, rgba(122, 92, 255, 0) 44%),
+      linear-gradient(160deg, #12275e, #0b1f4d 60%, #0a1838);
+    background-attachment: fixed;
+  }
+}
+
+/* Kelas glass dipakai berulang di banyak panel; ditulis sekali di sini supaya
+   tidak menyalin string backdrop-blur panjang di tiap komponen (DRY). */
+@layer components {
+  .glass {
+    @apply border border-white/25 bg-white/10 backdrop-blur-xl;
+  }
+  /* Panel putih buram untuk teks yang butuh kontras tinggi (OCR, daftar bahan). */
+  .glass-white {
+    @apply border border-white/60 bg-white/90 text-navy-base backdrop-blur-xl;
+  }
+}
+
+/* Aksesibilitas: hormati pengguna yang mematikan animasi di OS-nya. Tanpa ini,
+   fade/scan/shimmer tetap jalan dan bisa memicu mual/pusing (WCAG 2.3.3). */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
