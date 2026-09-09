@@ -1,74 +1,81 @@
+— tanpa perlu menghafal istilah teknis di baliknya.
 # LensaLabel
 
-**Lihat Jelas Komposisi, Pilih dengan Pasti.**
+Implementasi tugas akhir: OCR + Rule-Based Fuzzy String Matching untuk
+identifikasi keamanan bahan makanan pada produk kemasan, ditujukan untuk
+mendukung penerapan diet Gluten-Free Casein-Free (GFCF) bagi anak dengan
+Autism Spectrum Disorder (ASD).
 
-LensaLabel membantu memeriksa keamanan bahan makanan pada label kemasan untuk
-kebutuhan diet **Gluten-Free Casein-Free (GFCF)**. Cukup foto (atau ketik)
-daftar komposisi, dan LensaLabel membaca teksnya, mencocokkan tiap bahan dengan
-basis pengetahuan, lalu memberi status: **Aman**, **Perhatian**, atau **Hindari**
-— tanpa perlu menghafal istilah teknis di baliknya.
+Project ini menggabungkan image preprocessing, EasyOCR, tokenisasi berbasis
+regex, pencocokan fuzzy (RapidFuzz) dan classifier berbasis aturan untuk
+menghasilkan status per-bahan (`aman` / `perhatian` / `hindari`) dan verdict
+produk. Knowledge base bahan disusun menurut literatur GFCF dan divalidasi oleh
+ahli gizi.
 
-## Fitur
+## Ringkasan
 
-- **Pindai label** lewat kamera (live) atau unggah foto dari galeri.
-- **Ketik manual** — tempel/ketik daftar komposisi bila tidak bisa memotret.
-- **OCR** membaca teks komposisi dari foto kemasan.
-- **Fuzzy matching** mencocokkan tiap bahan ke basis pengetahuan meski ada salah ketik/ejaan.
-- **Klasifikasi per bahan** (Aman / Perhatian / Hindari) + verdict keseluruhan produk.
-- **Panel "Teks Terbaca"** menyorot bahan yang perlu dihindari langsung di teks hasil.
-- **Modul edukasi GFCF** dan halaman info sistem.
+- Fokus akademik: integrasi OCR + Rule-Based Fuzzy Matching untuk menangani
+  variasi ejaan dan kesalahan ekstraksi OCR pada teks komposisi.
+- Dataset uji: 200 foto kemasan (100 datar/fleksibel + 100 silindris/melengkung)
+  dengan transkripsi ground-truth manual.
+- Knowledge base: daftar bahan + sinonim + kategori keamanan (Aman/Perhatian/Hindari),
+  divalidasi oleh tenaga ahli.
 
-## Tech Stack
+## Arsitektur & alur
 
-| Bagian | Teknologi |
-|--------|-----------|
-| Backend | FastAPI, SQLAlchemy, PostgreSQL, EasyOCR, OpenCV, RapidFuzz |
-| Frontend | React, Vite, Tailwind CSS, React Router |
+1. Upload foto atau input teks manual
+2. Image preprocessing (grayscale, noise reduction, CLAHE, deskewing)
+3. OCR (EasyOCR singleton, downscale ke lebar maksimum untuk performa)
+4. Ekstraksi bagian komposisi + tokenisasi regex
+5. Fuzzy matching per-token terhadap knowledge base (Levenshtein, Jaro-Winkler,
+   character n-gram → skor komposit)
+6. Rule-based classification → verdict produk (aturan kehati-hatian: ``hindari`` > ``perhatian`` > ``aman``; ada status `perlu_verifikasi` dan `tidak_terbaca`)
 
-## Struktur
+Komponen utama ada di `backend/app`:
+- OCR: `app/ocr/reader.py`
+- Preprocessing: `app/preprocessing/pipeline.py`
+- Tokenizer: `app/tokenizer/tokenizer.py`
+- Matching: `app/matching/fuzzy_matcher.py`
+- Classifier: `app/classifier/rule_based.py`
+- API routes: `app/api/routes_identify.py`
 
-```
-backend/    FastAPI: OCR, preprocessing, fuzzy matching, rule-based classifier
-frontend/   React + Vite (mobile-first web app, glassmorphism UI)
-dataset/    foto kemasan, ground truth, basis pengetahuan bahan
-evaluation/ skrip evaluasi akurasi (CER/WER, Precision/Recall/F1)
-docs/       catatan teknis
-```
+## Evaluasi
 
-## Prasyarat
+- OCR: Character Error Rate (CER) dan Word Error Rate (WER).
+- Identifikasi & klasifikasi: Precision, Recall, F1-Score.
+- Kalibrasi threshold pencocokan dilakukan pada subset kalibrasi (40 sampel),
+  lalu diuji pada subset evaluasi akhir (160 sampel).
 
-- Python 3.12+
-- Node.js 18+
-- PostgreSQL 14+ (berjalan lokal)
+## Teknologi
 
-## Menjalankan
+- Backend: FastAPI, SQLAlchemy, PostgreSQL, EasyOCR, OpenCV, RapidFuzz.
+- Frontend: React + Vite + Tailwind CSS.
+- See `backend/requirements.txt` for Python deps.
 
-### 1. Backend
+## Prasyarat & jalankan singkat
 
-```bash
+1. Backend (Windows example):
+
+```powershell
 cd backend
 python -m venv .venv
-.venv\Scripts\activate           # Windows (Linux/Mac: source .venv/bin/activate)
+.venv\Scripts\Activate.ps1
 pip install -r requirements.txt
 ```
 
-Buat file `backend/.env` (lihat `.env.example`) berisi koneksi database:
+2. Buat `backend/.env` (lihat `.env.example`) dengan `DATABASE_URL` ke Postgres.
 
-```
-DATABASE_URL=postgresql+psycopg://USER:PASSWORD@localhost:5432/lensalabel
-```
+3. Migrasi dan seed knowledge base:
 
-Siapkan skema & isi basis pengetahuan, lalu jalankan server:
-
-```bash
+```powershell
 alembic upgrade head
 python -m app.db.seed_knowledge_base
 uvicorn app.main:app --reload
 ```
 
-Backend jalan di `http://127.0.0.1:8000` (dokumentasi API: `/docs`).
+API interaktif: `http://127.0.0.1:8000/docs`.
 
-### 2. Frontend
+Frontend:
 
 ```bash
 cd frontend
@@ -76,28 +83,26 @@ npm install
 npm run dev
 ```
 
-Arahkan frontend ke backend lewat `frontend/.env.development`:
+Pastikan `frontend/.env.development` mengarah ke `VITE_API_BASE_URL=http://127.0.0.1:8000`.
 
-```
-VITE_API_BASE_URL=http://127.0.0.1:8000
-```
+## Catatan penting
 
-Frontend jalan di `http://localhost:5173`.
+- OCR pada CPU dapat memakan waktu (30s–2min per foto pada perangkat
+  menengah). Downscaling dan preprocessing dipakai untuk menyeimbangkan akurasi
+  dan waktu eksekusi.
+- Threshold dan bobot skor komposit di `app/matching/fuzzy_matcher.py` perlu
+  kalibrasi empiris; konfigurasi awal ada di file tersebut.
+- Knowledge base harus diisi dan disahkan (seed script) sebelum API `/identify`
+  berguna, karena sistem akan mengembalikan error jika KB kosong.
 
-## API
+## Referensi
 
-| Method | Endpoint | Keterangan |
-|--------|----------|------------|
-| `POST` | `/identify` | Upload foto kemasan (multipart), kembalikan verdict + bahan per kategori. |
-| `POST` | `/identify-manual` | Kirim `{"text": "..."}` daftar komposisi, hasil sama seperti `/identify`. |
-| `GET`  | `/health` | Cek status backend & koneksi database. |
+Dokumen metode, dataset sampling, dan rencana evaluasi berasal dari proposal
+skripsi: "Implementasi Optical Character Recognition dan Rule-Based Fuzzy
+String Matching untuk Identifikasi Keamanan Bahan Makanan bagi Anak Autisme"
+(2026).
 
-## Catatan
-
-- OCR berjalan di CPU dan bisa memakan **30 detik – 2 menit** per foto pada
-  perangkat kelas menengah — ini normal, bukan hang.
-- Kamera live memerlukan **secure context**: `localhost` aman, tetapi akses
-  lewat IP jaringan (`http://192.168.x.x`) diblokir browser. Gunakan HTTPS atau
-  fitur unggah galeri saat menguji dari perangkat lain.
-- LensaLabel adalah alat bantu informasi, **bukan** pengganti saran dokter atau
-  ahli gizi.
+---
+Untuk detail implementasi lihat kode pada folder `backend/app` dan dokumentasi
+API di endpoint `/docs` saat server berjalan. Jika mau, saya bisa bantu membuat
+ringkasan pipeline visual atau menyiapkan skrip evaluasi otomatis.
