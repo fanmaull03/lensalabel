@@ -1,134 +1,167 @@
+"""Sinkronkan 240 entri tetap dari Lembar_Validasi_KB_Diet_GFCF_Autisme_final.pdf.
+
+Kategori mengikuti Usulan Peneliti; koreksi dan tanda tangan ahli masih kosong.
+Dari backend/: python -m app.db.seed_knowledge_base [--dry-run]
+Data lama dicadangkan, lalu bahan dan sinonim dicerminkan dalam satu transaksi.
 """
-Seed data knowledge base LensaLabel.
+from __future__ import annotations
 
-PENTING: 68 bahan di bawah ini adalah "Usulan Peneliti" dari
-Lembar_Validasi_KnowledgeBase_BahanMakanan_v2, BELUM ditandatangani atau
-dicentang oleh pakar medis/gizi anak (kolom Setuju dan Revisi Kategori di
-lembar itu masih kosong). Semua baris di-insert dengan is_validated=False.
+import argparse
+import json
+from datetime import datetime, timezone
+from pathlib import Path
 
-Setelah lembar validasi kembali dari pakar:
-1. Untuk bahan yang dicentang Setuju, cukup ubah is_validated jadi True.
-2. Untuk bahan yang direvisi, update kolom category di tabel ingredients
-   sesuai Revisi Kategori, lalu is_validated jadi True.
-3. Insert satu baris ExpertValidation per bahan untuk catatan audit trail
-   (validator_name, is_agreed, revised_category, expert_notes).
-
-Cara pakai (dari folder backend/, dengan .env sudah diisi DATABASE_URL):
-  python -m app.db.seed_knowledge_base
-"""
-
-from sqlalchemy import create_engine
-from sqlalchemy.orm import Session
+from sqlalchemy import create_engine, select
+from sqlalchemy.orm import Session, selectinload
 
 from app.config import settings
-from app.db.models import Base, Ingredient, IngredientSynonym, SafetyCategory
+from app.db.models import Base, ExpertValidation, Ingredient, IngredientSynonym, SafetyCategory
 
-AMAN = SafetyCategory.AMAN
-PERHATIAN = SafetyCategory.PERHATIAN
-HINDARI = SafetyCategory.HINDARI
-
-# (standard_name, [synonyms/kode aditif], category, justifikasi_ringkas)
-DRAFT_INGREDIENTS = [
-    ("Tepung terigu", ["Wheat flour", "Wheat", "Gandum", "Terigu", "Pati gandum"], HINDARI, "Sumber gluten utama"),
-    ("Gluten", ["Wheat gluten", "vital wheat gluten"], HINDARI, "Protein gluten murni, inti pantangan diet GFCF"),
-    ("Barley", ["Jelai", "malt"], HINDARI, "Turunan gluten dari jelai"),
-    ("Hydrolyzed wheat protein", ["Protein gandum terhidrolisis", "HWP"], HINDARI, "Turunan gluten, penamaan sering menyamarkan asal gandum"),
-    ("Oat", ["Havermut", "oatmeal", "Oats"], PERHATIAN, "Bebas gluten alami, namun rawan kontaminasi silang saat produksi"),
-    ("Kasein", ["Casein", "sodium caseinate", "Caseinate", "Kaseinat"], HINDARI, "Protein susu utama, inti pantangan diet GFCF"),
-    ("Susu sapi", ["Whole milk", "full cream milk", "Milk", "Susu", "Milk powder", "Susu bubuk"], HINDARI, "Sumber utama kasein"),
-    ("Keju", ["Cheese", "Cheese powder", "Bubuk keju"], HINDARI, "Olahan susu, kandungan kasein tinggi"),
-    ("Whey", ["Whey protein", "milk whey"], HINDARI, "Turunan protein susu"),
-    ("Tartrazin", ["E102", "Yellow 5"], HINDARI, "Pewarna azo, terkait perubahan perilaku pada anak sensitif"),
-    ("Sunset Yellow", ["E110", "Orange Yellow S"], HINDARI, "Pewarna azo, termasuk kelompok yang diteliti terkait hiperaktivitas"),
-    ("Karmosin", ["E122", "Azorubine"], HINDARI, "Pewarna azo sintetis"),
-    ("Ponceau 4R", ["E124", "Cochineal Red A"], HINDARI, "Pewarna azo sintetis"),
-    ("Eritrosin", ["E127", "Red 3"], HINDARI, "Pewarna sintetis"),
-    ("Biru Berlian", ["E133", "Brilliant Blue FCF"], PERHATIAN, "Pewarna sintetis, bukti keterkaitan perilaku lebih terbatas"),
-    ("Hijau FCF", ["E143", "Fast Green FCF"], PERHATIAN, "Pewarna sintetis, bukti keterkaitan perilaku lebih terbatas"),
-    ("Titanium dioksida", ["E171", "Titanium dioxide"], PERHATIAN, "Pewarna putih, menjadi sorotan regulasi di sejumlah negara"),
-    ("Natrium Benzoat", ["E211", "Sodium benzoate"], PERHATIAN, "Pengawet, terkait hiperaktivitas terutama bila dikombinasi pewarna sintetis"),
-    ("Kalium Benzoat", ["E212", "Potassium benzoate"], PERHATIAN, "Pengawet golongan benzoat"),
-    ("Sulfit", ["E220-228", "Sulfur dioxide dan turunannya"], PERHATIAN, "Pengawet, berisiko memicu reaksi alergi/asma pada anak sensitif"),
-    ("Natrium Nitrit", ["E250", "Sodium nitrite"], PERHATIAN, "Pengawet daging olahan, perlu dibatasi"),
-    ("BHA", ["E320", "Butylated hydroxyanisole"], PERHATIAN, "Antioksidan sintetis, perlu dibatasi"),
-    ("BHT", ["E321", "Butylated hydroxytoluene"], PERHATIAN, "Antioksidan sintetis, perlu dibatasi"),
-    ("MSG", ["E621", "Monosodium glutamate", "vetsin", "Mononatrium glutamat"], PERHATIAN, "Penguat rasa, sebagian literatur mencatat sensitivitas perilaku"),
-    ("Dinatrium Guanilat", ["E627", "Disodium guanylate"], PERHATIAN, "Penguat rasa, umumnya dipakai bersama MSG"),
-    ("Dinatrium Inosinat", ["E631", "Disodium inosinate"], PERHATIAN, "Penguat rasa, umumnya dipakai bersama MSG"),
-    ("Aspartam", ["E951", "Aspartame", "Equal"], PERHATIAN, "Pemanis buatan, bukti campuran terkait perilaku"),
-    ("Sakarin", ["E954", "Saccharin", "sodium saccharin"], PERHATIAN, "Pemanis buatan"),
-    ("Siklamat", ["E952", "Sodium cyclamate"], PERHATIAN, "Pemanis buatan"),
-    ("Sukralosa", ["E955", "Sucralose", "Splenda"], PERHATIAN, "Pemanis buatan"),
-    ("Gula pasir", ["Sukrosa", "sucrose", "sugar", "Gula"], PERHATIAN, "Gula sederhana, asupan berlebih dikaitkan gangguan perilaku"),
-    ("Fruktosa tinggi", ["High fructose corn syrup", "HFCS"], PERHATIAN, "Pemanis olahan, asupan berlebih perlu dibatasi"),
-    ("Kedelai", ["Soy", "soya", "Soybean"], PERHATIAN, "Sebagian anak ASD melaporkan sensitivitas terhadap kedelai"),
-    ("Cokelat", ["Cocoa", "cacao", "Coklat", "Chocolate"], PERHATIAN, "Mengandung senyawa stimulan ringan"),
-    ("Perisa buatan", ["Artificial flavour", "artificial flavoring", "Perisa sintetik", "Synthetic flavour"], PERHATIAN, "Komposisi tidak selalu transparan, perlu kehati-hatian"),
-    ("Asam askorbat", ["E300", "Ascorbic acid", "vitamin C"], AMAN, "Vitamin alami, umum dianggap aman"),
-    ("Natrium askorbat", ["E301", "Sodium ascorbate"], AMAN, "Bentuk garam vitamin C, umum dianggap aman"),
-    ("Tokoferol", ["E306", "Tocopherol", "vitamin E"], AMAN, "Antioksidan alami, umum dianggap aman"),
-    ("Beta karoten", ["E160a", "Beta carotene"], AMAN, "Pewarna alami dari sumber nabati"),
-    ("Asam fumarat", ["E297", "Fumaric acid"], AMAN, "Asam pengatur keasaman, umum dianggap aman"),
-    ("Pektin", ["E440", "Pectin", "apple pectin"], AMAN, "Serat alami dari buah"),
-    ("Agar-agar", ["E406", "Agar"], AMAN, "Bahan pengental alami dari rumput laut"),
-    ("Karagenan", ["E407", "Carrageenan"], PERHATIAN, "Pengental dari rumput laut, sebagian studi catat iritasi saluran cerna"),
-    ("Guar gum", ["E412", "Guaran"], AMAN, "Pengental alami dari kacang guar"),
-    ("Xanthan gum", ["E415"], AMAN, "Pengental hasil fermentasi, umum dianggap aman"),
-    ("Akasia gum", ["E414", "Acacia gum", "gum arabic"], AMAN, "Pengental alami dari getah akasia"),
-    ("Gelatin", ["E441", "Gelatine"], AMAN, "Bukan turunan gluten/kasein, perlu verifikasi sumber hewani"),
-    ("Selulosa", ["E460", "Cellulose"], AMAN, "Serat nabati, umum dianggap aman"),
-    ("Lesitin", ["E322", "Lecithin", "sunflower lecithin", "Soy lecithin", "Lesitin kedelai"], AMAN, "Emulsifier nabati, umumnya dari kedelai/bunga matahari"),
-    ("Gliserol", ["E422", "Glycerol", "glycerine"], AMAN, "Humektan, umum dianggap aman"),
-    ("Mono dan digliserida", ["E471"], AMAN, "Emulsifier, perlu verifikasi sumber nabati/hewani"),
-    ("Asam sitrat", ["E330", "Citric acid"], AMAN, "Asam alami dari buah sitrus"),
-    ("Natrium sitrat", ["E331", "Sodium citrate"], AMAN, "Garam asam sitrat, umum dianggap aman"),
-    ("Kalium sitrat", ["E332", "Potassium citrate"], AMAN, "Garam asam sitrat, umum dianggap aman"),
-    ("Asam laktat", ["E270", "Lactic acid"], AMAN, "Umumnya hasil fermentasi bakteri, bukan dari susu, perlu verifikasi sumber"),
-    ("Asam malat", ["E296", "Malic acid"], AMAN, "Asam alami dari buah"),
-    ("Natrium klorida", ["Sodium chloride", "garam dapur", "Salt", "Garam"], AMAN, "Garam dapur, umum dianggap aman"),
-    ("Kalsium karbonat", ["E170", "Calcium carbonate"], AMAN, "Mineral, umum dianggap aman"),
-    ("Kalsium fosfat", ["E341", "Calcium phosphate"], AMAN, "Mineral, umum dianggap aman"),
-    ("Kalium klorida", ["E508", "Potassium chloride"], AMAN, "Mineral, umum dianggap aman"),
-    ("Tepung beras", ["Rice flour"], AMAN, "Alternatif tepung bebas gluten"),
-    ("Tepung tapioka", ["Tapioca starch", "cassava starch", "Tapioka"], AMAN, "Alternatif tepung bebas gluten"),
-    ("Tepung sagu", ["Sago flour", "sago starch"], AMAN, "Alternatif tepung bebas gluten"),
-    ("Tepung jagung", ["Corn flour", "corn starch", "maizena", "Pati jagung"], AMAN, "Alternatif tepung bebas gluten"),
-    ("Minyak kelapa", ["Coconut oil"], AMAN, "Minyak nabati, bebas gluten/kasein"),
-    ("Minyak zaitun", ["Olive oil"], AMAN, "Minyak nabati, bebas gluten/kasein"),
-    ("Minyak jagung", ["Corn oil"], AMAN, "Minyak nabati, bebas gluten/kasein"),
-    ("Minyak bunga matahari", ["Sunflower oil"], AMAN, "Minyak nabati, bebas gluten/kasein"),
+SOURCE_PATH = Path(__file__).with_name("knowledge_base_gfcf.json")
+SOURCE = json.loads(SOURCE_PATH.read_text(encoding="utf-8"))
+if (
+    [row["number"] for row in SOURCE["ingredients"]] != list(range(1, 241))
+    or len({row["standard_name"] for row in SOURCE["ingredients"]}) != 240
+):
+    raise ValueError("Daftar tetap harus memuat tepat 240 entri unik, bernomor 1–240.")
+FINAL_INGREDIENTS = [
+    (
+        row["standard_name"], row["synonyms"], SafetyCategory(row["category"]),
+        f"Kategori usulan peneliti: {row['category']}. "
+        f"Sesuai {SOURCE['source_document']}, baris {row['number']}, halaman {row['page']}. "
+        f"Kode aditif pada lembar: {row['additive_codes']}. "
+        "Koreksi kategori dan alasan klinis ahli belum diisi.",
+    )
+    for row in SOURCE["ingredients"]
 ]
+# Kompatibilitas dengan skrip yang mengimpor nama konstanta lama.
+DRAFT_INGREDIENTS = FINAL_INGREDIENTS
+
+LEGACY_ROW_NUMBERS = {
+    "Tepung terigu": 1, "Barley": 3, "Oat": 14, "Kasein": 22,
+    "Keju": 17, "Whey": 21, "Sunset Yellow": 45, "Karmosin": 46,
+    "Biru Berlian": 52, "Sulfit": 58, "BHA": 66, "BHT": 67, "MSG": 59,
+    "Gula pasir": 147, "Fruktosa tinggi": 177, "Cokelat": 97,
+    "Perisa buatan": 41, "Asam askorbat": 185, "Tokoferol": 186,
+    "Beta karoten": 236, "Karagenan": 211, "Guar gum": 184,
+    "Akasia gum": 184, "Selulosa": 184, "Lesitin": 38, "Gliserol": 190,
+    "Mono dan digliserida": 39, "Asam sitrat": 175, "Natrium sitrat": 207,
+    "Asam laktat": 210, "Asam malat": 199, "Natrium klorida": 148,
+    "Kalsium fosfat": 173, "Tepung sagu": 109, "Tepung jagung": 150,
+}
+LEGACY_NAMES = {
+    name: SOURCE["ingredients"][number - 1]["standard_name"]
+    for name, number in LEGACY_ROW_NUMBERS.items()
+}
 
 
-def seed() -> None:
-    engine = create_engine(settings.DATABASE_URL)
-    Base.metadata.create_all(engine)
+def _references(row: dict) -> str:
+    return "\n".join(
+        f"{code}: {SOURCE['references'][code]['title']} {SOURCE['references'][code]['url']}"
+        for code in row["reference_codes"]
+    )
 
-    inserted = 0
-    with Session(engine) as session:
-        for standard_name, synonyms, category, justification in DRAFT_INGREDIENTS:
-            already_exists = (
-                session.query(Ingredient).filter_by(standard_name=standard_name).first()
-            )
-            if already_exists:
-                continue
 
-            ingredient = Ingredient(
-                standard_name=standard_name,
-                category=category,
-                justification=justification,
-                is_validated=False,
-            )
-            for syn in synonyms:
-                ingredient.synonyms.append(IngredientSynonym(synonym=syn))
+def _snapshot(session: Session) -> dict:
+    """Salin seluruh kolom dan relasi agar data lama dapat dipulihkan."""
+    def encode(value):
+        if isinstance(value, datetime):
+            return value.isoformat()
+        if isinstance(value, SafetyCategory):
+            return value.value
+        return value
 
+    return {
+        model.__tablename__: [
+            {column.name: encode(getattr(record, column.name)) for column in model.__table__.columns}
+            for record in session.scalars(select(model).order_by(model.id))
+        ]
+        for model in (Ingredient, IngredientSynonym, ExpertValidation)
+    }
+
+
+def synchronize(session: Session) -> dict[str, int]:
+    """Cerminkan sumber tetap, pertahankan ID dan audit bahan yang masih dipakai."""
+    existing = list(session.scalars(
+        select(Ingredient).options(
+            selectinload(Ingredient.synonyms), selectinload(Ingredient.validations)
+        ).order_by(Ingredient.id)
+    ))
+    by_name = {ingredient.standard_name: ingredient for ingredient in existing}
+    retained_ids = set()
+    stats = {"inserted": 0, "updated": 0, "removed": 0}
+
+    for row, (name, synonyms, category, justification) in zip(SOURCE["ingredients"], FINAL_INGREDIENTS):
+        legacy = [ingredient for ingredient in existing if LEGACY_NAMES.get(ingredient.standard_name) == name]
+        ingredient = by_name.get(name)
+        if ingredient is None and legacy:
+            ingredient = legacy[0]
+        is_new = ingredient is None
+        if is_new:
+            ingredient = Ingredient(standard_name=name, is_validated=False)
             session.add(ingredient)
-            inserted += 1
+            stats["inserted"] += 1
+        else:
+            retained_ids.add(ingredient.id)
+            if ingredient.category != category:
+                ingredient.is_validated = False
 
-        session.commit()
+        for duplicate in legacy:
+            if duplicate is not ingredient:
+                for validation in list(duplicate.validations):
+                    validation.ingredient = ingredient
 
-    print(f"Selesai. {inserted} bahan draft baru berhasil di-seed (is_validated=False).")
+        ingredient.standard_name = name
+        ingredient.category = category
+        ingredient.justification = justification
+        ingredient.references = _references(row)
+        wanted = set(synonyms)
+        kept = set()
+        for synonym in list(ingredient.synonyms):
+            if synonym.synonym not in wanted or synonym.synonym in kept:
+                ingredient.synonyms.remove(synonym)
+            else:
+                kept.add(synonym.synonym)
+        for synonym in synonyms:
+            if synonym not in kept:
+                ingredient.synonyms.append(IngredientSynonym(synonym=synonym))
+                kept.add(synonym)
+        if not is_new and session.is_modified(ingredient, include_collections=True):
+            stats["updated"] += 1
+
+    for ingredient in existing:
+        if ingredient.id not in retained_ids:
+            session.delete(ingredient)
+            stats["removed"] += 1
+    return stats
+
+
+def seed(*, dry_run: bool = False) -> None:
+    engine = create_engine(settings.DATABASE_URL)
+    if not dry_run:
+        Base.metadata.create_all(engine)
+    backup_path = None
+    with Session(engine, autoflush=False) as session:
+        snapshot = _snapshot(session)
+        stats = synchronize(session)
+        if dry_run:
+            session.rollback()
+        else:
+            if any(stats.values()) and snapshot["ingredients"]:
+                backup_dir = Path(__file__).resolve().parents[3] / "evaluation/results/knowledge_base_backups"
+                backup_dir.mkdir(parents=True, exist_ok=True)
+                stamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S%fZ")
+                backup_path = backup_dir / f"before_gfcf_sync_{stamp}.json"
+                backup_path.write_text(json.dumps(snapshot, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+            session.commit()
+    engine.dispose()
+    print(f"{'Rencana' if dry_run else 'Selesai'}: {stats['inserted']} bahan baru, "
+          f"{stats['updated']} diperbarui, {stats['removed']} bahan lama dihapus/digabungkan.")
+    if backup_path:
+        print(f"Cadangan sebelum perubahan: {backup_path}")
 
 
 if __name__ == "__main__":
-    seed()
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--dry-run", action="store_true", help="Tampilkan rencana tanpa mengubah data.")
+    seed(dry_run=parser.parse_args().dry_run)

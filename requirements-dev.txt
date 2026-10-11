@@ -1,0 +1,3 @@
+# Test runner for backend and evaluation suites.
+pytest==9.1.1
+matplotlib==3.11.2

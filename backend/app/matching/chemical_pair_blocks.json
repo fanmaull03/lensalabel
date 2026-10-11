@@ -1,0 +1,37 @@
+{
+  "candidate_threshold": 65.0,
+  "active_pairs": [
+    ["kalium", "kalsium"],
+    ["carbonate", "carbonated"],
+    ["citrate", "nitrate"],
+    ["guaran", "guarana"],
+    ["kafein", "kasein"],
+    ["nitrat", "nitrit"],
+    ["nitrat", "sitrat"],
+    ["nitrate", "nitrite"],
+    ["baking", "caking"],
+    ["sweetened", "sweetener"],
+    ["lembaga", "tembaga"],
+    ["jelai", "selai"],
+    ["goat", "oat"]
+  ],
+  "expert_pair_audit": [
+    {"pair": ["malt", "maltodekstrin"], "score": 22.49, "risky_in_kb": true, "blocked": false},
+    {"pair": ["malt", "maltitol"], "score": 41.48, "risky_in_kb": false, "blocked": false},
+    {"pair": ["malt", "maltosa"], "score": 49.17, "risky_in_kb": false, "blocked": false},
+    {"pair": ["malt", "maltol"], "score": 59.85, "risky_in_kb": false, "blocked": false},
+    {"pair": ["maltodekstrin", "maltitol"], "score": 35.69, "risky_in_kb": false, "blocked": false},
+    {"pair": ["maltodekstrin", "maltosa"], "score": 38.76, "risky_in_kb": false, "blocked": false},
+    {"pair": ["maltodekstrin", "maltol"], "score": 33.05, "risky_in_kb": false, "blocked": false},
+    {"pair": ["maltitol", "maltosa"], "score": 64.4, "risky_in_kb": false, "blocked": false},
+    {"pair": ["maltitol", "maltol"], "score": 69.92, "risky_in_kb": false, "blocked": false},
+    {"pair": ["maltosa", "maltol"], "score": 70.9, "risky_in_kb": false, "blocked": false},
+    {"pair": ["gluten", "glutamat"], "score": 50.44, "risky_in_kb": true, "blocked": false},
+    {"pair": ["laktosa", "laktat"], "score": 65.54, "risky_in_kb": true, "blocked": true},
+    {"pair": ["laktosa", "laktalbumin"], "score": 40.97, "risky_in_kb": true, "blocked": false},
+    {"pair": ["laktalbumin", "laktat"], "score": 40.62, "risky_in_kb": true, "blocked": false}
+  ],
+  "expert_distinct_pairs": [
+    ["laktosa", "laktat"]
+  ]
+}

@@ -1,0 +1,4300 @@
+{
+  "source_document": "Lembar_Validasi_KB_Diet_GFCF_Autisme_final.pdf",
+  "expert_validated": false,
+  "ingredients": [
+    {
+      "number": 1,
+      "page": 3,
+      "standard_name": "Terigu / Gandum",
+      "english_synonyms": "Wheat flour",
+      "additive_codes": "-",
+      "category": "hindari",
+      "reference_codes": [
+        "R1",
+        "R2",
+        "R8"
+      ],
+      "synonyms": [
+        "Wheat flour",
+        "Tepung terigu",
+        "Terigu",
+        "Gandum",
+        "Wheat"
+      ]
+    },
+    {
+      "number": 2,
+      "page": 3,
+      "standard_name": "Tepung terigu protein tinggi",
+      "english_synonyms": "High-gluten wheat flour",
+      "additive_codes": "-",
+      "category": "hindari",
+      "reference_codes": [
+        "R1",
+        "R2"
+      ],
+      "synonyms": [
+        "High-gluten wheat flour",
+        "High gluten wheat flour"
+      ]
+    },
+    {
+      "number": 3,
+      "page": 3,
+      "standard_name": "Barley (jelai)",
+      "english_synonyms": "Barley",
+      "additive_codes": "-",
+      "category": "hindari",
+      "reference_codes": [
+        "R1",
+        "R2",
+        "R8"
+      ],
+      "synonyms": [
+        "Barley",
+        "Jelai"
+      ]
+    },
+    {
+      "number": 4,
+      "page": 3,
+      "standard_name": "Rye (gandum hitam)",
+      "english_synonyms": "Rye",
+      "additive_codes": "-",
+      "category": "hindari",
+      "reference_codes": [
+        "R1",
+        "R2",
+        "R8"
+      ],
+      "synonyms": [
+        "Rye",
+        "Gandum hitam"
+      ]
+    },
+    {
+      "number": 5,
+      "page": 3,
+      "standard_name": "Malt / ekstrak malt",
+      "english_synonyms": "Malt / malt extract",
+      "additive_codes": "-",
+      "category": "hindari",
+      "reference_codes": [
+        "R1",
+        "R2"
+      ],
+      "synonyms": [
+        "Malt / malt extract",
+        "Malt",
+        "Ekstrak malt",
+        "Malt extract"
+      ]
+    },
+    {
+      "number": 6,
+      "page": 3,
+      "standard_name": "Malt vinegar",
+      "english_synonyms": "Malt vinegar",
+      "additive_codes": "-",
+      "category": "hindari",
+      "reference_codes": [
+        "R1"
+      ],
+      "synonyms": []
+    },
+    {
+      "number": 7,
+      "page": 3,
+      "standard_name": "Pati terigu",
+      "english_synonyms": "Wheat starch",
+      "additive_codes": "-",
+      "category": "hindari",
+      "reference_codes": [
+        "R1",
+        "R2"
+      ],
+      "synonyms": [
+        "Wheat starch",
+        "Pati gandum"
+      ]
+    },
+    {
+      "number": 8,
+      "page": 3,
+      "standard_name": "Couscous",
+      "english_synonyms": "Couscous (wheat semolina)",
+      "additive_codes": "-",
+      "category": "hindari",
+      "reference_codes": [
+        "R1"
+      ],
+      "synonyms": [
+        "Couscous (wheat semolina)",
+        "Wheat semolina couscous"
+      ]
+    },
+    {
+      "number": 9,
+      "page": 3,
+      "standard_name": "Semolina",
+      "english_synonyms": "Semolina",
+      "additive_codes": "-",
+      "category": "hindari",
+      "reference_codes": [
+        "R1"
+      ],
+      "synonyms": []
+    },
+    {
+      "number": 10,
+      "page": 3,
+      "standard_name": "Bulgur",
+      "english_synonyms": "Bulgur wheat",
+      "additive_codes": "-",
+      "category": "hindari",
+      "reference_codes": [
+        "R1"
+      ],
+      "synonyms": [
+        "Bulgur wheat"
+      ]
+    },
+    {
+      "number": 11,
+      "page": 3,
+      "standard_name": "Tepung terigu dalam saus/kaldu instan",
+      "english_synonyms": "Wheat flour as thickener in sauce/broth",
+      "additive_codes": "-",
+      "category": "perhatian",
+      "reference_codes": [
+        "R1",
+        "R2"
+      ],
+      "synonyms": [
+        "Wheat flour as thickener in sauce/broth",
+        "Tepung terigu dalam saus",
+        "Tepung terigu dalam kaldu instan"
+      ]
+    },
+    {
+      "number": 12,
+      "page": 3,
+      "standard_name": "Kecap asin (mengandung gandum fermentasi)",
+      "english_synonyms": "Soy sauce (wheat- fermented)",
+      "additive_codes": "-",
+      "category": "perhatian",
+      "reference_codes": [
+        "R1"
+      ],
+      "synonyms": [
+        "Soy sauce (wheat-fermented)",
+        "Kecap asin",
+        "Soy sauce"
+      ]
+    },
+    {
+      "number": 13,
+      "page": 3,
+      "standard_name": "Tepung panir (breadcrumb) berbahan gandum",
+      "english_synonyms": "Wheat breadcrumbs",
+      "additive_codes": "-",
+      "category": "hindari",
+      "reference_codes": [
+        "R1",
+        "R2"
+      ],
+      "synonyms": [
+        "Wheat breadcrumbs",
+        "Tepung panir berbahan gandum",
+        "Tepung panir",
+        "Breadcrumb",
+        "Breadcrumbs"
+      ]
+    },
+    {
+      "number": 14,
+      "page": 3,
+      "standard_name": "Oat tanpa label bebas gluten (risiko kontaminasi silang)",
+      "english_synonyms": "Oats (non gluten-free certified, cross- contamination risk)",
+      "additive_codes": "-",
+      "category": "perhatian",
+      "reference_codes": [
+        "R2",
+        "R9"
+      ],
+      "synonyms": [
+        "Oats (non gluten-free certified, cross-contamination risk)",
+        "Oat tanpa label bebas gluten",
+        "Oats",
+        "Oat",
+        "Havermut",
+        "Oatmeal"
+      ]
+    },
+    {
+      "number": 15,
+      "page": 3,
+      "standard_name": "Susu sapi",
+      "english_synonyms": "Cow's milk",
+      "additive_codes": "-",
+      "category": "hindari",
+      "reference_codes": [
+        "R1",
+        "R2",
+        "R8"
+      ],
+      "synonyms": [
+        "Cow's milk",
+        "Milk",
+        "Susu",
+        "Whole milk",
+        "Full cream milk"
+      ]
+    },
+    {
+      "number": 16,
+      "page": 3,
+      "standard_name": "Susu bubuk full cream",
+      "english_synonyms": "Full cream milk powder",
+      "additive_codes": "-",
+      "category": "hindari",
+      "reference_codes": [
+        "R1",
+        "R2"
+      ],
+      "synonyms": [
+        "Full cream milk powder",
+        "Milk powder",
+        "Susu bubuk"
+      ]
+    },
+    {
+      "number": 17,
+      "page": 3,
+      "standard_name": "Keju (semua jenis)",
+      "english_synonyms": "Cheese (all types)",
+      "additive_codes": "-",
+      "category": "hindari",
+      "reference_codes": [
+        "R1",
+        "R2",
+        "R8"
+      ],
+      "synonyms": [
+        "Cheese (all types)",
+        "Keju",
+        "Cheese",
+        "Cheese powder",
+        "Bubuk keju"
+      ]
+    },
+    {
+      "number": 18,
+      "page": 4,
+      "standard_name": "Yogurt (susu sapi)",
+      "english_synonyms": "Yogurt (dairy-based)",
+      "additive_codes": "-",
+      "category": "hindari",
+      "reference_codes": [
+        "R1",
+        "R2"
+      ],
+      "synonyms": [
+        "Yogurt (dairy-based)",
+        "Yogurt",
+        "Yoghurt"
+      ]
+    },
+    {
+      "number": 19,
+      "page": 4,
+      "standard_name": "Mentega / Butter",
+      "english_synonyms": "Butter",
+      "additive_codes": "-",
+      "category": "hindari",
+      "reference_codes": [
+        "R1",
+        "R2"
+      ],
+      "synonyms": [
+        "Butter",
+        "Mentega"
+      ]
+    },
+    {
+      "number": 20,
+      "page": 4,
+      "standard_name": "Krim / Whipped cream",
+      "english_synonyms": "Cream / whipped cream",
+      "additive_codes": "-",
+      "category": "hindari",
+      "reference_codes": [
+        "R1",
+        "R2"
+      ],
+      "synonyms": [
+        "Cream / whipped cream",
+        "Krim",
+        "Cream",
+        "Whipped cream"
+      ]
+    },
+    {
+      "number": 21,
+      "page": 4,
+      "standard_name": "Whey protein",
+      "english_synonyms": "Whey protein",
+      "additive_codes": "-",
+      "category": "hindari",
+      "reference_codes": [
+        "R1",
+        "R2"
+      ],
+      "synonyms": [
+        "Whey",
+        "Milk whey"
+      ]
+    },
+    {
+      "number": 22,
+      "page": 4,
+      "standard_name": "Kasein / Sodium kaseinat",
+      "english_synonyms": "Casein / Sodium caseinate",
+      "additive_codes": "INS 469 (Na kaseinat)",
+      "category": "hindari",
+      "reference_codes": [
+        "R1",
+        "R2"
+      ],
+      "synonyms": [
+        "Casein / Sodium caseinate",
+        "Kasein",
+        "Casein",
+        "Sodium kaseinat",
+        "Sodium caseinate",
+        "Natrium kaseinat",
+        "Kaseinat",
+        "Caseinate",
+        "E469",
+        "INS 469",
+        "INS469"
+      ]
+    },
+    {
+      "number": 23,
+      "page": 4,
+      "standard_name": "Kalsium kaseinat",
+      "english_synonyms": "Calcium caseinate",
+      "additive_codes": "-",
+      "category": "hindari",
+      "reference_codes": [
+        "R1",
+        "R2"
+      ],
+      "synonyms": [
+        "Calcium caseinate"
+      ]
+    },
+    {
+      "number": 24,
+      "page": 4,
+      "standard_name": "Rennet casein",
+      "english_synonyms": "Rennet casein",
+      "additive_codes": "-",
+      "category": "hindari",
+      "reference_codes": [
+        "R1"
+      ],
+      "synonyms": []
+    },
+    {
+      "number": 25,
+      "page": 4,
+      "standard_name": "Laktosa",
+      "english_synonyms": "Lactose",
+      "additive_codes": "-",
+      "category": "perhatian",
+      "reference_codes": [
+        "R1"
+      ],
+      "synonyms": [
+        "Lactose"
+      ]
+    },
+    {
+      "number": 26,
+      "page": 4,
+      "standard_name": "Laktalbumin",
+      "english_synonyms": "Lactalbumin",
+      "additive_codes": "-",
+      "category": "hindari",
+      "reference_codes": [
+        "R1"
+      ],
+      "synonyms": [
+        "Lactalbumin"
+      ]
+    },
+    {
+      "number": 27,
+      "page": 4,
+      "standard_name": "Susu kental manis",
+      "english_synonyms": "Sweetened condensed milk",
+      "additive_codes": "-",
+      "category": "hindari",
+      "reference_codes": [
+        "R1",
+        "R2"
+      ],
+      "synonyms": [
+        "Sweetened condensed milk"
+      ]
+    },
+    {
+      "number": 28,
+      "page": 4,
+      "standard_name": "Margarin (mengandung whey/susu)",
+      "english_synonyms": "Margarine containing whey/milk solids",
+      "additive_codes": "-",
+      "category": "perhatian",
+      "reference_codes": [
+        "R1",
+        "R2"
+      ],
+      "synonyms": [
+        "Margarine containing whey/milk solids",
+        "Margarin",
+        "Margarine"
+      ]
+    },
+    {
+      "number": 29,
+      "page": 4,
+      "standard_name": "Krimer non-dairy (berpotensi mengandung kaseinat)",
+      "english_synonyms": "Non-dairy creamer (may contain caseinate)",
+      "additive_codes": "INS 469/470",
+      "category": "perhatian",
+      "reference_codes": [
+        "R1"
+      ],
+      "synonyms": [
+        "Non-dairy creamer (may contain caseinate)",
+        "Krimer non-dairy",
+        "Non-dairy creamer"
+      ]
+    },
+    {
+      "number": 30,
+      "page": 4,
+      "standard_name": "Ragi terhidrolisis (autolyzed yeast)",
+      "english_synonyms": "Autolyzed yeast",
+      "additive_codes": "-",
+      "category": "perhatian",
+      "reference_codes": [
+        "R1",
+        "R2"
+      ],
+      "synonyms": [
+        "Autolyzed yeast",
+        "Ragi terhidrolisis"
+      ]
+    },
+    {
+      "number": 31,
+      "page": 4,
+      "standard_name": "Protein nabati terhidrolisis (HVP)",
+      "english_synonyms": "Hydrolyzed vegetable protein (HVP)",
+      "additive_codes": "-",
+      "category": "perhatian",
+      "reference_codes": [
+        "R1",
+        "R2"
+      ],
+      "synonyms": [
+        "Hydrolyzed vegetable protein (HVP)",
+        "Protein nabati terhidrolisis",
+        "Hydrolyzed vegetable protein",
+        "HVP"
+      ]
+    },
+    {
+      "number": 32,
+      "page": 4,
+      "standard_name": "Protein terhidrolisis lain (HPP)",
+      "english_synonyms": "Hydrolyzed plant protein",
+      "additive_codes": "-",
+      "category": "perhatian",
+      "reference_codes": [
+        "R1"
+      ],
+      "synonyms": [
+        "Hydrolyzed plant protein",
+        "Protein terhidrolisis lain",
+        "HPP"
+      ]
+    },
+    {
+      "number": 33,
+      "page": 4,
+      "standard_name": "Pati termodifikasi (sumber tidak disebutkan)",
+      "english_synonyms": "Modified food starch (unspecified source)",
+      "additive_codes": "INS 1400-1450",
+      "category": "perhatian",
+      "reference_codes": [
+        "R1",
+        "R2"
+      ],
+      "synonyms": [
+        "Modified food starch (unspecified source)",
+        "Pati termodifikasi",
+        "Modified food starch",
+        "Modified starch"
+      ]
+    },
+    {
+      "number": 34,
+      "page": 4,
+      "standard_name": "Pewarna karamel",
+      "english_synonyms": "Caramel color",
+      "additive_codes": "INS 150a-150d",
+      "category": "perhatian",
+      "reference_codes": [
+        "R1",
+        "R2"
+      ],
+      "synonyms": [
+        "Caramel color",
+        "Caramel colour",
+        "Karamel",
+        "E150a",
+        "INS 150a",
+        "INS150a",
+        "E150b",
+        "INS 150b",
+        "INS150b",
+        "E150c",
+        "INS 150c",
+        "INS150c",
+        "E150d",
+        "INS 150d",
+        "INS150d"
+      ]
+    },
+    {
+      "number": 35,
+      "page": 4,
+      "standard_name": "Protein nabati tekstur (TVP)",
+      "english_synonyms": "Textured vegetable protein (TVP)",
+      "additive_codes": "-",
+      "category": "perhatian",
+      "reference_codes": [
+        "R1"
+      ],
+      "synonyms": [
+        "Textured vegetable protein (TVP)",
+        "Protein nabati tekstur",
+        "Textured vegetable protein",
+        "TVP"
+      ]
+    },
+    {
+      "number": 36,
+      "page": 5,
+      "standard_name": "Maltodekstrin (perlu cek sumber pati)",
+      "english_synonyms": "Maltodextrin (source may vary)",
+      "additive_codes": "INS 1400",
+      "category": "perhatian",
+      "reference_codes": [
+        "R1"
+      ],
+      "synonyms": [
+        "Maltodextrin (source may vary)",
+        "Maltodekstrin",
+        "Maltodextrin",
+        "E1400",
+        "INS 1400",
+        "INS1400"
+      ]
+    },
+    {
+      "number": 37,
+      "page": 5,
+      "standard_name": "Dekstrin",
+      "english_synonyms": "Dextrin",
+      "additive_codes": "INS 1400",
+      "category": "perhatian",
+      "reference_codes": [
+        "R1"
+      ],
+      "synonyms": [
+        "Dextrin",
+        "E1400",
+        "INS 1400",
+        "INS1400"
+      ]
+    },
+    {
+      "number": 38,
+      "page": 5,
+      "standard_name": "Lesitin (kedelai umumnya aman, cek sumber)",
+      "english_synonyms": "Lecithin (soy - generally safe, verify source)",
+      "additive_codes": "INS 322",
+      "category": "perhatian",
+      "reference_codes": [
+        "R2"
+      ],
+      "synonyms": [
+        "Lecithin (soy - generally safe, verify source)",
+        "Lesitin",
+        "Lecithin",
+        "Soy lecithin",
+        "Lesitin kedelai",
+        "Sunflower lecithin",
+        "Lesitin bunga matahari",
+        "E322",
+        "INS 322",
+        "INS322"
+      ]
+    },
+    {
+      "number": 39,
+      "page": 5,
+      "standard_name": "Mono- dan digliserida asam lemak",
+      "english_synonyms": "Mono- and diglycerides of fatty acids",
+      "additive_codes": "INS 471",
+      "category": "perhatian",
+      "reference_codes": [
+        "R2"
+      ],
+      "synonyms": [
+        "Mono-and diglycerides of fatty acids",
+        "Mono dan digliserida",
+        "Mono-dan digliserida",
+        "Mono and diglycerides",
+        "Monoglycerides and diglycerides",
+        "E471",
+        "INS 471",
+        "INS471"
+      ]
+    },
+    {
+      "number": 40,
+      "page": 5,
+      "standard_name": "Perisa alami (natural flavor - sumber tidak spesifik)",
+      "english_synonyms": "Natural flavor (unspecified source)",
+      "additive_codes": "-",
+      "category": "perhatian",
+      "reference_codes": [
+        "R1",
+        "R2"
+      ],
+      "synonyms": [
+        "Natural flavor (unspecified source)",
+        "Perisa alami",
+        "Natural flavor",
+        "Natural flavour"
+      ]
+    },
+    {
+      "number": 41,
+      "page": 5,
+      "standard_name": "Perisa buatan (artificial flavor)",
+      "english_synonyms": "Artificial flavor / fragrance",
+      "additive_codes": "-",
+      "category": "perhatian",
+      "reference_codes": [
+        "R6",
+        "R7"
+      ],
+      "synonyms": [
+        "Artificial flavor / fragrance",
+        "Perisa buatan",
+        "Artificial flavor",
+        "Artificial flavour",
+        "Artificial flavoring",
+        "Fragrance",
+        "Perisa sintetik",
+        "Synthetic flavour"
+      ]
+    },
+    {
+      "number": 42,
+      "page": 5,
+      "standard_name": "Bumbu penyedap kaldu instan (kemungkinan HVP/gluten)",
+      "english_synonyms": "Instant bouillon/stock seasoning",
+      "additive_codes": "-",
+      "category": "perhatian",
+      "reference_codes": [
+        "R1"
+      ],
+      "synonyms": [
+        "Instant bouillon/stock seasoning",
+        "Bumbu penyedap kaldu instan",
+        "Kaldu instan",
+        "Instant bouillon",
+        "Stock seasoning"
+      ]
+    },
+    {
+      "number": 43,
+      "page": 5,
+      "standard_name": "Tartrazin",
+      "english_synonyms": "Tartrazine (FD&C Yellow No. 5)",
+      "additive_codes": "INS/E102",
+      "category": "hindari",
+      "reference_codes": [
+        "R3",
+        "R4"
+      ],
+      "synonyms": [
+        "Tartrazine (FD&C Yellow No. 5)",
+        "Tartrazine",
+        "Yellow 5",
+        "FD&C Yellow No. 5",
+        "E102",
+        "INS 102",
+        "INS102"
+      ]
+    },
+    {
+      "number": 44,
+      "page": 5,
+      "standard_name": "Kuinolin Kuning",
+      "english_synonyms": "Quinoline Yellow",
+      "additive_codes": "INS/E104",
+      "category": "hindari",
+      "reference_codes": [
+        "R3",
+        "R4"
+      ],
+      "synonyms": [
+        "Quinoline Yellow",
+        "E104",
+        "INS 104",
+        "INS104"
+      ]
+    },
+    {
+      "number": 45,
+      "page": 5,
+      "standard_name": "Kuning Sunset FCF",
+      "english_synonyms": "Sunset Yellow FCF (FD&C Yellow No. 6)",
+      "additive_codes": "INS/E110",
+      "category": "hindari",
+      "reference_codes": [
+        "R3",
+        "R4"
+      ],
+      "synonyms": [
+        "Sunset Yellow FCF (FD&C Yellow No. 6)",
+        "Sunset Yellow FCF",
+        "Sunset Yellow",
+        "Orange Yellow S",
+        "Yellow 6",
+        "FD&C Yellow No. 6",
+        "E110",
+        "INS 110",
+        "INS110"
+      ]
+    },
+    {
+      "number": 46,
+      "page": 5,
+      "standard_name": "Karmoisin (Azorubine)",
+      "english_synonyms": "Carmoisine / Azorubine",
+      "additive_codes": "INS/E122",
+      "category": "hindari",
+      "reference_codes": [
+        "R3",
+        "R4"
+      ],
+      "synonyms": [
+        "Carmoisine / Azorubine",
+        "Karmoisin",
+        "Karmosin",
+        "Carmoisine",
+        "Azorubine",
+        "E122",
+        "INS 122",
+        "INS122"
+      ]
+    },
+    {
+      "number": 47,
+      "page": 5,
+      "standard_name": "Ponceau 4R",
+      "english_synonyms": "Ponceau 4R",
+      "additive_codes": "INS/E124",
+      "category": "hindari",
+      "reference_codes": [
+        "R3",
+        "R4"
+      ],
+      "synonyms": [
+        "Cochineal Red A",
+        "E124",
+        "INS 124",
+        "INS124"
+      ]
+    },
+    {
+      "number": 48,
+      "page": 5,
+      "standard_name": "Merah Allura AC",
+      "english_synonyms": "Allura Red AC (FD&C Red No. 40)",
+      "additive_codes": "INS/E129",
+      "category": "hindari",
+      "reference_codes": [
+        "R3",
+        "R4"
+      ],
+      "synonyms": [
+        "Allura Red AC (FD&C Red No. 40)",
+        "Allura Red AC",
+        "Red 40",
+        "FD&C Red No. 40",
+        "E129",
+        "INS 129",
+        "INS129"
+      ]
+    },
+    {
+      "number": 49,
+      "page": 5,
+      "standard_name": "Natrium Benzoat",
+      "english_synonyms": "Sodium Benzoate",
+      "additive_codes": "INS/E211",
+      "category": "hindari",
+      "reference_codes": [
+        "R3",
+        "R4"
+      ],
+      "synonyms": [
+        "Sodium Benzoate",
+        "E211",
+        "INS 211",
+        "INS211"
+      ]
+    },
+    {
+      "number": 50,
+      "page": 5,
+      "standard_name": "Eritrosin",
+      "english_synonyms": "Erythrosine (FD&C Red No. 3)",
+      "additive_codes": "INS/E127",
+      "category": "perhatian",
+      "reference_codes": [
+        "R7",
+        "R10"
+      ],
+      "synonyms": [
+        "Erythrosine (FD&C Red No. 3)",
+        "Erythrosine",
+        "Red 3",
+        "FD&C Red No. 3",
+        "E127",
+        "INS 127",
+        "INS127"
+      ]
+    },
+    {
+      "number": 51,
+      "page": 5,
+      "standard_name": "Coklat HT",
+      "english_synonyms": "Brown HT",
+      "additive_codes": "INS/E155",
+      "category": "perhatian",
+      "reference_codes": [
+        "R10"
+      ],
+      "synonyms": [
+        "Brown HT",
+        "E155",
+        "INS 155",
+        "INS155"
+      ]
+    },
+    {
+      "number": 52,
+      "page": 5,
+      "standard_name": "Biru Berlian FCF",
+      "english_synonyms": "Brilliant Blue FCF",
+      "additive_codes": "INS/E133",
+      "category": "perhatian",
+      "reference_codes": [
+        "R10"
+      ],
+      "synonyms": [
+        "Brilliant Blue FCF",
+        "Biru Berlian",
+        "E133",
+        "INS 133",
+        "INS133"
+      ]
+    },
+    {
+      "number": 53,
+      "page": 6,
+      "standard_name": "Hijau S",
+      "english_synonyms": "Green S",
+      "additive_codes": "INS/E142",
+      "category": "perhatian",
+      "reference_codes": [
+        "R10"
+      ],
+      "synonyms": [
+        "Green S",
+        "E142",
+        "INS 142",
+        "INS142"
+      ]
+    },
+    {
+      "number": 54,
+      "page": 6,
+      "standard_name": "Indigotin (Indigo carmine)",
+      "english_synonyms": "Indigotine",
+      "additive_codes": "INS/E132",
+      "category": "perhatian",
+      "reference_codes": [
+        "R10"
+      ],
+      "synonyms": [
+        "Indigotine",
+        "Indigotin",
+        "Indigo carmine",
+        "E132",
+        "INS 132",
+        "INS132"
+      ]
+    },
+    {
+      "number": 55,
+      "page": 6,
+      "standard_name": "Kalium Sorbat",
+      "english_synonyms": "Potassium Sorbate",
+      "additive_codes": "INS/E202",
+      "category": "perhatian",
+      "reference_codes": [
+        "R10"
+      ],
+      "synonyms": [
+        "Potassium Sorbate",
+        "E202",
+        "INS 202",
+        "INS202"
+      ]
+    },
+    {
+      "number": 56,
+      "page": 6,
+      "standard_name": "Natrium Nitrit",
+      "english_synonyms": "Sodium Nitrite",
+      "additive_codes": "INS/E250",
+      "category": "hindari",
+      "reference_codes": [
+        "R7",
+        "R10"
+      ],
+      "synonyms": [
+        "Sodium Nitrite",
+        "E250",
+        "INS 250",
+        "INS250"
+      ]
+    },
+    {
+      "number": 57,
+      "page": 6,
+      "standard_name": "Natrium Nitrat",
+      "english_synonyms": "Sodium Nitrate",
+      "additive_codes": "INS/E251",
+      "category": "hindari",
+      "reference_codes": [
+        "R7",
+        "R10"
+      ],
+      "synonyms": [
+        "Sodium Nitrate",
+        "E251",
+        "INS 251",
+        "INS251"
+      ]
+    },
+    {
+      "number": 58,
+      "page": 6,
+      "standard_name": "Sulfit / Metabisulfit",
+      "english_synonyms": "Sulfites / Metabisulfite",
+      "additive_codes": "INS/E220-E228",
+      "category": "perhatian",
+      "reference_codes": [
+        "R7",
+        "R10"
+      ],
+      "synonyms": [
+        "Sulfites / Metabisulfite",
+        "Sulfit",
+        "Metabisulfit",
+        "Sulfites",
+        "Metabisulfite",
+        "Sulfur dioxide",
+        "Natrium metabisulfit",
+        "Sodium metabisulfite",
+        "E220",
+        "INS 220",
+        "INS220",
+        "E221",
+        "INS 221",
+        "INS221",
+        "E222",
+        "INS 222",
+        "INS222",
+        "E223",
+        "INS 223",
+        "INS223",
+        "E224",
+        "INS 224",
+        "INS224",
+        "E225",
+        "INS 225",
+        "INS225",
+        "E226",
+        "INS 226",
+        "INS226",
+        "E227",
+        "INS 227",
+        "INS227",
+        "E228",
+        "INS 228",
+        "INS228"
+      ]
+    },
+    {
+      "number": 59,
+      "page": 6,
+      "standard_name": "Monosodium Glutamat (MSG)",
+      "english_synonyms": "Monosodium Glutamate (MSG)",
+      "additive_codes": "INS/E621",
+      "category": "perhatian",
+      "reference_codes": [
+        "R7",
+        "R8"
+      ],
+      "synonyms": [
+        "Monosodium Glutamate (MSG)",
+        "Monosodium Glutamat",
+        "Monosodium Glutamate",
+        "MSG",
+        "Mononatrium glutamat",
+        "Vetsin",
+        "E621",
+        "INS 621",
+        "INS621"
+      ]
+    },
+    {
+      "number": 60,
+      "page": 6,
+      "standard_name": "Dinatrium Guanilat",
+      "english_synonyms": "Disodium Guanylate",
+      "additive_codes": "INS/E627",
+      "category": "perhatian",
+      "reference_codes": [
+        "R10"
+      ],
+      "synonyms": [
+        "Disodium Guanylate",
+        "E627",
+        "INS 627",
+        "INS627"
+      ]
+    },
+    {
+      "number": 61,
+      "page": 6,
+      "standard_name": "Dinatrium Inosinat",
+      "english_synonyms": "Disodium Inosinate",
+      "additive_codes": "INS/E631",
+      "category": "perhatian",
+      "reference_codes": [
+        "R10"
+      ],
+      "synonyms": [
+        "Disodium Inosinate",
+        "E631",
+        "INS 631",
+        "INS631"
+      ]
+    },
+    {
+      "number": 62,
+      "page": 6,
+      "standard_name": "Aspartam",
+      "english_synonyms": "Aspartame",
+      "additive_codes": "INS/E951",
+      "category": "hindari",
+      "reference_codes": [
+        "R6",
+        "R7"
+      ],
+      "synonyms": [
+        "Aspartame",
+        "Equal",
+        "E951",
+        "INS 951",
+        "INS951"
+      ]
+    },
+    {
+      "number": 63,
+      "page": 6,
+      "standard_name": "Asesulfam Kalium",
+      "english_synonyms": "Acesulfame Potassium",
+      "additive_codes": "INS/E950",
+      "category": "perhatian",
+      "reference_codes": [
+        "R6"
+      ],
+      "synonyms": [
+        "Acesulfame Potassium",
+        "Asesulfam K",
+        "Acesulfame K",
+        "E950",
+        "INS 950",
+        "INS950"
+      ]
+    },
+    {
+      "number": 64,
+      "page": 6,
+      "standard_name": "Sakarin",
+      "english_synonyms": "Saccharin",
+      "additive_codes": "INS/E954",
+      "category": "perhatian",
+      "reference_codes": [
+        "R6"
+      ],
+      "synonyms": [
+        "Saccharin",
+        "Sodium saccharin",
+        "E954",
+        "INS 954",
+        "INS954"
+      ]
+    },
+    {
+      "number": 65,
+      "page": 6,
+      "standard_name": "Siklamat",
+      "english_synonyms": "Cyclamate",
+      "additive_codes": "INS/E952",
+      "category": "perhatian",
+      "reference_codes": [
+        "R10"
+      ],
+      "synonyms": [
+        "Cyclamate",
+        "Sodium cyclamate",
+        "E952",
+        "INS 952",
+        "INS952"
+      ]
+    },
+    {
+      "number": 66,
+      "page": 6,
+      "standard_name": "Butil Hidroksianisol (BHA)",
+      "english_synonyms": "Butylated Hydroxyanisole (BHA)",
+      "additive_codes": "INS/E320",
+      "category": "hindari",
+      "reference_codes": [
+        "R6",
+        "R7"
+      ],
+      "synonyms": [
+        "Butylated Hydroxyanisole (BHA)",
+        "Butil Hidroksianisol",
+        "Butylated Hydroxyanisole",
+        "BHA",
+        "E320",
+        "INS 320",
+        "INS320"
+      ]
+    },
+    {
+      "number": 67,
+      "page": 6,
+      "standard_name": "Butil Hidroksitoluena (BHT)",
+      "english_synonyms": "Butylated Hydroxytoluene (BHT)",
+      "additive_codes": "INS/E321",
+      "category": "hindari",
+      "reference_codes": [
+        "R6",
+        "R7"
+      ],
+      "synonyms": [
+        "Butylated Hydroxytoluene (BHT)",
+        "Butil Hidroksitoluena",
+        "Butylated Hydroxytoluene",
+        "BHT",
+        "E321",
+        "INS 321",
+        "INS321"
+      ]
+    },
+    {
+      "number": 68,
+      "page": 6,
+      "standard_name": "Tersier-Butilhidrokuinon (TBHQ)",
+      "english_synonyms": "Tertiary Butylhydroquinone (TBHQ)",
+      "additive_codes": "INS/E319",
+      "category": "hindari",
+      "reference_codes": [
+        "R6",
+        "R7"
+      ],
+      "synonyms": [
+        "Tertiary Butylhydroquinone (TBHQ)",
+        "Tersier-Butilhidrokuinon",
+        "Tertiary Butylhydroquinone",
+        "TBHQ",
+        "Tersier butilhidrokuinon",
+        "E319",
+        "INS 319",
+        "INS319"
+      ]
+    },
+    {
+      "number": 69,
+      "page": 6,
+      "standard_name": "Kalium Bromat",
+      "english_synonyms": "Potassium Bromate",
+      "additive_codes": "-",
+      "category": "hindari",
+      "reference_codes": [
+        "R7"
+      ],
+      "synonyms": [
+        "Potassium Bromate"
+      ]
+    },
+    {
+      "number": 70,
+      "page": 6,
+      "standard_name": "Vanilin sintetis",
+      "english_synonyms": "Synthetic Vanillin",
+      "additive_codes": "INS/E965 (terkait)",
+      "category": "perhatian",
+      "reference_codes": [
+        "R6"
+      ],
+      "synonyms": [
+        "Synthetic Vanillin",
+        "Vanilin",
+        "Vanillin"
+      ]
+    },
+    {
+      "number": 71,
+      "page": 6,
+      "standard_name": "Pemanis buatan campuran (soft drink)",
+      "english_synonyms": "Artificial sweetener blends (soft drinks)",
+      "additive_codes": "-",
+      "category": "perhatian",
+      "reference_codes": [
+        "R6",
+        "R7"
+      ],
+      "synonyms": [
+        "Artificial sweetener blends (soft drinks)",
+        "Pemanis buatan campuran",
+        "Artificial sweetener blends"
+      ]
+    },
+    {
+      "number": 72,
+      "page": 7,
+      "standard_name": "Asam folat sintetis pada produk fortifikasi gandum",
+      "english_synonyms": "Synthetic folic acid (wheat-fortified products)",
+      "additive_codes": "-",
+      "category": "perhatian",
+      "reference_codes": [
+        "R2"
+      ],
+      "synonyms": [
+        "Synthetic folic acid (wheat-fortified products)",
+        "Synthetic folic acid"
+      ]
+    },
+    {
+      "number": 73,
+      "page": 7,
+      "standard_name": "Apel",
+      "english_synonyms": "Apple",
+      "additive_codes": "-",
+      "category": "perhatian",
+      "reference_codes": [
+        "R5",
+        "R6"
+      ],
+      "synonyms": [
+        "Apple"
+      ]
+    },
+    {
+      "number": 74,
+      "page": 7,
+      "standard_name": "Jeruk",
+      "english_synonyms": "Orange",
+      "additive_codes": "-",
+      "category": "perhatian",
+      "reference_codes": [
+        "R5",
+        "R6"
+      ],
+      "synonyms": [
+        "Orange"
+      ]
+    },
+    {
+      "number": 75,
+      "page": 7,
+      "standard_name": "Anggur",
+      "english_synonyms": "Grapes",
+      "additive_codes": "-",
+      "category": "perhatian",
+      "reference_codes": [
+        "R5",
+        "R6"
+      ],
+      "synonyms": [
+        "Grapes",
+        "Grape"
+      ]
+    },
+    {
+      "number": 76,
+      "page": 7,
+      "standard_name": "Stroberi/berry",
+      "english_synonyms": "Berries (strawberry, blueberry, raspberry)",
+      "additive_codes": "-",
+      "category": "perhatian",
+      "reference_codes": [
+        "R5",
+        "R6"
+      ],
+      "synonyms": [
+        "Berries (strawberry, blueberry, raspberry)",
+        "Berries",
+        "Stroberi",
+        "Berry",
+        "Strawberry",
+        "Blueberry",
+        "Raspberry"
+      ]
+    },
+    {
+      "number": 77,
+      "page": 7,
+      "standard_name": "Ceri",
+      "english_synonyms": "Cherries",
+      "additive_codes": "-",
+      "category": "perhatian",
+      "reference_codes": [
+        "R5",
+        "R6"
+      ],
+      "synonyms": [
+        "Cherries",
+        "Cherry"
+      ]
+    },
+    {
+      "number": 78,
+      "page": 7,
+      "standard_name": "Aprikot",
+      "english_synonyms": "Apricot",
+      "additive_codes": "-",
+      "category": "perhatian",
+      "reference_codes": [
+        "R5",
+        "R6"
+      ],
+      "synonyms": [
+        "Apricot"
+      ]
+    },
+    {
+      "number": 79,
+      "page": 7,
+      "standard_name": "Plum",
+      "english_synonyms": "Plums",
+      "additive_codes": "-",
+      "category": "perhatian",
+      "reference_codes": [
+        "R5",
+        "R6"
+      ],
+      "synonyms": [
+        "Plums"
+      ]
+    },
+    {
+      "number": 80,
+      "page": 7,
+      "standard_name": "Kismis",
+      "english_synonyms": "Raisins",
+      "additive_codes": "-",
+      "category": "perhatian",
+      "reference_codes": [
+        "R5",
+        "R6"
+      ],
+      "synonyms": [
+        "Raisins",
+        "Raisin"
+      ]
+    },
+    {
+      "number": 81,
+      "page": 7,
+      "standard_name": "Prune",
+      "english_synonyms": "Prunes",
+      "additive_codes": "-",
+      "category": "perhatian",
+      "reference_codes": [
+        "R5",
+        "R6"
+      ],
+      "synonyms": [
+        "Prunes"
+      ]
+    },
+    {
+      "number": 82,
+      "page": 7,
+      "standard_name": "Almond",
+      "english_synonyms": "Almonds",
+      "additive_codes": "-",
+      "category": "perhatian",
+      "reference_codes": [
+        "R5",
+        "R6"
+      ],
+      "synonyms": [
+        "Almonds"
+      ]
+    },
+    {
+      "number": 83,
+      "page": 7,
+      "standard_name": "Kacang tanah",
+      "english_synonyms": "Peanuts",
+      "additive_codes": "-",
+      "category": "perhatian",
+      "reference_codes": [
+        "R6"
+      ],
+      "synonyms": [
+        "Peanuts",
+        "Peanut"
+      ]
+    },
+    {
+      "number": 84,
+      "page": 7,
+      "standard_name": "Tomat",
+      "english_synonyms": "Tomatoes",
+      "additive_codes": "-",
+      "category": "perhatian",
+      "reference_codes": [
+        "R5",
+        "R6"
+      ],
+      "synonyms": [
+        "Tomatoes",
+        "Tomato"
+      ]
+    },
+    {
+      "number": 85,
+      "page": 7,
+      "standard_name": "Mentimun (dengan kulit)",
+      "english_synonyms": "Cucumbers",
+      "additive_codes": "-",
+      "category": "perhatian",
+      "reference_codes": [
+        "R5"
+      ],
+      "synonyms": [
+        "Cucumbers",
+        "Mentimun",
+        "Cucumber"
+      ]
+    },
+    {
+      "number": 86,
+      "page": 7,
+      "standard_name": "Acar (pickles)",
+      "english_synonyms": "Pickles",
+      "additive_codes": "-",
+      "category": "perhatian",
+      "reference_codes": [
+        "R5"
+      ],
+      "synonyms": [
+        "Pickles",
+        "Acar",
+        "Pickle"
+      ]
+    },
+    {
+      "number": 87,
+      "page": 7,
+      "standard_name": "Paprika hijau/cabai",
+      "english_synonyms": "Green peppers / hot peppers",
+      "additive_codes": "-",
+      "category": "perhatian",
+      "reference_codes": [
+        "R5"
+      ],
+      "synonyms": [
+        "Green peppers / hot peppers",
+        "Paprika hijau",
+        "Cabai",
+        "Green peppers",
+        "Hot peppers"
+      ]
+    },
+    {
+      "number": 88,
+      "page": 7,
+      "standard_name": "Kacang polong (peas)",
+      "english_synonyms": "Peas",
+      "additive_codes": "-",
+      "category": "perhatian",
+      "reference_codes": [
+        "R5"
+      ],
+      "synonyms": [
+        "Peas",
+        "Kacang polong"
+      ]
+    },
+    {
+      "number": 89,
+      "page": 7,
+      "standard_name": "Melon",
+      "english_synonyms": "Melons",
+      "additive_codes": "-",
+      "category": "perhatian",
+      "reference_codes": [
+        "R5"
+      ],
+      "synonyms": [
+        "Melons"
+      ]
+    },
+    {
+      "number": 90,
+      "page": 7,
+      "standard_name": "Blewah/nektarin/persik",
+      "english_synonyms": "Nectarines / Peaches",
+      "additive_codes": "-",
+      "category": "perhatian",
+      "reference_codes": [
+        "R5",
+        "R6"
+      ],
+      "synonyms": [
+        "Nectarines / Peaches",
+        "Blewah",
+        "Nektarin",
+        "Persik",
+        "Nectarine",
+        "Peach"
+      ]
+    },
+    {
+      "number": 91,
+      "page": 7,
+      "standard_name": "Jeruk bali (grapefruit)",
+      "english_synonyms": "Grapefruit",
+      "additive_codes": "-",
+      "category": "perhatian",
+      "reference_codes": [
+        "R5"
+      ],
+      "synonyms": [
+        "Grapefruit",
+        "Jeruk bali"
+      ]
+    },
+    {
+      "number": 92,
+      "page": 7,
+      "standard_name": "Lemon",
+      "english_synonyms": "Lemon",
+      "additive_codes": "-",
+      "category": "perhatian",
+      "reference_codes": [
+        "R5"
+      ],
+      "synonyms": []
+    },
+    {
+      "number": 93,
+      "page": 8,
+      "standard_name": "Kecap tomat / saus tomat (ketchup)",
+      "english_synonyms": "Ketchup / tomato sauce",
+      "additive_codes": "-",
+      "category": "perhatian",
+      "reference_codes": [
+        "R6"
+      ],
+      "synonyms": [
+        "Ketchup / tomato sauce",
+        "Kecap tomat / saus tomat",
+        "Kecap tomat",
+        "Saus tomat",
+        "Ketchup",
+        "Tomato sauce"
+      ]
+    },
+    {
+      "number": 94,
+      "page": 8,
+      "standard_name": "Madu",
+      "english_synonyms": "Honey",
+      "additive_codes": "-",
+      "category": "perhatian",
+      "reference_codes": [
+        "R6"
+      ],
+      "synonyms": [
+        "Honey"
+      ]
+    },
+    {
+      "number": 95,
+      "page": 8,
+      "standard_name": "Kopi",
+      "english_synonyms": "Coffee",
+      "additive_codes": "-",
+      "category": "perhatian",
+      "reference_codes": [
+        "R6"
+      ],
+      "synonyms": [
+        "Coffee"
+      ]
+    },
+    {
+      "number": 96,
+      "page": 8,
+      "standard_name": "Teh",
+      "english_synonyms": "Tea",
+      "additive_codes": "-",
+      "category": "perhatian",
+      "reference_codes": [
+        "R6"
+      ],
+      "synonyms": [
+        "Tea"
+      ]
+    },
+    {
+      "number": 97,
+      "page": 8,
+      "standard_name": "Kakao/cokelat murni",
+      "english_synonyms": "Cocoa / cacao",
+      "additive_codes": "-",
+      "category": "perhatian",
+      "reference_codes": [
+        "R6"
+      ],
+      "synonyms": [
+        "Cocoa / cacao",
+        "Kakao",
+        "Cokelat",
+        "Coklat",
+        "Cocoa",
+        "Cacao",
+        "Chocolate"
+      ]
+    },
+    {
+      "number": 98,
+      "page": 8,
+      "standard_name": "Cuka apel/anggur (cider/wine vinegar)",
+      "english_synonyms": "Cider / wine vinegar",
+      "additive_codes": "-",
+      "category": "perhatian",
+      "reference_codes": [
+        "R6"
+      ],
+      "synonyms": [
+        "Cider / wine vinegar",
+        "Cuka apel/anggur",
+        "Cuka apel",
+        "Cuka anggur",
+        "Cider vinegar",
+        "Wine vinegar"
+      ]
+    },
+    {
+      "number": 99,
+      "page": 8,
+      "standard_name": "Bumbu rempah umumnya (paprika bubuk, thyme, kari)",
+      "english_synonyms": "Most herbs/spices (paprika, thyme, curry powder)",
+      "additive_codes": "-",
+      "category": "perhatian",
+      "reference_codes": [
+        "R6"
+      ],
+      "synonyms": [
+        "Most herbs/spices (paprika, thyme, curry powder)",
+        "Bumbu rempah umumnya",
+        "Most herbs/spices",
+        "Bumbu rempah",
+        "Paprika bubuk",
+        "Thyme",
+        "Kari",
+        "Curry powder"
+      ]
+    },
+    {
+      "number": 100,
+      "page": 8,
+      "standard_name": "Cengkeh (cloves)",
+      "english_synonyms": "Cloves",
+      "additive_codes": "-",
+      "category": "perhatian",
+      "reference_codes": [
+        "R6"
+      ],
+      "synonyms": [
+        "Cloves",
+        "Cengkeh",
+        "Clove"
+      ]
+    },
+    {
+      "number": 101,
+      "page": 8,
+      "standard_name": "Bubuk cabai (chili powder)",
+      "english_synonyms": "Chili powder",
+      "additive_codes": "-",
+      "category": "perhatian",
+      "reference_codes": [
+        "R6"
+      ],
+      "synonyms": [
+        "Chili powder",
+        "Bubuk cabai"
+      ]
+    },
+    {
+      "number": 102,
+      "page": 8,
+      "standard_name": "Minyak gandapura (oil of wintergreen)",
+      "english_synonyms": "Oil of wintergreen",
+      "additive_codes": "-",
+      "category": "hindari",
+      "reference_codes": [
+        "R6"
+      ],
+      "synonyms": [
+        "Oil of wintergreen",
+        "Minyak gandapura"
+      ]
+    },
+    {
+      "number": 103,
+      "page": 8,
+      "standard_name": "Beras putih",
+      "english_synonyms": "White rice",
+      "additive_codes": "-",
+      "category": "aman",
+      "reference_codes": [
+        "R2",
+        "R9"
+      ],
+      "synonyms": [
+        "White rice",
+        "Beras",
+        "Rice"
+      ]
+    },
+    {
+      "number": 104,
+      "page": 8,
+      "standard_name": "Beras merah/cokelat",
+      "english_synonyms": "Brown rice",
+      "additive_codes": "-",
+      "category": "aman",
+      "reference_codes": [
+        "R2",
+        "R9"
+      ],
+      "synonyms": [
+        "Brown rice",
+        "Beras merah",
+        "Beras cokelat"
+      ]
+    },
+    {
+      "number": 105,
+      "page": 8,
+      "standard_name": "Jagung (segar)",
+      "english_synonyms": "Corn (fresh)",
+      "additive_codes": "-",
+      "category": "aman",
+      "reference_codes": [
+        "R2",
+        "R9"
+      ],
+      "synonyms": [
+        "Corn (fresh)",
+        "Jagung",
+        "Corn"
+      ]
+    },
+    {
+      "number": 106,
+      "page": 8,
+      "standard_name": "Kentang",
+      "english_synonyms": "Potato",
+      "additive_codes": "-",
+      "category": "aman",
+      "reference_codes": [
+        "R2",
+        "R9"
+      ],
+      "synonyms": [
+        "Potato"
+      ]
+    },
+    {
+      "number": 107,
+      "page": 8,
+      "standard_name": "Ubi jalar",
+      "english_synonyms": "Sweet potato",
+      "additive_codes": "-",
+      "category": "aman",
+      "reference_codes": [
+        "R2",
+        "R9"
+      ],
+      "synonyms": [
+        "Sweet potato"
+      ]
+    },
+    {
+      "number": 108,
+      "page": 8,
+      "standard_name": "Singkong / ubi kayu",
+      "english_synonyms": "Cassava",
+      "additive_codes": "-",
+      "category": "aman",
+      "reference_codes": [
+        "R2",
+        "R9"
+      ],
+      "synonyms": [
+        "Cassava",
+        "Singkong",
+        "Ubi kayu"
+      ]
+    },
+    {
+      "number": 109,
+      "page": 8,
+      "standard_name": "Sagu",
+      "english_synonyms": "Sago",
+      "additive_codes": "-",
+      "category": "aman",
+      "reference_codes": [
+        "R2",
+        "R9"
+      ],
+      "synonyms": [
+        "Sago",
+        "Tepung sagu",
+        "Sago flour",
+        "Sago starch"
+      ]
+    },
+    {
+      "number": 110,
+      "page": 8,
+      "standard_name": "Quinoa",
+      "english_synonyms": "Quinoa",
+      "additive_codes": "-",
+      "category": "aman",
+      "reference_codes": [
+        "R2",
+        "R9"
+      ],
+      "synonyms": []
+    },
+    {
+      "number": 111,
+      "page": 8,
+      "standard_name": "Sorgum",
+      "english_synonyms": "Sorghum",
+      "additive_codes": "-",
+      "category": "aman",
+      "reference_codes": [
+        "R2",
+        "R9"
+      ],
+      "synonyms": [
+        "Sorghum"
+      ]
+    },
+    {
+      "number": 112,
+      "page": 8,
+      "standard_name": "Millet",
+      "english_synonyms": "Millet",
+      "additive_codes": "-",
+      "category": "aman",
+      "reference_codes": [
+        "R2",
+        "R9"
+      ],
+      "synonyms": []
+    },
+    {
+      "number": 113,
+      "page": 8,
+      "standard_name": "Soba / Buckwheat murni (100%)",
+      "english_synonyms": "Buckwheat (pure, 100%)",
+      "additive_codes": "-",
+      "category": "aman",
+      "reference_codes": [
+        "R2",
+        "R9"
+      ],
+      "synonyms": [
+        "Buckwheat (pure, 100%)",
+        "Soba / Buckwheat murni",
+        "Buckwheat",
+        "Soba"
+      ]
+    },
+    {
+      "number": 114,
+      "page": 9,
+      "standard_name": "Daging sapi segar (tanpa olahan)",
+      "english_synonyms": "Fresh beef (unprocessed)",
+      "additive_codes": "-",
+      "category": "aman",
+      "reference_codes": [
+        "R2",
+        "R9"
+      ],
+      "synonyms": [
+        "Fresh beef (unprocessed)",
+        "Daging sapi segar",
+        "Fresh beef"
+      ]
+    },
+    {
+      "number": 115,
+      "page": 9,
+      "standard_name": "Daging ayam segar (tanpa olahan)",
+      "english_synonyms": "Fresh chicken (unprocessed)",
+      "additive_codes": "-",
+      "category": "aman",
+      "reference_codes": [
+        "R2",
+        "R9"
+      ],
+      "synonyms": [
+        "Fresh chicken (unprocessed)",
+        "Daging ayam segar",
+        "Fresh chicken"
+      ]
+    },
+    {
+      "number": 116,
+      "page": 9,
+      "standard_name": "Ikan segar",
+      "english_synonyms": "Fresh fish",
+      "additive_codes": "-",
+      "category": "aman",
+      "reference_codes": [
+        "R2",
+        "R9"
+      ],
+      "synonyms": [
+        "Fresh fish"
+      ]
+    },
+    {
+      "number": 117,
+      "page": 9,
+      "standard_name": "Telur",
+      "english_synonyms": "Eggs",
+      "additive_codes": "-",
+      "category": "aman",
+      "reference_codes": [
+        "R2",
+        "R9"
+      ],
+      "synonyms": [
+        "Eggs",
+        "Egg"
+      ]
+    },
+    {
+      "number": 118,
+      "page": 9,
+      "standard_name": "Kacang-kacangan (kacang merah, kacang hijau, dll)",
+      "english_synonyms": "Legumes/beans (kidney beans, mung beans, etc.)",
+      "additive_codes": "-",
+      "category": "aman",
+      "reference_codes": [
+        "R2",
+        "R9"
+      ],
+      "synonyms": [
+        "Legumes/beans (kidney beans, mung beans, etc.)",
+        "Kacang-kacangan",
+        "Legumes/beans",
+        "Kacang merah",
+        "Kacang hijau",
+        "Kidney beans",
+        "Mung beans"
+      ]
+    },
+    {
+      "number": 119,
+      "page": 9,
+      "standard_name": "Tahu (kedelai murni)",
+      "english_synonyms": "Tofu (pure soy)",
+      "additive_codes": "-",
+      "category": "aman",
+      "reference_codes": [
+        "R2",
+        "R9"
+      ],
+      "synonyms": [
+        "Tofu (pure soy)",
+        "Tahu",
+        "Tofu"
+      ]
+    },
+    {
+      "number": 120,
+      "page": 9,
+      "standard_name": "Tempe (kedelai murni)",
+      "english_synonyms": "Tempeh (pure soy)",
+      "additive_codes": "-",
+      "category": "aman",
+      "reference_codes": [
+        "R2",
+        "R9"
+      ],
+      "synonyms": [
+        "Tempeh (pure soy)",
+        "Tempe",
+        "Tempeh"
+      ]
+    },
+    {
+      "number": 121,
+      "page": 9,
+      "standard_name": "Alpukat",
+      "english_synonyms": "Avocado",
+      "additive_codes": "-",
+      "category": "aman",
+      "reference_codes": [
+        "R5",
+        "R2",
+        "R9"
+      ],
+      "synonyms": [
+        "Avocado"
+      ]
+    },
+    {
+      "number": 122,
+      "page": 9,
+      "standard_name": "Artichoke",
+      "english_synonyms": "Artichoke",
+      "additive_codes": "-",
+      "category": "aman",
+      "reference_codes": [
+        "R5"
+      ],
+      "synonyms": []
+    },
+    {
+      "number": 123,
+      "page": 9,
+      "standard_name": "Asparagus",
+      "english_synonyms": "Asparagus",
+      "additive_codes": "-",
+      "category": "aman",
+      "reference_codes": [
+        "R5"
+      ],
+      "synonyms": []
+    },
+    {
+      "number": 124,
+      "page": 9,
+      "standard_name": "Kecambah alfalfa",
+      "english_synonyms": "Alfalfa sprouts",
+      "additive_codes": "-",
+      "category": "aman",
+      "reference_codes": [
+        "R5"
+      ],
+      "synonyms": [
+        "Alfalfa sprouts"
+      ]
+    },
+    {
+      "number": 125,
+      "page": 9,
+      "standard_name": "Rebung",
+      "english_synonyms": "Bamboo shoots",
+      "additive_codes": "-",
+      "category": "aman",
+      "reference_codes": [
+        "R5"
+      ],
+      "synonyms": [
+        "Bamboo shoots"
+      ]
+    },
+    {
+      "number": 126,
+      "page": 9,
+      "standard_name": "Tauge (bean sprouts)",
+      "english_synonyms": "Bean sprouts",
+      "additive_codes": "-",
+      "category": "aman",
+      "reference_codes": [
+        "R5"
+      ],
+      "synonyms": [
+        "Bean sprouts",
+        "Tauge"
+      ]
+    },
+    {
+      "number": 127,
+      "page": 9,
+      "standard_name": "Bit (beetroot)",
+      "english_synonyms": "Beets",
+      "additive_codes": "-",
+      "category": "aman",
+      "reference_codes": [
+        "R5"
+      ],
+      "synonyms": [
+        "Beets",
+        "Bit",
+        "Beetroot"
+      ]
+    },
+    {
+      "number": 128,
+      "page": 9,
+      "standard_name": "Brokoli",
+      "english_synonyms": "Broccoli",
+      "additive_codes": "-",
+      "category": "aman",
+      "reference_codes": [
+        "R5"
+      ],
+      "synonyms": [
+        "Broccoli"
+      ]
+    },
+    {
+      "number": 129,
+      "page": 9,
+      "standard_name": "Kubis Brussel",
+      "english_synonyms": "Brussels sprouts",
+      "additive_codes": "-",
+      "category": "aman",
+      "reference_codes": [
+        "R5"
+      ],
+      "synonyms": [
+        "Brussels sprouts"
+      ]
+    },
+    {
+      "number": 130,
+      "page": 9,
+      "standard_name": "Kubis / kol",
+      "english_synonyms": "Cabbage",
+      "additive_codes": "-",
+      "category": "aman",
+      "reference_codes": [
+        "R2",
+        "R9"
+      ],
+      "synonyms": [
+        "Cabbage",
+        "Kubis",
+        "Kol"
+      ]
+    },
+    {
+      "number": 131,
+      "page": 9,
+      "standard_name": "Wortel",
+      "english_synonyms": "Carrot",
+      "additive_codes": "-",
+      "category": "aman",
+      "reference_codes": [
+        "R2",
+        "R9"
+      ],
+      "synonyms": [
+        "Carrot"
+      ]
+    },
+    {
+      "number": 132,
+      "page": 9,
+      "standard_name": "Seledri",
+      "english_synonyms": "Celery",
+      "additive_codes": "-",
+      "category": "aman",
+      "reference_codes": [
+        "R2",
+        "R9"
+      ],
+      "synonyms": [
+        "Celery"
+      ]
+    },
+    {
+      "number": 133,
+      "page": 9,
+      "standard_name": "Selada",
+      "english_synonyms": "Lettuce",
+      "additive_codes": "-",
+      "category": "aman",
+      "reference_codes": [
+        "R2",
+        "R9"
+      ],
+      "synonyms": [
+        "Lettuce"
+      ]
+    },
+    {
+      "number": 134,
+      "page": 9,
+      "standard_name": "Bayam (dalam jumlah wajar)",
+      "english_synonyms": "Spinach (moderate amount)",
+      "additive_codes": "-",
+      "category": "perhatian",
+      "reference_codes": [
+        "R5"
+      ],
+      "synonyms": [
+        "Spinach (moderate amount)",
+        "Bayam",
+        "Spinach"
+      ]
+    },
+    {
+      "number": 135,
+      "page": 9,
+      "standard_name": "Pisang",
+      "english_synonyms": "Banana",
+      "additive_codes": "-",
+      "category": "aman",
+      "reference_codes": [
+        "R2",
+        "R9"
+      ],
+      "synonyms": [
+        "Banana"
+      ]
+    },
+    {
+      "number": 136,
+      "page": 10,
+      "standard_name": "Pir (dikupas)",
+      "english_synonyms": "Pear (peeled)",
+      "additive_codes": "-",
+      "category": "aman",
+      "reference_codes": [
+        "R2",
+        "R9"
+      ],
+      "synonyms": [
+        "Pear (peeled)",
+        "Pir",
+        "Pear"
+      ]
+    },
+    {
+      "number": 137,
+      "page": 10,
+      "standard_name": "Semangka",
+      "english_synonyms": "Watermelon",
+      "additive_codes": "-",
+      "category": "aman",
+      "reference_codes": [
+        "R2",
+        "R9"
+      ],
+      "synonyms": [
+        "Watermelon"
+      ]
+    },
+    {
+      "number": 138,
+      "page": 10,
+      "standard_name": "Pepaya",
+      "english_synonyms": "Papaya",
+      "additive_codes": "-",
+      "category": "aman",
+      "reference_codes": [
+        "R2",
+        "R9"
+      ],
+      "synonyms": [
+        "Papaya"
+      ]
+    },
+    {
+      "number": 139,
+      "page": 10,
+      "standard_name": "Mangga",
+      "english_synonyms": "Mango",
+      "additive_codes": "-",
+      "category": "aman",
+      "reference_codes": [
+        "R2",
+        "R9"
+      ],
+      "synonyms": [
+        "Mango"
+      ]
+    },
+    {
+      "number": 140,
+      "page": 10,
+      "standard_name": "Minyak zaitun",
+      "english_synonyms": "Olive oil",
+      "additive_codes": "-",
+      "category": "aman",
+      "reference_codes": [
+        "R2",
+        "R9"
+      ],
+      "synonyms": [
+        "Olive oil"
+      ]
+    },
+    {
+      "number": 141,
+      "page": 10,
+      "standard_name": "Minyak kelapa",
+      "english_synonyms": "Coconut oil",
+      "additive_codes": "-",
+      "category": "aman",
+      "reference_codes": [
+        "R2",
+        "R9"
+      ],
+      "synonyms": [
+        "Coconut oil"
+      ]
+    },
+    {
+      "number": 142,
+      "page": 10,
+      "standard_name": "Santan / susu kelapa",
+      "english_synonyms": "Coconut milk",
+      "additive_codes": "-",
+      "category": "aman",
+      "reference_codes": [
+        "R2",
+        "R9"
+      ],
+      "synonyms": [
+        "Coconut milk",
+        "Santan",
+        "Susu kelapa"
+      ]
+    },
+    {
+      "number": 143,
+      "page": 10,
+      "standard_name": "Susu beras",
+      "english_synonyms": "Rice milk",
+      "additive_codes": "-",
+      "category": "aman",
+      "reference_codes": [
+        "R2",
+        "R9"
+      ],
+      "synonyms": [
+        "Rice milk"
+      ]
+    },
+    {
+      "number": 144,
+      "page": 10,
+      "standard_name": "Susu almond (tanpa perisa buatan)",
+      "english_synonyms": "Almond milk (unflavored, no artificial additives)",
+      "additive_codes": "-",
+      "category": "aman",
+      "reference_codes": [
+        "R2",
+        "R9"
+      ],
+      "synonyms": [
+        "Almond milk (unflavored, no artificial additives)",
+        "Susu almond",
+        "Almond milk"
+      ]
+    },
+    {
+      "number": 145,
+      "page": 10,
+      "standard_name": "Susu kedelai murni",
+      "english_synonyms": "Pure soy milk",
+      "additive_codes": "-",
+      "category": "aman",
+      "reference_codes": [
+        "R2",
+        "R9"
+      ],
+      "synonyms": [
+        "Pure soy milk",
+        "Susu kedelai",
+        "Soy milk"
+      ]
+    },
+    {
+      "number": 146,
+      "page": 10,
+      "standard_name": "Susu oat bersertifikat bebas gluten",
+      "english_synonyms": "Oat milk (certified gluten-free)",
+      "additive_codes": "-",
+      "category": "perhatian",
+      "reference_codes": [
+        "R2",
+        "R9"
+      ],
+      "synonyms": [
+        "Oat milk (certified gluten-free)",
+        "Oat milk",
+        "Susu oat"
+      ]
+    },
+    {
+      "number": 147,
+      "page": 10,
+      "standard_name": "Gula pasir murni",
+      "english_synonyms": "Cane sugar (pure)",
+      "additive_codes": "-",
+      "category": "aman",
+      "reference_codes": [
+        "R2",
+        "R9"
+      ],
+      "synonyms": [
+        "Cane sugar (pure)",
+        "Cane sugar",
+        "Gula pasir",
+        "Gula",
+        "Sugar"
+      ]
+    },
+    {
+      "number": 148,
+      "page": 10,
+      "standard_name": "Garam",
+      "english_synonyms": "Salt",
+      "additive_codes": "-",
+      "category": "aman",
+      "reference_codes": [
+        "R2",
+        "R9"
+      ],
+      "synonyms": [
+        "Salt",
+        "Natrium klorida",
+        "Sodium chloride",
+        "Garam dapur"
+      ]
+    },
+    {
+      "number": 149,
+      "page": 10,
+      "standard_name": "Tepung beras",
+      "english_synonyms": "Rice flour",
+      "additive_codes": "-",
+      "category": "aman",
+      "reference_codes": [
+        "R2",
+        "R9"
+      ],
+      "synonyms": [
+        "Rice flour"
+      ]
+    },
+    {
+      "number": 150,
+      "page": 10,
+      "standard_name": "Tepung jagung (maizena murni)",
+      "english_synonyms": "Corn starch / cornflour (pure)",
+      "additive_codes": "-",
+      "category": "aman",
+      "reference_codes": [
+        "R2",
+        "R9"
+      ],
+      "synonyms": [
+        "Corn starch / cornflour (pure)",
+        "Tepung jagung",
+        "Corn starch / cornflour",
+        "Maizena",
+        "Pati jagung",
+        "Corn flour",
+        "Corn starch",
+        "Cornflour"
+      ]
+    },
+    {
+      "number": 151,
+      "page": 10,
+      "standard_name": "Tepung tapioka",
+      "english_synonyms": "Tapioca flour",
+      "additive_codes": "-",
+      "category": "aman",
+      "reference_codes": [
+        "R2",
+        "R9"
+      ],
+      "synonyms": [
+        "Tapioca flour",
+        "Tapioka",
+        "Tapioca starch",
+        "Cassava starch"
+      ]
+    },
+    {
+      "number": 152,
+      "page": 10,
+      "standard_name": "Tepung kelapa",
+      "english_synonyms": "Coconut flour",
+      "additive_codes": "-",
+      "category": "aman",
+      "reference_codes": [
+        "R2",
+        "R9"
+      ],
+      "synonyms": [
+        "Coconut flour"
+      ]
+    },
+    {
+      "number": 153,
+      "page": 10,
+      "standard_name": "Tepung kacang almond",
+      "english_synonyms": "Almond flour",
+      "additive_codes": "-",
+      "category": "aman",
+      "reference_codes": [
+        "R2",
+        "R9"
+      ],
+      "synonyms": [
+        "Almond flour",
+        "Tepung almond"
+      ]
+    },
+    {
+      "number": 154,
+      "page": 10,
+      "standard_name": "Tepung garut (arrowroot)",
+      "english_synonyms": "Arrowroot flour",
+      "additive_codes": "-",
+      "category": "aman",
+      "reference_codes": [
+        "R2",
+        "R9"
+      ],
+      "synonyms": [
+        "Arrowroot flour",
+        "Tepung garut",
+        "Arrowroot"
+      ]
+    },
+    {
+      "number": 155,
+      "page": 10,
+      "standard_name": "Air mineral",
+      "english_synonyms": "Mineral water",
+      "additive_codes": "-",
+      "category": "aman",
+      "reference_codes": [
+        "R9"
+      ],
+      "synonyms": [
+        "Mineral water"
+      ]
+    },
+    {
+      "number": 156,
+      "page": 10,
+      "standard_name": "Suplemen kalsium (atas anjuran dokter)",
+      "english_synonyms": "Calcium supplement (as advised by physician)",
+      "additive_codes": "-",
+      "category": "aman",
+      "reference_codes": [
+        "R9"
+      ],
+      "synonyms": [
+        "Calcium supplement (as advised by physician)",
+        "Suplemen kalsium",
+        "Calcium supplement"
+      ]
+    },
+    {
+      "number": 157,
+      "page": 11,
+      "standard_name": "Suplemen vitamin D (atas anjuran dokter)",
+      "english_synonyms": "Vitamin D supplement (as advised by physician)",
+      "additive_codes": "-",
+      "category": "aman",
+      "reference_codes": [
+        "R9"
+      ],
+      "synonyms": [
+        "Vitamin D supplement (as advised by physician)",
+        "Suplemen vitamin D",
+        "Vitamin D supplement"
+      ]
+    },
+    {
+      "number": 158,
+      "page": 11,
+      "standard_name": "Minyak ikan / Omega-3",
+      "english_synonyms": "Fish oil / Omega-3",
+      "additive_codes": "-",
+      "category": "aman",
+      "reference_codes": [
+        "R7",
+        "R9"
+      ],
+      "synonyms": [
+        "Fish oil / Omega-3",
+        "Minyak ikan",
+        "Omega-3",
+        "Fish oil"
+      ]
+    },
+    {
+      "number": 159,
+      "page": 11,
+      "standard_name": "Minyak sawit / Minyak kelapa sawit (termasuk minyak olein kelapa sawit, minyak goreng sawit)",
+      "english_synonyms": "Palm oil / palm olein (incl. cooking palm oil)",
+      "additive_codes": "-",
+      "category": "aman",
+      "reference_codes": [
+        "R2",
+        "R9"
+      ],
+      "synonyms": [
+        "Palm oil / palm olein (incl. cooking palm oil)",
+        "Minyak sawit / Minyak kelapa sawit",
+        "Palm oil / palm olein",
+        "Minyak sawit",
+        "Minyak kelapa sawit",
+        "Minyak olein kelapa sawit",
+        "Minyak goreng sawit",
+        "Palm oil",
+        "Palm olein",
+        "Cooking palm oil"
+      ]
+    },
+    {
+      "number": 160,
+      "page": 11,
+      "standard_name": "Minyak kanola",
+      "english_synonyms": "Canola oil",
+      "additive_codes": "-",
+      "category": "aman",
+      "reference_codes": [
+        "R2",
+        "R9"
+      ],
+      "synonyms": [
+        "Canola oil"
+      ]
+    },
+    {
+      "number": 161,
+      "page": 11,
+      "standard_name": "Biji bunga matahari",
+      "english_synonyms": "Sunflower seeds",
+      "additive_codes": "-",
+      "category": "aman",
+      "reference_codes": [
+        "R2",
+        "R9"
+      ],
+      "synonyms": [
+        "Sunflower seeds",
+        "Sunflower seed"
+      ]
+    },
+    {
+      "number": 162,
+      "page": 11,
+      "standard_name": "Biji labu",
+      "english_synonyms": "Pumpkin seeds",
+      "additive_codes": "-",
+      "category": "aman",
+      "reference_codes": [
+        "R2",
+        "R9"
+      ],
+      "synonyms": [
+        "Pumpkin seeds",
+        "Pumpkin seed"
+      ]
+    },
+    {
+      "number": 163,
+      "page": 11,
+      "standard_name": "Biji rami (flaxseed)",
+      "english_synonyms": "Flaxseed",
+      "additive_codes": "-",
+      "category": "aman",
+      "reference_codes": [
+        "R2",
+        "R9"
+      ],
+      "synonyms": [
+        "Flaxseed",
+        "Biji rami"
+      ]
+    },
+    {
+      "number": 164,
+      "page": 11,
+      "standard_name": "Biji chia",
+      "english_synonyms": "Chia seeds",
+      "additive_codes": "-",
+      "category": "aman",
+      "reference_codes": [
+        "R2",
+        "R9"
+      ],
+      "synonyms": [
+        "Chia seeds",
+        "Chia seed"
+      ]
+    },
+    {
+      "number": 165,
+      "page": 11,
+      "standard_name": "Kacang koro",
+      "english_synonyms": "Jack bean / koro bean",
+      "additive_codes": "-",
+      "category": "aman",
+      "reference_codes": [
+        "R2",
+        "R9"
+      ],
+      "synonyms": [
+        "Jack bean / koro bean",
+        "Jack bean",
+        "Koro bean"
+      ]
+    },
+    {
+      "number": 166,
+      "page": 11,
+      "standard_name": "Kacang mede (cashew)",
+      "english_synonyms": "Cashew nuts",
+      "additive_codes": "-",
+      "category": "perhatian",
+      "reference_codes": [
+        "R5",
+        "R2"
+      ],
+      "synonyms": [
+        "Cashew nuts",
+        "Kacang mede",
+        "Kacang mete",
+        "Cashew"
+      ]
+    },
+    {
+      "number": 167,
+      "page": 11,
+      "standard_name": "Kacang pistachio",
+      "english_synonyms": "Pistachio nuts",
+      "additive_codes": "-",
+      "category": "perhatian",
+      "reference_codes": [
+        "R5",
+        "R2"
+      ],
+      "synonyms": [
+        "Pistachio nuts",
+        "Pistachio"
+      ]
+    },
+    {
+      "number": 168,
+      "page": 11,
+      "standard_name": "Kacang walnut",
+      "english_synonyms": "Walnuts",
+      "additive_codes": "-",
+      "category": "perhatian",
+      "reference_codes": [
+        "R5",
+        "R2"
+      ],
+      "synonyms": [
+        "Walnuts",
+        "Walnut"
+      ]
+    },
+    {
+      "number": 169,
+      "page": 11,
+      "standard_name": "Kacang macadamia",
+      "english_synonyms": "Macadamia nuts",
+      "additive_codes": "-",
+      "category": "perhatian",
+      "reference_codes": [
+        "R5",
+        "R2"
+      ],
+      "synonyms": [
+        "Macadamia nuts",
+        "Macadamia"
+      ]
+    },
+    {
+      "number": 170,
+      "page": 11,
+      "standard_name": "Amonium bikarbonat",
+      "english_synonyms": "Ammonium bicarbonate",
+      "additive_codes": "INS 503(ii)",
+      "category": "aman",
+      "reference_codes": [
+        "R10"
+      ],
+      "synonyms": [
+        "Ammonium bicarbonate",
+        "E503(ii)",
+        "INS 503(ii)",
+        "INS503(ii)"
+      ]
+    },
+    {
+      "number": 171,
+      "page": 11,
+      "standard_name": "Natrium bikarbonat (soda kue)",
+      "english_synonyms": "Sodium bicarbonate (baking soda)",
+      "additive_codes": "INS 500(i)",
+      "category": "aman",
+      "reference_codes": [
+        "R10"
+      ],
+      "synonyms": [
+        "Sodium bicarbonate (baking soda)",
+        "Natrium bikarbonat",
+        "Sodium bicarbonate",
+        "Soda kue",
+        "Baking soda",
+        "E500(i)",
+        "INS 500(i)",
+        "INS500(i)"
+      ]
+    },
+    {
+      "number": 172,
+      "page": 11,
+      "standard_name": "Kalsium karbonat",
+      "english_synonyms": "Calcium carbonate",
+      "additive_codes": "INS 170",
+      "category": "aman",
+      "reference_codes": [
+        "R10"
+      ],
+      "synonyms": [
+        "Calcium carbonate",
+        "E170",
+        "INS 170",
+        "INS170"
+      ]
+    },
+    {
+      "number": 173,
+      "page": 11,
+      "standard_name": "Dinatrium difosfat / fosfat penstabil",
+      "english_synonyms": "Disodium phosphate / stabilizer phosphates",
+      "additive_codes": "INS 339-341",
+      "category": "aman",
+      "reference_codes": [
+        "R10"
+      ],
+      "synonyms": [
+        "Disodium phosphate / stabilizer phosphates",
+        "Dinatrium difosfat",
+        "Fosfat penstabil",
+        "Disodium phosphate",
+        "Stabilizer phosphates",
+        "E339",
+        "INS 339",
+        "INS339",
+        "E340",
+        "INS 340",
+        "INS340",
+        "E341",
+        "INS 341",
+        "INS341"
+      ]
+    },
+    {
+      "number": 174,
+      "page": 11,
+      "standard_name": "Antikempal silikon dioksida",
+      "english_synonyms": "Silicon dioxide (anti- caking agent)",
+      "additive_codes": "INS 551",
+      "category": "aman",
+      "reference_codes": [
+        "R10"
+      ],
+      "synonyms": [
+        "Silicon dioxide (anti-caking agent)",
+        "Silicon dioxide",
+        "Silikon dioksida",
+        "E551",
+        "INS 551",
+        "INS551"
+      ]
+    },
+    {
+      "number": 175,
+      "page": 11,
+      "standard_name": "Asam sitrat (pengatur keasaman)",
+      "english_synonyms": "Citric acid",
+      "additive_codes": "INS 330",
+      "category": "aman",
+      "reference_codes": [
+        "R10"
+      ],
+      "synonyms": [
+        "Citric acid",
+        "Asam sitrat",
+        "E330",
+        "INS 330",
+        "INS330"
+      ]
+    },
+    {
+      "number": 176,
+      "page": 12,
+      "standard_name": "Baking powder (kemasan komersial)",
+      "english_synonyms": "Baking powder (commercial blend)",
+      "additive_codes": "-",
+      "category": "perhatian",
+      "reference_codes": [
+        "R1",
+        "R10"
+      ],
+      "synonyms": [
+        "Baking powder (commercial blend)",
+        "Baking powder"
+      ]
+    },
+    {
+      "number": 177,
+      "page": 12,
+      "standard_name": "Sirup glukosa / Dekstrosa / Fruktosa / Sirup fruktosa",
+      "english_synonyms": "Glucose syrup / Dextrose / Fructose / High fructose syrup",
+      "additive_codes": "-",
+      "category": "aman",
+      "reference_codes": [
+        "R2",
+        "R9"
+      ],
+      "synonyms": [
+        "Glucose syrup / Dextrose / Fructose / High fructose syrup",
+        "Sirup glukosa",
+        "Dekstrosa",
+        "Fruktosa",
+        "Sirup fruktosa",
+        "Glucose syrup",
+        "Dextrose",
+        "Fructose",
+        "High fructose syrup",
+        "High fructose corn syrup",
+        "HFCS"
+      ]
+    },
+    {
+      "number": 178,
+      "page": 12,
+      "standard_name": "Sukrosa",
+      "english_synonyms": "Sucrose",
+      "additive_codes": "-",
+      "category": "aman",
+      "reference_codes": [
+        "R2",
+        "R9"
+      ],
+      "synonyms": [
+        "Sucrose"
+      ]
+    },
+    {
+      "number": 179,
+      "page": 12,
+      "standard_name": "Gula merah / Gula palem / Gula aren / Gula lontar / Gula tebu / Gula sorgum",
+      "english_synonyms": "Palm sugar / coconut sugar / cane sugar / sorghum sugar (unrefined sugar variants)",
+      "additive_codes": "-",
+      "category": "aman",
+      "reference_codes": [
+        "R2",
+        "R9"
+      ],
+      "synonyms": [
+        "Palm sugar / coconut sugar / cane sugar / sorghum sugar (unrefined sugar variants)",
+        "Palm sugar / coconut sugar / cane sugar / sorghum sugar",
+        "Gula merah",
+        "Gula palem",
+        "Gula aren",
+        "Gula lontar",
+        "Gula tebu",
+        "Gula sorgum",
+        "Palm sugar",
+        "Coconut sugar",
+        "Cane sugar",
+        "Sorghum sugar"
+      ]
+    },
+    {
+      "number": 180,
+      "page": 12,
+      "standard_name": "Manitol",
+      "english_synonyms": "Mannitol",
+      "additive_codes": "INS 421",
+      "category": "aman",
+      "reference_codes": [
+        "R10"
+      ],
+      "synonyms": [
+        "Mannitol",
+        "E421",
+        "INS 421",
+        "INS421"
+      ]
+    },
+    {
+      "number": 181,
+      "page": 12,
+      "standard_name": "Ragi (baker's yeast, murni)",
+      "english_synonyms": "Baker's yeast (plain)",
+      "additive_codes": "-",
+      "category": "aman",
+      "reference_codes": [
+        "R2",
+        "R9"
+      ],
+      "synonyms": [
+        "Baker's yeast (plain)",
+        "Ragi",
+        "Baker's yeast"
+      ]
+    },
+    {
+      "number": 182,
+      "page": 12,
+      "standard_name": "Rumput laut",
+      "english_synonyms": "Seaweed / kelp",
+      "additive_codes": "-",
+      "category": "aman",
+      "reference_codes": [
+        "R2",
+        "R9"
+      ],
+      "synonyms": [
+        "Seaweed / kelp",
+        "Seaweed",
+        "Kelp"
+      ]
+    },
+    {
+      "number": 183,
+      "page": 12,
+      "standard_name": "Bawang putih & bawang merah (segar/bubuk)",
+      "english_synonyms": "Garlic & onion (fresh/powder)",
+      "additive_codes": "-",
+      "category": "aman",
+      "reference_codes": [
+        "R2",
+        "R9"
+      ],
+      "synonyms": [
+        "Garlic & onion (fresh/powder)",
+        "Bawang putih & bawang merah",
+        "Garlic & onion",
+        "Bawang putih",
+        "Bawang merah",
+        "Garlic",
+        "Onion",
+        "Bubuk bawang putih",
+        "Bubuk bawang merah",
+        "Garlic powder",
+        "Onion powder"
+      ]
+    },
+    {
+      "number": 184,
+      "page": 12,
+      "standard_name": "Gom arab / Selulosa bubuk / Gom guar",
+      "english_synonyms": "Gum arabic / Cellulose powder / Guar gum",
+      "additive_codes": "INS 414/460/412",
+      "category": "aman",
+      "reference_codes": [
+        "R10"
+      ],
+      "synonyms": [
+        "Gum arabic / Cellulose powder / Guar gum",
+        "Gom arab",
+        "Selulosa bubuk",
+        "Gom guar",
+        "Gum arabic",
+        "Cellulose powder",
+        "Guar gum",
+        "Akasia gum",
+        "Acacia gum",
+        "Selulosa",
+        "Cellulose",
+        "Guaran",
+        "E414",
+        "INS 414",
+        "INS414",
+        "E460",
+        "INS 460",
+        "INS460",
+        "E412",
+        "INS 412",
+        "INS412"
+      ]
+    },
+    {
+      "number": 185,
+      "page": 12,
+      "standard_name": "Asam askorbat (Vitamin C)",
+      "english_synonyms": "Ascorbic acid (Vitamin C)",
+      "additive_codes": "INS 300",
+      "category": "aman",
+      "reference_codes": [
+        "R10"
+      ],
+      "synonyms": [
+        "Ascorbic acid (Vitamin C)",
+        "Asam askorbat",
+        "Ascorbic acid",
+        "Vitamin C",
+        "E300",
+        "INS 300",
+        "INS300"
+      ]
+    },
+    {
+      "number": 186,
+      "page": 12,
+      "standard_name": "Tokoferol / Tokoferol campuran pekat (Vitamin E)",
+      "english_synonyms": "Tocopherol / mixed tocopherols (Vitamin E)",
+      "additive_codes": "INS 307",
+      "category": "aman",
+      "reference_codes": [
+        "R10"
+      ],
+      "synonyms": [
+        "Tocopherol / mixed tocopherols (Vitamin E)",
+        "Tokoferol / Tokoferol campuran pekat",
+        "Tocopherol / mixed tocopherols",
+        "Tokoferol",
+        "Tokoferol campuran pekat",
+        "Vitamin E",
+        "Tocopherol",
+        "Mixed tocopherols",
+        "E307",
+        "INS 307",
+        "INS307"
+      ]
+    },
+    {
+      "number": 187,
+      "page": 12,
+      "standard_name": "Askorbil palmitat",
+      "english_synonyms": "Ascorbyl palmitate",
+      "additive_codes": "INS 304",
+      "category": "aman",
+      "reference_codes": [
+        "R10"
+      ],
+      "synonyms": [
+        "Ascorbyl palmitate",
+        "E304",
+        "INS 304",
+        "INS304"
+      ]
+    },
+    {
+      "number": 188,
+      "page": 12,
+      "standard_name": "Nisin",
+      "english_synonyms": "Nisin",
+      "additive_codes": "INS 234",
+      "category": "aman",
+      "reference_codes": [
+        "R10"
+      ],
+      "synonyms": [
+        "E234",
+        "INS 234",
+        "INS234"
+      ]
+    },
+    {
+      "number": 189,
+      "page": 12,
+      "standard_name": "Premiks vitamin B kompleks (B1, B2, B6, B12)",
+      "english_synonyms": "B-complex vitamin premix (B1, B2, B6, B12)",
+      "additive_codes": "-",
+      "category": "aman",
+      "reference_codes": [
+        "R9"
+      ],
+      "synonyms": [
+        "B-complex vitamin premix (B1, B2, B6, B12)",
+        "Premiks vitamin B kompleks",
+        "B-complex vitamin premix"
+      ]
+    },
+    {
+      "number": 190,
+      "page": 13,
+      "standard_name": "Gliserin (humektan, sumber bisa nabati/hewani)",
+      "english_synonyms": "Glycerin (humectant, source may vary)",
+      "additive_codes": "INS 422",
+      "category": "perhatian",
+      "reference_codes": [
+        "R1",
+        "R2"
+      ],
+      "synonyms": [
+        "Glycerin (humectant, source may vary)",
+        "Gliserin",
+        "Glycerin",
+        "Gliserol",
+        "Glycerine",
+        "Glycerol",
+        "E422",
+        "INS 422",
+        "INS422"
+      ]
+    },
+    {
+      "number": 191,
+      "page": 13,
+      "standard_name": "Ekstrak ragi (yeast extract)",
+      "english_synonyms": "Yeast extract",
+      "additive_codes": "-",
+      "category": "perhatian",
+      "reference_codes": [
+        "R1",
+        "R2"
+      ],
+      "synonyms": [
+        "Yeast extract",
+        "Ekstrak ragi"
+      ]
+    },
+    {
+      "number": 192,
+      "page": 13,
+      "standard_name": "Pengemulsi / Penstabil / Pengental nabati (sumber tidak spesifik)",
+      "english_synonyms": "Vegetable emulsifier / stabilizer / thickener (unspecified source)",
+      "additive_codes": "-",
+      "category": "perhatian",
+      "reference_codes": [
+        "R1",
+        "R2"
+      ],
+      "synonyms": [
+        "Vegetable emulsifier / stabilizer / thickener (unspecified source)",
+        "Pengemulsi / Penstabil / Pengental nabati",
+        "Vegetable emulsifier / stabilizer / thickener",
+        "Pengemulsi nabati",
+        "Penstabil nabati",
+        "Pengental nabati",
+        "Vegetable emulsifier",
+        "Vegetable stabilizer",
+        "Vegetable thickener"
+      ]
+    },
+    {
+      "number": 193,
+      "page": 13,
+      "standard_name": "Susu skim bubuk",
+      "english_synonyms": "Skim milk powder",
+      "additive_codes": "-",
+      "category": "hindari",
+      "reference_codes": [
+        "R1",
+        "R2"
+      ],
+      "synonyms": [
+        "Skim milk powder"
+      ]
+    },
+    {
+      "number": 194,
+      "page": 13,
+      "standard_name": "Krimer susu bubuk / Padatan susu (milk solids)",
+      "english_synonyms": "Milk-based creamer powder / milk solids",
+      "additive_codes": "-",
+      "category": "hindari",
+      "reference_codes": [
+        "R1",
+        "R2"
+      ],
+      "synonyms": [
+        "Milk-based creamer powder / milk solids",
+        "Krimer susu bubuk / Padatan susu",
+        "Krimer susu bubuk",
+        "Padatan susu",
+        "Milk-based creamer powder",
+        "Milk solids"
+      ]
+    },
+    {
+      "number": 195,
+      "page": 13,
+      "standard_name": "Enzim protease dari gandum dan kedelai (bahan penolong)",
+      "english_synonyms": "Protease enzyme processing aid derived from wheat and soy",
+      "additive_codes": "-",
+      "category": "hindari",
+      "reference_codes": [
+        "R1",
+        "R8"
+      ],
+      "synonyms": [
+        "Protease enzyme processing aid derived from wheat and soy",
+        "Enzim protease dari gandum dan kedelai"
+      ]
+    },
+    {
+      "number": 196,
+      "page": 13,
+      "standard_name": "Air berkarbonasi / Bahan pengkarbonasi karbon dioksida (CO2)",
+      "english_synonyms": "Carbonated water / carbon dioxide carbonating agent",
+      "additive_codes": "INS 290",
+      "category": "aman",
+      "reference_codes": [
+        "R10"
+      ],
+      "synonyms": [
+        "Carbonated water / carbon dioxide carbonating agent",
+        "Air berkarbonasi / Bahan pengkarbonasi karbon dioksida",
+        "Air berkarbonasi",
+        "Karbon dioksida",
+        "CO2",
+        "Carbonated water",
+        "Carbon dioxide",
+        "E290",
+        "INS 290",
+        "INS290"
+      ]
+    },
+    {
+      "number": 197,
+      "page": 13,
+      "standard_name": "Air kelapa / Konsentrat air kelapa",
+      "english_synonyms": "Coconut water / coconut water concentrate",
+      "additive_codes": "-",
+      "category": "aman",
+      "reference_codes": [
+        "R2",
+        "R9"
+      ],
+      "synonyms": [
+        "Coconut water / coconut water concentrate",
+        "Air kelapa",
+        "Konsentrat air kelapa",
+        "Coconut water",
+        "Coconut water concentrate"
+      ]
+    },
+    {
+      "number": 198,
+      "page": 13,
+      "standard_name": "Asam fosfat (pengatur keasaman)",
+      "english_synonyms": "Phosphoric acid",
+      "additive_codes": "INS 338",
+      "category": "aman",
+      "reference_codes": [
+        "R10"
+      ],
+      "synonyms": [
+        "Phosphoric acid",
+        "Asam fosfat",
+        "E338",
+        "INS 338",
+        "INS338"
+      ]
+    },
+    {
+      "number": 199,
+      "page": 13,
+      "standard_name": "Asam malat (pengatur keasaman)",
+      "english_synonyms": "Malic acid",
+      "additive_codes": "INS 296",
+      "category": "aman",
+      "reference_codes": [
+        "R10"
+      ],
+      "synonyms": [
+        "Malic acid",
+        "Asam malat",
+        "E296",
+        "INS 296",
+        "INS296"
+      ]
+    },
+    {
+      "number": 200,
+      "page": 13,
+      "standard_name": "Dikalium fosfat / Kalium fosfat",
+      "english_synonyms": "Dipotassium phosphate / Potassium phosphate",
+      "additive_codes": "INS 340",
+      "category": "aman",
+      "reference_codes": [
+        "R10"
+      ],
+      "synonyms": [
+        "Dipotassium phosphate / Potassium phosphate",
+        "Dikalium fosfat",
+        "Kalium fosfat",
+        "Dipotassium phosphate",
+        "Potassium phosphate",
+        "E340",
+        "INS 340",
+        "INS340"
+      ]
+    },
+    {
+      "number": 201,
+      "page": 13,
+      "standard_name": "Kalium karbonat",
+      "english_synonyms": "Potassium carbonate",
+      "additive_codes": "INS 501",
+      "category": "aman",
+      "reference_codes": [
+        "R10"
+      ],
+      "synonyms": [
+        "Potassium carbonate",
+        "E501",
+        "INS 501",
+        "INS501"
+      ]
+    },
+    {
+      "number": 202,
+      "page": 13,
+      "standard_name": "Kalium klorida",
+      "english_synonyms": "Potassium chloride",
+      "additive_codes": "INS 508",
+      "category": "aman",
+      "reference_codes": [
+        "R10"
+      ],
+      "synonyms": [
+        "Potassium chloride",
+        "E508",
+        "INS 508",
+        "INS508"
+      ]
+    },
+    {
+      "number": 203,
+      "page": 13,
+      "standard_name": "Kalium sitrat",
+      "english_synonyms": "Potassium citrate",
+      "additive_codes": "INS 332",
+      "category": "aman",
+      "reference_codes": [
+        "R10"
+      ],
+      "synonyms": [
+        "Potassium citrate",
+        "E332",
+        "INS 332",
+        "INS332"
+      ]
+    },
+    {
+      "number": 204,
+      "page": 13,
+      "standard_name": "Kalsium laktat",
+      "english_synonyms": "Calcium lactate",
+      "additive_codes": "INS 327",
+      "category": "aman",
+      "reference_codes": [
+        "R10"
+      ],
+      "synonyms": [
+        "Calcium lactate",
+        "E327",
+        "INS 327",
+        "INS327"
+      ]
+    },
+    {
+      "number": 205,
+      "page": 14,
+      "standard_name": "Magnesium karbonat / Magnesium klorida",
+      "english_synonyms": "Magnesium carbonate / Magnesium chloride",
+      "additive_codes": "INS 504/511",
+      "category": "aman",
+      "reference_codes": [
+        "R10"
+      ],
+      "synonyms": [
+        "Magnesium carbonate / Magnesium chloride",
+        "Magnesium karbonat",
+        "Magnesium klorida",
+        "Magnesium carbonate",
+        "Magnesium chloride",
+        "E504",
+        "INS 504",
+        "INS504",
+        "E511",
+        "INS 511",
+        "INS511"
+      ]
+    },
+    {
+      "number": 206,
+      "page": 14,
+      "standard_name": "Natrium karboksimetil selulosa (Na-CMC)",
+      "english_synonyms": "Sodium carboxymethyl cellulose",
+      "additive_codes": "INS 466",
+      "category": "aman",
+      "reference_codes": [
+        "R10"
+      ],
+      "synonyms": [
+        "Sodium carboxymethyl cellulose",
+        "Natrium karboksimetil selulosa",
+        "Na-CMC",
+        "CMC",
+        "E466",
+        "INS 466",
+        "INS466"
+      ]
+    },
+    {
+      "number": 207,
+      "page": 14,
+      "standard_name": "Natrium sitrat / Trinatrium sitrat",
+      "english_synonyms": "Sodium citrate / Trisodium citrate",
+      "additive_codes": "INS 331",
+      "category": "aman",
+      "reference_codes": [
+        "R10"
+      ],
+      "synonyms": [
+        "Sodium citrate / Trisodium citrate",
+        "Natrium sitrat",
+        "Trinatrium sitrat",
+        "Sodium citrate",
+        "Trisodium citrate",
+        "E331",
+        "INS 331",
+        "INS331"
+      ]
+    },
+    {
+      "number": 208,
+      "page": 14,
+      "standard_name": "Sekuestran kalsium dinatrium EDTA",
+      "english_synonyms": "Calcium disodium EDTA (sequestrant)",
+      "additive_codes": "INS 385",
+      "category": "aman",
+      "reference_codes": [
+        "R10"
+      ],
+      "synonyms": [
+        "Calcium disodium EDTA (sequestrant)",
+        "Calcium disodium EDTA",
+        "Kalsium dinatrium EDTA",
+        "E385",
+        "INS 385",
+        "INS385"
+      ]
+    },
+    {
+      "number": 209,
+      "page": 14,
+      "standard_name": "Zinc oxide / Zinc (fortifikasi mineral)",
+      "english_synonyms": "Zinc oxide / Zinc (mineral fortification)",
+      "additive_codes": "INS 314i",
+      "category": "aman",
+      "reference_codes": [
+        "R10"
+      ],
+      "synonyms": [
+        "Zinc oxide / Zinc (mineral fortification)",
+        "Zinc oxide / Zinc",
+        "Zinc oxide",
+        "Zinc",
+        "E314i",
+        "INS 314i",
+        "INS314i"
+      ]
+    },
+    {
+      "number": 210,
+      "page": 14,
+      "standard_name": "Asam laktat (sumber bisa nabati/hewani)",
+      "english_synonyms": "Lactic acid (source may vary)",
+      "additive_codes": "INS 270",
+      "category": "perhatian",
+      "reference_codes": [
+        "R1",
+        "R2"
+      ],
+      "synonyms": [
+        "Lactic acid (source may vary)",
+        "Asam laktat",
+        "Lactic acid",
+        "E270",
+        "INS 270",
+        "INS270"
+      ]
+    },
+    {
+      "number": 211,
+      "page": 14,
+      "standard_name": "Karagenan (rumput laut)",
+      "english_synonyms": "Carrageenan (seaweed- derived)",
+      "additive_codes": "INS 407",
+      "category": "aman",
+      "reference_codes": [
+        "R2",
+        "R9"
+      ],
+      "synonyms": [
+        "Carrageenan (seaweed-derived)",
+        "Karagenan",
+        "Carrageenan",
+        "E407",
+        "INS 407",
+        "INS407"
+      ]
+    },
+    {
+      "number": 212,
+      "page": 14,
+      "standard_name": "Gom gelan (gellan gum)",
+      "english_synonyms": "Gellan gum",
+      "additive_codes": "INS 418",
+      "category": "aman",
+      "reference_codes": [
+        "R10"
+      ],
+      "synonyms": [
+        "Gellan gum",
+        "Gom gelan",
+        "E418",
+        "INS 418",
+        "INS418"
+      ]
+    },
+    {
+      "number": 213,
+      "page": 14,
+      "standard_name": "Metil selulosa / Karboksi metil selulosa",
+      "english_synonyms": "Methylcellulose / Carboxymethyl cellulose",
+      "additive_codes": "INS 461/465",
+      "category": "aman",
+      "reference_codes": [
+        "R10"
+      ],
+      "synonyms": [
+        "Methylcellulose / Carboxymethyl cellulose",
+        "Metil selulosa",
+        "Karboksi metil selulosa",
+        "Methylcellulose",
+        "Carboxymethyl cellulose",
+        "E461",
+        "INS 461",
+        "INS461",
+        "E465",
+        "INS 465",
+        "INS465"
+      ]
+    },
+    {
+      "number": 214,
+      "page": 14,
+      "standard_name": "Polidekstrosa",
+      "english_synonyms": "Polydextrose",
+      "additive_codes": "INS 1200",
+      "category": "aman",
+      "reference_codes": [
+        "R10"
+      ],
+      "synonyms": [
+        "Polydextrose",
+        "E1200",
+        "INS 1200",
+        "INS1200"
+      ]
+    },
+    {
+      "number": 215,
+      "page": 14,
+      "standard_name": "Konnyaku bubuk",
+      "english_synonyms": "Konjac powder",
+      "additive_codes": "-",
+      "category": "aman",
+      "reference_codes": [
+        "R2",
+        "R9"
+      ],
+      "synonyms": [
+        "Konjac powder",
+        "Konnyaku",
+        "Konjac"
+      ]
+    },
+    {
+      "number": 216,
+      "page": 14,
+      "standard_name": "Nata de coco",
+      "english_synonyms": "Nata de coco (coconut gel)",
+      "additive_codes": "-",
+      "category": "aman",
+      "reference_codes": [
+        "R2",
+        "R9"
+      ],
+      "synonyms": [
+        "Nata de coco (coconut gel)",
+        "Coconut gel"
+      ]
+    },
+    {
+      "number": 217,
+      "page": 14,
+      "standard_name": "Ester asam lemak sukrosa (pengemulsi)",
+      "english_synonyms": "Sucrose esters of fatty acids (emulsifier)",
+      "additive_codes": "INS 473",
+      "category": "perhatian",
+      "reference_codes": [
+        "R1",
+        "R2"
+      ],
+      "synonyms": [
+        "Sucrose esters of fatty acids (emulsifier)",
+        "Ester asam lemak sukrosa",
+        "Sucrose esters of fatty acids",
+        "E473",
+        "INS 473",
+        "INS473"
+      ]
+    },
+    {
+      "number": 218,
+      "page": 14,
+      "standard_name": "Antibuih (sumber tidak spesifik)",
+      "english_synonyms": "Antifoaming agent (unspecified source)",
+      "additive_codes": "-",
+      "category": "perhatian",
+      "reference_codes": [
+        "R1",
+        "R2"
+      ],
+      "synonyms": [
+        "Antifoaming agent (unspecified source)",
+        "Antibuih",
+        "Antifoaming agent"
+      ]
+    },
+    {
+      "number": 219,
+      "page": 14,
+      "standard_name": "Popping boba (komposisi tidak spesifik)",
+      "english_synonyms": "Popping boba (unspecified composition)",
+      "additive_codes": "-",
+      "category": "perhatian",
+      "reference_codes": [
+        "R1",
+        "R2"
+      ],
+      "synonyms": [
+        "Popping boba (unspecified composition)",
+        "Popping boba"
+      ]
+    },
+    {
+      "number": 220,
+      "page": 14,
+      "standard_name": "Sweet modulator (bahan tidak spesifik)",
+      "english_synonyms": "Sweet modulator/flavor enhancer (unspecified)",
+      "additive_codes": "-",
+      "category": "perhatian",
+      "reference_codes": [
+        "R1",
+        "R2"
+      ],
+      "synonyms": [
+        "Sweet modulator/flavor enhancer (unspecified)",
+        "Sweet modulator",
+        "Sweet modulator/flavor enhancer",
+        "Flavor enhancer"
+      ]
+    },
+    {
+      "number": 221,
+      "page": 15,
+      "standard_name": "Sukralosa",
+      "english_synonyms": "Sucralose",
+      "additive_codes": "INS 955",
+      "category": "aman",
+      "reference_codes": [
+        "R11"
+      ],
+      "synonyms": [
+        "Sucralose",
+        "Splenda",
+        "E955",
+        "INS 955",
+        "INS955"
+      ]
+    },
+    {
+      "number": 222,
+      "page": 15,
+      "standard_name": "Pemanis alami glikosida steviol (Stevia)",
+      "english_synonyms": "Steviol glycosides (Stevia)",
+      "additive_codes": "INS 960",
+      "category": "aman",
+      "reference_codes": [
+        "R11"
+      ],
+      "synonyms": [
+        "Steviol glycosides (Stevia)",
+        "Pemanis alami glikosida steviol",
+        "Steviol glycosides",
+        "Stevia",
+        "Glikosida steviol",
+        "E960",
+        "INS 960",
+        "INS960"
+      ]
+    },
+    {
+      "number": 223,
+      "page": 15,
+      "standard_name": "Sorbitol (pemanis)",
+      "english_synonyms": "Sorbitol",
+      "additive_codes": "INS 420",
+      "category": "aman",
+      "reference_codes": [
+        "R11"
+      ],
+      "synonyms": [
+        "Sorbitol",
+        "E420",
+        "INS 420",
+        "INS420"
+      ]
+    },
+    {
+      "number": 224,
+      "page": 15,
+      "standard_name": "Monk fruit (pemanis alami)",
+      "english_synonyms": "Monk fruit sweetener",
+      "additive_codes": "-",
+      "category": "aman",
+      "reference_codes": [
+        "R11"
+      ],
+      "synonyms": [
+        "Monk fruit sweetener",
+        "Monk fruit"
+      ]
+    },
+    {
+      "number": 225,
+      "page": 15,
+      "standard_name": "Lemak susu",
+      "english_synonyms": "Milk fat",
+      "additive_codes": "-",
+      "category": "hindari",
+      "reference_codes": [
+        "R1",
+        "R2"
+      ],
+      "synonyms": [
+        "Milk fat"
+      ]
+    },
+    {
+      "number": 226,
+      "page": 15,
+      "standard_name": "Kultur bakteri yogurt (Lactobacillus, Streptococcus thermophilus)",
+      "english_synonyms": "Yogurt starter culture bacteria",
+      "additive_codes": "-",
+      "category": "perhatian",
+      "reference_codes": [
+        "R1",
+        "R2"
+      ],
+      "synonyms": [
+        "Yogurt starter culture bacteria",
+        "Kultur bakteri yogurt"
+      ]
+    },
+    {
+      "number": 227,
+      "page": 15,
+      "standard_name": "Kafein",
+      "english_synonyms": "Caffeine",
+      "additive_codes": "-",
+      "category": "aman",
+      "reference_codes": [
+        "R2",
+        "R9"
+      ],
+      "synonyms": [
+        "Caffeine"
+      ]
+    },
+    {
+      "number": 228,
+      "page": 15,
+      "standard_name": "Guarana / Ekstrak ginseng",
+      "english_synonyms": "Guarana / Ginseng extract",
+      "additive_codes": "-",
+      "category": "aman",
+      "reference_codes": [
+        "R2",
+        "R9"
+      ],
+      "synonyms": [
+        "Guarana / Ginseng extract",
+        "Guarana",
+        "Ekstrak ginseng",
+        "Ginseng extract"
+      ]
+    },
+    {
+      "number": 229,
+      "page": 15,
+      "standard_name": "Ekstrak bunga (safflower, krisantemum, mawar, melati)",
+      "english_synonyms": "Flower extracts (safflower, chrysanthemum, rose, jasmine)",
+      "additive_codes": "-",
+      "category": "aman",
+      "reference_codes": [
+        "R2",
+        "R9"
+      ],
+      "synonyms": [
+        "Flower extracts (safflower, chrysanthemum, rose, jasmine)",
+        "Ekstrak bunga",
+        "Flower extracts",
+        "Ekstrak safflower",
+        "Ekstrak krisantemum",
+        "Ekstrak mawar",
+        "Ekstrak melati"
+      ]
+    },
+    {
+      "number": 230,
+      "page": 15,
+      "standard_name": "Hop",
+      "english_synonyms": "Hops",
+      "additive_codes": "-",
+      "category": "aman",
+      "reference_codes": [
+        "R2",
+        "R9"
+      ],
+      "synonyms": [
+        "Hops"
+      ]
+    },
+    {
+      "number": 231,
+      "page": 15,
+      "standard_name": "Daun cincau / Cincau",
+      "english_synonyms": "Grass jelly leaf / Cincau",
+      "additive_codes": "-",
+      "category": "aman",
+      "reference_codes": [
+        "R2",
+        "R9"
+      ],
+      "synonyms": [
+        "Grass jelly leaf / Cincau",
+        "Daun cincau",
+        "Cincau",
+        "Grass jelly leaf"
+      ]
+    },
+    {
+      "number": 232,
+      "page": 15,
+      "standard_name": "Ekstrak sarang burung",
+      "english_synonyms": "Bird's nest extract",
+      "additive_codes": "-",
+      "category": "aman",
+      "reference_codes": [
+        "R2",
+        "R9"
+      ],
+      "synonyms": [
+        "Bird's nest extract"
+      ]
+    },
+    {
+      "number": 233,
+      "page": 15,
+      "standard_name": "Rempah Indonesia lain (jahe, kunyit, kencur)",
+      "english_synonyms": "Other Indonesian spices (ginger, turmeric, kencur/aromatic ginger)",
+      "additive_codes": "-",
+      "category": "aman",
+      "reference_codes": [
+        "R2",
+        "R9"
+      ],
+      "synonyms": [
+        "Other Indonesian spices (ginger, turmeric, kencur/aromatic ginger)",
+        "Rempah Indonesia lain",
+        "Other Indonesian spices",
+        "Jahe",
+        "Kunyit",
+        "Kencur",
+        "Ginger",
+        "Turmeric",
+        "Aromatic ginger"
+      ]
+    },
+    {
+      "number": 234,
+      "page": 15,
+      "standard_name": "Licorice",
+      "english_synonyms": "Licorice",
+      "additive_codes": "-",
+      "category": "aman",
+      "reference_codes": [
+        "R2",
+        "R9"
+      ],
+      "synonyms": []
+    },
+    {
+      "number": 235,
+      "page": 15,
+      "standard_name": "Buah tropis lain (nanas, leci, delima, kurma, jambu biji, kola, asam jawa)",
+      "english_synonyms": "Other tropical fruits (pineapple, lychee, pomegranate, dates, guava, kola nut, tamarind)",
+      "additive_codes": "-",
+      "category": "aman",
+      "reference_codes": [
+        "R2",
+        "R9"
+      ],
+      "synonyms": [
+        "Other tropical fruits (pineapple, lychee, pomegranate, dates, guava, kola nut, tamarind)",
+        "Buah tropis lain",
+        "Other tropical fruits",
+        "Nanas",
+        "Leci",
+        "Delima",
+        "Kurma",
+        "Jambu biji",
+        "Kola",
+        "Asam jawa",
+        "Pineapple",
+        "Lychee",
+        "Pomegranate",
+        "Dates",
+        "Guava",
+        "Kola nut",
+        "Tamarind"
+      ]
+    },
+    {
+      "number": 236,
+      "page": 16,
+      "standard_name": "Beta-karoten (pewarna alami)",
+      "english_synonyms": "Beta-carotene (natural color)",
+      "additive_codes": "INS 160a",
+      "category": "aman",
+      "reference_codes": [
+        "R10"
+      ],
+      "synonyms": [
+        "Beta-carotene (natural color)",
+        "Beta-karoten",
+        "Beta-carotene",
+        "Beta karoten",
+        "Beta carotene",
+        "E160a",
+        "INS 160a",
+        "INS160a"
+      ]
+    },
+    {
+      "number": 237,
+      "page": 16,
+      "standard_name": "Klorofilin tembaga kompleks",
+      "english_synonyms": "Copper chlorophyllin complex",
+      "additive_codes": "INS 141",
+      "category": "aman",
+      "reference_codes": [
+        "R10"
+      ],
+      "synonyms": [
+        "Copper chlorophyllin complex",
+        "E141",
+        "INS 141",
+        "INS141"
+      ]
+    },
+    {
+      "number": 238,
+      "page": 16,
+      "standard_name": "Karmin / Anato (pewarna alami)",
+      "english_synonyms": "Carmine (cochineal) / Annatto (natural color)",
+      "additive_codes": "INS 120/160b",
+      "category": "aman",
+      "reference_codes": [
+        "R10"
+      ],
+      "synonyms": [
+        "Carmine (cochineal) / Annatto (natural color)",
+        "Karmin / Anato",
+        "Carmine / Annatto",
+        "Karmin",
+        "Anato",
+        "Carmine",
+        "Cochineal",
+        "Annatto",
+        "E120",
+        "INS 120",
+        "INS120",
+        "E160b",
+        "INS 160b",
+        "INS160b"
+      ]
+    },
+    {
+      "number": 239,
+      "page": 16,
+      "standard_name": "Vitamin A dan D3 (fortifikasi minuman)",
+      "english_synonyms": "Vitamin A and D3 (beverage fortification)",
+      "additive_codes": "-",
+      "category": "aman",
+      "reference_codes": [
+        "R9"
+      ],
+      "synonyms": [
+        "Vitamin A and D3 (beverage fortification)",
+        "Vitamin A dan D3",
+        "Vitamin A and D3",
+        "Vitamin A",
+        "Vitamin D3"
+      ]
+    },
+    {
+      "number": 240,
+      "page": 16,
+      "standard_name": "Kolagen sapi",
+      "english_synonyms": "Bovine collagen",
+      "additive_codes": "-",
+      "category": "aman",
+      "reference_codes": [
+        "R2",
+        "R9"
+      ],
+      "synonyms": [
+        "Bovine collagen"
+      ]
+    }
+  ],
+  "references": {
+    "R1": {
+      "title": "Zurzolo et al. (2012). Hidden Allergens in Foods and Implications for Labelling and Clinical Care of Food Allergic Patients.",
+      "url": "https://doi.org/10.1007/s11882-012-0263-6"
+    },
+    "R2": {
+      "title": "Mar?-Bauset et al. (2014). Evidence of the gluten-free and casein-free diet in autism spectrum disorders: A systematic review.",
+      "url": "https://doi.org/10.1177/0883073814531330"
+    },
+    "R3": {
+      "title": "McCann et al. (2007). Food additives and hyperactive behaviour in children (Southampton Study).",
+      "url": "https://doi.org/10.1016/S0140-6736(07)61306-3"
+    },
+    "R4": {
+      "title": "European Commission Regulation (EC) No 1333/2008.",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32008R1333"
+    },
+    "R5": {
+      "title": "Duthie & Wood (2011). Natural salicylates: foods, functions and disease prevention.",
+      "url": "https://pubs.rsc.org/en/content/articlehtml/2011/fo/c1fo10128e"
+    },
+    "R6": {
+      "title": "Nigg et al. (2012). Meta-analysis of ADHD symptoms, restriction diets, and synthetic food color additives.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/22176942/"
+    },
+    "R7": {
+      "title": "Adams et al. (2011). Nutritional and metabolic status of children with autism vs. neurotypical children.",
+      "url": "https://doi.org/10.1186/1743-7075-8-34"
+    },
+    "R8": {
+      "title": "Rahmawati, Sunartini, Julia. Hubungan pola konsumsi gluten dan kasein dengan skor CARS pada anak ASD.",
+      "url": "https://jurnal.ugm.ac.id/jgki/article/view/17425"
+    },
+    "R9": {
+      "title": "Mar?-Bauset et al. (2016). Nutritional Impact of a Gluten-Free Casein-Free Diet in Children with Autism Spectrum Disorder.",
+      "url": "https://doi.org/10.1007/s10803-015-2582-7"
+    },
+    "R10": {
+      "title": "BPOM RI. Peraturan Badan POM Nomor 11 Tahun 2019 tentang Bahan Tambahan Pangan.",
+      "url": "https://bikinpabrik.id/wp-content/uploads/2019/08/PerBPOM-No-11-Tahun-2019-tentang-BTP.pdf"
+    },
+    "R11": {
+      "title": "Dur?n Ag?ero et al. (2018). Noncaloric Sweeteners in Children: A Controversial Theme.",
+      "url": "https://doi.org/10.1155/2018/4806534"
+    }
+  }
+}

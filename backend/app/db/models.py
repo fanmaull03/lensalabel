@@ -100,5 +100,6 @@ class ExpertValidation(Base):
     )
     expert_notes: Mapped[str | None] = mapped_column(Text, nullable=True)
     validated_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
+    source_category: Mapped[str | None] = mapped_column(String(80), nullable=True)
 
     ingredient: Mapped["Ingredient"] = relationship(back_populates="validations")

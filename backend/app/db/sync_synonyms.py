@@ -1,7 +1,7 @@
-"""Sinkronkan sinonim baru dari DRAFT_INGREDIENTS ke database yang sudah jalan.
+"""Tambahkan sinonim dari daftar tetap PDF ke database yang sudah jalan.
 
-Beda dengan seed_knowledge_base.py yang melewati bahan yang sudah ada: script
-ini khusus menambal sinonim yang belum ada pada bahan yang SUDAH ada, tanpa
+Untuk sinkronisasi lengkap gunakan seed_knowledge_base.py. Script ini khusus
+menambal sinonim yang belum ada pada bahan yang SUDAH ada, tanpa
 menyentuh baris ingredient-nya sama sekali. Aman dijalankan berulang.
 
 Sengaja hanya INSERT, tidak pernah UPDATE atau DELETE: kalau ada sinonim di
@@ -19,7 +19,7 @@ from __future__ import annotations
 import sys
 
 from app.db.models import Ingredient, IngredientSynonym
-from app.db.seed_knowledge_base import DRAFT_INGREDIENTS
+from app.db.seed_knowledge_base import FINAL_INGREDIENTS
 from app.db.session import SessionLocal
 
 
@@ -28,7 +28,7 @@ def sync(apply: bool) -> None:
         rencana: list[tuple[str, str]] = []
         hanya_di_db: list[tuple[str, str]] = []
 
-        for standard_name, synonyms, _, _ in DRAFT_INGREDIENTS:
+        for standard_name, synonyms, _, _ in FINAL_INGREDIENTS:
             ingredient = (
                 session.query(Ingredient).filter_by(standard_name=standard_name).first()
             )

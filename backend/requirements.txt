@@ -6,6 +6,7 @@ alembic
 pydantic-settings
 python-dotenv
 python-multipart
+Pillow
 easyocr
 opencv-python-headless
 rapidfuzz

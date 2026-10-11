@@ -16,12 +16,17 @@ from __future__ import annotations
 
 from collections import Counter
 from dataclasses import dataclass
+from functools import lru_cache
+import json
+from pathlib import Path
+import re
 
 from rapidfuzz import fuzz
 from rapidfuzz.distance import JaroWinkler
 from sqlalchemy.orm import Session, selectinload
 
 from app.db.models import Ingredient
+from app.matching.pair_blocks import is_forbidden_pair
 
 # --- Knob kalibrasi ---------------------------------------------------------
 # PLACEHOLDER AWAL, BELUM DIKALIBRASI SECARA EMPIRIS. Bobot sengaja dimulai
@@ -35,6 +40,16 @@ WEIGHTS = {
 }
 THRESHOLD = 75.0  # skor komposit minimal supaya token dianggap cocok
 NGRAM_SIZE = 2    # bigram karakter
+
+_WORD_RE = re.compile(r"[\w]+(?:-[\w]+)?", re.UNICODE)
+_NEGATION_WORDS = {"bebas", "tanpa", "non"}
+_NEGATION_PHRASES = {
+    ("bebas",),
+    ("bebas", "dari"),
+    ("tanpa",),
+    ("non",),
+    ("tidak", "mengandung"),
+}
 
 
 @dataclass
@@ -58,6 +73,10 @@ class MatchResult:
     ingredient_id: int | None = None
     standard_name: str | None = None
     category: str | None = None
+    span_start: int | None = None
+    span_end: int | None = None
+    match_source: str = "window"
+    shared_head_span: tuple[int, int] | None = None
 
 
 def _bigrams(text: str) -> Counter:
@@ -78,19 +97,35 @@ def ngram_similarity(a: str, b: str) -> float:
     return 200.0 * overlap / total
 
 
-def composite_score(a: str, b: str, weights: dict[str, float] = WEIGHTS) -> float:
-    """Weighted sum tiga algoritma, skala 0-100. Case-insensitive.
+def composite_score(
+    a: str,
+    b: str,
+    weights: dict[str, float] = WEIGHTS,
+    length_penalty_exponent: float = 0.8,
+) -> float:
+    """Weighted sum tiga algoritma, skala 0-100 dengan penalti selisih panjang karakter.
+    Case-insensitive.
 
-    Dibulatkan 2 desimal: bobot 1/3 bikin string identik jadi 99.99999999999999,
-    yang menyesatkan saat dibaca di laporan evaluasi.
+    Penalti berbasis selisih panjang (min_len / max_len) ** 0.8 diterapkan untuk
+    mencegah kata pendek (misal "Vitamin") match ke target panjang (misal "vitamin C" /
+    "Asam askorbat") tanpa merusak penanganan typo minor pada kata sedang/panjang.
+
+    Dibulatkan 2 desimal.
     """
     a, b = a.lower(), b.lower()
-    score = (
+    raw_score = (
         weights["levenshtein"] * fuzz.ratio(a, b)
         + weights["jaro_winkler"] * JaroWinkler.normalized_similarity(a, b) * 100
         + weights["ngram"] * ngram_similarity(a, b)
     )
-    return round(score, 2)
+    len_a, len_b = len(a), len(b)
+    max_len = max(len_a, len_b)
+    if max_len == 0:
+        return 0.0
+
+    length_ratio = min(len_a, len_b) / max_len
+    penalty_factor = length_ratio**length_penalty_exponent
+    return round(raw_score * penalty_factor, 2)
 
 
 def find_best_window(
@@ -113,20 +148,89 @@ def find_best_window(
     toleransi kalau OCR menambah atau menghilangkan satu kata.
     """
     words = token.split()
-    if len(words) <= 2:  # token lebih pendek dari name_variant, tidak ada yang digeser
-        return token, composite_score_fn(token, name_variant)
-
     word_count = len(name_variant.split())
     widths = {w for w in (word_count - 1, word_count, word_count + 1) if w >= 1}
 
     best_window, best_score = token, composite_score_fn(token, name_variant)
+    if is_forbidden_pair(token, name_variant):
+        best_score = -1.0
     for width in widths:
         for start in range(len(words) - width + 1):
             window = " ".join(words[start : start + width])
+            if is_forbidden_pair(window, name_variant):
+                continue
             score = composite_score_fn(window, name_variant)
             if score > best_score:
                 best_window, best_score = window, score
-    return best_window, best_score
+    return best_window, max(best_score, 0.0)
+
+
+def _words(value: str) -> list[str]:
+    return [word.lower() for word in _WORD_RE.findall(value)]
+
+
+def _has_zero_percent_negation(token: str, target_words: list[str]) -> bool:
+    """Return whether an intact zero-percent unit directly precedes target."""
+    if not target_words:
+        return False
+
+    target = r"\s+".join(re.escape(word) for word in target_words)
+    return re.search(
+        rf"(?<!\w)0(?:[.,]0+)?\s*%\s+{target}(?!\w)",
+        token,
+        flags=re.IGNORECASE,
+    ) is not None
+
+
+def _is_negated_match(token: str, matched_window: str, name_variant: str) -> bool:
+    """Return whether this local candidate is explicitly negated.
+
+    The check is anchored to the matched phrase. It never searches the whole
+    token for a free-standing qualifier, so a qualifier for another ingredient
+    cannot suppress this candidate.
+    """
+    target_words = _words(name_variant) or _words(matched_window)
+    if not target_words:
+        return False
+    if _has_zero_percent_negation(token, target_words):
+        return True
+
+    normalized_token = re.sub(r"[^\w%-]+", " ", token.lower()).strip()
+    target = r"[- ]+".join(re.escape(word) for word in target_words)
+    if re.search(rf"\b{target}[- ]free\b", normalized_token):
+        return True
+    if re.search(rf"\bnon[- ]{target}\b", normalized_token):
+        return True
+
+    token_words = _words(token)
+    if not token_words:
+        return False
+
+    target_start = None
+    for index in range(len(token_words) - len(target_words) + 1):
+        if token_words[index : index + len(target_words)] == target_words:
+            target_start = index
+            break
+    if target_start is None:
+        target_words = _words(name_variant)
+        for index in range(len(token_words) - len(target_words) + 1):
+            if token_words[index : index + len(target_words)] == target_words:
+                target_start = index
+                break
+    if target_start is None:
+        return False
+
+    preceding = token_words[max(0, target_start - 2) : target_start]
+    for phrase in _NEGATION_PHRASES:
+        if len(preceding) >= len(phrase) and tuple(preceding[-len(phrase) :]) == phrase:
+            return True
+
+    target_end = target_start + len(target_words)
+    following = token_words[target_end : target_end + 1]
+    if following == ["free"]:
+        return True
+
+    return False
 
 
 def load_knowledge_base(session: Session) -> list[dict]:
@@ -150,11 +254,25 @@ def load_knowledge_base(session: Session) -> list[dict]:
     return knowledge_base
 
 
+def load_knowledge_base_from_json(path: str | Path) -> list[dict]:
+    """Load a previously exported, flattened knowledge base snapshot."""
+    with Path(path).open(encoding="utf-8") as f:
+        knowledge_base = json.load(f)
+    if not isinstance(knowledge_base, list):
+        raise ValueError("Knowledge base snapshot must contain a JSON list")
+    required = {"ingredient_id", "standard_name", "category", "name_variant"}
+    for index, entry in enumerate(knowledge_base):
+        if not isinstance(entry, dict) or not required.issubset(entry):
+            raise ValueError(f"Invalid knowledge base entry at index {index}")
+    return knowledge_base
+
+
 def match_token(
     token: str,
     knowledge_base: list[dict],
     weights: dict[str, float] = WEIGHTS,
     threshold: float = THRESHOLD,
+    length_penalty_exponent: float = 0.8,
 ) -> MatchResult:
     """Cocokkan token ke semua name_variant, ambil skor tertinggi (top-1).
 
@@ -168,16 +286,36 @@ def match_token(
         window, score = find_best_window(
             token,
             entry["name_variant"],
-            lambda a, b: composite_score(a, b, weights),
+            lambda a, b: composite_score(a, b, weights, length_penalty_exponent),
         )
-        if score > best_score:
+        # Daftar tetap membedakan bahan seperti milk / almond milk dan
+        # wheat / wheat starch. Saat skor sama, pilih jendela yang memuat
+        # lebih banyak kata agar nama umum tidak menutupi bahan spesifik.
+        if score > best_score or (
+            score == best_score
+            and len(_words(window)) > len(_words(best_window or ""))
+        ):
             best_entry, best_score, best_window = entry, score, window
 
     if best_entry is None:  # knowledge base kosong
         return MatchResult(token=token, matched=False, score=0.0)
 
+    # KEPUTUSAN EKSPLISIT (Tie-boundary decision):
+    # Skor yang PERSIS SAMA DENGAN threshold (best_score >= threshold) dianggap MATCH.
+    # Nilai threshold (misal 75.0) merepresentasikan ambang batas minimum yang diterima
+    # (sesuai proposal Bab III). Hanya jika best_score < threshold (dibawah minimum)
+    # token ditolak (matched=False).
     if best_score < threshold:
         # Simpan skor & variant terdekat untuk eksplorasi kalibrasi threshold.
+        return MatchResult(
+            token=token,
+            matched=False,
+            score=best_score,
+            matched_window=best_window,
+            matched_variant=best_entry["name_variant"],
+        )
+
+    if _is_negated_match(token, best_window, best_entry["name_variant"]):
         return MatchResult(
             token=token,
             matched=False,
@@ -195,4 +333,168 @@ def match_token(
         ingredient_id=best_entry["ingredient_id"],
         standard_name=best_entry["standard_name"],
         category=best_entry["category"],
+    )
+
+
+_SHARED_HEAD_RE = re.compile(
+    r"(?<!\w)(?P<head>Dinatrium)\s+(?P<first>Inosinat|Guanilat)"
+    r"\s+dan\s+(?P<second>Inosinat|Guanilat)(?!\w)", re.IGNORECASE,
+)
+
+
+@lru_cache(maxsize=65536)
+def _many_score(a: str, b: str, weight_items: tuple, length_penalty_exponent: float = 0.8) -> float:
+    return composite_score(a, b, dict(weight_items), length_penalty_exponent)
+
+
+@lru_cache(maxsize=2048)
+def _best_fragment(token: str, left: int, right: int, variants: tuple, weight_items: tuple,
+                   length_penalty_exponent: float = 0.8):
+    fragment = token[left:right]
+    words = list(re.finditer(r"\S+", fragment))
+    best = None
+    for index, variant in enumerate(variants):
+        window = fragment
+        value = _many_score(fragment.lower(), variant.lower(), weight_items, length_penalty_exponent)
+        if is_forbidden_pair(fragment, variant):
+            value = -1.0
+        start, end = left, right
+        count = len(variant.split())
+        widths = {w for w in (count - 1, count, count + 1) if w >= 1}
+        for width in widths:
+            for offset in range(len(words) - width + 1):
+                selected = words[offset:offset + width]
+                candidate_window = " ".join(w[0] for w in selected)
+                if is_forbidden_pair(candidate_window, variant):
+                    continue
+                candidate_score = _many_score(candidate_window.lower(), variant.lower(), weight_items,
+                                              length_penalty_exponent)
+                if candidate_score > value:
+                    window, value = candidate_window, candidate_score
+                    start, end = left + selected[0].start(), left + selected[-1].end()
+        candidate = (value, window, start, end, index, "window", None)
+        if best is None or (value, len(_words(window))) > (best[0], len(_words(best[1]))):
+            best = candidate
+    if best is not None and best[0] < 0:
+        return None
+    return best
+
+
+def match_token_many(
+    token: str,
+    knowledge_base: list[dict],
+    weights: dict[str, float] = WEIGHTS,
+    threshold: float = THRESHOLD,
+    *,
+    shared_heads: bool = True,
+    secondary_min_score: float | None = None,
+    secondary_full_coverage: bool = False,
+    length_penalty_exponent: float = 0.8,
+) -> list[MatchResult]:
+    """Greedy matches on disjoint source spans, with the original score/negation.
+
+    Rejected negated spans are consumed too: a shorter alias must not re-enter
+    through the space left by a rejected ingredient. Remaining fragments are
+    scanned separately, never concatenated across a consumed span.
+    """
+    weight_items = tuple(sorted(weights.items()))
+    variants = tuple(entry["name_variant"] for entry in knowledge_base)
+
+    def score(a: str, b: str) -> float:
+        return _many_score(a.lower(), b.lower(), weight_items, length_penalty_exponent)
+
+    # Candidates: score, window, start, end, KB index, source, head span.
+    virtual = []
+    blocked = []
+    if shared_heads:
+        aliases = {}
+        for index, entry in enumerate(knowledge_base):
+            aliases.setdefault(entry["name_variant"].lower(), index)
+        for phrase in _SHARED_HEAD_RE.finditer(token):
+            first = f"{phrase['head']} {phrase['first']}"
+            second = f"{phrase['head']} {phrase['second']}"
+            if phrase['first'].lower() == phrase['second'].lower():
+                continue
+            if first.lower() not in aliases or second.lower() not in aliases:
+                continue
+            if (_is_negated_match(token, first, first)
+                    or _is_negated_match(token, phrase['second'], phrase['second'])):
+                # The old negation rule cannot infer the second omitted head.
+                # Abstain on the whole coordinated phrase instead of inventing scope.
+                blocked.append((phrase.start(), phrase.end()))
+                continue
+            index = aliases[second.lower()]
+            virtual.append((score(second, knowledge_base[index]["name_variant"]),
+                            second, phrase.start('second'), phrase.end('second'),
+                            index, "shared_head", phrase.span('head')))
+
+    def best_candidate(left: int, right: int):
+        best = _best_fragment(token, left, right, variants, weight_items, length_penalty_exponent)
+        for candidate in virtual:
+            if left <= candidate[2] and candidate[3] <= right:
+                if best is None or (candidate[0], len(_words(candidate[1])), -candidate[4]) > (
+                    best[0], len(_words(best[1])), -best[4]
+                ):
+                    best = candidate
+        return best
+
+    def result(candidate, accepted: bool) -> MatchResult:
+        value, window, start, end, index, source, head = candidate
+        entry = knowledge_base[index]
+        return MatchResult(
+            token=token, matched=accepted, score=value, matched_window=window,
+            matched_variant=entry["name_variant"],
+            ingredient_id=entry["ingredient_id"] if accepted else None,
+            standard_name=entry["standard_name"] if accepted else None,
+            category=entry["category"] if accepted else None,
+            span_start=start, span_end=end, match_source=source, shared_head_span=head,
+        )
+
+    output = []
+    fragments = [(0, len(token))]
+    for start, end in blocked:
+        remaining = []
+        for left, right in fragments:
+            if end <= left or start >= right:
+                remaining.append((left, right))
+            else:
+                remaining.extend(((left, start), (end, right)))
+        fragments = remaining
+        output.append(MatchResult(token=token, matched=False, score=0.0,
+                                  matched_window=token[start:end], span_start=start,
+                                  span_end=end, match_source="shared_head_negation_abstained"))
+    while fragments:
+        choices = []
+        for left, right in fragments:
+            while left < right and token[left].isspace():
+                left += 1
+            while right > left and token[right - 1].isspace():
+                right -= 1
+            if left == right:
+                continue
+            candidate = best_candidate(left, right)
+            if candidate is None:
+                output.append(MatchResult(token=token, matched=False, score=0.0,
+                                          span_start=left, span_end=right))
+            elif candidate[0] < threshold:
+                output.append(result(candidate, False))
+            else:
+                choices.append((candidate, left, right))
+        if not choices:
+            break
+        chosen, left, right = max(choices, key=lambda c: (
+            c[0][0], len(_words(c[0][1])), -c[0][4], -c[0][2],
+        ))
+        entry = knowledge_base[chosen[4]]
+        accepted = not _is_negated_match(token, chosen[1], entry["name_variant"])
+        output.append(result(chosen, accepted))
+        fragments = [(a, b) for candidate, a, b in choices if (a, b) != (left, right)]
+        fragments.extend(((left, chosen[2]), (chosen[3], right)))
+    # Preserve the classifier's token-level unknown policy: an already matched
+    # token did not turn unknown because it also contained qualifiers or noise.
+    accepted = [match for match in output if match.matched]
+    from app.matching.secondary_guards import filter_secondary_matches
+    return filter_secondary_matches(
+        accepted or output or [MatchResult(token=token, matched=False, score=0.0)],
+        minimum_score=secondary_min_score, full_coverage=secondary_full_coverage,
     )

@@ -9,16 +9,19 @@ Tahap 3 (app/ocr/reader.py) supaya model tidak di-load ulang tiap request.
 
 from __future__ import annotations
 
+from io import BytesIO
+
 import cv2
 import numpy as np
 from fastapi import APIRouter, Depends, File, HTTPException, UploadFile
+from PIL import Image, ImageOps, UnidentifiedImageError
 from sqlalchemy import text
 from sqlalchemy.exc import SQLAlchemyError
 from sqlalchemy.orm import Session
 
 from app.classifier.rule_based import classify_product
 from app.db.session import get_db
-from app.matching.fuzzy_matcher import load_knowledge_base, match_token
+from app.matching.fuzzy_matcher import load_knowledge_base, match_token_many
 from app.ocr.reader import extract_text
 from app.preprocessing.pipeline import preprocess
 from app.schemas.identify import (
@@ -84,13 +87,27 @@ def _classify_text(raw_text: str, db: Session) -> IdentifyResponse:
         )
 
     tokens = tokenize(extract_composition_section(raw_text))
-    hasil = classify_product([match_token(tok, knowledge_base) for tok in tokens])
+    hasil = classify_product([
+        match for tok in tokens for match in match_token_many(tok, knowledge_base)
+    ])
 
     return IdentifyResponse(**hasil, raw_text=raw_text)
 
 
+def decode_image_bytes(data: bytes) -> np.ndarray:
+    """Decode bytes with EXIF orientation applied, returning a BGR OpenCV array."""
+    try:
+        with Image.open(BytesIO(data)) as pil_image:
+            oriented = ImageOps.exif_transpose(pil_image).convert("RGB")
+            rgb = np.asarray(oriented)
+    except (UnidentifiedImageError, OSError) as exc:
+        raise ValueError("File bukan gambar yang valid atau formatnya tidak didukung.") from exc
+
+    return cv2.cvtColor(rgb, cv2.COLOR_RGB2BGR)
+
+
 def _decode_upload(file: UploadFile) -> np.ndarray:
-    """Baca upload jadi array OpenCV, langsung dari memori (tanpa simpan ke disk)."""
+    """Baca upload jadi array OpenCV dengan EXIF orientation diterapkan."""
     # file.size diisi Starlette sebelum body dibaca, jadi file kebesaran ditolak
     # tanpa pernah masuk memori sepenuhnya.
     if file.size is not None and file.size > MAX_UPLOAD_BYTES:
@@ -107,10 +124,9 @@ def _decode_upload(file: UploadFile) -> np.ndarray:
     if not data:
         raise HTTPException(status_code=400, detail="File kosong.")
 
-    image = cv2.imdecode(np.frombuffer(data, np.uint8), cv2.IMREAD_COLOR)
-    if image is None:
+    try:
+        return decode_image_bytes(data)
+    except ValueError as exc:
         raise HTTPException(
-            status_code=400,
-            detail="File bukan gambar yang valid atau formatnya tidak didukung.",
-        )
-    return image
+            status_code=400, detail=str(exc)
+        ) from exc

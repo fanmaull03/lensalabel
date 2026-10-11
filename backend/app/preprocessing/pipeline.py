@@ -1,7 +1,7 @@
 """Tahap 2 - Image preprocessing (OpenCV).
 
-Lima tahap berurutan sesuai proposal skripsi (urutan TIDAK boleh diubah):
-  1. grayscale -> 2. Gaussian blur -> 3. CLAHE -> 4. adaptive threshold -> 5. deskew
+Empat tahap berurutan sesuai proposal skripsi:
+    1. grayscale -> 2. Gaussian blur -> 3. CLAHE -> 4. deskew
 
 Tiap tahap dibuat sebagai fungsi terpisah supaya bisa dites satu per satu.
 Semua fungsi menerima dan mengembalikan numpy.ndarray (citra OpenCV, BGR/gray).
@@ -29,14 +29,6 @@ GAUSSIAN_KERNEL = (3, 3)
 CLAHE_CLIP_LIMIT = 2.0
 CLAHE_TILE_GRID = (8, 8)
 
-# blockSize besar & ganjil (31) supaya tiap piksel dibandingkan dengan area
-# yang cukup luas; penting untuk kemasan melengkung & cahaya tidak merata di
-# mana threshold global (satu nilai untuk seluruh gambar) gagal. C=10 menggeser
-# ambang sedikit ke atas untuk membuang sisa bayangan latar.
-THRESH_BLOCK_SIZE = 31
-THRESH_C = 10
-
-
 def to_grayscale(image: np.ndarray) -> np.ndarray:
     """Tahap 1: buang informasi warna, sisakan 1 kanal intensitas."""
     return cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
@@ -53,60 +45,48 @@ def enhance_contrast(gray: np.ndarray) -> np.ndarray:
     return clahe.apply(gray)
 
 
-def adaptive_threshold(gray: np.ndarray) -> np.ndarray:
-    """Tahap 4: binarisasi adaptif (hitam-putih), ambang dihitung per wilayah."""
-    return cv2.adaptiveThreshold(
-        gray,
-        255,
-        cv2.ADAPTIVE_THRESH_GAUSSIAN_C,
-        cv2.THRESH_BINARY,
-        THRESH_BLOCK_SIZE,
-        THRESH_C,
-    )
-
-def deskew(binary: np.ndarray) -> np.ndarray:
-    """Tahap 5: luruskan kemiringan teks akibat sudut foto.
+def deskew(gray: np.ndarray) -> np.ndarray:
+    """Tahap 4: luruskan kemiringan teks akibat sudut foto.
 
     Sudut dihitung dari kontur foreground terbesar saja, bukan seluruh
     piksel gelap, supaya estimasi lebih tahan terhadap noise latar
     belakang yang ikut jadi hitam setelah threshold.
     """
-    contours, _ = cv2.findContours(
-        255 - binary, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE
-    )
+    contours, _ = cv2.findContours(255 - gray, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
     if not contours:
-        return binary
+        return gray
 
     largest = max(contours, key=cv2.contourArea)
     angle = cv2.minAreaRect(largest)[-1]
     if angle < -45:
         angle += 90
+    elif angle > 45:
+        angle -= 90
 
-    # ponytail: hanya koreksi rotasi planar. Kemasan MELENGKUNG bikin teks
-    # terdistorsi non-linear yang tidak bisa diluruskan rotasi biasa; kalau
-    # akurasi curved jelek, upgrade ke dewarping (mis. page-dewarp) di sini.
+    # Lewati rotasi jika sudut kemiringan mendekati 0 (<0.5 derajat)
+    if abs(angle) < 0.5:
+        return gray
 
-    h, w = binary.shape
+    h, w = gray.shape
     matrix = cv2.getRotationMatrix2D((w / 2, h / 2), angle, 1.0)
     return cv2.warpAffine(
-        binary, matrix, (w, h),
+        gray, matrix, (w, h),
         flags=cv2.INTER_CUBIC,
         borderMode=cv2.BORDER_REPLICATE,
     )
 
 
-# Urutan tahap: dipakai runner test & (nanti) integrasi FastAPI.
+# Urutan tahap: dipakai runner test dan integrasi FastAPI.
 STAGES = [
     ("grayscale", to_grayscale),
     ("blur", reduce_noise),
     ("clahe", enhance_contrast),
-    ("threshold", adaptive_threshold),
     ("deskew", deskew),
 ]
 
 
 def preprocess(image: np.ndarray) -> np.ndarray:
-    """Jalankan kelima tahap berurutan, kembalikan citra siap-OCR."""
+    """Jalankan keempat tahap berurutan, kembalikan citra siap-OCR."""
     for _, stage_fn in STAGES:
         image = stage_fn(image)
     return image

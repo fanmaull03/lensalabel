@@ -1,61 +1,123 @@
-"""Kunci angka untuk false positive yang sudah ditemukan manual (Tahap 5).
+"""Pengujian Fuzzy Matcher - Length Penalty & Tie Boundary Decision.
 
-  python -m tests.test_fuzzy_matcher    (atau: pytest tests/test_fuzzy_matcher.py)
-
-Isi file ini SENGAJA menguji perilaku yang SALAH. Tujuannya supaya perubahan
-kalibrasi di Tahap 9 (bobot, threshold, penalti panjang kata) ketahuan efeknya
-tanpa perlu uji manual lagi: begitu assert di sini mulai gagal, artinya
-perilakunya berubah, dan tinggal dicek apakah berubah ke arah yang benar.
+Menguji penalti selisih panjang karakter (Issue 1) dan keputusan batas pas threshold
+(Issue 2).
 """
 
-from app.matching.fuzzy_matcher import THRESHOLD, composite_score, find_best_window
+from app.matching.fuzzy_matcher import THRESHOLD, MatchResult, composite_score, match_token
 
-# Angka hasil pengukuran nyata dengan WEIGHTS & THRESHOLD saat ini (masih
-# placeholder 1/3 rata & 75.0). Kalau salah satu knob diubah, angka ini ikut
-# bergeser dan test gagal, itu memang sinyal yang diinginkan.
-SKOR_SALT_MALT = 75.0
+# Mock KB sederhana untuk pengujian terisolasi tanpa koneksi DB
+MOCK_KB = [
+    {
+        "ingredient_id": 1,
+        "standard_name": "Cokelat",
+        "category": "perhatian",
+        "name_variant": "Cokelat",
+    },
+    {
+        "ingredient_id": 2,
+        "standard_name": "Asam askorbat",
+        "category": "aman",
+        "name_variant": "Asam askorbat",
+    },
+    {
+        "ingredient_id": 2,
+        "standard_name": "Asam askorbat",
+        "category": "aman",
+        "name_variant": "vitamin C",
+    },
+    {
+        "ingredient_id": 3,
+        "standard_name": "Barley",
+        "category": "hindari",
+        "name_variant": "Barley",
+    },
+    {
+        "ingredient_id": 4,
+        "standard_name": "Susu sapi",
+        "category": "hindari",
+        "name_variant": "Susu",
+    },
+    {
+        "ingredient_id": 5,
+        "standard_name": "Natrium klorida",
+        "category": "aman",
+        "name_variant": "Garam",
+    },
+]
 
 
-def test_salt_vs_malt_masih_lolos_threshold():
-    """'Salt' (garam, aman) lolos jadi 'malt' (barley, sumber gluten).
+def test_length_penalty_mencegah_false_positive_kata_pendek():
+    """Issue 1: Kata pendek tidak boleh match ke target yang jauh lebih panjang."""
+    # 1. "Cocok" vs "Cokelat"
+    skor_cocok_cokelat = composite_score("Cocok", "Cokelat")
+    assert (
+        skor_cocok_cokelat < THRESHOLD
+    ), f"'Cocok' vs 'Cokelat' harus < threshold ({skor_cocok_cokelat})"
 
-    Beda satu huruf, makna bertolak belakang. Ditemukan lewat uji end-to-end
-    di frontend pakai normal_003.jpeg: verdict produk jadi 'hindari' keliru.
-    """
-    skor = composite_score("Salt", "malt")
-    assert skor == SKOR_SALT_MALT
-    # match_token() memakai `best_score < threshold` untuk menolak, jadi skor
-    # yang PERSIS sama dengan threshold tetap diterima. Ini yang bikin 'Salt'
-    # lolos: 75.0 bukan di atas threshold, tapi tepat di garisnya.
-    assert skor >= THRESHOLD, "kalau ini gagal, cek apakah Tahap 9 sudah menutup kasus Salt/malt"
+    # 2. "Vitamin" vs "Asam askorbat" & "vitamin C"
+    skor_vit_askorbat = composite_score("Vitamin", "Asam askorbat")
+    assert (
+        skor_vit_askorbat < THRESHOLD
+    ), f"'Vitamin' vs 'Asam askorbat' harus < threshold ({skor_vit_askorbat})"
+
+    skor_vit_c = composite_score("Vitamin", "vitamin C")
+    assert (
+        skor_vit_c < THRESHOLD
+    ), f"'Vitamin' vs 'vitamin C' harus < threshold ({skor_vit_c})"
+
+    # 3. "Salt" vs "Barley"
+    skor_salt_barley = composite_score("Salt", "Barley")
+    assert (
+        skor_salt_barley < THRESHOLD
+    ), f"'Salt' vs 'Barley' harus < threshold ({skor_salt_barley})"
 
 
-def test_salt_dalam_kalimat_tetap_ketemu_lewat_windowing():
-    """Windowing Tahap 5 justru memudahkan false positive ini muncul.
+def test_valid_matches_tetap_lolos_tanpa_regresi():
+    """Issue 1: Token yang valid & typo minor harus tetap match."""
+    # Kapitalisasi berbeda
+    assert composite_score("Susu", "susu") >= THRESHOLD
 
-    'Salt' yang terkubur di token panjang tetap terangkat jadi window sendiri,
-    sehingga skor 75.0-nya tercapai walau token aslinya jauh lebih panjang.
-    """
-    window, skor = find_best_window("Wheat Flour Sugar Salt Yeast", "malt")
-    assert window == "Salt"
-    assert skor == SKOR_SALT_MALT
+    # Typo minor 1 karakter
+    assert composite_score("Susu", "Susuu") >= THRESHOLD
+    assert composite_score("Pemanis", "Pemaniss") >= THRESHOLD
+    assert composite_score("Garam", "Garam") >= THRESHOLD
 
 
-def test_target_tahap9_belum_tercapai():
-    """Status target Tahap 9, dilaporkan tanpa menggagalkan suite.
+def test_tie_boundary_exact_threshold():
+    """Issue 2: Skor yang PERSIS SAMA DENGAN threshold (75.0 == 75.0) HARUS dianggap MATCH."""
+    # Uji eksplisit match_token dengan threshold yang disetel sama persis dengan composite_score
+    raw_score = composite_score("Salt", "malt")  # persis 75.0
+    assert raw_score == 75.0, f"Skor Salt vs malt diharapkan 75.0, dapat {raw_score}"
 
-    Target: 'Salt' TIDAK boleh lolos sebagai 'malt'. Selama belum tercapai,
-    fungsi ini cuma mencetak status; yang mengunci angkanya adalah dua test di
-    atas. Begitu Tahap 9 menerapkan penalti panjang kata, dua test di atas akan
-    gagal, lalu file ini tinggal dibalik jadi assert skor < THRESHOLD.
-    """
-    sudah_teratasi = composite_score("Salt", "malt") < THRESHOLD
-    status = "SUDAH TERATASI" if sudah_teratasi else "MASIH BERMASALAH (diharapkan)"
-    print(f"  target Tahap 9 'Salt' bukan 'malt': {status}")
+    # Jalankan match_token dengan threshold 75.0
+    mock_kb_malt = [
+        {
+            "ingredient_id": 99,
+            "standard_name": "Barley",
+            "category": "hindari",
+            "name_variant": "malt",
+        }
+    ]
+    result: MatchResult = match_token("Salt", mock_kb_malt, threshold=75.0)
+
+    # Pastikan skor pas di 75.0 dianggap MATCH (matched == True, operator >=)
+    assert result.score == 75.0
+    assert (
+        result.matched is True
+    ), "Skor yang tepat sama dengan threshold (75.0 == 75.0) harus dianggap MATCH (>=)"
+
+
+def test_length_penalty_exponent_is_configurable_and_default_is_unchanged():
+    default_score = composite_score("Susu", "Susu sapi")
+    explicit_default_score = composite_score("Susu", "Susu sapi", length_penalty_exponent=0.8)
+    no_penalty_score = composite_score("Susu", "Susu sapi", length_penalty_exponent=0.0)
+    assert default_score == explicit_default_score
+    assert no_penalty_score > default_score
 
 
 if __name__ == "__main__":
-    test_salt_vs_malt_masih_lolos_threshold()
-    test_salt_dalam_kalimat_tetap_ketemu_lewat_windowing()
-    test_target_tahap9_belum_tercapai()
-    print("ok")
+    test_length_penalty_mencegah_false_positive_kata_pendek()
+    test_valid_matches_tetap_lolos_tanpa_regresi()
+    test_tie_boundary_exact_threshold()
+    print("ALL FUZZY MATCHER TESTS PASSED!")

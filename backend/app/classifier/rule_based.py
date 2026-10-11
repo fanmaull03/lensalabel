@@ -35,9 +35,18 @@ def classify_product(matches: list[MatchResult]) -> dict:
     saja bahan berisiko yang tidak dikenali sistem, sehingga menyebut produk
     aman berarti menyembunyikan ketidaktahuan dari orang tua. Karena itu token
     unmatched juga tetap dilaporkan di grup 'tidak_dikenali', bukan dibuang.
+
+    Deduplikasi Rincian Bahan:
+    Jika beberapa token dalam satu komposisi match ke entry kanonis yang sama
+    (misalnya token bilingual 'Susu Segar' dan 'Fresh Milk' -> 'Susu sapi'),
+    maka mereka dikelompokkan menjadi satu baris per bahan kanonis. Field
+    matched_window menggabungkan semua potongan teks yang terbaca.
     """
     result = {cat: [] for cat in CATEGORIES}
     result[UNKNOWN_GROUP] = []
+
+    # Kelompokkan bahan yang cocok berdasarkan kategori dan nama kanonis (standard_name)
+    grouped_matched: dict[str, dict[str, dict]] = {cat: {} for cat in CATEGORIES}
 
     for m in matches:
         if not m.matched:
@@ -49,13 +58,36 @@ def classify_product(matches: list[MatchResult]) -> dict:
                 }
             )
             continue
-        result[m.category].append(
-            {
-                "standard_name": m.standard_name,
-                "matched_window": m.matched_window,
-                "score": m.score,
+
+        cat = m.category
+        if cat not in grouped_matched:
+            continue
+
+        std_name = m.standard_name
+        window_text = (m.matched_window if m.matched_window is not None else m.token).strip()
+
+        if std_name not in grouped_matched[cat]:
+            grouped_matched[cat][std_name] = {
+                "standard_name": std_name,
+                "matched_windows": [window_text] if window_text else [],
+                "scores": [m.score],
             }
-        )
+        else:
+            entry = grouped_matched[cat][std_name]
+            if window_text and window_text not in entry["matched_windows"]:
+                entry["matched_windows"].append(window_text)
+            entry["scores"].append(m.score)
+
+    # Susun rincian bahan kanonis per kategori
+    for cat in CATEGORIES:
+        for std_name, entry in grouped_matched[cat].items():
+            result[cat].append(
+                {
+                    "standard_name": entry["standard_name"],
+                    "matched_window": ", ".join(entry["matched_windows"]) if entry["matched_windows"] else None,
+                    "score": max(entry["scores"]) if entry["scores"] else 0.0,
+                }
+            )
 
     if not matches:
         verdict = "tidak_terbaca"
@@ -70,3 +102,4 @@ def classify_product(matches: list[MatchResult]) -> dict:
 
     result["verdict"] = verdict
     return result
+

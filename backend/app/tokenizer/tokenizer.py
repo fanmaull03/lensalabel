@@ -22,8 +22,21 @@ MIN_TOKEN_LEN = 2              # <2 char sesudah dibersihkan = sisa noise OCR
 # Penanda rentang komposisi. Dicari fuzzy karena kata ini sering rusak parah
 # kena OCR (mis. "Komposisi" terbaca "Kompo5isi", "KOMPCSISI").
 OPEN_MARKERS = ("KOMPOSISI", "COMPOSITION", "INGREDIENTS")
-CLOSE_MARKERS = ("MENGANDUNG ALERGEN", "ALLERGEN", "DIPRODUKSI", "MANUFACTURED")
-MARKER_THRESHOLD = 70  # skor partial_ratio minimal supaya dianggap penanda
+CLOSE_MARKERS = (
+    "MENGANDUNG ALERGEN",
+    "ALLERGEN",
+    "DIPRODUKSI OLEH",
+    "DIPRODUKSI DI",
+    "DIPRODUKSI DENGAN",
+    "KODE PRODUKSI",
+    "MANUFACTURED BY",
+    "MANUFACTURED IN",
+    "MANUFACTURED WITH",
+)
+ALLERGEN_DISCLAIMER_MARKERS = ("LIHAT DAFTAR", "DICETAK TEBAL", "INFORMASI ALERGEN")
+WARNING_DISCLAIMER_MARKER = "DISARANKAN TIDAK DIKONSUMSI"
+MARKER_THRESHOLD = 70  # threshold marker pembuka
+CLOSING_MARKER_THRESHOLD = 90  # closing marker harus berupa frasa utuh
 
 
 def _find_marker(words: list[str], markers: tuple[str, ...], start: int = 0) -> int | None:
@@ -48,7 +61,37 @@ def _find_marker(words: list[str], markers: tuple[str, ...], start: int = 0) -> 
     return None
 
 
-def extract_composition_section(text: str) -> str:
+def _find_closing_marker(words: list[str], start: int = 0) -> int | None:
+    """Cari closing marker sebagai frasa utuh, bukan kecocokan kata tunggal."""
+    for i in range(start, len(words)):
+        context = " ".join(words[i : i + 20])
+        normalized_context = re.sub(r"[^\w]+", " ", context.upper()).strip()
+        if (
+            normalized_context.startswith("MENGANDUNG ")
+            and (
+                any(marker in normalized_context for marker in ALLERGEN_DISCLAIMER_MARKERS)
+                or WARNING_DISCLAIMER_MARKER in normalized_context
+            )
+        ):
+            return i
+
+        for marker in CLOSE_MARKERS:
+            width = len(marker.split())
+            window = " ".join(words[i : i + width])
+            normalized_marker = re.sub(r"[^\w]+", " ", marker.upper()).strip()
+            normalized_window = re.sub(r"[^\w]+", " ", window.upper()).strip()
+            if fuzz.ratio(normalized_marker, normalized_window) >= CLOSING_MARKER_THRESHOLD:
+                return i
+    return None
+
+
+SECONDARY_PANEL_MARKERS = (
+    "TAKARAN SAJI", "SERVING SIZE", "INFORMASI NILAI GIZI", "NUTRITION FACTS",
+    "JUMLAH PER SAJIAN", "ENERGI TOTAL", "PERSEN AKG", "KONSUMSI GULA",
+)
+
+
+def extract_composition_section(text: str, *, close_secondary_panels: bool = False) -> str:
     """Potong teks dari penanda pembuka sampai penanda penutup.
 
     Tujuannya membuang tabel nilai gizi & teks lain yang ikut terbaca OCR,
@@ -62,7 +105,18 @@ def extract_composition_section(text: str) -> str:
     if open_idx is None:
         return text
 
-    close_idx = _find_marker(words, CLOSE_MARKERS, start=open_idx + 1)
+    close_idx = _find_closing_marker(words, start=open_idx + 1)
+    if close_secondary_panels:
+        for index in range(open_idx + 1, close_idx if close_idx is not None else len(words)):
+            found = False
+            for marker in SECONDARY_PANEL_MARKERS:
+                window = " ".join(words[index:index + len(marker.split())])
+                normalized = re.sub(r"[^\w]+", " ", window.upper()).strip()
+                if fuzz.ratio(marker, normalized) >= CLOSING_MARKER_THRESHOLD:
+                    close_idx, found = index, True
+                    break
+            if found:
+                break
     return " ".join(words[open_idx:close_idx])  # close_idx None = sampai akhir
 
 
