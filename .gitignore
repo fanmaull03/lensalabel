@@ -42,3 +42,17 @@ evaluation/results/*
 !evaluation/results/.gitkeep
 dataset/debug_output/*
 !dataset/debug_output/.gitkeep
+
+# Local-only, sensitive, archival, or generated material
+Microsoft/
+backend/test_write.txt
+backend/regression_report*
+archive/db_dumps/
+archive/backups/
+archive/evaluation_gt_final_inputs/
+archive/ground_truth/
+archive/kb_v2_phase3_pre_gt_remap/
+dataset/raw_photos/
+dataset/raw_photos_backup/
+docs/lembar_KB/
+docs/proposal/*.pdf
