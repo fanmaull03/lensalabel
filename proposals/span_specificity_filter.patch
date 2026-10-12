@@ -1,0 +1,113 @@
+diff --git a/backend/app/matching/span_specificity.py b/backend/app/matching/span_specificity.py
+new file mode 100644
+--- /dev/null
++++ b/backend/app/matching/span_specificity.py
+@@ -0,0 +1,20 @@
++"""Candidate-level span specificity filter for overlapping ingredient names."""
++from __future__ import annotations
++from collections.abc import Iterable
++
++def filter_contained_candidates(candidates: Iterable[tuple], threshold: float) -> list[tuple]:
++    rows = list(candidates)
++    kept = []
++    for candidate in rows:
++        score, _window, start, end, entry_index, *_ = candidate
++        contained = any(
++            other is not candidate
++            and other[0] >= threshold
++            and other[4] != entry_index
++            and other[2] <= start and end <= other[3]
++            and (other[2], other[3]) != (start, end)
++            for other in rows
++        )
++        if not contained:
++            kept.append(candidate)
++    return kept
+diff --git a/backend/app/matching/fuzzy_matcher.py b/backend/app/matching/fuzzy_matcher.py
+--- a/backend/app/matching/fuzzy_matcher.py
++++ b/backend/app/matching/fuzzy_matcher.py
+@@ -26,6 +26,7 @@
+ from sqlalchemy.orm import Session, selectinload
+ 
+ from app.db.models import Ingredient
++from app.matching.span_specificity import filter_contained_candidates
+ 
+ # --- Knob kalibrasi ---------------------------------------------------------
+ # PLACEHOLDER AWAL, BELUM DIKALIBRASI SECARA EMPIRIS. Bobot sengaja dimulai
+@@ -337,28 +338,26 @@
+ 
+ 
+ @lru_cache(maxsize=2048)
+-def _best_fragment(token: str, left: int, right: int, variants: tuple, weight_items: tuple):
++def _best_fragment(token: str, left: int, right: int, variants: tuple, weight_items: tuple, threshold: float):
+     fragment = token[left:right]
+     words = list(re.finditer(r"\S+", fragment))
+-    best = None
++    candidates = []
+     for index, variant in enumerate(variants):
+-        window = fragment
+         value = _many_score(fragment.lower(), variant.lower(), weight_items)
+-        start, end = left, right
++        candidates.append((value, fragment, left, right, index, "window", None))
+         count = len(variant.split())
+         widths = {w for w in (count - 1, count, count + 1) if w >= 1}
+         for width in widths:
+             for offset in range(len(words) - width + 1):
+                 selected = words[offset:offset + width]
+-                candidate_window = " ".join(w[0] for w in selected)
+-                candidate_score = _many_score(candidate_window.lower(), variant.lower(), weight_items)
+-                if candidate_score > value:
+-                    window, value = candidate_window, candidate_score
+-                    start, end = left + selected[0].start(), left + selected[-1].end()
+-        candidate = (value, window, start, end, index, "window", None)
+-        if best is None or (value, len(_words(window))) > (best[0], len(_words(best[1]))):
+-            best = candidate
+-    return best
++                window = " ".join(w[0] for w in selected)
++                score = _many_score(window.lower(), variant.lower(), weight_items)
++                candidates.append((score, window, left + selected[0].start(),
++                                   left + selected[-1].end(), index, "window", None))
++    candidates = filter_contained_candidates(candidates, threshold)
++    if not candidates:
++        return None
++    return max(candidates, key=lambda row: (row[0], len(_words(row[1])), -row[4]))
+ 
+ 
+ def match_token_many(
+@@ -409,7 +408,7 @@
+                             index, "shared_head", phrase.span('head')))
+ 
+     def best_candidate(left: int, right: int):
+-        best = _best_fragment(token, left, right, variants, weight_items)
++        best = _best_fragment(token, left, right, variants, weight_items, threshold)
+         for candidate in virtual:
+             if left <= candidate[2] and candidate[3] <= right:
+                 if best is None or (candidate[0], len(_words(candidate[1])), -candidate[4]) > (
+diff --git a/evaluation/tests/test_span_specificity_proposal.py b/evaluation/tests/test_span_specificity_proposal.py
+new file mode 100644
+--- /dev/null
++++ b/evaluation/tests/test_span_specificity_proposal.py
+@@ -0,0 +1,23 @@
++from pathlib import Path
++import sys
++ROOT = Path(__file__).resolve().parents[2]
++sys.path.insert(0, str(ROOT / "backend"))
++from app.matching.span_specificity import filter_contained_candidates
++
++def candidate(score, start, end, entry_index, window):
++    return (score, window, start, end, entry_index, "window", None)
++
++def test_nested_generic_span_is_removed_when_specific_candidate_qualifies():
++    generic = candidate(100, 0, 4, 1, "Susu")
++    specific = candidate(100, 0, 15, 2, "Susu Skim Bubuk")
++    assert filter_contained_candidates([generic, specific], 75) == [specific]
++
++def test_noncontained_candidates_remain():
++    left = candidate(100, 0, 7, 1, "Bahan A")
++    right = candidate(100, 8, 15, 2, "Bahan B")
++    assert filter_contained_candidates([left, right], 75) == [left, right]
++
++def test_below_threshold_container_does_not_suppress():
++    generic = candidate(100, 0, 4, 1, "Susu")
++    specific = candidate(70, 0, 15, 2, "Susu Skim Bubuk")
++    assert filter_contained_candidates([generic, specific], 75) == [generic, specific]
