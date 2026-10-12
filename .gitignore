@@ -56,3 +56,21 @@ dataset/raw_photos/
 dataset/raw_photos_backup/
 docs/lembar_KB/
 docs/proposal/*.pdf
+
+# Local review workbooks and intermediate ground-truth exports; keep on disk,
+# but do not add them to release/freeze commits.
+dataset/ground_truth/calibration_ingredients_gt.json
+dataset/ground_truth/calibration_kb_risk_audit_v3.xlsx
+dataset/ground_truth/calibration_regeneration_summary.json
+dataset/ground_truth/calibration_regeneration_v2_summary.json
+dataset/ground_truth/calibration_regeneration_v4_summary.json
+dataset/ground_truth/calibration_review.xlsx
+dataset/ground_truth/calibration_review_v2.xlsx
+dataset/ground_truth/calibration_review_v4.xlsx
+dataset/ground_truth/correction_history/
+dataset/ground_truth/datar_047_ingredients_gt_final.json
+dataset/ground_truth/pending_transcript_corrections.json
+dataset/ground_truth/transcripts_datar.xlsx
+dataset/ground_truth/transcripts_melengkung.xlsx
+evaluation/ground_truth/*.xlsx
+proposals/
