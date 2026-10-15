@@ -105,35 +105,30 @@ pip install -r requirements.txt
 
 2. Buat `backend/.env` (lihat `.env.example`) dengan `DATABASE_URL` ke Postgres.
 
-3. Migrasi dan seed knowledge base:
+3. Migrasi dan seed KB v2 dari direktori `backend/`. Pastikan `DATABASE_URL`
+mengarah ke database PostgreSQL tujuan yang tabel `ingredients`-nya masih kosong:
 
 ```powershell
 alembic upgrade head
-python -m app.db.seed_knowledge_base
+python -m app.db.seed_knowledge_base_v2 --dry-run
+python -m app.db.seed_knowledge_base_v2 --apply
 uvicorn app.main:app --reload
 ```
 
 API interaktif: `http://127.0.0.1:8000/docs`.
 
-Knowledge base menggunakan 240 entri tetap dari
-`Lembar_Validasi_KB_Diet_GFCF_Autisme_final.pdf`: 118 Aman, 80 Perlu Perhatian,
-dan 42 Hindari. Data sumber, nomor baris/halaman, sinonim, kode aditif, dan
-rujukan R1–R11 disimpan di `backend/app/db/knowledge_base_gfcf.json`.
-Kelompok bahan pada satu baris PDF tetap menjadi satu entri database.
-Kategori mengikuti kolom Usulan Peneliti; status validasi ahli tidak diaktifkan
-karena kolom koreksi dan persetujuan ahli pada dokumen masih kosong.
+Seed deployment membaca `app/db/knowledge_base_v2_deploy.json` yang berisi 259
+bahan dan 1.030 sinonim (1.289 varian termasuk nama baku). Nama, kategori,
+dan himpunan variannya sama dengan KB v2 yang digunakan saat evaluasi.
+Berkas ini hanya memuat data bahan yang dibutuhkan aplikasi, tanpa catatan
+ahli atau data penelitian.
 
-`python -m app.db.seed_knowledge_base --dry-run` menampilkan rencana perubahan.
-Tanpa `--dry-run`, skrip memperbarui bahan dan sinonim, menambahkan entri baru,
-serta menghapus/menggabungkan bahan lama di luar daftar tetap dalam satu transaksi.
-ID bahan yang masih digunakan dan riwayat validasinya dipertahankan;
-perubahan kategori mengembalikan `is_validated=False`.
-Cadangan lengkap tiga tabel sebelum perubahan disimpan sebagai JSON di
-`evaluation/results/knowledge_base_backups/`. Menjalankan ulang skrip dengan
-data yang sudah sesuai tidak mengubah database.
-Kode rentang sumber pati tidak diperluas menjadi seluruh nomor dalam rentang;
-kode pada krimer campuran dan kode vanilin bertanda “terkait” disimpan sebagai
-metadata sumber, tanpa digunakan sebagai alias tunggal bahan tersebut.
+`--dry-run` hanya memeriksa berkas sumber dan menampilkan jumlah data;
+`--apply` mengisi tabel `ingredients` dan `ingredient_synonyms`. Seed
+menolak database yang sudah memiliki bahan untuk mencegah campuran KB.
+Jangan jalankan `app.db.seed_knowledge_base` untuk deployment: modul itu
+memuat KB lama. Untuk database yang telah berisi KB lama, buat cadangan
+terlebih dahulu dan lakukan migrasi terencana sebelum memakai seed v2.
 
 Frontend:
 
