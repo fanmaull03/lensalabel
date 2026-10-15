@@ -79,7 +79,7 @@ def test_c_preserves_first_match_even_in_a_later_token():
 
 
 def test_joined_spelling_only_creates_review_candidates():
-    from evaluation.calibration_annotations import joined_spelling_review_rows
+    joined_spelling_review_rows = pytest.importorskip("evaluation.calibration_annotations").joined_spelling_review_rows
     entries=kb('Beta carotene','Sodium caseinate','E 160a')
     assert len(joined_spelling_review_rows('x','Betacarotene Natural',[],entries))==1
     assert not joined_spelling_review_rows('x','Beta,carotene',[],entries)

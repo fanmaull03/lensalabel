@@ -3,7 +3,7 @@ import json
 
 import pytest
 
-from evaluation import run_grid_search
+run_grid_search = pytest.importorskip("evaluation.run_grid_search")
 
 
 @pytest.mark.parametrize('mode,expected_tp', [('old', 1), ('many', 2), ('many_shared', 2)])

@@ -11,7 +11,7 @@ venv/
 .coverage
 htmlcov/
 
-# Env (rahasia: DB password dll). .env.example tetap ikut.
+# Env dan kredensial lokal tidak masuk repo deploy.
 .env
 .env.local
 .env.*.local
@@ -74,3 +74,21 @@ dataset/ground_truth/transcripts_datar.xlsx
 dataset/ground_truth/transcripts_melengkung.xlsx
 evaluation/ground_truth/*.xlsx
 proposals/
+
+# Berkas riset dan rahasia dikecualikan dari repo deploy.
+**/.env*
+dataset/
+evaluation/
+archive/
+docs/evaluation/
+docs/lembar_KB/
+docs/proposal/
+docs/notes/
+
+# Format dokumen dan foto penelitian tidak masuk repo deploy.
+*.pdf
+*.docx
+*.xlsx
+*.zip
+*.jpg
+*.jpeg
