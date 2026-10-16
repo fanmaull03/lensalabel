@@ -10,16 +10,21 @@ Tahap 3 (app/ocr/reader.py) supaya model tidak di-load ulang tiap request.
 from __future__ import annotations
 
 from io import BytesIO
+from threading import BoundedSemaphore
+from typing import Literal
 
 import cv2
 import numpy as np
 from fastapi import APIRouter, Depends, File, HTTPException, UploadFile
+from fastapi.responses import JSONResponse
 from PIL import Image, ImageOps, UnidentifiedImageError
 from sqlalchemy import text
 from sqlalchemy.exc import SQLAlchemyError
 from sqlalchemy.orm import Session
 
 from app.classifier.rule_based import classify_product
+from app.api.runtime_config import load_runtime_config
+from app.db.kb_integrity import inspect_kb
 from app.db.session import get_db
 from app.matching.fuzzy_matcher import load_knowledge_base, match_token_many
 from app.ocr.reader import extract_text
@@ -29,7 +34,10 @@ from app.schemas.identify import (
     IdentifyResponse,
     ManualIdentifyRequest,
 )
-from app.tokenizer.tokenizer import extract_composition_section, tokenize
+from app.tokenizer.tokenizer import (
+    OPEN_MARKERS, _find_closing_marker, _find_marker,
+    extract_composition_section, tokenize,
+)
 
 router = APIRouter()
 
@@ -37,16 +45,32 @@ router = APIRouter()
 # Ditolak SEBELUM decode/OCR: laptop target 8GB RAM dan EasyOCR sendiri sudah
 # makan ~1.5GB, jangan sampai file raksasa ikut masuk memori.
 MAX_UPLOAD_BYTES = 10 * 1024 * 1024
+OCR_GATE = BoundedSemaphore(1)
 
 
 @router.get("/health", response_model=HealthResponse)
 def health(db: Session = Depends(get_db)) -> HealthResponse:
-    """Cek backend hidup dan koneksi database benar-benar bisa dipakai."""
+    """Periksa koneksi, KB operasional, dan hash konfigurasi beku."""
+    config = load_runtime_config()
     try:
         db.execute(text("SELECT 1"))
-    except SQLAlchemyError as exc:
-        raise HTTPException(status_code=503, detail=f"Database tidak bisa diakses: {exc}")
-    return HealthResponse(status="ok", database="ok")
+        kb = inspect_kb(db)
+    except SQLAlchemyError:
+        failed = HealthResponse(
+            status="unhealthy", database="unavailable", kb_version="unknown",
+            kb_hash=None, config_hash=config.config_sha256,
+        )
+        return JSONResponse(status_code=503, content=failed.model_dump())
+    result = HealthResponse(
+        status="ok" if kb.healthy else "unhealthy",
+        database="ok",
+        kb_version=kb.version,
+        kb_hash=kb.sha256,
+        config_hash=config.config_sha256,
+    )
+    if not kb.healthy:
+        return JSONResponse(status_code=503, content=result.model_dump())
+    return result
 
 
 @router.post("/identify", response_model=IdentifyResponse)
@@ -55,9 +79,14 @@ def identify(
     db: Session = Depends(get_db),
 ) -> IdentifyResponse:
     """Terima foto kemasan, kembalikan verdict + bahan per kategori."""
-    image = _decode_upload(file)
-    raw_text = extract_text(preprocess(image))
-    return _classify_text(raw_text, db)
+    try:
+        image = _decode_upload(file)
+        config = load_runtime_config()
+        with OCR_GATE:
+            raw_text = extract_text(preprocess(image), max_width=config.max_ocr_width)
+        return _classify_text(raw_text, db, input_source="photo")
+    finally:
+        file.file.close()
 
 
 @router.post("/identify-manual", response_model=IdentifyResponse)
@@ -68,10 +97,12 @@ def identify_manual(
     """Sama seperti /identify tapi dari teks yang diketik pengguna: lewati
     seluruh pipeline gambar (decode/preprocess/OCR), langsung ke tokenize.
     Response identik agar frontend memakai komponen hasil yang sama."""
-    return _classify_text(payload.text, db)
+    return _classify_text(payload.text, db, input_source="manual")
 
 
-def _classify_text(raw_text: str, db: Session) -> IdentifyResponse:
+def _classify_text(
+    raw_text: str, db: Session, *, input_source: Literal["photo", "manual"] = "photo"
+) -> IdentifyResponse:
     """Tahap dari teks -> verdict, dipakai bersama /identify dan
     /identify-manual (satu-satunya sumber logika klasifikasi)."""
     # Knowledge base di-query SEKALI per request, bukan per token: match_token()
@@ -83,15 +114,40 @@ def _classify_text(raw_text: str, db: Session) -> IdentifyResponse:
     if not knowledge_base:
         raise HTTPException(
             status_code=503,
-            detail="Knowledge base kosong. Jalankan seed_knowledge_base dulu.",
+            detail="Knowledge base kosong. Jalankan seed_knowledge_base_v2 pada database baru.",
         )
 
-    tokens = tokenize(extract_composition_section(raw_text))
+    config = load_runtime_config()
+    composition_text = extract_composition_section(raw_text)
+    tokens = tokenize(composition_text)
     hasil = classify_product([
-        match for tok in tokens for match in match_token_many(tok, knowledge_base)
+        match for tok in tokens for match in match_token_many(
+            tok, knowledge_base,
+            weights=config.weights,
+            threshold=config.threshold,
+            shared_heads=True,
+            secondary_min_score=None,
+            secondary_full_coverage=False,
+            length_penalty_exponent=config.length_penalty_exponent,
+        )
     ])
 
-    return IdentifyResponse(**hasil, raw_text=raw_text)
+    opening_found = closing_found = None
+    if input_source == "photo":
+        words = raw_text.split()
+        opening_index = _find_marker(words, OPEN_MARKERS)
+        opening_found = opening_index is not None
+        if opening_found:
+            closing_found = _find_closing_marker(words, start=opening_index + 1) is not None
+
+    return IdentifyResponse(
+        **hasil,
+        raw_text=raw_text,
+        composition_text=composition_text,
+        opening_marker_found=opening_found,
+        closing_marker_found=closing_found,
+        input_source=input_source,
+    )
 
 
 def decode_image_bytes(data: bytes) -> np.ndarray:

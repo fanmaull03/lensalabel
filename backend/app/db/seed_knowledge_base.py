@@ -3,6 +3,7 @@
 Kategori mengikuti Usulan Peneliti; koreksi dan tanda tangan ahli masih kosong.
 Dari backend/: python -m app.db.seed_knowledge_base [--dry-run]
 Data lama dicadangkan, lalu bahan dan sinonim dicerminkan dalam satu transaksi.
+Database KB v2 ditolak kecuali --allow-legacy diberikan secara eksplisit.
 """
 from __future__ import annotations
 
@@ -15,6 +16,7 @@ from sqlalchemy import create_engine, select
 from sqlalchemy.orm import Session, selectinload
 
 from app.config import settings
+from app.db.kb_integrity import is_v2_database
 from app.db.models import Base, ExpertValidation, Ingredient, IngredientSynonym, SafetyCategory
 
 SOURCE_PATH = Path(__file__).with_name("knowledge_base_gfcf.json")
@@ -80,8 +82,10 @@ def _snapshot(session: Session) -> dict:
     }
 
 
-def synchronize(session: Session) -> dict[str, int]:
+def synchronize(session: Session, *, allow_legacy: bool = False) -> dict[str, int]:
     """Cerminkan sumber tetap, pertahankan ID dan audit bahan yang masih dipakai."""
+    if not allow_legacy and is_v2_database(session):
+        raise RuntimeError("KB v2 terdeteksi; seed lama ditolak. Gunakan --allow-legacy hanya jika memang hendak menimpa KB v2.")
     existing = list(session.scalars(
         select(Ingredient).options(
             selectinload(Ingredient.synonyms), selectinload(Ingredient.validations)
@@ -136,14 +140,14 @@ def synchronize(session: Session) -> dict[str, int]:
     return stats
 
 
-def seed(*, dry_run: bool = False) -> None:
+def seed(*, dry_run: bool = False, allow_legacy: bool = False) -> None:
     engine = create_engine(settings.DATABASE_URL)
     if not dry_run:
         Base.metadata.create_all(engine)
     backup_path = None
     with Session(engine, autoflush=False) as session:
         snapshot = _snapshot(session)
-        stats = synchronize(session)
+        stats = synchronize(session, allow_legacy=allow_legacy)
         if dry_run:
             session.rollback()
         else:
@@ -164,4 +168,6 @@ def seed(*, dry_run: bool = False) -> None:
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--dry-run", action="store_true", help="Tampilkan rencana tanpa mengubah data.")
-    seed(dry_run=parser.parse_args().dry_run)
+    parser.add_argument("--allow-legacy", action="store_true", help="Izinkan seed v1 pada database KB v2 secara eksplisit.")
+    args = parser.parse_args()
+    seed(dry_run=args.dry_run, allow_legacy=args.allow_legacy)
