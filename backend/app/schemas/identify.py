@@ -68,3 +68,6 @@ class HealthResponse(BaseModel):
     kb_version: str | None = None
     kb_hash: str | None = None
     config_hash: str | None = None
+    matcher_mode: Literal["frozen", "optimized"]
+    frozen_matcher_hash: str
+    optimized_matcher_hash: str

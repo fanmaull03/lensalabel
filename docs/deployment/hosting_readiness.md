@@ -6,6 +6,8 @@ Diperbarui 16 Oktober 2026. Ini rancangan image, bukan image yang sudah dibangun
 
 Profil CPU lokal pada tiga foto kalibrasi (i3-1005G1, 7,74 GiB RAM, EasyOCR 1.7.2, Torch 2.13.0 CPU, OpenCV headless 5.0.0.93) mencatat pemuatan model 13,70 detik, proses hangat rata-rata 40,02 detik per foto, dan RSS puncak tersampel 2.456 MiB. Komponen waktu rata-rata: dekode 0,254, preprocessing 0,072, OCR 36,955, ekstraksi dan tokenisasi 0,004, pemuatan KB 0,275, matcher 2,461 detik; klasifikasi kurang dari 0,001 detik. Timer memakai QueryUnbiasedInterruptTime; RAM sedang terbatas saat profil, sehingga uji Linux tetap wajib. Profil matcher tersebut memakai eksperimen lokal, bukan jaminan waktu tag beku. Perkiraan image Linux CPU 1,3–2,5 GiB termasuk bobot EasyOCR sekitar 94 MiB; ukuran riil belum diukur.
 
+**Cold start:** pemuatan model terukur sekitar 14 detik; permintaan pertama pada laptop sekitar 54 detik jika memuat model dan memproses foto sekaligus. Untuk demo sinkron, pertahankan minimal satu instance hidup bila platform mendukungnya, atau lakukan pemanasan dengan permintaan foto kalibrasi yang tidak sensitif sebelum sesi. `/health` hanya memeriksa database dan KB; panggilan itu tidak memuat bobot OCR, sehingga bukan pemanasan model. Atur timeout proxy di atas waktu permintaan pertama dan ukur lagi pada host sebenarnya. Menyimpan bobot di image menghindari pengunduhan saat cold start, tetapi tidak menghilangkan waktu inisialisasi model.
+
 Mulai uji pada **RAM 4 GiB minimum**, lebih aman 6–8 GiB, satu worker dan satu OCR serentak. Batasi concurrency platform menjadi satu dan ukur ulang cold start, latensi p95, serta RSS pada image Linux. [Cloud Run](https://docs.cloud.google.com/run/quotas) mendokumentasikan memori sampai 32 GiB dan timeout permintaan sampai 60 menit; kelas 4–8 GiB memenuhi batas sumber daya. [Render compute plans](https://render.com/docs/compute-plans) menyediakan kelas 4/8 GiB; [dokumentasi Render](https://render.com/docs/heroku) menyebut respons HTTP hingga 100 menit. Keduanya layak diuji; ini belum keputusan pembelian. [Heroku](https://devcenter.heroku.com/articles/http-routing) memerlukan respons awal dalam 30 detik, sehingga alur sinkron CPU lokal sekitar 40 detik tidak cocok tanpa pola job/polling. Batas Railway belum cukup terverifikasi untuk direkomendasikan. Batas sumber daya dan harga perlu dicek lagi saat deployment.
 
 ## Rancangan image tersaring
@@ -63,6 +65,14 @@ CMD ["sh", "-c", "exec uvicorn app.main:app --host 0.0.0.0 --port ${PORT:-8000} 
 3. Jalankan `python -m app.db.seed_knowledge_base_deploy --dry-run`, lalu `--apply` satu kali pada database kosong. Seed ini memakai KB v2 operasional yang terlacak dan menolak tabel bahan yang sudah terisi. Tabel `expert_validations` tetap kosong pada paket deploy yang disanitasi.
 4. Verifikasi SQL: 259 baris `ingredients`, 1.030 `ingredient_synonyms`, 1.289 varian total. Periksa `GET /health`: `status=ok`, `kb_version=v2`, `kb_hash=4c6cbe97400c2947910f6c497f2d0170bf3295c94da7c64e8ea349ca05305c9e`, dan `config_hash=6f04865dd02fe7122a93ad6c6a0b32223f059205758bfb1b793477fe7426dd80`. Alihkan trafik hanya jika semua cocok.
 5. Pada database yang sudah berisi data, ambil dan verifikasi `pg_dump` sebelum migrasi. Seed deploy ini hanya untuk database kosong; gunakan prosedur migrasi yang telah diaudit untuk DB berisi data.
+
+PostgreSQL kecil dapat dipakai sebagai titik awal karena KB hanya 259 bahan dan 1.030 sinonim; kapasitas utama berada pada OCR di proses aplikasi. Gunakan penyedia dengan backup otomatis, koneksi privat, dan penyimpanan persisten. Jangan menyamakan ukuran database dengan kebutuhan RAM aplikasi. Setelah migrasi dan seed, wajib cocokkan hitungan serta hash melalui `/health` sebelum menerima trafik.
+
+## Pilihan matcher saat hosting
+
+`MATCHER_MODE=frozen` adalah default dan memanggil modul byte-identik dengan tag `eval-freeze-v1`. `MATCHER_MODE=optimized` memanggil modul terpisah yang hanya boleh dipakai setelah uji diferensial penuh pada 200 OCR tersimpan dan 2.000 teks sintetis lulus. `/health` melaporkan mode aktif dan hash SHA-256 kedua modul. Pilihan ini tidak mengubah konfigurasi evaluasi atau KB.
+
+Skrip `backend/tools/deploy_smoke_test.py` menerima URL layanan, folder foto lokal, cache prediksi beku, serta pemetaan nama opsional (`photo_file,cache_filename`) untuk 16 kasus wawancara anonim. Foto dan pemetaannya tetap di luar Git. CSV keluarannya mencatat bahan yang hilang/bertambah, kategori, verdict, status, dan HTTP status per foto.
 
 ## Usulan job dan polling, belum diimplementasikan
 

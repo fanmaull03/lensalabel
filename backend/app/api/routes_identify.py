@@ -26,7 +26,8 @@ from app.classifier.rule_based import classify_product
 from app.api.runtime_config import load_runtime_config
 from app.db.kb_integrity import inspect_kb
 from app.db.session import get_db
-from app.matching.fuzzy_matcher import load_knowledge_base, match_token_many
+from app.matching.fuzzy_matcher import load_knowledge_base
+from app.matching.runtime_mode import match_token_many, matcher_hashes, matcher_mode
 from app.ocr.reader import extract_text
 from app.preprocessing.pipeline import preprocess
 from app.schemas.identify import (
@@ -52,6 +53,8 @@ OCR_GATE = BoundedSemaphore(1)
 def health(db: Session = Depends(get_db)) -> HealthResponse:
     """Periksa koneksi, KB operasional, dan hash konfigurasi beku."""
     config = load_runtime_config()
+    hashes = matcher_hashes()
+    mode = matcher_mode()
     try:
         db.execute(text("SELECT 1"))
         kb = inspect_kb(db)
@@ -59,6 +62,8 @@ def health(db: Session = Depends(get_db)) -> HealthResponse:
         failed = HealthResponse(
             status="unhealthy", database="unavailable", kb_version="unknown",
             kb_hash=None, config_hash=config.config_sha256,
+            matcher_mode=mode, frozen_matcher_hash=hashes["frozen"],
+            optimized_matcher_hash=hashes["optimized"],
         )
         return JSONResponse(status_code=503, content=failed.model_dump())
     result = HealthResponse(
@@ -67,6 +72,9 @@ def health(db: Session = Depends(get_db)) -> HealthResponse:
         kb_version=kb.version,
         kb_hash=kb.sha256,
         config_hash=config.config_sha256,
+        matcher_mode=mode,
+        frozen_matcher_hash=hashes["frozen"],
+        optimized_matcher_hash=hashes["optimized"],
     )
     if not kb.healthy:
         return JSONResponse(status_code=503, content=result.model_dump())

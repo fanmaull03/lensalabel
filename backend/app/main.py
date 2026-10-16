@@ -15,6 +15,7 @@ from app.api import routes_identify
 from app.api.runtime_config import load_runtime_config
 from app.db.kb_integrity import inspect_kb
 from app.db.session import SessionLocal
+from app.matching.runtime_mode import FROZEN_MATCHER_SHA256, matcher_hashes, matcher_mode
 
 app = FastAPI(
     title="LensaLabel",
@@ -46,6 +47,9 @@ app.state.kb_healthy = False
 def check_knowledge_base_at_startup() -> None:
     """Catat penyimpangan KB sejak awal; /health tetap memeriksa ulang."""
     load_runtime_config()
+    matcher_mode()
+    if matcher_hashes()["frozen"] != FROZEN_MATCHER_SHA256:
+        raise RuntimeError("Modul matcher beku berubah dari tag eval-freeze-v1")
     try:
         with SessionLocal() as session:
             integrity = inspect_kb(session)
