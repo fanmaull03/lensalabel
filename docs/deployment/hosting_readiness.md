@@ -1,6 +1,6 @@
 ﻿# Kesiapan hosting LensaLabel
 
-Diperbarui 16 Oktober 2026. Ini rancangan image, bukan image yang sudah dibangun atau layanan yang sudah di-deploy. Konfigurasi penelitian dan hasil evaluasi tidak diubah.
+Audit historis 16 Oktober 2026. Dockerfile, `.dockerignore`, dan Compose sekarang tersedia; gunakan `DEPLOY_CONTAINER.md` untuk langkah rilis terkini. Image Linux belum dibangun atau diuji pada mesin ini. Konfigurasi penelitian dan hasil evaluasi tidak diubah.
 
 ## Kapasitas dan pilihan hosting
 

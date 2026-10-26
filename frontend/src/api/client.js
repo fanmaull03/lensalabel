@@ -51,8 +51,17 @@ async function send(path, init) {
     }
     if (response.status === 503) {
       throw new Error(
-        "Server belum siap (database bermasalah). Coba lagi beberapa saat, atau hubungi pengelola."
+        "Server belum siap. Coba lagi beberapa saat, atau hubungi pengelola."
       );
+    }
+    if (response.status === 413) {
+      throw new Error("Foto terlalu besar. Pilih foto berukuran di bawah 10 MB.");
+    }
+    if (response.status === 429) {
+      throw new Error("Terlalu banyak permintaan. Tunggu sebentar lalu coba lagi.");
+    }
+    if (response.status === 504) {
+      throw new Error("Waktu pemrosesan habis. Coba lagi dengan foto yang lebih jelas.");
     }
     throw new Error(detail ?? `Terjadi kesalahan di server (kode ${response.status}).`);
   }

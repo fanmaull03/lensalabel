@@ -1,0 +1,14 @@
+*
+!app/
+!app/**
+!alembic/
+!alembic/**
+!alembic.ini
+!deploy/
+!deploy/config_frozen.json
+!deploy/config_frozen.sha256
+!requirements-deploy.txt
+**/.env*
+**/__pycache__/
+**/*.pyc
+app/db/knowledge_base_gfcf.json

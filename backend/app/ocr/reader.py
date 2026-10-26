@@ -13,6 +13,7 @@ from __future__ import annotations
 import cv2
 import numpy as np
 import os
+from threading import Lock
 
 # Knob: batas lebar sebelum readtext. Naik dari 1000 -> 2000 berdasarkan
 # eksperimen ablasi (resolution_ablation_colab_summary.txt): 2000px jauh lebih
@@ -23,16 +24,19 @@ import os
 MAX_OCR_WIDTH = 2000
 
 _reader = None  # singleton, diisi saat pertama kali dibutuhkan
+_reader_lock = Lock()
 
 
 def get_reader():
     """Kembalikan instance EasyOCR tunggal (id+en). GPU opt-in via env."""
     global _reader
     if _reader is None:
-        import easyocr  # import di sini supaya modul lain tak ikut nunggu load model
+        with _reader_lock:
+            if _reader is None:
+                import easyocr  # import di sini supaya modul lain tak ikut nunggu load model
 
-        use_gpu = os.environ.get("EASYOCR_GPU", "0").strip().lower() in {"1", "true", "yes", "on"}
-        _reader = easyocr.Reader(["id", "en"], gpu=use_gpu)
+                use_gpu = os.environ.get("EASYOCR_GPU", "0").strip().lower() in {"1", "true", "yes", "on"}
+                _reader = easyocr.Reader(["id", "en"], gpu=use_gpu)
     return _reader
 
 

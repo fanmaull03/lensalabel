@@ -9,6 +9,7 @@ Tahap 3 (app/ocr/reader.py) supaya model tidak di-load ulang tiap request.
 
 from __future__ import annotations
 
+import logging
 from io import BytesIO
 from threading import BoundedSemaphore
 from typing import Literal
@@ -28,7 +29,7 @@ from app.db.kb_integrity import inspect_kb
 from app.db.session import get_db
 from app.matching.fuzzy_matcher import load_knowledge_base
 from app.matching.runtime_mode import match_token_many, matcher_hashes, matcher_mode
-from app.ocr.reader import extract_text
+from app.ocr.reader import extract_text, get_reader
 from app.preprocessing.pipeline import preprocess
 from app.schemas.identify import (
     HealthResponse,
@@ -46,6 +47,7 @@ router = APIRouter()
 # Ditolak SEBELUM decode/OCR: laptop target 8GB RAM dan EasyOCR sendiri sudah
 # makan ~1.5GB, jangan sampai file raksasa ikut masuk memori.
 MAX_UPLOAD_BYTES = 10 * 1024 * 1024
+MAX_IMAGE_PIXELS = 20_000_000
 OCR_GATE = BoundedSemaphore(1)
 
 
@@ -78,6 +80,19 @@ def health(db: Session = Depends(get_db)) -> HealthResponse:
     )
     if not kb.healthy:
         return JSONResponse(status_code=503, content=result.model_dump())
+    return result
+
+
+@router.get("/ready", response_model=HealthResponse)
+def ready(db: Session = Depends(get_db)) -> HealthResponse:
+    result = health(db)
+    if isinstance(result, JSONResponse):
+        return result
+    try:
+        get_reader()
+    except Exception:
+        logging.getLogger(__name__).exception("Model OCR belum siap")
+        return JSONResponse(status_code=503, content={"detail": "Model OCR belum siap."})
     return result
 
 
@@ -117,8 +132,9 @@ def _classify_text(
     # dipanggil puluhan kali dan tiap query ulang akan sia-sia.
     try:
         knowledge_base = load_knowledge_base(db)
-    except SQLAlchemyError as exc:
-        raise HTTPException(status_code=503, detail=f"Gagal query knowledge base: {exc}")
+    except SQLAlchemyError:
+        logging.getLogger(__name__).exception("Gagal query knowledge base")
+        raise HTTPException(status_code=503, detail="Knowledge base belum tersedia.")
     if not knowledge_base:
         raise HTTPException(
             status_code=503,
@@ -162,9 +178,11 @@ def decode_image_bytes(data: bytes) -> np.ndarray:
     """Decode bytes with EXIF orientation applied, returning a BGR OpenCV array."""
     try:
         with Image.open(BytesIO(data)) as pil_image:
+            if pil_image.width * pil_image.height > MAX_IMAGE_PIXELS:
+                raise ValueError("Resolusi gambar terlalu besar, maksimal 20 megapiksel.")
             oriented = ImageOps.exif_transpose(pil_image).convert("RGB")
             rgb = np.asarray(oriented)
-    except (UnidentifiedImageError, OSError) as exc:
+    except (UnidentifiedImageError, OSError, Image.DecompressionBombError) as exc:
         raise ValueError("File bukan gambar yang valid atau formatnya tidak didukung.") from exc
 
     return cv2.cvtColor(rgb, cv2.COLOR_RGB2BGR)

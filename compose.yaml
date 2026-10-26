@@ -1,0 +1,18 @@
+services:
+  backend:
+    build: ./backend
+    restart: unless-stopped
+    environment:
+      DATABASE_URL: ${DATABASE_URL:?Set DATABASE_URL in deploy.env}
+      LENSALABEL_CORS_ORIGINS: ${PUBLIC_ORIGIN:?Set PUBLIC_ORIGIN in deploy.env}
+      MATCHER_MODE: ${MATCHER_MODE:-frozen}
+    mem_limit: 6g
+
+  frontend:
+    build: ./frontend
+    restart: unless-stopped
+    depends_on:
+      backend:
+        condition: service_healthy
+    ports:
+      - "${BIND_ADDR:-127.0.0.1}:${HTTP_PORT:-8080}:8080"

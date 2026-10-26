@@ -1,6 +1,9 @@
 — tanpa perlu menghafal istilah teknis di baliknya.
 # LensaLabel
 
+Untuk checkout hosting gabungan ini, mulai dari `DEPLOY_CONTAINER.md`.
+Perintah eksperimen penelitian di bawah merujuk repo penelitian terpisah.
+
 Implementasi tugas akhir: OCR + Rule-Based Fuzzy String Matching untuk
 identifikasi keamanan bahan makanan pada produk kemasan, ditujukan untuk
 mendukung penerapan diet Gluten-Free Casein-Free (GFCF) bagi anak dengan

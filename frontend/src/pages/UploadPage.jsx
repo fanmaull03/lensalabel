@@ -235,10 +235,12 @@ function ManualEntry({ onSubmit, onCancel }) {
           autoFocus
           value={text}
           onChange={(e) => setText(e.target.value)}
+          maxLength={5000}
           rows={5}
           placeholder="Tepung terigu, tepung tapioka, garam, penguat rasa, cabai bubuk…"
           className="glass w-full rounded-2xl p-4 text-sm leading-relaxed text-white placeholder-white/40 shadow-inner outline-none focus:border-white/50"
         />
+        <p className="mt-1 text-xs text-white/60">Maksimal 5.000 karakter.</p>
       </div>
 
       {items.length > 0 && (

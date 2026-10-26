@@ -36,7 +36,7 @@ class ManualIdentifyRequest(BaseModel):
     """Body untuk /identify-manual: teks komposisi yang diketik pengguna,
     menggantikan hasil OCR. min_length=1 menolak string kosong di batas."""
 
-    text: str = Field(min_length=1, description="Teks komposisi mentah dari pengguna.")
+    text: str = Field(min_length=1, max_length=5000, description="Teks komposisi mentah dari pengguna.")
 
 
 class IdentifyResponse(BaseModel):

@@ -1,5 +1,7 @@
 ﻿# Deploy LensaLabel
 
+Panduan container dan pemeriksaan staging ada di `DEPLOY_CONTAINER.md`.
+
 Repo ini hanya berisi kode aplikasi dan KB operasional. Transkrip, foto penelitian,
 catatan validasi ahli, paket wawancara, hasil evaluasi, dan `.env` disimpan terpisah.
 
