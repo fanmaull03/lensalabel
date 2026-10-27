@@ -93,3 +93,5 @@ docs/notes/
 *.zip
 *.jpg
 *.jpeg
+db_backup/
+*.dump
