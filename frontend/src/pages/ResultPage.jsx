@@ -107,7 +107,7 @@ export default function ResultPage() {
   }
 
   return (
-    <div className="space-y-6 font-sans">
+    <div className="space-y-5 font-sans">
       {/* verdict card — warna verdict.className functional, jangan diubah */}
       <div className={`rounded-3xl border border-white/30 p-6 text-white shadow-2xl ${verdict.className}`}>
         <div className="flex items-center gap-4">
@@ -127,10 +127,10 @@ export default function ResultPage() {
       </div>
 
       {/* counters */}
-      <div className="flex gap-3">
-        <Counter value={counts.aman} label="Aman" color="text-emerald-300" />
-        <Counter value={counts.perhatian} label="Perhatian" color="text-amber-300" />
-        <Counter value={counts.hindari} label="Hindari" color="text-red-300" />
+      <div className="grid grid-cols-3 gap-3">
+        <Counter value={counts.aman} label="Aman" color="text-emerald-300" tint="bg-blue-100/15" />
+        <Counter value={counts.perhatian} label="Perhatian" color="text-amber-300" tint="bg-white/10" />
+        <Counter value={counts.hindari} label="Hindari" color="text-red-300" tint="bg-white/15" />
       </div>
 
       {result.raw_text?.trim() && <OcrPanel result={result} />}
@@ -154,23 +154,45 @@ export default function ResultPage() {
   );
 }
 
-function Counter({ value, label, color }) {
+function Counter({ value, label, color, tint }) {
   return (
-    <div className="glass flex-1 rounded-2xl p-3 text-center">
+    <div className={`rounded-2xl border border-white/25 p-3 text-center backdrop-blur-xl ${tint}`}>
       <div className={`font-display text-xl font-extrabold ${color}`}>{value}</div>
       <div className="text-xs text-white/65">{label}</div>
     </div>
   );
 }
 
-// Panel "Teks Terbaca": raw_text OCR asli, sorot potongan yang benar dinilai.
+// composition_text adalah rentang yang dianalisis; raw_text tetap tersedia untuk diperiksa.
 function OcrPanel({ result }) {
+  const composition = result.composition_text?.trim() || result.raw_text;
+  const note = result.input_source === "manual"
+    ? "Analisis memakai teks komposisi yang Anda masukkan."
+    : result.opening_marker_found && result.closing_marker_found
+      ? "Penanda komposisi dan penanda akhir ditemukan. Analisis memakai teks dari penanda komposisi hingga sebelum penanda akhir."
+      : result.opening_marker_found
+        ? "Penanda komposisi ditemukan. Analisis memakai teks sejak penanda komposisi."
+        : "Penanda komposisi tidak ditemukan. Analisis memakai seluruh teks yang terbaca.";
   return (
     <div>
-      <h2 className="mb-2 text-sm font-semibold uppercase tracking-wide text-white/60">Teks Terbaca</h2>
+      <h2 className="mb-3 font-display text-base font-bold text-white">Teks komposisi yang dianalisis</h2>
       <div className="glass-white rounded-2xl p-4 text-sm leading-relaxed shadow-xl">
-        {highlight(result.raw_text, result)}
+        <p className="text-slate-600">{note}</p>
+        <p className="mt-4 whitespace-pre-wrap text-navy-base [overflow-wrap:anywhere]">
+          {highlight(composition, result)}
+        </p>
       </div>
+      {result.input_source !== "manual" && (
+        <details className="group mt-3 rounded-2xl bg-white/90 text-navy-base shadow-lg">
+          <summary className="flex min-h-12 cursor-pointer list-none items-center px-4 py-3 text-sm font-semibold [&::-webkit-details-marker]:hidden">
+            <span className="group-open:hidden">Lihat teks OCR lengkap</span>
+            <span className="hidden group-open:inline">Sembunyikan teks OCR lengkap</span>
+          </summary>
+          <p className="border-t border-slate-200 px-4 py-3 text-sm leading-relaxed whitespace-pre-wrap [overflow-wrap:anywhere]">
+            {highlight(result.raw_text, result)}
+          </p>
+        </details>
+      )}
     </div>
   );
 }
@@ -179,7 +201,13 @@ function highlight(text, result) {
   const terms = [
     ...(result.hindari ?? []).map((b) => ({ w: b.matched_window, cls: "bg-red-100 text-red-700 font-semibold" })),
     ...(result.perhatian ?? []).map((b) => ({ w: b.matched_window, cls: "bg-amber-100 text-amber-700 font-semibold" })),
-  ].filter((t) => t.w);
+    ...(result.aman ?? []).map((b) => ({ w: b.matched_window, cls: "bg-emerald-100 text-emerald-800 font-semibold" })),
+  ].flatMap((term) => {
+    if (!term.w) return [];
+    return (text.toLowerCase().includes(term.w.toLowerCase()) ? [term.w] : term.w.split(", "))
+      .filter(Boolean)
+      .map((w) => ({ ...term, w }));
+  }).sort((a, b) => b.w.length - a.w.length);
   if (terms.length === 0) return text;
 
   const escape = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");

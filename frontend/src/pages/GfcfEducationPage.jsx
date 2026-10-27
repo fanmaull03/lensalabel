@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { Fragment, useState } from "react";
 import {
   articles,
   categoryLegend,
@@ -6,6 +6,41 @@ import {
   getReadMinutes,
   glossary,
 } from "../data/educationContent";
+import gfcfCover from "../assets/articles/gfcf-basics-cover.webp";
+import labelCover from "../assets/articles/reading-label-cover.webp";
+import hiddenCover from "../assets/articles/hidden-ingredients-cover.webp";
+import caseinCover from "../assets/articles/casein-cover.webp";
+import nutritionImage from "../assets/articles/nutrition-balance.webp";
+import labelDetailImage from "../assets/articles/reading-label-detail.webp";
+import grainsImage from "../assets/articles/grains-and-sauce.webp";
+import curdsImage from "../assets/articles/curds-and-whey.webp";
+
+const ARTICLE_IMAGES = {
+  "apa-itu-diet-gfcf": {
+    cover: gfcfCover,
+    inline: nutritionImage,
+    afterHeading: "Perhatikan asupan anak",
+    alt: "Piring berisi nasi, ikan, sayur, dan buah sebagai contoh makanan yang beragam",
+  },
+  "membaca-label-komposisi": {
+    cover: labelCover,
+    inline: labelDetailImage,
+    afterHeading: "Periksa pernyataan alergen",
+    alt: "Seseorang menelusuri informasi pada bagian belakang kemasan pangan",
+  },
+  "gluten-kasein-tersembunyi": {
+    cover: hiddenCover,
+    inline: grainsImage,
+    afterHeading: "Nama gandum dan malt",
+    alt: "Beberapa jenis biji-bijian dan oat disajikan terpisah di atas meja",
+  },
+  "bahan-yang-mengandung-kasein": {
+    cover: caseinCover,
+    inline: curdsImage,
+    afterHeading: "Whey bukan kasein",
+    alt: "Dadih susu di saringan terpisah dari cairan whey di bawahnya",
+  },
+};
 
 const VERDICT_COLOR = {
   Aman: "border-emerald-500 text-emerald-600",
@@ -42,7 +77,7 @@ export default function GfcfEducationPage() {
         onClick={() => setReading(featured)}
         className="glass block w-full overflow-hidden rounded-3xl text-left shadow-2xl transition duration-200 active:scale-[.99]"
       >
-        <div className="h-32 bg-gradient-to-br from-accent-blue to-accent-purple" />
+        <img src={ARTICLE_IMAGES[featured.id].cover} alt="" className="h-32 w-full object-cover" decoding="async" />
         <div className="p-5 text-white">
           <div className="text-xs font-bold uppercase tracking-wide opacity-80">Mulai di sini</div>
           <div className="mt-1 break-words font-display text-xl font-extrabold leading-tight">{featured.title}</div>
@@ -62,7 +97,7 @@ export default function GfcfEducationPage() {
               onClick={() => setReading(article)}
               className="glass flex w-full items-center gap-3 rounded-2xl p-3 text-left shadow-xl transition duration-200 hover:bg-white/20 active:scale-[.99]"
             >
-              <div className="h-14 w-16 flex-none rounded-xl bg-gradient-to-br from-accent-green/70 to-accent-blue/60" />
+              <img src={ARTICLE_IMAGES[article.id].cover} alt="" className="h-14 w-16 flex-none rounded-xl object-cover" loading="lazy" decoding="async" />
               <div className="min-w-0 flex-1">
                 <div className="break-words font-semibold text-white">{article.title}</div>
                 <div className="text-xs text-white/60">{getReadMinutes(article.body)} menit baca</div>
@@ -112,10 +147,13 @@ function ArticleBlock({ block }) {
   return <p className="mt-4 text-[15px] leading-relaxed text-slate-600 [overflow-wrap:anywhere]">{block.text}</p>;
 }
 
-function ArticleReader({ article, onBack }) {
+export function ArticleReader({ article, onBack }) {
+  const image = ARTICLE_IMAGES[article.id];
   return (
     <div className="animate-fade-up min-w-0 overflow-hidden rounded-3xl bg-[#F7F9FC] shadow-2xl">
-      <div className="relative h-40 bg-gradient-to-br from-accent-blue to-accent-purple">
+      <div className="relative h-40">
+        <img src={image.cover} alt="" className="h-full w-full object-cover" decoding="async" />
+        <div className="absolute inset-0 bg-gradient-to-t from-navy-base/50 to-transparent" />
         <button
           type="button"
           onClick={onBack}
@@ -141,7 +179,16 @@ function ArticleReader({ article, onBack }) {
           </div>
         </div>
 
-        <div>{article.body.map((block, index) => <ArticleBlock key={`${article.id}-${index}`} block={block} />)}</div>
+        <div>{article.body.map((block, index) => (
+          <Fragment key={`${article.id}-${index}`}>
+            <ArticleBlock block={block} />
+            {block.type === "heading" && block.text === image.afterHeading && (
+              <figure className="mt-4 overflow-hidden rounded-2xl">
+                <img src={image.inline} alt={image.alt} className="aspect-[3/2] w-full object-cover" loading="lazy" decoding="async" />
+              </figure>
+            )}
+          </Fragment>
+        ))}</div>
 
         <div className="mt-5 rounded-2xl border-l-4 border-accent-blue bg-[#EAF0FD] p-4">
           <p className="break-words font-display text-sm font-semibold leading-snug text-navy-base [overflow-wrap:anywhere]">“{article.quote}”</p>
