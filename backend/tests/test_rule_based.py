@@ -5,6 +5,7 @@
 
 from app.classifier.rule_based import UNKNOWN_GROUP, classify_product
 from app.matching.fuzzy_matcher import MatchResult
+from app.matching.runtime_mode import match_token_many
 
 
 def _cocok(category: str) -> MatchResult:
@@ -44,6 +45,24 @@ def test_unmatched_tidak_dibuang():
     hasil = classify_product([_cocok("aman"), _gagal(), _gagal()])
     assert len(hasil[UNKNOWN_GROUP]) == 2
     assert len(hasil["aman"]) == 1
+
+
+def test_unknown_part_of_matched_token_requires_verification():
+    kb = [{"ingredient_id": 1, "standard_name": "Garam", "name_variant": "Garam", "category": "aman"}]
+    matches = match_token_many("Komposisi: Garam dan bahan xyzzy", kb)
+    hasil = classify_product(matches)
+    assert hasil["verdict"] == "perlu_verifikasi"
+    assert any("xyzzy" in item["token"] for item in hasil[UNKNOWN_GROUP])
+
+
+def test_composition_label_and_numbers_do_not_trigger_unknown():
+    kb = [{"ingredient_id": 1, "standard_name": "Garam", "name_variant": "Garam", "category": "aman"}]
+    hasil = classify_product(match_token_many("Komposisi: Garam 5%", kb))
+    assert hasil["verdict"] == "aman"
+
+
+def test_noise_alone_is_not_safe():
+    assert classify_product([MatchResult(token="5%", matched=False, score=0.0)])["verdict"] == "tidak_terbaca"
 
 
 def test_deduplication_bilingual_same_canonical_ingredient():

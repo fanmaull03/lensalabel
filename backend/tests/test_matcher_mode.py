@@ -43,12 +43,21 @@ def test_optimized_mode_is_separate(monkeypatch):
 
 
 def test_dispatch_calls_only_selected_module(monkeypatch):
-    monkeypatch.setattr(fuzzy_matcher, "match_token_many", lambda *a, **k: ["frozen"])
-    monkeypatch.setattr(fuzzy_matcher_optimized, "match_token_many", lambda *a, **k: ["optimized"])
+    monkeypatch.setattr(fuzzy_matcher, "match_token_many", lambda *a, **k: [fuzzy_matcher.MatchResult("frozen", False, 0)])
+    monkeypatch.setattr(fuzzy_matcher_optimized, "match_token_many", lambda *a, **k: [fuzzy_matcher.MatchResult("optimized", False, 0)])
     monkeypatch.setenv("MATCHER_MODE", "frozen")
-    assert match_token_many("text", []) == ["frozen"]
+    assert match_token_many("text", [])[0].token == "frozen"
     monkeypatch.setenv("MATCHER_MODE", "optimized")
-    assert match_token_many("text", []) == ["optimized"]
+    assert match_token_many("text", [])[0].token == "optimized"
+
+
+@pytest.mark.parametrize("mode", ["frozen", "optimized"])
+def test_api_matcher_preserves_unknown_fragment(monkeypatch, mode):
+    monkeypatch.setenv("MATCHER_MODE", mode)
+    kb = [dict(ingredient_id=1, standard_name="Garam", name_variant="Garam", category="aman")]
+    matches = match_token_many("Garam xyzzy", kb)
+    assert len([m for m in matches if m.matched]) == 1
+    assert [m.token[m.span_start:m.span_end].strip() for m in matches if not m.matched] == ["xyzzy"]
 
 
 def test_invalid_mode_fails_closed(monkeypatch):

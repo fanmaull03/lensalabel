@@ -25,7 +25,23 @@ def matcher_module():
 
 
 def match_token_many(*args, **kwargs):
-    return matcher_module().match_token_many(*args, **kwargs)
+    matches = matcher_module().match_token_many(*args, **kwargs)
+    token = args[0] if args else kwargs["token"]
+    spans = sorted((m.span_start, m.span_end) for m in matches
+                   if m.span_start is not None and m.span_end is not None)
+    if not spans:
+        return matches
+    from app.matching.fuzzy_matcher import MatchResult
+    end = 0
+    for left, right in spans:
+        if left > end:
+            matches.append(MatchResult(token=token, matched=False, score=0.0,
+                                       span_start=end, span_end=left))
+        end = max(end, right)
+    if end < len(token):
+        matches.append(MatchResult(token=token, matched=False, score=0.0,
+                                   span_start=end, span_end=len(token)))
+    return matches
 
 
 def matcher_hashes() -> dict[str, str]:

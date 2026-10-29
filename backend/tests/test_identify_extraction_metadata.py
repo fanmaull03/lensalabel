@@ -77,3 +77,13 @@ def test_manual_input_has_no_photo_marker_status(monkeypatch):
     assert response.input_source == "manual"
     assert response.opening_marker_found is None
     assert response.closing_marker_found is None
+
+
+def test_manual_api_does_not_mark_partly_unknown_ingredient_safe(monkeypatch):
+    kb = [dict(ingredient_id=1, standard_name="Garam", name_variant="Garam", category="aman")]
+    monkeypatch.setattr(routes_identify, "load_knowledge_base", lambda db: kb)
+    response = routes_identify.identify_manual(
+        ManualIdentifyRequest(text="Komposisi: Garam bahan xyzzy"), object()
+    )
+    assert response.verdict == "perlu_verifikasi"
+    assert any("xyzzy" in item.token for item in response.tidak_dikenali)

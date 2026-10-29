@@ -4,20 +4,28 @@
 // pipeline /identify tidak berubah.
 import { useEffect, useRef, useState } from "react";
 import logo from "../assets/lensalabel_logo.png";
+import { cameraCrop } from "./cameraCrop";
 
 export default function CameraCapture({ onCapture, onCancel }) {
   const videoRef = useRef(null);
   const streamRef = useRef(null);
   const fileRef = useRef(null);
+  const frameRef = useRef(null);
   const [facing, setFacing] = useState("environment");
   const [denied, setDenied] = useState(false);
+  const [captured, setCaptured] = useState(null);
+  const [captureError, setCaptureError] = useState("");
+
+  useEffect(() => () => {
+    if (captured) URL.revokeObjectURL(captured.url);
+  }, [captured]);
 
   useEffect(() => {
     let active = true;
     async function start() {
       try {
         const stream = await navigator.mediaDevices.getUserMedia({
-          video: { facingMode: facing },
+          video: { facingMode: facing, width: { ideal: 1920 }, height: { ideal: 1080 } },
           audio: false,
         });
         if (!active) {
@@ -25,6 +33,7 @@ export default function CameraCapture({ onCapture, onCancel }) {
           return;
         }
         streamRef.current = stream;
+        setDenied(false);
         if (videoRef.current) videoRef.current.srcObject = stream;
       } catch {
         // Izin ditolak / tidak ada kamera: tetap buka overlay, tawarkan galeri.
@@ -42,13 +51,29 @@ export default function CameraCapture({ onCapture, onCancel }) {
 
   function shoot() {
     const video = videoRef.current;
-    if (!video || !video.videoWidth) return;
+    if (!video || !video.videoWidth || !frameRef.current) {
+      setCaptureError("Kamera belum siap. Coba lagi sebentar.");
+      return;
+    }
+    const crop = cameraCrop(video, frameRef.current);
+    // shortcut: 640×480 hanya batas resolusi; mutu OCR perlu dikalibrasi pada kamera nyata.
+    if (crop.width < 640 || crop.height < 480) {
+      setCaptureError(`Resolusi area komposisi ${Math.round(crop.width)} × ${Math.round(crop.height)} piksel terlalu rendah. Gunakan kamera beresolusi lebih tinggi atau unggah foto dari galeri.`);
+      return;
+    }
+    setCaptureError("");
     const canvas = document.createElement("canvas");
-    canvas.width = video.videoWidth;
-    canvas.height = video.videoHeight;
-    canvas.getContext("2d").drawImage(video, 0, 0);
+    canvas.width = Math.round(crop.width);
+    canvas.height = Math.round(crop.height);
+    canvas.getContext("2d").drawImage(video, crop.x, crop.y, crop.width, crop.height, 0, 0, canvas.width, canvas.height);
     canvas.toBlob(
-      (blob) => blob && onCapture(new File([blob], "kamera.jpg", { type: "image/jpeg" })),
+      (blob) => {
+        if (!blob) {
+          setCaptureError("Foto gagal dibuat. Coba ambil ulang.");
+          return;
+        }
+        setCaptured({ file: new File([blob], "kamera.jpg", { type: "image/jpeg" }), url: URL.createObjectURL(blob), width: canvas.width, height: canvas.height });
+      },
       "image/jpeg",
       0.92,
     );
@@ -63,10 +88,12 @@ export default function CameraCapture({ onCapture, onCancel }) {
           autoPlay
           playsInline
           muted
+          hidden={Boolean(captured)}
           className="absolute inset-0 h-full w-full object-cover"
         />
       )}
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_42%,transparent_38%,rgba(0,0,0,0.55))]" />
+      {captured && <img src={captured.url} alt="Pratinjau foto komposisi" className="absolute inset-0 h-full w-full object-contain" />}
+      {!captured && <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_42%,transparent_38%,rgba(0,0,0,0.55))]" />}
 
       <input
         ref={fileRef}
@@ -85,7 +112,7 @@ export default function CameraCapture({ onCapture, onCancel }) {
         <div className="mx-4 mt-4 flex items-center gap-2 rounded-2xl border border-white/25 bg-navy-base/40 px-4 py-3 text-white backdrop-blur-xl">
           <img src={logo} alt="" className="h-6 w-6 flex-none object-contain" />
           <p className="text-sm leading-snug">
-            Posisikan <b>daftar komposisi</b> di dalam bingkai
+            {captured ? "Periksa apakah seluruh tulisan komposisi jelas dan tidak silau" : <>Posisikan <b>daftar komposisi</b> di dalam bingkai</>}
           </p>
           <button
             type="button"
@@ -98,7 +125,9 @@ export default function CameraCapture({ onCapture, onCancel }) {
 
         {/* viewfinder tengah */}
         <div className="flex flex-1 items-center justify-center p-6">
-          {denied ? (
+          {captured ? (
+            <div className="sr-only">Pratinjau foto siap diperiksa</div>
+          ) : denied ? (
             <div className="max-w-xs rounded-2xl border border-white/25 bg-navy-base/50 p-6 text-center text-white backdrop-blur-xl">
               <p className="font-display text-lg font-bold">Kamera tidak bisa diakses</p>
               <p className="mt-2 text-sm text-white/75">
@@ -107,7 +136,7 @@ export default function CameraCapture({ onCapture, onCancel }) {
               </p>
             </div>
           ) : (
-            <div className="relative h-44 w-64">
+            <div ref={frameRef} className="relative aspect-[4/3] w-full max-w-xl max-h-full">
               <span className="absolute left-0 top-0 h-7 w-7 rounded-tl-lg border-l-[3px] border-t-[3px] border-white" />
               <span className="absolute right-0 top-0 h-7 w-7 rounded-tr-lg border-r-[3px] border-t-[3px] border-white" />
               <span className="absolute bottom-0 left-0 h-7 w-7 rounded-bl-lg border-b-[3px] border-l-[3px] border-white" />
@@ -120,40 +149,49 @@ export default function CameraCapture({ onCapture, onCancel }) {
         </div>
 
         {/* kontrol bawah: galeri · shutter · flip */}
+        {captureError && <p role="alert" className="relative mx-6 mb-3 rounded-xl bg-navy-base/80 p-3 text-center text-sm text-white">{captureError}</p>}
+        {captured && <p className="relative mb-3 text-center text-sm text-white">Area foto: {captured.width} × {captured.height} piksel</p>}
         <div className="flex items-center justify-between px-8 pb-10">
-          <button
-            type="button"
-            onClick={() => fileRef.current?.click()}
-            title="Unggah dari galeri"
-            className="glass flex h-14 w-14 items-center justify-center rounded-2xl text-white transition active:scale-90"
-          >
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <rect x="3" y="4" width="18" height="16" rx="3" />
-              <circle cx="8.5" cy="9" r="1.6" />
-              <path d="M4 18l5-5 4 4 3-3 4 4" />
-            </svg>
-          </button>
-
-          <button
-            type="button"
-            onClick={shoot}
-            disabled={denied}
-            title="Ambil foto"
-            className="flex h-20 w-20 items-center justify-center rounded-full border-[5px] border-white/50 bg-white/25 shadow-[0_8px_22px_rgba(0,0,0,0.4)] backdrop-blur transition active:scale-95 disabled:opacity-40"
-          >
-            <span className="h-14 w-14 rounded-full bg-gradient-to-b from-accent-blue to-accent-blue-link shadow-[inset_0_1px_0_rgba(255,255,255,0.5)]" />
-          </button>
-
-          <button
-            type="button"
-            onClick={() => setFacing((f) => (f === "environment" ? "user" : "environment"))}
-            title="Balik kamera"
-            className="glass flex h-14 w-14 items-center justify-center rounded-2xl text-white transition active:scale-90"
-          >
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
-              <path d="M4 12a8 8 0 0 1 13-6l3 2M20 12a8 8 0 0 1-13 6l-3-2" />
-            </svg>
-          </button>
+          {captured ? (
+            <>
+              <button type="button" onClick={() => setCaptured(null)} className="glass rounded-2xl px-5 py-3 text-sm font-semibold text-white">Ambil ulang</button>
+              <button type="button" onClick={() => onCapture(captured.file)} className="rounded-2xl bg-accent-blue px-5 py-3 text-sm font-semibold text-white">Gunakan foto</button>
+            </>
+          ) : (
+            <>
+              <button
+                type="button"
+                onClick={() => fileRef.current?.click()}
+                title="Unggah dari galeri"
+                className="glass flex h-14 w-14 items-center justify-center rounded-2xl text-white transition active:scale-90"
+              >
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="3" y="4" width="18" height="16" rx="3" />
+                  <circle cx="8.5" cy="9" r="1.6" />
+                  <path d="M4 18l5-5 4 4 3-3 4 4" />
+                </svg>
+              </button>
+              <button
+                type="button"
+                onClick={shoot}
+                disabled={denied}
+                title="Ambil foto"
+                className="flex h-20 w-20 items-center justify-center rounded-full border-[5px] border-white/50 bg-white/25 shadow-[0_8px_22px_rgba(0,0,0,0.4)] backdrop-blur transition active:scale-95 disabled:opacity-40"
+              >
+                <span className="h-14 w-14 rounded-full bg-gradient-to-b from-accent-blue to-accent-blue-link shadow-[inset_0_1px_0_rgba(255,255,255,0.5)]" />
+              </button>
+              <button
+                type="button"
+                onClick={() => setFacing((f) => (f === "environment" ? "user" : "environment"))}
+                title="Balik kamera"
+                className="glass flex h-14 w-14 items-center justify-center rounded-2xl text-white transition active:scale-90"
+              >
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+                  <path d="M4 12a8 8 0 0 1 13-6l3 2M20 12a8 8 0 0 1-13 6l-3-2" />
+                </svg>
+              </button>
+            </>
+          )}
         </div>
       </div>
     </div>

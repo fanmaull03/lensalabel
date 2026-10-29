@@ -7,6 +7,8 @@ matching Tahap 5 lalu menyimpulkan satu verdict untuk keseluruhan produk.
 
 from __future__ import annotations
 
+import re
+
 from app.matching.fuzzy_matcher import MatchResult
 
 CATEGORIES = ("aman", "perhatian", "hindari")
@@ -50,9 +52,14 @@ def classify_product(matches: list[MatchResult]) -> dict:
 
     for m in matches:
         if not m.matched:
+            token = m.token[m.span_start:m.span_end] if m.span_start is not None and m.span_end is not None else m.token
+            token = re.sub(r"^(?:komposisi|composition|ingredients)\s*:\s*", "", token.strip(), flags=re.I)
+            token = token.strip(" \t\r\n.,:;()[]")
+            if not any(char.isalpha() for char in token) or token.lower() in {"dan", "and", "atau", "or"}:
+                continue
             result[UNKNOWN_GROUP].append(
                 {
-                    "token": m.token,
+                    "token": token,
                     "score": m.score,
                     "terdekat": m.matched_variant,
                 }
@@ -98,7 +105,7 @@ def classify_product(matches: list[MatchResult]) -> dict:
     elif result[UNKNOWN_GROUP]:
         verdict = "perlu_verifikasi"
     else:
-        verdict = "aman"
+        verdict = "aman" if result["aman"] else "tidak_terbaca"
 
     result["verdict"] = verdict
     return result
