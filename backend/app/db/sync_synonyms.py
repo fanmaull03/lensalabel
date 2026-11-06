@@ -12,19 +12,23 @@ tidak dobel dengan 'salt'.
 Cara pakai (dari folder backend/):
   python -m app.db.sync_synonyms          # lihat rencana, tidak menulis apa pun
   python -m app.db.sync_synonyms --apply  # benar-benar insert
+Pada database KB v2, kedua mode ditolak kecuali --allow-legacy diberikan.
 """
 
 from __future__ import annotations
 
 import sys
 
+from app.db.kb_integrity import is_v2_database
 from app.db.models import Ingredient, IngredientSynonym
 from app.db.seed_knowledge_base import FINAL_INGREDIENTS
 from app.db.session import SessionLocal
 
 
-def sync(apply: bool) -> None:
+def sync(apply: bool, *, allow_legacy: bool = False) -> None:
     with SessionLocal() as session:
+        if not allow_legacy and is_v2_database(session):
+            raise RuntimeError("KB v2 terdeteksi; sinkronisasi sinonim v1 ditolak. Gunakan --allow-legacy hanya bila disengaja.")
         rencana: list[tuple[str, str]] = []
         hanya_di_db: list[tuple[str, str]] = []
 
@@ -73,4 +77,4 @@ def sync(apply: bool) -> None:
 
 
 if __name__ == "__main__":
-    sync(apply="--apply" in sys.argv)
+    sync(apply="--apply" in sys.argv, allow_legacy="--allow-legacy" in sys.argv)

@@ -12,10 +12,20 @@ tokenize() MURNI pemisahan:
 from __future__ import annotations
 
 import re
+from dataclasses import dataclass
 
 from rapidfuzz import fuzz
 
 _SPLIT = re.compile(r"[,;]")   # pemisah antar bahan
+# Kalimat boilerplate label ("Simpan di tempat sejuk.", "Netto: 100 g.",
+# "Baik digunakan sebelum ...") diakhiri titik TANPA koma, jadi koma saja tidak
+# cukup: kata pembuka kalimat berikutnya menempel pada bahan terakhir dan
+# menyeret verdict "aman" turun ke "perlu_verifikasi". Titik yang diikuti huruf
+# kapital/akhir teks dianggap pemisah kalimat; titik desimal ("3,5 %" tidak
+# terpengaruh karena setelah titiknya bukan huruf kapital) dan singkatan
+# umum ("pt.", "no.", "bpom") tidak ikut terpotong karena huruf sesudahnya
+# kecil.
+_SENTENCE_BREAK = re.compile(r"\.\s*(?=[A-Z0-9]|$)")
 _SPACES = re.compile(r"\s+")   # untuk rapikan spasi ganda
 MIN_TOKEN_LEN = 2              # <2 char sesudah dibersihkan = sisa noise OCR
 
@@ -91,8 +101,17 @@ SECONDARY_PANEL_MARKERS = (
 )
 
 
-def extract_composition_section(text: str, *, close_secondary_panels: bool = False) -> str:
-    """Potong teks dari penanda pembuka sampai penanda penutup.
+@dataclass(frozen=True)
+class CompositionExtraction:
+    text: str
+    opening_found: bool
+    closing_found: bool | None
+
+
+def extract_composition_with_metadata(
+    text: str, *, close_secondary_panels: bool = False
+) -> CompositionExtraction:
+    """Potong teks komposisi dan laporkan penanda yang ditemukan.
 
     Tujuannya membuang tabel nilai gizi & teks lain yang ikut terbaca OCR,
     supaya tidak salah match ke knowledge base saat fuzzy matching.
@@ -103,7 +122,7 @@ def extract_composition_section(text: str, *, close_secondary_panels: bool = Fal
     words = text.split()
     open_idx = _find_marker(words, OPEN_MARKERS)
     if open_idx is None:
-        return text
+        return CompositionExtraction(text, opening_found=False, closing_found=None)
 
     close_idx = _find_closing_marker(words, start=open_idx + 1)
     if close_secondary_panels:
@@ -117,14 +136,26 @@ def extract_composition_section(text: str, *, close_secondary_panels: bool = Fal
                     break
             if found:
                 break
-    return " ".join(words[open_idx:close_idx])  # close_idx None = sampai akhir
+    return CompositionExtraction(
+        " ".join(words[open_idx:close_idx]),  # close_idx None = sampai akhir
+        opening_found=True,
+        closing_found=close_idx is not None,
+    )
+
+
+def extract_composition_section(text: str, *, close_secondary_panels: bool = False) -> str:
+    """Kembalikan teks ekstraksi dengan perilaku lama untuk pemanggil yang ada."""
+    return extract_composition_with_metadata(
+        text, close_secondary_panels=close_secondary_panels
+    ).text
 
 
 def tokenize(text: str) -> list[str]:
-    """Split by koma/titik koma, bersihkan whitespace, buang token pendek/kosong."""
+    """Split by koma/titik koma + batas kalimat, rapikan spasi, buang noise."""
     tokens = []
-    for raw in _SPLIT.split(text):
-        cleaned = _SPACES.sub(" ", raw).strip()
-        if len(cleaned) >= MIN_TOKEN_LEN:
-            tokens.append(cleaned)
+    for sentence in _SENTENCE_BREAK.split(text):
+        for raw in _SPLIT.split(sentence):
+            cleaned = _SPACES.sub(" ", raw).strip(" .")
+            if len(cleaned) >= MIN_TOKEN_LEN:
+                tokens.append(cleaned)
     return tokens

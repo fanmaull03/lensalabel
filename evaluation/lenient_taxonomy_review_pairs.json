@@ -1,0 +1,665 @@
+[
+  {
+    "short_name": "Oat tanpa label bebas gluten (risiko kontaminasi silang)",
+    "long_name": "Susu oat bersertifikat bebas gluten",
+    "short_variant": "Oat",
+    "long_variant": "Oat milk",
+    "extra_words": [
+      "milk"
+    ]
+  },
+  {
+    "short_name": "Terigu / Gandum",
+    "long_name": "Tepung terigu protein tinggi",
+    "short_variant": "Wheat flour",
+    "long_variant": "High-gluten wheat flour",
+    "extra_words": [
+      "gluten",
+      "high"
+    ]
+  },
+  {
+    "short_name": "Terigu / Gandum",
+    "long_name": "Pati terigu",
+    "short_variant": "Wheat",
+    "long_variant": "Wheat starch",
+    "extra_words": [
+      "starch"
+    ]
+  },
+  {
+    "short_name": "Terigu / Gandum",
+    "long_name": "Couscous",
+    "short_variant": "Wheat",
+    "long_variant": "Couscous (wheat semolina)",
+    "extra_words": [
+      "couscous",
+      "semolina"
+    ]
+  },
+  {
+    "short_name": "Terigu / Gandum",
+    "long_name": "Bulgur",
+    "short_variant": "Wheat",
+    "long_variant": "Bulgur wheat",
+    "extra_words": [
+      "bulgur"
+    ]
+  },
+  {
+    "short_name": "Terigu / Gandum",
+    "long_name": "Kecap asin (mengandung gandum fermentasi)",
+    "short_variant": "Wheat",
+    "long_variant": "Soy sauce (wheat-fermented)",
+    "extra_words": [
+      "fermented",
+      "sauce",
+      "soy"
+    ]
+  },
+  {
+    "short_name": "Terigu / Gandum",
+    "long_name": "Tepung panir (breadcrumb) berbahan gandum",
+    "short_variant": "Wheat",
+    "long_variant": "Wheat breadcrumbs",
+    "extra_words": [
+      "breadcrumbs"
+    ]
+  },
+  {
+    "short_name": "Terigu / Gandum",
+    "long_name": "Asam folat sintetis pada produk fortifikasi gandum",
+    "short_variant": "Wheat",
+    "long_variant": "Synthetic folic acid (wheat-fortified products)",
+    "extra_words": [
+      "asam",
+      "folic",
+      "fortified",
+      "products",
+      "sintetik"
+    ]
+  },
+  {
+    "short_name": "Terigu / Gandum",
+    "long_name": "Rye (gandum hitam)",
+    "short_variant": "Gandum",
+    "long_variant": "Gandum hitam",
+    "extra_words": [
+      "hitam"
+    ]
+  },
+  {
+    "short_name": "Terigu / Gandum",
+    "long_name": "Enzim protease dari gandum dan kedelai (bahan penolong)",
+    "short_variant": "Gandum",
+    "long_variant": "Enzim protease dari gandum dan kedelai",
+    "extra_words": [
+      "dan",
+      "dari",
+      "enzim",
+      "kedelai",
+      "protease"
+    ]
+  },
+  {
+    "short_name": "Terigu / Gandum",
+    "long_name": "Tepung terigu dalam saus/kaldu instan",
+    "short_variant": "Terigu",
+    "long_variant": "Tepung terigu dalam saus",
+    "extra_words": [
+      "dalam",
+      "saus",
+      "tepung"
+    ]
+  },
+  {
+    "short_name": "Kasein / Sodium kaseinat",
+    "long_name": "Rennet casein",
+    "short_variant": "Casein",
+    "long_variant": "Rennet casein",
+    "extra_words": [
+      "rennet"
+    ]
+  },
+  {
+    "short_name": "Kasein / Sodium kaseinat",
+    "long_name": "Kalsium kaseinat",
+    "short_variant": "Caseinate",
+    "long_variant": "Calcium caseinate",
+    "extra_words": [
+      "calcium"
+    ]
+  },
+  {
+    "short_name": "Kasein / Sodium kaseinat",
+    "long_name": "Krimer non-dairy (berpotensi mengandung kaseinat)",
+    "short_variant": "Caseinate",
+    "long_variant": "Non-dairy creamer (may contain caseinate)",
+    "extra_words": [
+      "contain",
+      "creamer",
+      "dairy",
+      "may",
+      "non"
+    ]
+  },
+  {
+    "short_name": "Susu sapi",
+    "long_name": "Yogurt (susu sapi)",
+    "short_variant": "Susu sapi",
+    "long_variant": "Yogurt (susu sapi)",
+    "extra_words": [
+      "yogurt"
+    ]
+  },
+  {
+    "short_name": "Susu sapi",
+    "long_name": "Whey protein",
+    "short_variant": "Milk",
+    "long_variant": "Milk whey",
+    "extra_words": [
+      "whey"
+    ]
+  },
+  {
+    "short_name": "Susu sapi",
+    "long_name": "Susu bubuk full cream",
+    "short_variant": "Milk",
+    "long_variant": "Milk powder",
+    "extra_words": [
+      "powder"
+    ]
+  },
+  {
+    "short_name": "Susu sapi",
+    "long_name": "Susu kental manis",
+    "short_variant": "Milk",
+    "long_variant": "Sweetened condensed milk",
+    "extra_words": [
+      "condensed",
+      "sweetened"
+    ]
+  },
+  {
+    "short_name": "Susu sapi",
+    "long_name": "Margarin (mengandung whey/susu)",
+    "short_variant": "Susu",
+    "long_variant": "Margarin (mengandung whey/susu)",
+    "extra_words": [
+      "margarin",
+      "mengandung",
+      "whey"
+    ]
+  },
+  {
+    "short_name": "Susu sapi",
+    "long_name": "Santan / susu kelapa",
+    "short_variant": "Milk",
+    "long_variant": "Coconut milk",
+    "extra_words": [
+      "coconut"
+    ]
+  },
+  {
+    "short_name": "Susu sapi",
+    "long_name": "Susu beras",
+    "short_variant": "Milk",
+    "long_variant": "Rice milk",
+    "extra_words": [
+      "rice"
+    ]
+  },
+  {
+    "short_name": "Susu sapi",
+    "long_name": "Susu almond (tanpa perisa buatan)",
+    "short_variant": "Milk",
+    "long_variant": "Almond milk",
+    "extra_words": [
+      "almond"
+    ]
+  },
+  {
+    "short_name": "Susu sapi",
+    "long_name": "Susu kedelai murni",
+    "short_variant": "Milk",
+    "long_variant": "Soy milk",
+    "extra_words": [
+      "soy"
+    ]
+  },
+  {
+    "short_name": "Susu sapi",
+    "long_name": "Susu oat bersertifikat bebas gluten",
+    "short_variant": "Milk",
+    "long_variant": "Oat milk",
+    "extra_words": [
+      "oat"
+    ]
+  },
+  {
+    "short_name": "Susu sapi",
+    "long_name": "Susu skim bubuk",
+    "short_variant": "Milk",
+    "long_variant": "Skim milk powder",
+    "extra_words": [
+      "powder",
+      "skim"
+    ]
+  },
+  {
+    "short_name": "Susu sapi",
+    "long_name": "Krimer susu bubuk / Padatan susu (milk solids)",
+    "short_variant": "Milk",
+    "long_variant": "Milk solids",
+    "extra_words": [
+      "solids"
+    ]
+  },
+  {
+    "short_name": "Susu sapi",
+    "long_name": "Lemak susu",
+    "short_variant": "Milk",
+    "long_variant": "Milk fat",
+    "extra_words": [
+      "fat"
+    ]
+  },
+  {
+    "short_name": "Whey protein",
+    "long_name": "Margarin (mengandung whey/susu)",
+    "short_variant": "Whey",
+    "long_variant": "Margarin (mengandung whey/susu)",
+    "extra_words": [
+      "margarin",
+      "mengandung",
+      "susu"
+    ]
+  },
+  {
+    "short_name": "Gula pasir murni",
+    "long_name": "Gula merah / Gula palem / Gula aren / Gula lontar / Gula tebu / Gula sorgum",
+    "short_variant": "Gula",
+    "long_variant": "Gula merah",
+    "extra_words": [
+      "merah"
+    ]
+  },
+  {
+    "short_name": "Kakao/cokelat murni",
+    "long_name": "Coklat HT",
+    "short_variant": "Coklat",
+    "long_variant": "Coklat HT",
+    "extra_words": [
+      "ht"
+    ]
+  },
+  {
+    "short_name": "Kakao/cokelat murni",
+    "long_name": "Beras merah/cokelat",
+    "short_variant": "Cokelat",
+    "long_variant": "Beras cokelat",
+    "extra_words": [
+      "beras"
+    ]
+  },
+  {
+    "short_name": "Perisa buatan (artificial flavor)",
+    "long_name": "Susu almond (tanpa perisa buatan)",
+    "short_variant": "Perisa buatan",
+    "long_variant": "Susu almond (tanpa perisa buatan)",
+    "extra_words": [
+      "almond",
+      "susu",
+      "tanpa"
+    ]
+  },
+  {
+    "short_name": "Gom arab / Selulosa bubuk / Gom guar",
+    "long_name": "Natrium karboksimetil selulosa (Na-CMC)",
+    "short_variant": "Selulosa",
+    "long_variant": "Natrium karboksimetil selulosa",
+    "extra_words": [
+      "karboksimetil",
+      "natrium"
+    ]
+  },
+  {
+    "short_name": "Gom arab / Selulosa bubuk / Gom guar",
+    "long_name": "Metil selulosa / Karboksi metil selulosa",
+    "short_variant": "Selulosa",
+    "long_variant": "Metil selulosa",
+    "extra_words": [
+      "metil"
+    ]
+  },
+  {
+    "short_name": "Minyak kelapa",
+    "long_name": "Minyak sawit / Minyak kelapa sawit (termasuk minyak olein kelapa sawit, minyak goreng sawit)",
+    "short_variant": "Minyak kelapa",
+    "long_variant": "Minyak kelapa sawit",
+    "extra_words": [
+      "sawit"
+    ]
+  },
+  {
+    "short_name": "Malt / ekstrak malt",
+    "long_name": "Malt vinegar",
+    "short_variant": "Malt",
+    "long_variant": "Malt vinegar",
+    "extra_words": [
+      "vinegar"
+    ]
+  },
+  {
+    "short_name": "Semolina",
+    "long_name": "Couscous",
+    "short_variant": "Semolina",
+    "long_variant": "Couscous (wheat semolina)",
+    "extra_words": [
+      "couscous",
+      "wheat"
+    ]
+  },
+  {
+    "short_name": "Susu bubuk full cream",
+    "long_name": "Susu skim bubuk",
+    "short_variant": "Milk powder",
+    "long_variant": "Skim milk powder",
+    "extra_words": [
+      "skim"
+    ]
+  },
+  {
+    "short_name": "Susu bubuk full cream",
+    "long_name": "Krimer susu bubuk / Padatan susu (milk solids)",
+    "short_variant": "Susu bubuk",
+    "long_variant": "Krimer susu bubuk",
+    "extra_words": [
+      "krimer"
+    ]
+  },
+  {
+    "short_name": "Yogurt (susu sapi)",
+    "long_name": "Kultur bakteri yogurt (Lactobacillus, Streptococcus thermophilus)",
+    "short_variant": "Yogurt",
+    "long_variant": "Kultur bakteri yogurt",
+    "extra_words": [
+      "bakteri",
+      "kultur"
+    ]
+  },
+  {
+    "short_name": "Krim / Whipped cream",
+    "long_name": "Susu sapi",
+    "short_variant": "Cream",
+    "long_variant": "Full cream milk",
+    "extra_words": [
+      "full",
+      "milk"
+    ]
+  },
+  {
+    "short_name": "Krim / Whipped cream",
+    "long_name": "Susu bubuk full cream",
+    "short_variant": "Cream",
+    "long_variant": "Susu bubuk full cream",
+    "extra_words": [
+      "bubuk",
+      "full",
+      "susu"
+    ]
+  },
+  {
+    "short_name": "Bumbu penyedap kaldu instan (kemungkinan HVP/gluten)",
+    "long_name": "Tepung terigu dalam saus/kaldu instan",
+    "short_variant": "Kaldu instan",
+    "long_variant": "Tepung terigu dalam kaldu instan",
+    "extra_words": [
+      "dalam",
+      "tepung",
+      "terigu"
+    ]
+  },
+  {
+    "short_name": "Apel",
+    "long_name": "Cuka apel/anggur (cider/wine vinegar)",
+    "short_variant": "Apel",
+    "long_variant": "Cuka apel",
+    "extra_words": [
+      "cuka"
+    ]
+  },
+  {
+    "short_name": "Jeruk",
+    "long_name": "Jeruk bali (grapefruit)",
+    "short_variant": "Jeruk",
+    "long_variant": "Jeruk bali",
+    "extra_words": [
+      "bali"
+    ]
+  },
+  {
+    "short_name": "Jeruk",
+    "long_name": "Kuning Sunset FCF",
+    "short_variant": "Orange",
+    "long_variant": "Orange Yellow S",
+    "extra_words": [
+      "s",
+      "yellow"
+    ]
+  },
+  {
+    "short_name": "Anggur",
+    "long_name": "Cuka apel/anggur (cider/wine vinegar)",
+    "short_variant": "Anggur",
+    "long_variant": "Cuka anggur",
+    "extra_words": [
+      "cuka"
+    ]
+  },
+  {
+    "short_name": "Almond",
+    "long_name": "Susu almond (tanpa perisa buatan)",
+    "short_variant": "Almond",
+    "long_variant": "Susu almond",
+    "extra_words": [
+      "susu"
+    ]
+  },
+  {
+    "short_name": "Almond",
+    "long_name": "Tepung kacang almond",
+    "short_variant": "Almond",
+    "long_variant": "Almond flour",
+    "extra_words": [
+      "flour"
+    ]
+  },
+  {
+    "short_name": "Tomat",
+    "long_name": "Kecap tomat / saus tomat (ketchup)",
+    "short_variant": "Tomat",
+    "long_variant": "Kecap tomat",
+    "extra_words": [
+      "kecap"
+    ]
+  },
+  {
+    "short_name": "Paprika hijau/cabai",
+    "long_name": "Bubuk cabai (chili powder)",
+    "short_variant": "Cabai",
+    "long_variant": "Bubuk cabai",
+    "extra_words": [
+      "bubuk"
+    ]
+  },
+  {
+    "short_name": "Beras putih",
+    "long_name": "Tepung beras",
+    "short_variant": "Beras",
+    "long_variant": "Tepung beras",
+    "extra_words": [
+      "tepung"
+    ]
+  },
+  {
+    "short_name": "Beras putih",
+    "long_name": "Beras merah/cokelat",
+    "short_variant": "Beras",
+    "long_variant": "Beras merah",
+    "extra_words": [
+      "merah"
+    ]
+  },
+  {
+    "short_name": "Beras putih",
+    "long_name": "Susu beras",
+    "short_variant": "Beras",
+    "long_variant": "Susu beras",
+    "extra_words": [
+      "susu"
+    ]
+  },
+  {
+    "short_name": "Jagung (segar)",
+    "long_name": "Tepung jagung (maizena murni)",
+    "short_variant": "Jagung",
+    "long_variant": "Pati jagung",
+    "extra_words": [
+      "pati"
+    ]
+  },
+  {
+    "short_name": "Jagung (segar)",
+    "long_name": "Sirup glukosa / Dekstrosa / Fruktosa / Sirup fruktosa",
+    "short_variant": "Corn",
+    "long_variant": "High fructose corn syrup",
+    "extra_words": [
+      "fructose",
+      "high",
+      "syrup"
+    ]
+  },
+  {
+    "short_name": "Kentang",
+    "long_name": "Ubi jalar",
+    "short_variant": "Potato",
+    "long_variant": "Sweet potato",
+    "extra_words": [
+      "sweet"
+    ]
+  },
+  {
+    "short_name": "Singkong / ubi kayu",
+    "long_name": "Tepung tapioka",
+    "short_variant": "Cassava",
+    "long_variant": "Cassava starch",
+    "extra_words": [
+      "starch"
+    ]
+  },
+  {
+    "short_name": "Sorgum",
+    "long_name": "Gula merah / Gula palem / Gula aren / Gula lontar / Gula tebu / Gula sorgum",
+    "short_variant": "Sorgum",
+    "long_variant": "Gula sorgum",
+    "extra_words": [
+      "gula"
+    ]
+  },
+  {
+    "short_name": "Kubis / kol",
+    "long_name": "Kubis Brussel",
+    "short_variant": "Kubis",
+    "long_variant": "Kubis Brussel",
+    "extra_words": [
+      "brussel"
+    ]
+  },
+  {
+    "short_name": "Sukrosa",
+    "long_name": "Ester asam lemak sukrosa (pengemulsi)",
+    "short_variant": "Sukrosa",
+    "long_variant": "Ester asam lemak sukrosa",
+    "extra_words": [
+      "asam",
+      "ester",
+      "lemak"
+    ]
+  },
+  {
+    "short_name": "Gula merah / Gula palem / Gula aren / Gula lontar / Gula tebu / Gula sorgum",
+    "long_name": "Gula pasir murni",
+    "short_variant": "Cane sugar",
+    "long_variant": "Cane sugar (pure)",
+    "extra_words": [
+      "pure"
+    ]
+  },
+  {
+    "short_name": "Ragi (baker's yeast, murni)",
+    "long_name": "Ragi terhidrolisis (autolyzed yeast)",
+    "short_variant": "Ragi",
+    "long_variant": "Ragi terhidrolisis",
+    "extra_words": [
+      "terhidrolisis"
+    ]
+  },
+  {
+    "short_name": "Ragi (baker's yeast, murni)",
+    "long_name": "Ekstrak ragi (yeast extract)",
+    "short_variant": "Ragi",
+    "long_variant": "Ekstrak ragi",
+    "extra_words": [
+      "ekstrak"
+    ]
+  },
+  {
+    "short_name": "Rumput laut",
+    "long_name": "Karagenan (rumput laut)",
+    "short_variant": "Rumput laut",
+    "long_variant": "Karagenan (rumput laut)",
+    "extra_words": [
+      "karagenan"
+    ]
+  },
+  {
+    "short_name": "Krimer susu bubuk / Padatan susu (milk solids)",
+    "long_name": "Margarin (mengandung whey/susu)",
+    "short_variant": "Milk solids",
+    "long_variant": "Margarine containing whey/milk solids",
+    "extra_words": [
+      "containing",
+      "margarine",
+      "whey"
+    ]
+  },
+  {
+    "short_name": "Metil selulosa / Karboksi metil selulosa",
+    "long_name": "Natrium karboksimetil selulosa (Na-CMC)",
+    "short_variant": "Carboxymethyl cellulose",
+    "long_variant": "Sodium carboxymethyl cellulose",
+    "extra_words": [
+      "natrium"
+    ]
+  },
+  {
+    "short_name": "Karmin / Anato (pewarna alami)",
+    "long_name": "Indigotin (Indigo carmine)",
+    "short_variant": "Carmine",
+    "long_variant": "Indigo carmine",
+    "extra_words": [
+      "indigo"
+    ]
+  },
+  {
+    "short_name": "Karmin / Anato (pewarna alami)",
+    "long_name": "Ponceau 4R",
+    "short_variant": "Cochineal",
+    "long_variant": "Cochineal Red A",
+    "extra_words": [
+      "a",
+      "red"
+    ]
+  }
+]

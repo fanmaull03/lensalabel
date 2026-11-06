@@ -1,0 +1,7364 @@
+[
+  {
+    "ingredient_id": 5,
+    "standard_name": "Oat tanpa label bebas gluten (risiko kontaminasi silang)",
+    "category": "perhatian",
+    "name_variant": "Oat tanpa label bebas gluten (risiko kontaminasi silang)"
+  },
+  {
+    "ingredient_id": 5,
+    "standard_name": "Oat tanpa label bebas gluten (risiko kontaminasi silang)",
+    "category": "perhatian",
+    "name_variant": "Havermut"
+  },
+  {
+    "ingredient_id": 5,
+    "standard_name": "Oat tanpa label bebas gluten (risiko kontaminasi silang)",
+    "category": "perhatian",
+    "name_variant": "Oats"
+  },
+  {
+    "ingredient_id": 5,
+    "standard_name": "Oat tanpa label bebas gluten (risiko kontaminasi silang)",
+    "category": "perhatian",
+    "name_variant": "Oats (non gluten-free certified, cross-contamination risk)"
+  },
+  {
+    "ingredient_id": 5,
+    "standard_name": "Oat tanpa label bebas gluten (risiko kontaminasi silang)",
+    "category": "perhatian",
+    "name_variant": "Oat tanpa label bebas gluten"
+  },
+  {
+    "ingredient_id": 5,
+    "standard_name": "Oat tanpa label bebas gluten (risiko kontaminasi silang)",
+    "category": "perhatian",
+    "name_variant": "Oat"
+  },
+  {
+    "ingredient_id": 5,
+    "standard_name": "Oat tanpa label bebas gluten (risiko kontaminasi silang)",
+    "category": "perhatian",
+    "name_variant": "Oatmeal"
+  },
+  {
+    "ingredient_id": 1,
+    "standard_name": "Terigu / Gandum",
+    "category": "hindari",
+    "name_variant": "Terigu / Gandum"
+  },
+  {
+    "ingredient_id": 1,
+    "standard_name": "Terigu / Gandum",
+    "category": "hindari",
+    "name_variant": "Wheat flour"
+  },
+  {
+    "ingredient_id": 1,
+    "standard_name": "Terigu / Gandum",
+    "category": "hindari",
+    "name_variant": "Wheat"
+  },
+  {
+    "ingredient_id": 1,
+    "standard_name": "Terigu / Gandum",
+    "category": "hindari",
+    "name_variant": "Gandum"
+  },
+  {
+    "ingredient_id": 1,
+    "standard_name": "Terigu / Gandum",
+    "category": "hindari",
+    "name_variant": "Terigu"
+  },
+  {
+    "ingredient_id": 1,
+    "standard_name": "Terigu / Gandum",
+    "category": "hindari",
+    "name_variant": "Tepung terigu"
+  },
+  {
+    "ingredient_id": 3,
+    "standard_name": "Barley (jelai)",
+    "category": "hindari",
+    "name_variant": "Barley (jelai)"
+  },
+  {
+    "ingredient_id": 3,
+    "standard_name": "Barley (jelai)",
+    "category": "hindari",
+    "name_variant": "Jelai"
+  },
+  {
+    "ingredient_id": 3,
+    "standard_name": "Barley (jelai)",
+    "category": "hindari",
+    "name_variant": "Barley"
+  },
+  {
+    "ingredient_id": 6,
+    "standard_name": "Kasein / Sodium kaseinat",
+    "category": "hindari",
+    "name_variant": "Kasein / Sodium kaseinat"
+  },
+  {
+    "ingredient_id": 6,
+    "standard_name": "Kasein / Sodium kaseinat",
+    "category": "hindari",
+    "name_variant": "Casein"
+  },
+  {
+    "ingredient_id": 6,
+    "standard_name": "Kasein / Sodium kaseinat",
+    "category": "hindari",
+    "name_variant": "Caseinate"
+  },
+  {
+    "ingredient_id": 6,
+    "standard_name": "Kasein / Sodium kaseinat",
+    "category": "hindari",
+    "name_variant": "Kaseinat"
+  },
+  {
+    "ingredient_id": 6,
+    "standard_name": "Kasein / Sodium kaseinat",
+    "category": "hindari",
+    "name_variant": "Casein / Sodium caseinate"
+  },
+  {
+    "ingredient_id": 6,
+    "standard_name": "Kasein / Sodium kaseinat",
+    "category": "hindari",
+    "name_variant": "Kasein"
+  },
+  {
+    "ingredient_id": 6,
+    "standard_name": "Kasein / Sodium kaseinat",
+    "category": "hindari",
+    "name_variant": "Sodium kaseinat"
+  },
+  {
+    "ingredient_id": 6,
+    "standard_name": "Kasein / Sodium kaseinat",
+    "category": "hindari",
+    "name_variant": "Sodium caseinate"
+  },
+  {
+    "ingredient_id": 6,
+    "standard_name": "Kasein / Sodium kaseinat",
+    "category": "hindari",
+    "name_variant": "Natrium kaseinat"
+  },
+  {
+    "ingredient_id": 6,
+    "standard_name": "Kasein / Sodium kaseinat",
+    "category": "hindari",
+    "name_variant": "E469"
+  },
+  {
+    "ingredient_id": 6,
+    "standard_name": "Kasein / Sodium kaseinat",
+    "category": "hindari",
+    "name_variant": "INS 469"
+  },
+  {
+    "ingredient_id": 6,
+    "standard_name": "Kasein / Sodium kaseinat",
+    "category": "hindari",
+    "name_variant": "INS469"
+  },
+  {
+    "ingredient_id": 7,
+    "standard_name": "Susu sapi",
+    "category": "hindari",
+    "name_variant": "Susu sapi"
+  },
+  {
+    "ingredient_id": 7,
+    "standard_name": "Susu sapi",
+    "category": "hindari",
+    "name_variant": "Whole milk"
+  },
+  {
+    "ingredient_id": 7,
+    "standard_name": "Susu sapi",
+    "category": "hindari",
+    "name_variant": "Milk"
+  },
+  {
+    "ingredient_id": 7,
+    "standard_name": "Susu sapi",
+    "category": "hindari",
+    "name_variant": "Susu"
+  },
+  {
+    "ingredient_id": 7,
+    "standard_name": "Susu sapi",
+    "category": "hindari",
+    "name_variant": "Cow's milk"
+  },
+  {
+    "ingredient_id": 7,
+    "standard_name": "Susu sapi",
+    "category": "hindari",
+    "name_variant": "Full cream milk"
+  },
+  {
+    "ingredient_id": 8,
+    "standard_name": "Keju (semua jenis)",
+    "category": "hindari",
+    "name_variant": "Keju (semua jenis)"
+  },
+  {
+    "ingredient_id": 8,
+    "standard_name": "Keju (semua jenis)",
+    "category": "hindari",
+    "name_variant": "Cheese"
+  },
+  {
+    "ingredient_id": 8,
+    "standard_name": "Keju (semua jenis)",
+    "category": "hindari",
+    "name_variant": "Cheese powder"
+  },
+  {
+    "ingredient_id": 8,
+    "standard_name": "Keju (semua jenis)",
+    "category": "hindari",
+    "name_variant": "Bubuk keju"
+  },
+  {
+    "ingredient_id": 8,
+    "standard_name": "Keju (semua jenis)",
+    "category": "hindari",
+    "name_variant": "Cheese (all types)"
+  },
+  {
+    "ingredient_id": 8,
+    "standard_name": "Keju (semua jenis)",
+    "category": "hindari",
+    "name_variant": "Keju"
+  },
+  {
+    "ingredient_id": 9,
+    "standard_name": "Whey protein",
+    "category": "hindari",
+    "name_variant": "Whey protein"
+  },
+  {
+    "ingredient_id": 9,
+    "standard_name": "Whey protein",
+    "category": "hindari",
+    "name_variant": "Whey"
+  },
+  {
+    "ingredient_id": 9,
+    "standard_name": "Whey protein",
+    "category": "hindari",
+    "name_variant": "Milk whey"
+  },
+  {
+    "ingredient_id": 10,
+    "standard_name": "Tartrazin",
+    "category": "hindari",
+    "name_variant": "Tartrazin"
+  },
+  {
+    "ingredient_id": 10,
+    "standard_name": "Tartrazin",
+    "category": "hindari",
+    "name_variant": "E102"
+  },
+  {
+    "ingredient_id": 10,
+    "standard_name": "Tartrazin",
+    "category": "hindari",
+    "name_variant": "Yellow 5"
+  },
+  {
+    "ingredient_id": 10,
+    "standard_name": "Tartrazin",
+    "category": "hindari",
+    "name_variant": "Tartrazine (FD&C Yellow No. 5)"
+  },
+  {
+    "ingredient_id": 10,
+    "standard_name": "Tartrazin",
+    "category": "hindari",
+    "name_variant": "Tartrazine"
+  },
+  {
+    "ingredient_id": 10,
+    "standard_name": "Tartrazin",
+    "category": "hindari",
+    "name_variant": "FD&C Yellow No. 5"
+  },
+  {
+    "ingredient_id": 10,
+    "standard_name": "Tartrazin",
+    "category": "hindari",
+    "name_variant": "INS 102"
+  },
+  {
+    "ingredient_id": 10,
+    "standard_name": "Tartrazin",
+    "category": "hindari",
+    "name_variant": "INS102"
+  },
+  {
+    "ingredient_id": 11,
+    "standard_name": "Kuning Sunset FCF",
+    "category": "hindari",
+    "name_variant": "Kuning Sunset FCF"
+  },
+  {
+    "ingredient_id": 11,
+    "standard_name": "Kuning Sunset FCF",
+    "category": "hindari",
+    "name_variant": "E110"
+  },
+  {
+    "ingredient_id": 11,
+    "standard_name": "Kuning Sunset FCF",
+    "category": "hindari",
+    "name_variant": "Orange Yellow S"
+  },
+  {
+    "ingredient_id": 11,
+    "standard_name": "Kuning Sunset FCF",
+    "category": "hindari",
+    "name_variant": "Sunset Yellow FCF (FD&C Yellow No. 6)"
+  },
+  {
+    "ingredient_id": 11,
+    "standard_name": "Kuning Sunset FCF",
+    "category": "hindari",
+    "name_variant": "Sunset Yellow FCF"
+  },
+  {
+    "ingredient_id": 11,
+    "standard_name": "Kuning Sunset FCF",
+    "category": "hindari",
+    "name_variant": "Sunset Yellow"
+  },
+  {
+    "ingredient_id": 11,
+    "standard_name": "Kuning Sunset FCF",
+    "category": "hindari",
+    "name_variant": "Yellow 6"
+  },
+  {
+    "ingredient_id": 11,
+    "standard_name": "Kuning Sunset FCF",
+    "category": "hindari",
+    "name_variant": "FD&C Yellow No. 6"
+  },
+  {
+    "ingredient_id": 11,
+    "standard_name": "Kuning Sunset FCF",
+    "category": "hindari",
+    "name_variant": "INS 110"
+  },
+  {
+    "ingredient_id": 11,
+    "standard_name": "Kuning Sunset FCF",
+    "category": "hindari",
+    "name_variant": "INS110"
+  },
+  {
+    "ingredient_id": 12,
+    "standard_name": "Karmoisin (Azorubine)",
+    "category": "hindari",
+    "name_variant": "Karmoisin (Azorubine)"
+  },
+  {
+    "ingredient_id": 12,
+    "standard_name": "Karmoisin (Azorubine)",
+    "category": "hindari",
+    "name_variant": "E122"
+  },
+  {
+    "ingredient_id": 12,
+    "standard_name": "Karmoisin (Azorubine)",
+    "category": "hindari",
+    "name_variant": "Azorubine"
+  },
+  {
+    "ingredient_id": 12,
+    "standard_name": "Karmoisin (Azorubine)",
+    "category": "hindari",
+    "name_variant": "Carmoisine / Azorubine"
+  },
+  {
+    "ingredient_id": 12,
+    "standard_name": "Karmoisin (Azorubine)",
+    "category": "hindari",
+    "name_variant": "Karmoisin"
+  },
+  {
+    "ingredient_id": 12,
+    "standard_name": "Karmoisin (Azorubine)",
+    "category": "hindari",
+    "name_variant": "Karmosin"
+  },
+  {
+    "ingredient_id": 12,
+    "standard_name": "Karmoisin (Azorubine)",
+    "category": "hindari",
+    "name_variant": "Carmoisine"
+  },
+  {
+    "ingredient_id": 12,
+    "standard_name": "Karmoisin (Azorubine)",
+    "category": "hindari",
+    "name_variant": "INS 122"
+  },
+  {
+    "ingredient_id": 12,
+    "standard_name": "Karmoisin (Azorubine)",
+    "category": "hindari",
+    "name_variant": "INS122"
+  },
+  {
+    "ingredient_id": 13,
+    "standard_name": "Ponceau 4R",
+    "category": "hindari",
+    "name_variant": "Ponceau 4R"
+  },
+  {
+    "ingredient_id": 13,
+    "standard_name": "Ponceau 4R",
+    "category": "hindari",
+    "name_variant": "E124"
+  },
+  {
+    "ingredient_id": 13,
+    "standard_name": "Ponceau 4R",
+    "category": "hindari",
+    "name_variant": "Cochineal Red A"
+  },
+  {
+    "ingredient_id": 13,
+    "standard_name": "Ponceau 4R",
+    "category": "hindari",
+    "name_variant": "INS 124"
+  },
+  {
+    "ingredient_id": 13,
+    "standard_name": "Ponceau 4R",
+    "category": "hindari",
+    "name_variant": "INS124"
+  },
+  {
+    "ingredient_id": 14,
+    "standard_name": "Eritrosin",
+    "category": "perhatian",
+    "name_variant": "Eritrosin"
+  },
+  {
+    "ingredient_id": 14,
+    "standard_name": "Eritrosin",
+    "category": "perhatian",
+    "name_variant": "E127"
+  },
+  {
+    "ingredient_id": 14,
+    "standard_name": "Eritrosin",
+    "category": "perhatian",
+    "name_variant": "Red 3"
+  },
+  {
+    "ingredient_id": 14,
+    "standard_name": "Eritrosin",
+    "category": "perhatian",
+    "name_variant": "Erythrosine (FD&C Red No. 3)"
+  },
+  {
+    "ingredient_id": 14,
+    "standard_name": "Eritrosin",
+    "category": "perhatian",
+    "name_variant": "Erythrosine"
+  },
+  {
+    "ingredient_id": 14,
+    "standard_name": "Eritrosin",
+    "category": "perhatian",
+    "name_variant": "FD&C Red No. 3"
+  },
+  {
+    "ingredient_id": 14,
+    "standard_name": "Eritrosin",
+    "category": "perhatian",
+    "name_variant": "INS 127"
+  },
+  {
+    "ingredient_id": 14,
+    "standard_name": "Eritrosin",
+    "category": "perhatian",
+    "name_variant": "INS127"
+  },
+  {
+    "ingredient_id": 15,
+    "standard_name": "Biru Berlian FCF",
+    "category": "perhatian",
+    "name_variant": "Biru Berlian FCF"
+  },
+  {
+    "ingredient_id": 15,
+    "standard_name": "Biru Berlian FCF",
+    "category": "perhatian",
+    "name_variant": "E133"
+  },
+  {
+    "ingredient_id": 15,
+    "standard_name": "Biru Berlian FCF",
+    "category": "perhatian",
+    "name_variant": "Brilliant Blue FCF"
+  },
+  {
+    "ingredient_id": 15,
+    "standard_name": "Biru Berlian FCF",
+    "category": "perhatian",
+    "name_variant": "Biru Berlian"
+  },
+  {
+    "ingredient_id": 15,
+    "standard_name": "Biru Berlian FCF",
+    "category": "perhatian",
+    "name_variant": "INS 133"
+  },
+  {
+    "ingredient_id": 15,
+    "standard_name": "Biru Berlian FCF",
+    "category": "perhatian",
+    "name_variant": "INS133"
+  },
+  {
+    "ingredient_id": 18,
+    "standard_name": "Natrium Benzoat",
+    "category": "hindari",
+    "name_variant": "Natrium Benzoat"
+  },
+  {
+    "ingredient_id": 18,
+    "standard_name": "Natrium Benzoat",
+    "category": "hindari",
+    "name_variant": "E211"
+  },
+  {
+    "ingredient_id": 18,
+    "standard_name": "Natrium Benzoat",
+    "category": "hindari",
+    "name_variant": "Sodium Benzoate"
+  },
+  {
+    "ingredient_id": 18,
+    "standard_name": "Natrium Benzoat",
+    "category": "hindari",
+    "name_variant": "INS 211"
+  },
+  {
+    "ingredient_id": 18,
+    "standard_name": "Natrium Benzoat",
+    "category": "hindari",
+    "name_variant": "INS211"
+  },
+  {
+    "ingredient_id": 20,
+    "standard_name": "Sulfit / Metabisulfit",
+    "category": "perhatian",
+    "name_variant": "Sulfit / Metabisulfit"
+  },
+  {
+    "ingredient_id": 20,
+    "standard_name": "Sulfit / Metabisulfit",
+    "category": "perhatian",
+    "name_variant": "Sulfites / Metabisulfite"
+  },
+  {
+    "ingredient_id": 20,
+    "standard_name": "Sulfit / Metabisulfit",
+    "category": "perhatian",
+    "name_variant": "Sulfit"
+  },
+  {
+    "ingredient_id": 20,
+    "standard_name": "Sulfit / Metabisulfit",
+    "category": "perhatian",
+    "name_variant": "Metabisulfit"
+  },
+  {
+    "ingredient_id": 20,
+    "standard_name": "Sulfit / Metabisulfit",
+    "category": "perhatian",
+    "name_variant": "Sulfites"
+  },
+  {
+    "ingredient_id": 20,
+    "standard_name": "Sulfit / Metabisulfit",
+    "category": "perhatian",
+    "name_variant": "Metabisulfite"
+  },
+  {
+    "ingredient_id": 20,
+    "standard_name": "Sulfit / Metabisulfit",
+    "category": "perhatian",
+    "name_variant": "Sulfur dioxide"
+  },
+  {
+    "ingredient_id": 20,
+    "standard_name": "Sulfit / Metabisulfit",
+    "category": "perhatian",
+    "name_variant": "Natrium metabisulfit"
+  },
+  {
+    "ingredient_id": 20,
+    "standard_name": "Sulfit / Metabisulfit",
+    "category": "perhatian",
+    "name_variant": "Sodium metabisulfite"
+  },
+  {
+    "ingredient_id": 20,
+    "standard_name": "Sulfit / Metabisulfit",
+    "category": "perhatian",
+    "name_variant": "E220"
+  },
+  {
+    "ingredient_id": 20,
+    "standard_name": "Sulfit / Metabisulfit",
+    "category": "perhatian",
+    "name_variant": "INS 220"
+  },
+  {
+    "ingredient_id": 20,
+    "standard_name": "Sulfit / Metabisulfit",
+    "category": "perhatian",
+    "name_variant": "INS220"
+  },
+  {
+    "ingredient_id": 20,
+    "standard_name": "Sulfit / Metabisulfit",
+    "category": "perhatian",
+    "name_variant": "E221"
+  },
+  {
+    "ingredient_id": 20,
+    "standard_name": "Sulfit / Metabisulfit",
+    "category": "perhatian",
+    "name_variant": "INS 221"
+  },
+  {
+    "ingredient_id": 20,
+    "standard_name": "Sulfit / Metabisulfit",
+    "category": "perhatian",
+    "name_variant": "INS221"
+  },
+  {
+    "ingredient_id": 20,
+    "standard_name": "Sulfit / Metabisulfit",
+    "category": "perhatian",
+    "name_variant": "E222"
+  },
+  {
+    "ingredient_id": 20,
+    "standard_name": "Sulfit / Metabisulfit",
+    "category": "perhatian",
+    "name_variant": "INS 222"
+  },
+  {
+    "ingredient_id": 20,
+    "standard_name": "Sulfit / Metabisulfit",
+    "category": "perhatian",
+    "name_variant": "INS222"
+  },
+  {
+    "ingredient_id": 20,
+    "standard_name": "Sulfit / Metabisulfit",
+    "category": "perhatian",
+    "name_variant": "E223"
+  },
+  {
+    "ingredient_id": 20,
+    "standard_name": "Sulfit / Metabisulfit",
+    "category": "perhatian",
+    "name_variant": "INS 223"
+  },
+  {
+    "ingredient_id": 20,
+    "standard_name": "Sulfit / Metabisulfit",
+    "category": "perhatian",
+    "name_variant": "INS223"
+  },
+  {
+    "ingredient_id": 20,
+    "standard_name": "Sulfit / Metabisulfit",
+    "category": "perhatian",
+    "name_variant": "E224"
+  },
+  {
+    "ingredient_id": 20,
+    "standard_name": "Sulfit / Metabisulfit",
+    "category": "perhatian",
+    "name_variant": "INS 224"
+  },
+  {
+    "ingredient_id": 20,
+    "standard_name": "Sulfit / Metabisulfit",
+    "category": "perhatian",
+    "name_variant": "INS224"
+  },
+  {
+    "ingredient_id": 20,
+    "standard_name": "Sulfit / Metabisulfit",
+    "category": "perhatian",
+    "name_variant": "E225"
+  },
+  {
+    "ingredient_id": 20,
+    "standard_name": "Sulfit / Metabisulfit",
+    "category": "perhatian",
+    "name_variant": "INS 225"
+  },
+  {
+    "ingredient_id": 20,
+    "standard_name": "Sulfit / Metabisulfit",
+    "category": "perhatian",
+    "name_variant": "INS225"
+  },
+  {
+    "ingredient_id": 20,
+    "standard_name": "Sulfit / Metabisulfit",
+    "category": "perhatian",
+    "name_variant": "E226"
+  },
+  {
+    "ingredient_id": 20,
+    "standard_name": "Sulfit / Metabisulfit",
+    "category": "perhatian",
+    "name_variant": "INS 226"
+  },
+  {
+    "ingredient_id": 20,
+    "standard_name": "Sulfit / Metabisulfit",
+    "category": "perhatian",
+    "name_variant": "INS226"
+  },
+  {
+    "ingredient_id": 20,
+    "standard_name": "Sulfit / Metabisulfit",
+    "category": "perhatian",
+    "name_variant": "E227"
+  },
+  {
+    "ingredient_id": 20,
+    "standard_name": "Sulfit / Metabisulfit",
+    "category": "perhatian",
+    "name_variant": "INS 227"
+  },
+  {
+    "ingredient_id": 20,
+    "standard_name": "Sulfit / Metabisulfit",
+    "category": "perhatian",
+    "name_variant": "INS227"
+  },
+  {
+    "ingredient_id": 20,
+    "standard_name": "Sulfit / Metabisulfit",
+    "category": "perhatian",
+    "name_variant": "E228"
+  },
+  {
+    "ingredient_id": 20,
+    "standard_name": "Sulfit / Metabisulfit",
+    "category": "perhatian",
+    "name_variant": "INS 228"
+  },
+  {
+    "ingredient_id": 20,
+    "standard_name": "Sulfit / Metabisulfit",
+    "category": "perhatian",
+    "name_variant": "INS228"
+  },
+  {
+    "ingredient_id": 21,
+    "standard_name": "Natrium Nitrit",
+    "category": "hindari",
+    "name_variant": "Natrium Nitrit"
+  },
+  {
+    "ingredient_id": 21,
+    "standard_name": "Natrium Nitrit",
+    "category": "hindari",
+    "name_variant": "E250"
+  },
+  {
+    "ingredient_id": 21,
+    "standard_name": "Natrium Nitrit",
+    "category": "hindari",
+    "name_variant": "Sodium Nitrite"
+  },
+  {
+    "ingredient_id": 21,
+    "standard_name": "Natrium Nitrit",
+    "category": "hindari",
+    "name_variant": "INS 250"
+  },
+  {
+    "ingredient_id": 21,
+    "standard_name": "Natrium Nitrit",
+    "category": "hindari",
+    "name_variant": "INS250"
+  },
+  {
+    "ingredient_id": 22,
+    "standard_name": "Butil Hidroksianisol (BHA)",
+    "category": "hindari",
+    "name_variant": "Butil Hidroksianisol (BHA)"
+  },
+  {
+    "ingredient_id": 22,
+    "standard_name": "Butil Hidroksianisol (BHA)",
+    "category": "hindari",
+    "name_variant": "E320"
+  },
+  {
+    "ingredient_id": 22,
+    "standard_name": "Butil Hidroksianisol (BHA)",
+    "category": "hindari",
+    "name_variant": "Butylated Hydroxyanisole (BHA)"
+  },
+  {
+    "ingredient_id": 22,
+    "standard_name": "Butil Hidroksianisol (BHA)",
+    "category": "hindari",
+    "name_variant": "Butil Hidroksianisol"
+  },
+  {
+    "ingredient_id": 22,
+    "standard_name": "Butil Hidroksianisol (BHA)",
+    "category": "hindari",
+    "name_variant": "Butylated Hydroxyanisole"
+  },
+  {
+    "ingredient_id": 22,
+    "standard_name": "Butil Hidroksianisol (BHA)",
+    "category": "hindari",
+    "name_variant": "BHA"
+  },
+  {
+    "ingredient_id": 22,
+    "standard_name": "Butil Hidroksianisol (BHA)",
+    "category": "hindari",
+    "name_variant": "INS 320"
+  },
+  {
+    "ingredient_id": 22,
+    "standard_name": "Butil Hidroksianisol (BHA)",
+    "category": "hindari",
+    "name_variant": "INS320"
+  },
+  {
+    "ingredient_id": 23,
+    "standard_name": "Butil Hidroksitoluena (BHT)",
+    "category": "hindari",
+    "name_variant": "Butil Hidroksitoluena (BHT)"
+  },
+  {
+    "ingredient_id": 23,
+    "standard_name": "Butil Hidroksitoluena (BHT)",
+    "category": "hindari",
+    "name_variant": "E321"
+  },
+  {
+    "ingredient_id": 23,
+    "standard_name": "Butil Hidroksitoluena (BHT)",
+    "category": "hindari",
+    "name_variant": "Butylated Hydroxytoluene (BHT)"
+  },
+  {
+    "ingredient_id": 23,
+    "standard_name": "Butil Hidroksitoluena (BHT)",
+    "category": "hindari",
+    "name_variant": "Butil Hidroksitoluena"
+  },
+  {
+    "ingredient_id": 23,
+    "standard_name": "Butil Hidroksitoluena (BHT)",
+    "category": "hindari",
+    "name_variant": "Butylated Hydroxytoluene"
+  },
+  {
+    "ingredient_id": 23,
+    "standard_name": "Butil Hidroksitoluena (BHT)",
+    "category": "hindari",
+    "name_variant": "BHT"
+  },
+  {
+    "ingredient_id": 23,
+    "standard_name": "Butil Hidroksitoluena (BHT)",
+    "category": "hindari",
+    "name_variant": "INS 321"
+  },
+  {
+    "ingredient_id": 23,
+    "standard_name": "Butil Hidroksitoluena (BHT)",
+    "category": "hindari",
+    "name_variant": "INS321"
+  },
+  {
+    "ingredient_id": 24,
+    "standard_name": "Monosodium Glutamat (MSG)",
+    "category": "perhatian",
+    "name_variant": "Monosodium Glutamat (MSG)"
+  },
+  {
+    "ingredient_id": 24,
+    "standard_name": "Monosodium Glutamat (MSG)",
+    "category": "perhatian",
+    "name_variant": "E621"
+  },
+  {
+    "ingredient_id": 24,
+    "standard_name": "Monosodium Glutamat (MSG)",
+    "category": "perhatian",
+    "name_variant": "Mononatrium glutamat"
+  },
+  {
+    "ingredient_id": 24,
+    "standard_name": "Monosodium Glutamat (MSG)",
+    "category": "perhatian",
+    "name_variant": "Monosodium Glutamate (MSG)"
+  },
+  {
+    "ingredient_id": 24,
+    "standard_name": "Monosodium Glutamat (MSG)",
+    "category": "perhatian",
+    "name_variant": "Monosodium Glutamat"
+  },
+  {
+    "ingredient_id": 24,
+    "standard_name": "Monosodium Glutamat (MSG)",
+    "category": "perhatian",
+    "name_variant": "Monosodium Glutamate"
+  },
+  {
+    "ingredient_id": 24,
+    "standard_name": "Monosodium Glutamat (MSG)",
+    "category": "perhatian",
+    "name_variant": "MSG"
+  },
+  {
+    "ingredient_id": 24,
+    "standard_name": "Monosodium Glutamat (MSG)",
+    "category": "perhatian",
+    "name_variant": "Vetsin"
+  },
+  {
+    "ingredient_id": 24,
+    "standard_name": "Monosodium Glutamat (MSG)",
+    "category": "perhatian",
+    "name_variant": "INS 621"
+  },
+  {
+    "ingredient_id": 24,
+    "standard_name": "Monosodium Glutamat (MSG)",
+    "category": "perhatian",
+    "name_variant": "INS621"
+  },
+  {
+    "ingredient_id": 25,
+    "standard_name": "Dinatrium Guanilat",
+    "category": "perhatian",
+    "name_variant": "Dinatrium Guanilat"
+  },
+  {
+    "ingredient_id": 25,
+    "standard_name": "Dinatrium Guanilat",
+    "category": "perhatian",
+    "name_variant": "E627"
+  },
+  {
+    "ingredient_id": 25,
+    "standard_name": "Dinatrium Guanilat",
+    "category": "perhatian",
+    "name_variant": "Disodium Guanylate"
+  },
+  {
+    "ingredient_id": 25,
+    "standard_name": "Dinatrium Guanilat",
+    "category": "perhatian",
+    "name_variant": "INS 627"
+  },
+  {
+    "ingredient_id": 25,
+    "standard_name": "Dinatrium Guanilat",
+    "category": "perhatian",
+    "name_variant": "INS627"
+  },
+  {
+    "ingredient_id": 26,
+    "standard_name": "Dinatrium Inosinat",
+    "category": "perhatian",
+    "name_variant": "Dinatrium Inosinat"
+  },
+  {
+    "ingredient_id": 26,
+    "standard_name": "Dinatrium Inosinat",
+    "category": "perhatian",
+    "name_variant": "E631"
+  },
+  {
+    "ingredient_id": 26,
+    "standard_name": "Dinatrium Inosinat",
+    "category": "perhatian",
+    "name_variant": "Disodium Inosinate"
+  },
+  {
+    "ingredient_id": 26,
+    "standard_name": "Dinatrium Inosinat",
+    "category": "perhatian",
+    "name_variant": "INS 631"
+  },
+  {
+    "ingredient_id": 26,
+    "standard_name": "Dinatrium Inosinat",
+    "category": "perhatian",
+    "name_variant": "INS631"
+  },
+  {
+    "ingredient_id": 27,
+    "standard_name": "Aspartam",
+    "category": "hindari",
+    "name_variant": "Aspartam"
+  },
+  {
+    "ingredient_id": 27,
+    "standard_name": "Aspartam",
+    "category": "hindari",
+    "name_variant": "E951"
+  },
+  {
+    "ingredient_id": 27,
+    "standard_name": "Aspartam",
+    "category": "hindari",
+    "name_variant": "Aspartame"
+  },
+  {
+    "ingredient_id": 27,
+    "standard_name": "Aspartam",
+    "category": "hindari",
+    "name_variant": "Equal"
+  },
+  {
+    "ingredient_id": 27,
+    "standard_name": "Aspartam",
+    "category": "hindari",
+    "name_variant": "INS 951"
+  },
+  {
+    "ingredient_id": 27,
+    "standard_name": "Aspartam",
+    "category": "hindari",
+    "name_variant": "INS951"
+  },
+  {
+    "ingredient_id": 28,
+    "standard_name": "Sakarin",
+    "category": "perhatian",
+    "name_variant": "Sakarin"
+  },
+  {
+    "ingredient_id": 28,
+    "standard_name": "Sakarin",
+    "category": "perhatian",
+    "name_variant": "E954"
+  },
+  {
+    "ingredient_id": 28,
+    "standard_name": "Sakarin",
+    "category": "perhatian",
+    "name_variant": "Saccharin"
+  },
+  {
+    "ingredient_id": 28,
+    "standard_name": "Sakarin",
+    "category": "perhatian",
+    "name_variant": "Sodium saccharin"
+  },
+  {
+    "ingredient_id": 28,
+    "standard_name": "Sakarin",
+    "category": "perhatian",
+    "name_variant": "INS 954"
+  },
+  {
+    "ingredient_id": 28,
+    "standard_name": "Sakarin",
+    "category": "perhatian",
+    "name_variant": "INS954"
+  },
+  {
+    "ingredient_id": 29,
+    "standard_name": "Siklamat",
+    "category": "perhatian",
+    "name_variant": "Siklamat"
+  },
+  {
+    "ingredient_id": 29,
+    "standard_name": "Siklamat",
+    "category": "perhatian",
+    "name_variant": "E952"
+  },
+  {
+    "ingredient_id": 29,
+    "standard_name": "Siklamat",
+    "category": "perhatian",
+    "name_variant": "Sodium cyclamate"
+  },
+  {
+    "ingredient_id": 29,
+    "standard_name": "Siklamat",
+    "category": "perhatian",
+    "name_variant": "Cyclamate"
+  },
+  {
+    "ingredient_id": 29,
+    "standard_name": "Siklamat",
+    "category": "perhatian",
+    "name_variant": "INS 952"
+  },
+  {
+    "ingredient_id": 29,
+    "standard_name": "Siklamat",
+    "category": "perhatian",
+    "name_variant": "INS952"
+  },
+  {
+    "ingredient_id": 30,
+    "standard_name": "Sukralosa",
+    "category": "aman",
+    "name_variant": "Sukralosa"
+  },
+  {
+    "ingredient_id": 30,
+    "standard_name": "Sukralosa",
+    "category": "aman",
+    "name_variant": "E955"
+  },
+  {
+    "ingredient_id": 30,
+    "standard_name": "Sukralosa",
+    "category": "aman",
+    "name_variant": "Sucralose"
+  },
+  {
+    "ingredient_id": 30,
+    "standard_name": "Sukralosa",
+    "category": "aman",
+    "name_variant": "Splenda"
+  },
+  {
+    "ingredient_id": 30,
+    "standard_name": "Sukralosa",
+    "category": "aman",
+    "name_variant": "INS 955"
+  },
+  {
+    "ingredient_id": 30,
+    "standard_name": "Sukralosa",
+    "category": "aman",
+    "name_variant": "INS955"
+  },
+  {
+    "ingredient_id": 31,
+    "standard_name": "Gula pasir murni",
+    "category": "aman",
+    "name_variant": "Gula pasir murni"
+  },
+  {
+    "ingredient_id": 31,
+    "standard_name": "Gula pasir murni",
+    "category": "aman",
+    "name_variant": "Gula"
+  },
+  {
+    "ingredient_id": 31,
+    "standard_name": "Gula pasir murni",
+    "category": "aman",
+    "name_variant": "Cane sugar (pure)"
+  },
+  {
+    "ingredient_id": 31,
+    "standard_name": "Gula pasir murni",
+    "category": "aman",
+    "name_variant": "Cane sugar"
+  },
+  {
+    "ingredient_id": 31,
+    "standard_name": "Gula pasir murni",
+    "category": "aman",
+    "name_variant": "Gula pasir"
+  },
+  {
+    "ingredient_id": 31,
+    "standard_name": "Gula pasir murni",
+    "category": "aman",
+    "name_variant": "Sugar"
+  },
+  {
+    "ingredient_id": 32,
+    "standard_name": "Sirup glukosa / Dekstrosa / Fruktosa / Sirup fruktosa",
+    "category": "aman",
+    "name_variant": "Sirup glukosa / Dekstrosa / Fruktosa / Sirup fruktosa"
+  },
+  {
+    "ingredient_id": 32,
+    "standard_name": "Sirup glukosa / Dekstrosa / Fruktosa / Sirup fruktosa",
+    "category": "aman",
+    "name_variant": "High fructose corn syrup"
+  },
+  {
+    "ingredient_id": 32,
+    "standard_name": "Sirup glukosa / Dekstrosa / Fruktosa / Sirup fruktosa",
+    "category": "aman",
+    "name_variant": "HFCS"
+  },
+  {
+    "ingredient_id": 32,
+    "standard_name": "Sirup glukosa / Dekstrosa / Fruktosa / Sirup fruktosa",
+    "category": "aman",
+    "name_variant": "Glucose syrup / Dextrose / Fructose / High fructose syrup"
+  },
+  {
+    "ingredient_id": 32,
+    "standard_name": "Sirup glukosa / Dekstrosa / Fruktosa / Sirup fruktosa",
+    "category": "aman",
+    "name_variant": "Sirup glukosa"
+  },
+  {
+    "ingredient_id": 32,
+    "standard_name": "Sirup glukosa / Dekstrosa / Fruktosa / Sirup fruktosa",
+    "category": "aman",
+    "name_variant": "Dekstrosa"
+  },
+  {
+    "ingredient_id": 32,
+    "standard_name": "Sirup glukosa / Dekstrosa / Fruktosa / Sirup fruktosa",
+    "category": "aman",
+    "name_variant": "Fruktosa"
+  },
+  {
+    "ingredient_id": 32,
+    "standard_name": "Sirup glukosa / Dekstrosa / Fruktosa / Sirup fruktosa",
+    "category": "aman",
+    "name_variant": "Sirup fruktosa"
+  },
+  {
+    "ingredient_id": 32,
+    "standard_name": "Sirup glukosa / Dekstrosa / Fruktosa / Sirup fruktosa",
+    "category": "aman",
+    "name_variant": "Glucose syrup"
+  },
+  {
+    "ingredient_id": 32,
+    "standard_name": "Sirup glukosa / Dekstrosa / Fruktosa / Sirup fruktosa",
+    "category": "aman",
+    "name_variant": "Dextrose"
+  },
+  {
+    "ingredient_id": 32,
+    "standard_name": "Sirup glukosa / Dekstrosa / Fruktosa / Sirup fruktosa",
+    "category": "aman",
+    "name_variant": "Fructose"
+  },
+  {
+    "ingredient_id": 32,
+    "standard_name": "Sirup glukosa / Dekstrosa / Fruktosa / Sirup fruktosa",
+    "category": "aman",
+    "name_variant": "High fructose syrup"
+  },
+  {
+    "ingredient_id": 34,
+    "standard_name": "Kakao/cokelat murni",
+    "category": "perhatian",
+    "name_variant": "Kakao/cokelat murni"
+  },
+  {
+    "ingredient_id": 34,
+    "standard_name": "Kakao/cokelat murni",
+    "category": "perhatian",
+    "name_variant": "Cocoa"
+  },
+  {
+    "ingredient_id": 34,
+    "standard_name": "Kakao/cokelat murni",
+    "category": "perhatian",
+    "name_variant": "Coklat"
+  },
+  {
+    "ingredient_id": 34,
+    "standard_name": "Kakao/cokelat murni",
+    "category": "perhatian",
+    "name_variant": "Chocolate"
+  },
+  {
+    "ingredient_id": 34,
+    "standard_name": "Kakao/cokelat murni",
+    "category": "perhatian",
+    "name_variant": "Cocoa / cacao"
+  },
+  {
+    "ingredient_id": 34,
+    "standard_name": "Kakao/cokelat murni",
+    "category": "perhatian",
+    "name_variant": "Kakao"
+  },
+  {
+    "ingredient_id": 34,
+    "standard_name": "Kakao/cokelat murni",
+    "category": "perhatian",
+    "name_variant": "Cokelat"
+  },
+  {
+    "ingredient_id": 34,
+    "standard_name": "Kakao/cokelat murni",
+    "category": "perhatian",
+    "name_variant": "Cacao"
+  },
+  {
+    "ingredient_id": 35,
+    "standard_name": "Perisa buatan (artificial flavor)",
+    "category": "perhatian",
+    "name_variant": "Perisa buatan (artificial flavor)"
+  },
+  {
+    "ingredient_id": 35,
+    "standard_name": "Perisa buatan (artificial flavor)",
+    "category": "perhatian",
+    "name_variant": "Artificial flavour"
+  },
+  {
+    "ingredient_id": 35,
+    "standard_name": "Perisa buatan (artificial flavor)",
+    "category": "perhatian",
+    "name_variant": "Perisa sintetik"
+  },
+  {
+    "ingredient_id": 35,
+    "standard_name": "Perisa buatan (artificial flavor)",
+    "category": "perhatian",
+    "name_variant": "Synthetic flavour"
+  },
+  {
+    "ingredient_id": 35,
+    "standard_name": "Perisa buatan (artificial flavor)",
+    "category": "perhatian",
+    "name_variant": "Artificial flavor / fragrance"
+  },
+  {
+    "ingredient_id": 35,
+    "standard_name": "Perisa buatan (artificial flavor)",
+    "category": "perhatian",
+    "name_variant": "Perisa buatan"
+  },
+  {
+    "ingredient_id": 35,
+    "standard_name": "Perisa buatan (artificial flavor)",
+    "category": "perhatian",
+    "name_variant": "Artificial flavor"
+  },
+  {
+    "ingredient_id": 35,
+    "standard_name": "Perisa buatan (artificial flavor)",
+    "category": "perhatian",
+    "name_variant": "Artificial flavoring"
+  },
+  {
+    "ingredient_id": 35,
+    "standard_name": "Perisa buatan (artificial flavor)",
+    "category": "perhatian",
+    "name_variant": "Fragrance"
+  },
+  {
+    "ingredient_id": 36,
+    "standard_name": "Asam askorbat (Vitamin C)",
+    "category": "aman",
+    "name_variant": "Asam askorbat (Vitamin C)"
+  },
+  {
+    "ingredient_id": 36,
+    "standard_name": "Asam askorbat (Vitamin C)",
+    "category": "aman",
+    "name_variant": "E300"
+  },
+  {
+    "ingredient_id": 36,
+    "standard_name": "Asam askorbat (Vitamin C)",
+    "category": "aman",
+    "name_variant": "Ascorbic acid"
+  },
+  {
+    "ingredient_id": 36,
+    "standard_name": "Asam askorbat (Vitamin C)",
+    "category": "aman",
+    "name_variant": "Ascorbic acid (Vitamin C)"
+  },
+  {
+    "ingredient_id": 36,
+    "standard_name": "Asam askorbat (Vitamin C)",
+    "category": "aman",
+    "name_variant": "Asam askorbat"
+  },
+  {
+    "ingredient_id": 36,
+    "standard_name": "Asam askorbat (Vitamin C)",
+    "category": "aman",
+    "name_variant": "Vitamin C"
+  },
+  {
+    "ingredient_id": 36,
+    "standard_name": "Asam askorbat (Vitamin C)",
+    "category": "aman",
+    "name_variant": "INS 300"
+  },
+  {
+    "ingredient_id": 36,
+    "standard_name": "Asam askorbat (Vitamin C)",
+    "category": "aman",
+    "name_variant": "INS300"
+  },
+  {
+    "ingredient_id": 38,
+    "standard_name": "Tokoferol / Tokoferol campuran pekat (Vitamin E)",
+    "category": "aman",
+    "name_variant": "Tokoferol / Tokoferol campuran pekat (Vitamin E)"
+  },
+  {
+    "ingredient_id": 38,
+    "standard_name": "Tokoferol / Tokoferol campuran pekat (Vitamin E)",
+    "category": "aman",
+    "name_variant": "Tocopherol"
+  },
+  {
+    "ingredient_id": 38,
+    "standard_name": "Tokoferol / Tokoferol campuran pekat (Vitamin E)",
+    "category": "aman",
+    "name_variant": "Tocopherol / mixed tocopherols (Vitamin E)"
+  },
+  {
+    "ingredient_id": 38,
+    "standard_name": "Tokoferol / Tokoferol campuran pekat (Vitamin E)",
+    "category": "aman",
+    "name_variant": "Tokoferol / Tokoferol campuran pekat"
+  },
+  {
+    "ingredient_id": 38,
+    "standard_name": "Tokoferol / Tokoferol campuran pekat (Vitamin E)",
+    "category": "aman",
+    "name_variant": "Tocopherol / mixed tocopherols"
+  },
+  {
+    "ingredient_id": 38,
+    "standard_name": "Tokoferol / Tokoferol campuran pekat (Vitamin E)",
+    "category": "aman",
+    "name_variant": "Tokoferol"
+  },
+  {
+    "ingredient_id": 38,
+    "standard_name": "Tokoferol / Tokoferol campuran pekat (Vitamin E)",
+    "category": "aman",
+    "name_variant": "Tokoferol campuran pekat"
+  },
+  {
+    "ingredient_id": 38,
+    "standard_name": "Tokoferol / Tokoferol campuran pekat (Vitamin E)",
+    "category": "aman",
+    "name_variant": "Vitamin E"
+  },
+  {
+    "ingredient_id": 38,
+    "standard_name": "Tokoferol / Tokoferol campuran pekat (Vitamin E)",
+    "category": "aman",
+    "name_variant": "Mixed tocopherols"
+  },
+  {
+    "ingredient_id": 38,
+    "standard_name": "Tokoferol / Tokoferol campuran pekat (Vitamin E)",
+    "category": "aman",
+    "name_variant": "E307"
+  },
+  {
+    "ingredient_id": 38,
+    "standard_name": "Tokoferol / Tokoferol campuran pekat (Vitamin E)",
+    "category": "aman",
+    "name_variant": "INS 307"
+  },
+  {
+    "ingredient_id": 38,
+    "standard_name": "Tokoferol / Tokoferol campuran pekat (Vitamin E)",
+    "category": "aman",
+    "name_variant": "INS307"
+  },
+  {
+    "ingredient_id": 39,
+    "standard_name": "Beta-karoten (pewarna alami)",
+    "category": "aman",
+    "name_variant": "Beta-karoten (pewarna alami)"
+  },
+  {
+    "ingredient_id": 39,
+    "standard_name": "Beta-karoten (pewarna alami)",
+    "category": "aman",
+    "name_variant": "E160a"
+  },
+  {
+    "ingredient_id": 39,
+    "standard_name": "Beta-karoten (pewarna alami)",
+    "category": "aman",
+    "name_variant": "Beta carotene"
+  },
+  {
+    "ingredient_id": 39,
+    "standard_name": "Beta-karoten (pewarna alami)",
+    "category": "aman",
+    "name_variant": "Beta-carotene (natural color)"
+  },
+  {
+    "ingredient_id": 39,
+    "standard_name": "Beta-karoten (pewarna alami)",
+    "category": "aman",
+    "name_variant": "Beta-karoten"
+  },
+  {
+    "ingredient_id": 39,
+    "standard_name": "Beta-karoten (pewarna alami)",
+    "category": "aman",
+    "name_variant": "Beta-carotene"
+  },
+  {
+    "ingredient_id": 39,
+    "standard_name": "Beta-karoten (pewarna alami)",
+    "category": "aman",
+    "name_variant": "Beta karoten"
+  },
+  {
+    "ingredient_id": 39,
+    "standard_name": "Beta-karoten (pewarna alami)",
+    "category": "aman",
+    "name_variant": "INS 160a"
+  },
+  {
+    "ingredient_id": 39,
+    "standard_name": "Beta-karoten (pewarna alami)",
+    "category": "aman",
+    "name_variant": "INS160a"
+  },
+  {
+    "ingredient_id": 43,
+    "standard_name": "Karagenan (rumput laut)",
+    "category": "aman",
+    "name_variant": "Karagenan (rumput laut)"
+  },
+  {
+    "ingredient_id": 43,
+    "standard_name": "Karagenan (rumput laut)",
+    "category": "aman",
+    "name_variant": "E407"
+  },
+  {
+    "ingredient_id": 43,
+    "standard_name": "Karagenan (rumput laut)",
+    "category": "aman",
+    "name_variant": "Carrageenan"
+  },
+  {
+    "ingredient_id": 43,
+    "standard_name": "Karagenan (rumput laut)",
+    "category": "aman",
+    "name_variant": "Carrageenan (seaweed-derived)"
+  },
+  {
+    "ingredient_id": 43,
+    "standard_name": "Karagenan (rumput laut)",
+    "category": "aman",
+    "name_variant": "Karagenan"
+  },
+  {
+    "ingredient_id": 43,
+    "standard_name": "Karagenan (rumput laut)",
+    "category": "aman",
+    "name_variant": "INS 407"
+  },
+  {
+    "ingredient_id": 43,
+    "standard_name": "Karagenan (rumput laut)",
+    "category": "aman",
+    "name_variant": "INS407"
+  },
+  {
+    "ingredient_id": 44,
+    "standard_name": "Gom arab / Selulosa bubuk / Gom guar",
+    "category": "aman",
+    "name_variant": "Gom arab / Selulosa bubuk / Gom guar"
+  },
+  {
+    "ingredient_id": 44,
+    "standard_name": "Gom arab / Selulosa bubuk / Gom guar",
+    "category": "aman",
+    "name_variant": "E412"
+  },
+  {
+    "ingredient_id": 44,
+    "standard_name": "Gom arab / Selulosa bubuk / Gom guar",
+    "category": "aman",
+    "name_variant": "Guaran"
+  },
+  {
+    "ingredient_id": 44,
+    "standard_name": "Gom arab / Selulosa bubuk / Gom guar",
+    "category": "aman",
+    "name_variant": "Gum arabic / Cellulose powder / Guar gum"
+  },
+  {
+    "ingredient_id": 44,
+    "standard_name": "Gom arab / Selulosa bubuk / Gom guar",
+    "category": "aman",
+    "name_variant": "Gom arab"
+  },
+  {
+    "ingredient_id": 44,
+    "standard_name": "Gom arab / Selulosa bubuk / Gom guar",
+    "category": "aman",
+    "name_variant": "Selulosa bubuk"
+  },
+  {
+    "ingredient_id": 44,
+    "standard_name": "Gom arab / Selulosa bubuk / Gom guar",
+    "category": "aman",
+    "name_variant": "Gom guar"
+  },
+  {
+    "ingredient_id": 44,
+    "standard_name": "Gom arab / Selulosa bubuk / Gom guar",
+    "category": "aman",
+    "name_variant": "Gum arabic"
+  },
+  {
+    "ingredient_id": 44,
+    "standard_name": "Gom arab / Selulosa bubuk / Gom guar",
+    "category": "aman",
+    "name_variant": "Cellulose powder"
+  },
+  {
+    "ingredient_id": 44,
+    "standard_name": "Gom arab / Selulosa bubuk / Gom guar",
+    "category": "aman",
+    "name_variant": "Guar gum"
+  },
+  {
+    "ingredient_id": 44,
+    "standard_name": "Gom arab / Selulosa bubuk / Gom guar",
+    "category": "aman",
+    "name_variant": "Akasia gum"
+  },
+  {
+    "ingredient_id": 44,
+    "standard_name": "Gom arab / Selulosa bubuk / Gom guar",
+    "category": "aman",
+    "name_variant": "Acacia gum"
+  },
+  {
+    "ingredient_id": 44,
+    "standard_name": "Gom arab / Selulosa bubuk / Gom guar",
+    "category": "aman",
+    "name_variant": "Selulosa"
+  },
+  {
+    "ingredient_id": 44,
+    "standard_name": "Gom arab / Selulosa bubuk / Gom guar",
+    "category": "aman",
+    "name_variant": "Cellulose"
+  },
+  {
+    "ingredient_id": 44,
+    "standard_name": "Gom arab / Selulosa bubuk / Gom guar",
+    "category": "aman",
+    "name_variant": "E414"
+  },
+  {
+    "ingredient_id": 44,
+    "standard_name": "Gom arab / Selulosa bubuk / Gom guar",
+    "category": "aman",
+    "name_variant": "INS 414"
+  },
+  {
+    "ingredient_id": 44,
+    "standard_name": "Gom arab / Selulosa bubuk / Gom guar",
+    "category": "aman",
+    "name_variant": "INS414"
+  },
+  {
+    "ingredient_id": 44,
+    "standard_name": "Gom arab / Selulosa bubuk / Gom guar",
+    "category": "aman",
+    "name_variant": "E460"
+  },
+  {
+    "ingredient_id": 44,
+    "standard_name": "Gom arab / Selulosa bubuk / Gom guar",
+    "category": "aman",
+    "name_variant": "INS 460"
+  },
+  {
+    "ingredient_id": 44,
+    "standard_name": "Gom arab / Selulosa bubuk / Gom guar",
+    "category": "aman",
+    "name_variant": "INS460"
+  },
+  {
+    "ingredient_id": 44,
+    "standard_name": "Gom arab / Selulosa bubuk / Gom guar",
+    "category": "aman",
+    "name_variant": "INS 412"
+  },
+  {
+    "ingredient_id": 44,
+    "standard_name": "Gom arab / Selulosa bubuk / Gom guar",
+    "category": "aman",
+    "name_variant": "INS412"
+  },
+  {
+    "ingredient_id": 49,
+    "standard_name": "Lesitin (kedelai umumnya aman, cek sumber)",
+    "category": "perhatian",
+    "name_variant": "Lesitin (kedelai umumnya aman, cek sumber)"
+  },
+  {
+    "ingredient_id": 49,
+    "standard_name": "Lesitin (kedelai umumnya aman, cek sumber)",
+    "category": "perhatian",
+    "name_variant": "E322"
+  },
+  {
+    "ingredient_id": 49,
+    "standard_name": "Lesitin (kedelai umumnya aman, cek sumber)",
+    "category": "perhatian",
+    "name_variant": "Lecithin"
+  },
+  {
+    "ingredient_id": 49,
+    "standard_name": "Lesitin (kedelai umumnya aman, cek sumber)",
+    "category": "perhatian",
+    "name_variant": "Soy lecithin"
+  },
+  {
+    "ingredient_id": 49,
+    "standard_name": "Lesitin (kedelai umumnya aman, cek sumber)",
+    "category": "perhatian",
+    "name_variant": "Lesitin kedelai"
+  },
+  {
+    "ingredient_id": 49,
+    "standard_name": "Lesitin (kedelai umumnya aman, cek sumber)",
+    "category": "perhatian",
+    "name_variant": "Lecithin (soy - generally safe, verify source)"
+  },
+  {
+    "ingredient_id": 49,
+    "standard_name": "Lesitin (kedelai umumnya aman, cek sumber)",
+    "category": "perhatian",
+    "name_variant": "Lesitin"
+  },
+  {
+    "ingredient_id": 49,
+    "standard_name": "Lesitin (kedelai umumnya aman, cek sumber)",
+    "category": "perhatian",
+    "name_variant": "Sunflower lecithin"
+  },
+  {
+    "ingredient_id": 49,
+    "standard_name": "Lesitin (kedelai umumnya aman, cek sumber)",
+    "category": "perhatian",
+    "name_variant": "Lesitin bunga matahari"
+  },
+  {
+    "ingredient_id": 49,
+    "standard_name": "Lesitin (kedelai umumnya aman, cek sumber)",
+    "category": "perhatian",
+    "name_variant": "INS 322"
+  },
+  {
+    "ingredient_id": 49,
+    "standard_name": "Lesitin (kedelai umumnya aman, cek sumber)",
+    "category": "perhatian",
+    "name_variant": "INS322"
+  },
+  {
+    "ingredient_id": 50,
+    "standard_name": "Gliserin (humektan, sumber bisa nabati/hewani)",
+    "category": "perhatian",
+    "name_variant": "Gliserin (humektan, sumber bisa nabati/hewani)"
+  },
+  {
+    "ingredient_id": 50,
+    "standard_name": "Gliserin (humektan, sumber bisa nabati/hewani)",
+    "category": "perhatian",
+    "name_variant": "E422"
+  },
+  {
+    "ingredient_id": 50,
+    "standard_name": "Gliserin (humektan, sumber bisa nabati/hewani)",
+    "category": "perhatian",
+    "name_variant": "Glycerol"
+  },
+  {
+    "ingredient_id": 50,
+    "standard_name": "Gliserin (humektan, sumber bisa nabati/hewani)",
+    "category": "perhatian",
+    "name_variant": "Glycerin (humectant, source may vary)"
+  },
+  {
+    "ingredient_id": 50,
+    "standard_name": "Gliserin (humektan, sumber bisa nabati/hewani)",
+    "category": "perhatian",
+    "name_variant": "Gliserin"
+  },
+  {
+    "ingredient_id": 50,
+    "standard_name": "Gliserin (humektan, sumber bisa nabati/hewani)",
+    "category": "perhatian",
+    "name_variant": "Glycerin"
+  },
+  {
+    "ingredient_id": 50,
+    "standard_name": "Gliserin (humektan, sumber bisa nabati/hewani)",
+    "category": "perhatian",
+    "name_variant": "Gliserol"
+  },
+  {
+    "ingredient_id": 50,
+    "standard_name": "Gliserin (humektan, sumber bisa nabati/hewani)",
+    "category": "perhatian",
+    "name_variant": "Glycerine"
+  },
+  {
+    "ingredient_id": 50,
+    "standard_name": "Gliserin (humektan, sumber bisa nabati/hewani)",
+    "category": "perhatian",
+    "name_variant": "INS 422"
+  },
+  {
+    "ingredient_id": 50,
+    "standard_name": "Gliserin (humektan, sumber bisa nabati/hewani)",
+    "category": "perhatian",
+    "name_variant": "INS422"
+  },
+  {
+    "ingredient_id": 51,
+    "standard_name": "Mono- dan digliserida asam lemak",
+    "category": "perhatian",
+    "name_variant": "Mono- dan digliserida asam lemak"
+  },
+  {
+    "ingredient_id": 51,
+    "standard_name": "Mono- dan digliserida asam lemak",
+    "category": "perhatian",
+    "name_variant": "E471"
+  },
+  {
+    "ingredient_id": 51,
+    "standard_name": "Mono- dan digliserida asam lemak",
+    "category": "perhatian",
+    "name_variant": "Mono-and diglycerides of fatty acids"
+  },
+  {
+    "ingredient_id": 51,
+    "standard_name": "Mono- dan digliserida asam lemak",
+    "category": "perhatian",
+    "name_variant": "Mono dan digliserida"
+  },
+  {
+    "ingredient_id": 51,
+    "standard_name": "Mono- dan digliserida asam lemak",
+    "category": "perhatian",
+    "name_variant": "Mono-dan digliserida"
+  },
+  {
+    "ingredient_id": 51,
+    "standard_name": "Mono- dan digliserida asam lemak",
+    "category": "perhatian",
+    "name_variant": "Mono and diglycerides"
+  },
+  {
+    "ingredient_id": 51,
+    "standard_name": "Mono- dan digliserida asam lemak",
+    "category": "perhatian",
+    "name_variant": "Monoglycerides and diglycerides"
+  },
+  {
+    "ingredient_id": 51,
+    "standard_name": "Mono- dan digliserida asam lemak",
+    "category": "perhatian",
+    "name_variant": "INS 471"
+  },
+  {
+    "ingredient_id": 51,
+    "standard_name": "Mono- dan digliserida asam lemak",
+    "category": "perhatian",
+    "name_variant": "INS471"
+  },
+  {
+    "ingredient_id": 52,
+    "standard_name": "Asam sitrat (pengatur keasaman)",
+    "category": "aman",
+    "name_variant": "Asam sitrat (pengatur keasaman)"
+  },
+  {
+    "ingredient_id": 52,
+    "standard_name": "Asam sitrat (pengatur keasaman)",
+    "category": "aman",
+    "name_variant": "E330"
+  },
+  {
+    "ingredient_id": 52,
+    "standard_name": "Asam sitrat (pengatur keasaman)",
+    "category": "aman",
+    "name_variant": "Citric acid"
+  },
+  {
+    "ingredient_id": 52,
+    "standard_name": "Asam sitrat (pengatur keasaman)",
+    "category": "aman",
+    "name_variant": "Asam sitrat"
+  },
+  {
+    "ingredient_id": 52,
+    "standard_name": "Asam sitrat (pengatur keasaman)",
+    "category": "aman",
+    "name_variant": "INS 330"
+  },
+  {
+    "ingredient_id": 52,
+    "standard_name": "Asam sitrat (pengatur keasaman)",
+    "category": "aman",
+    "name_variant": "INS330"
+  },
+  {
+    "ingredient_id": 53,
+    "standard_name": "Natrium sitrat / Trinatrium sitrat",
+    "category": "aman",
+    "name_variant": "Natrium sitrat / Trinatrium sitrat"
+  },
+  {
+    "ingredient_id": 53,
+    "standard_name": "Natrium sitrat / Trinatrium sitrat",
+    "category": "aman",
+    "name_variant": "E331"
+  },
+  {
+    "ingredient_id": 53,
+    "standard_name": "Natrium sitrat / Trinatrium sitrat",
+    "category": "aman",
+    "name_variant": "Sodium citrate"
+  },
+  {
+    "ingredient_id": 53,
+    "standard_name": "Natrium sitrat / Trinatrium sitrat",
+    "category": "aman",
+    "name_variant": "Sodium citrate / Trisodium citrate"
+  },
+  {
+    "ingredient_id": 53,
+    "standard_name": "Natrium sitrat / Trinatrium sitrat",
+    "category": "aman",
+    "name_variant": "Natrium sitrat"
+  },
+  {
+    "ingredient_id": 53,
+    "standard_name": "Natrium sitrat / Trinatrium sitrat",
+    "category": "aman",
+    "name_variant": "Trinatrium sitrat"
+  },
+  {
+    "ingredient_id": 53,
+    "standard_name": "Natrium sitrat / Trinatrium sitrat",
+    "category": "aman",
+    "name_variant": "Trisodium citrate"
+  },
+  {
+    "ingredient_id": 53,
+    "standard_name": "Natrium sitrat / Trinatrium sitrat",
+    "category": "aman",
+    "name_variant": "INS 331"
+  },
+  {
+    "ingredient_id": 53,
+    "standard_name": "Natrium sitrat / Trinatrium sitrat",
+    "category": "aman",
+    "name_variant": "INS331"
+  },
+  {
+    "ingredient_id": 54,
+    "standard_name": "Kalium sitrat",
+    "category": "aman",
+    "name_variant": "Kalium sitrat"
+  },
+  {
+    "ingredient_id": 54,
+    "standard_name": "Kalium sitrat",
+    "category": "aman",
+    "name_variant": "E332"
+  },
+  {
+    "ingredient_id": 54,
+    "standard_name": "Kalium sitrat",
+    "category": "aman",
+    "name_variant": "Potassium citrate"
+  },
+  {
+    "ingredient_id": 54,
+    "standard_name": "Kalium sitrat",
+    "category": "aman",
+    "name_variant": "INS 332"
+  },
+  {
+    "ingredient_id": 54,
+    "standard_name": "Kalium sitrat",
+    "category": "aman",
+    "name_variant": "INS332"
+  },
+  {
+    "ingredient_id": 55,
+    "standard_name": "Asam laktat (sumber bisa nabati/hewani)",
+    "category": "perhatian",
+    "name_variant": "Asam laktat (sumber bisa nabati/hewani)"
+  },
+  {
+    "ingredient_id": 55,
+    "standard_name": "Asam laktat (sumber bisa nabati/hewani)",
+    "category": "perhatian",
+    "name_variant": "E270"
+  },
+  {
+    "ingredient_id": 55,
+    "standard_name": "Asam laktat (sumber bisa nabati/hewani)",
+    "category": "perhatian",
+    "name_variant": "Lactic acid"
+  },
+  {
+    "ingredient_id": 55,
+    "standard_name": "Asam laktat (sumber bisa nabati/hewani)",
+    "category": "perhatian",
+    "name_variant": "Lactic acid (source may vary)"
+  },
+  {
+    "ingredient_id": 55,
+    "standard_name": "Asam laktat (sumber bisa nabati/hewani)",
+    "category": "perhatian",
+    "name_variant": "Asam laktat"
+  },
+  {
+    "ingredient_id": 55,
+    "standard_name": "Asam laktat (sumber bisa nabati/hewani)",
+    "category": "perhatian",
+    "name_variant": "INS 270"
+  },
+  {
+    "ingredient_id": 55,
+    "standard_name": "Asam laktat (sumber bisa nabati/hewani)",
+    "category": "perhatian",
+    "name_variant": "INS270"
+  },
+  {
+    "ingredient_id": 56,
+    "standard_name": "Asam malat (pengatur keasaman)",
+    "category": "aman",
+    "name_variant": "Asam malat (pengatur keasaman)"
+  },
+  {
+    "ingredient_id": 56,
+    "standard_name": "Asam malat (pengatur keasaman)",
+    "category": "aman",
+    "name_variant": "E296"
+  },
+  {
+    "ingredient_id": 56,
+    "standard_name": "Asam malat (pengatur keasaman)",
+    "category": "aman",
+    "name_variant": "Malic acid"
+  },
+  {
+    "ingredient_id": 56,
+    "standard_name": "Asam malat (pengatur keasaman)",
+    "category": "aman",
+    "name_variant": "Asam malat"
+  },
+  {
+    "ingredient_id": 56,
+    "standard_name": "Asam malat (pengatur keasaman)",
+    "category": "aman",
+    "name_variant": "INS 296"
+  },
+  {
+    "ingredient_id": 56,
+    "standard_name": "Asam malat (pengatur keasaman)",
+    "category": "aman",
+    "name_variant": "INS296"
+  },
+  {
+    "ingredient_id": 57,
+    "standard_name": "Garam",
+    "category": "aman",
+    "name_variant": "Garam"
+  },
+  {
+    "ingredient_id": 57,
+    "standard_name": "Garam",
+    "category": "aman",
+    "name_variant": "Sodium chloride"
+  },
+  {
+    "ingredient_id": 57,
+    "standard_name": "Garam",
+    "category": "aman",
+    "name_variant": "Salt"
+  },
+  {
+    "ingredient_id": 57,
+    "standard_name": "Garam",
+    "category": "aman",
+    "name_variant": "Natrium klorida"
+  },
+  {
+    "ingredient_id": 57,
+    "standard_name": "Garam",
+    "category": "aman",
+    "name_variant": "Garam dapur"
+  },
+  {
+    "ingredient_id": 58,
+    "standard_name": "Kalsium karbonat",
+    "category": "aman",
+    "name_variant": "Kalsium karbonat"
+  },
+  {
+    "ingredient_id": 58,
+    "standard_name": "Kalsium karbonat",
+    "category": "aman",
+    "name_variant": "E170"
+  },
+  {
+    "ingredient_id": 58,
+    "standard_name": "Kalsium karbonat",
+    "category": "aman",
+    "name_variant": "Calcium carbonate"
+  },
+  {
+    "ingredient_id": 58,
+    "standard_name": "Kalsium karbonat",
+    "category": "aman",
+    "name_variant": "INS 170"
+  },
+  {
+    "ingredient_id": 58,
+    "standard_name": "Kalsium karbonat",
+    "category": "aman",
+    "name_variant": "INS170"
+  },
+  {
+    "ingredient_id": 59,
+    "standard_name": "Dinatrium difosfat / fosfat penstabil",
+    "category": "aman",
+    "name_variant": "Dinatrium difosfat / fosfat penstabil"
+  },
+  {
+    "ingredient_id": 59,
+    "standard_name": "Dinatrium difosfat / fosfat penstabil",
+    "category": "aman",
+    "name_variant": "E341"
+  },
+  {
+    "ingredient_id": 59,
+    "standard_name": "Dinatrium difosfat / fosfat penstabil",
+    "category": "aman",
+    "name_variant": "Disodium phosphate / stabilizer phosphates"
+  },
+  {
+    "ingredient_id": 59,
+    "standard_name": "Dinatrium difosfat / fosfat penstabil",
+    "category": "aman",
+    "name_variant": "Dinatrium difosfat"
+  },
+  {
+    "ingredient_id": 59,
+    "standard_name": "Dinatrium difosfat / fosfat penstabil",
+    "category": "aman",
+    "name_variant": "Fosfat penstabil"
+  },
+  {
+    "ingredient_id": 59,
+    "standard_name": "Dinatrium difosfat / fosfat penstabil",
+    "category": "aman",
+    "name_variant": "Disodium phosphate"
+  },
+  {
+    "ingredient_id": 59,
+    "standard_name": "Dinatrium difosfat / fosfat penstabil",
+    "category": "aman",
+    "name_variant": "Stabilizer phosphates"
+  },
+  {
+    "ingredient_id": 59,
+    "standard_name": "Dinatrium difosfat / fosfat penstabil",
+    "category": "aman",
+    "name_variant": "E339"
+  },
+  {
+    "ingredient_id": 59,
+    "standard_name": "Dinatrium difosfat / fosfat penstabil",
+    "category": "aman",
+    "name_variant": "INS 339"
+  },
+  {
+    "ingredient_id": 59,
+    "standard_name": "Dinatrium difosfat / fosfat penstabil",
+    "category": "aman",
+    "name_variant": "INS339"
+  },
+  {
+    "ingredient_id": 59,
+    "standard_name": "Dinatrium difosfat / fosfat penstabil",
+    "category": "aman",
+    "name_variant": "E340"
+  },
+  {
+    "ingredient_id": 59,
+    "standard_name": "Dinatrium difosfat / fosfat penstabil",
+    "category": "aman",
+    "name_variant": "INS 340"
+  },
+  {
+    "ingredient_id": 59,
+    "standard_name": "Dinatrium difosfat / fosfat penstabil",
+    "category": "aman",
+    "name_variant": "INS340"
+  },
+  {
+    "ingredient_id": 59,
+    "standard_name": "Dinatrium difosfat / fosfat penstabil",
+    "category": "aman",
+    "name_variant": "INS 341"
+  },
+  {
+    "ingredient_id": 59,
+    "standard_name": "Dinatrium difosfat / fosfat penstabil",
+    "category": "aman",
+    "name_variant": "INS341"
+  },
+  {
+    "ingredient_id": 60,
+    "standard_name": "Kalium klorida",
+    "category": "aman",
+    "name_variant": "Kalium klorida"
+  },
+  {
+    "ingredient_id": 60,
+    "standard_name": "Kalium klorida",
+    "category": "aman",
+    "name_variant": "E508"
+  },
+  {
+    "ingredient_id": 60,
+    "standard_name": "Kalium klorida",
+    "category": "aman",
+    "name_variant": "Potassium chloride"
+  },
+  {
+    "ingredient_id": 60,
+    "standard_name": "Kalium klorida",
+    "category": "aman",
+    "name_variant": "INS 508"
+  },
+  {
+    "ingredient_id": 60,
+    "standard_name": "Kalium klorida",
+    "category": "aman",
+    "name_variant": "INS508"
+  },
+  {
+    "ingredient_id": 61,
+    "standard_name": "Tepung beras",
+    "category": "aman",
+    "name_variant": "Tepung beras"
+  },
+  {
+    "ingredient_id": 61,
+    "standard_name": "Tepung beras",
+    "category": "aman",
+    "name_variant": "Rice flour"
+  },
+  {
+    "ingredient_id": 62,
+    "standard_name": "Tepung tapioka",
+    "category": "aman",
+    "name_variant": "Tepung tapioka"
+  },
+  {
+    "ingredient_id": 62,
+    "standard_name": "Tepung tapioka",
+    "category": "aman",
+    "name_variant": "Tapioca starch"
+  },
+  {
+    "ingredient_id": 62,
+    "standard_name": "Tepung tapioka",
+    "category": "aman",
+    "name_variant": "Tapioka"
+  },
+  {
+    "ingredient_id": 62,
+    "standard_name": "Tepung tapioka",
+    "category": "aman",
+    "name_variant": "Tapioca flour"
+  },
+  {
+    "ingredient_id": 62,
+    "standard_name": "Tepung tapioka",
+    "category": "aman",
+    "name_variant": "Cassava starch"
+  },
+  {
+    "ingredient_id": 63,
+    "standard_name": "Sagu",
+    "category": "aman",
+    "name_variant": "Sagu"
+  },
+  {
+    "ingredient_id": 63,
+    "standard_name": "Sagu",
+    "category": "aman",
+    "name_variant": "Sago flour"
+  },
+  {
+    "ingredient_id": 63,
+    "standard_name": "Sagu",
+    "category": "aman",
+    "name_variant": "Sago"
+  },
+  {
+    "ingredient_id": 63,
+    "standard_name": "Sagu",
+    "category": "aman",
+    "name_variant": "Tepung sagu"
+  },
+  {
+    "ingredient_id": 63,
+    "standard_name": "Sagu",
+    "category": "aman",
+    "name_variant": "Sago starch"
+  },
+  {
+    "ingredient_id": 64,
+    "standard_name": "Tepung jagung (maizena murni)",
+    "category": "aman",
+    "name_variant": "Tepung jagung (maizena murni)"
+  },
+  {
+    "ingredient_id": 64,
+    "standard_name": "Tepung jagung (maizena murni)",
+    "category": "aman",
+    "name_variant": "Corn flour"
+  },
+  {
+    "ingredient_id": 64,
+    "standard_name": "Tepung jagung (maizena murni)",
+    "category": "aman",
+    "name_variant": "Pati jagung"
+  },
+  {
+    "ingredient_id": 64,
+    "standard_name": "Tepung jagung (maizena murni)",
+    "category": "aman",
+    "name_variant": "Corn starch / cornflour (pure)"
+  },
+  {
+    "ingredient_id": 64,
+    "standard_name": "Tepung jagung (maizena murni)",
+    "category": "aman",
+    "name_variant": "Tepung jagung"
+  },
+  {
+    "ingredient_id": 64,
+    "standard_name": "Tepung jagung (maizena murni)",
+    "category": "aman",
+    "name_variant": "Corn starch / cornflour"
+  },
+  {
+    "ingredient_id": 64,
+    "standard_name": "Tepung jagung (maizena murni)",
+    "category": "aman",
+    "name_variant": "Maizena"
+  },
+  {
+    "ingredient_id": 64,
+    "standard_name": "Tepung jagung (maizena murni)",
+    "category": "aman",
+    "name_variant": "Corn starch"
+  },
+  {
+    "ingredient_id": 64,
+    "standard_name": "Tepung jagung (maizena murni)",
+    "category": "aman",
+    "name_variant": "Cornflour"
+  },
+  {
+    "ingredient_id": 65,
+    "standard_name": "Minyak kelapa",
+    "category": "aman",
+    "name_variant": "Minyak kelapa"
+  },
+  {
+    "ingredient_id": 65,
+    "standard_name": "Minyak kelapa",
+    "category": "aman",
+    "name_variant": "Coconut oil"
+  },
+  {
+    "ingredient_id": 66,
+    "standard_name": "Minyak zaitun",
+    "category": "aman",
+    "name_variant": "Minyak zaitun"
+  },
+  {
+    "ingredient_id": 66,
+    "standard_name": "Minyak zaitun",
+    "category": "aman",
+    "name_variant": "Olive oil"
+  },
+  {
+    "ingredient_id": 69,
+    "standard_name": "Tepung terigu protein tinggi",
+    "category": "hindari",
+    "name_variant": "Tepung terigu protein tinggi"
+  },
+  {
+    "ingredient_id": 69,
+    "standard_name": "Tepung terigu protein tinggi",
+    "category": "hindari",
+    "name_variant": "High-gluten wheat flour"
+  },
+  {
+    "ingredient_id": 69,
+    "standard_name": "Tepung terigu protein tinggi",
+    "category": "hindari",
+    "name_variant": "High gluten wheat flour"
+  },
+  {
+    "ingredient_id": 70,
+    "standard_name": "Rye (gandum hitam)",
+    "category": "hindari",
+    "name_variant": "Rye (gandum hitam)"
+  },
+  {
+    "ingredient_id": 70,
+    "standard_name": "Rye (gandum hitam)",
+    "category": "hindari",
+    "name_variant": "Rye"
+  },
+  {
+    "ingredient_id": 70,
+    "standard_name": "Rye (gandum hitam)",
+    "category": "hindari",
+    "name_variant": "Gandum hitam"
+  },
+  {
+    "ingredient_id": 71,
+    "standard_name": "Malt / ekstrak malt",
+    "category": "hindari",
+    "name_variant": "Malt / ekstrak malt"
+  },
+  {
+    "ingredient_id": 71,
+    "standard_name": "Malt / ekstrak malt",
+    "category": "hindari",
+    "name_variant": "Malt / malt extract"
+  },
+  {
+    "ingredient_id": 71,
+    "standard_name": "Malt / ekstrak malt",
+    "category": "hindari",
+    "name_variant": "Malt"
+  },
+  {
+    "ingredient_id": 71,
+    "standard_name": "Malt / ekstrak malt",
+    "category": "hindari",
+    "name_variant": "Ekstrak malt"
+  },
+  {
+    "ingredient_id": 71,
+    "standard_name": "Malt / ekstrak malt",
+    "category": "hindari",
+    "name_variant": "Malt extract"
+  },
+  {
+    "ingredient_id": 72,
+    "standard_name": "Malt vinegar",
+    "category": "hindari",
+    "name_variant": "Malt vinegar"
+  },
+  {
+    "ingredient_id": 73,
+    "standard_name": "Pati terigu",
+    "category": "hindari",
+    "name_variant": "Pati terigu"
+  },
+  {
+    "ingredient_id": 73,
+    "standard_name": "Pati terigu",
+    "category": "hindari",
+    "name_variant": "Wheat starch"
+  },
+  {
+    "ingredient_id": 73,
+    "standard_name": "Pati terigu",
+    "category": "hindari",
+    "name_variant": "Pati gandum"
+  },
+  {
+    "ingredient_id": 74,
+    "standard_name": "Couscous",
+    "category": "hindari",
+    "name_variant": "Couscous"
+  },
+  {
+    "ingredient_id": 74,
+    "standard_name": "Couscous",
+    "category": "hindari",
+    "name_variant": "Couscous (wheat semolina)"
+  },
+  {
+    "ingredient_id": 74,
+    "standard_name": "Couscous",
+    "category": "hindari",
+    "name_variant": "Wheat semolina couscous"
+  },
+  {
+    "ingredient_id": 75,
+    "standard_name": "Semolina",
+    "category": "hindari",
+    "name_variant": "Semolina"
+  },
+  {
+    "ingredient_id": 76,
+    "standard_name": "Bulgur",
+    "category": "hindari",
+    "name_variant": "Bulgur"
+  },
+  {
+    "ingredient_id": 76,
+    "standard_name": "Bulgur",
+    "category": "hindari",
+    "name_variant": "Bulgur wheat"
+  },
+  {
+    "ingredient_id": 77,
+    "standard_name": "Tepung terigu dalam saus/kaldu instan",
+    "category": "perhatian",
+    "name_variant": "Tepung terigu dalam saus/kaldu instan"
+  },
+  {
+    "ingredient_id": 77,
+    "standard_name": "Tepung terigu dalam saus/kaldu instan",
+    "category": "perhatian",
+    "name_variant": "Wheat flour as thickener in sauce/broth"
+  },
+  {
+    "ingredient_id": 77,
+    "standard_name": "Tepung terigu dalam saus/kaldu instan",
+    "category": "perhatian",
+    "name_variant": "Tepung terigu dalam saus"
+  },
+  {
+    "ingredient_id": 77,
+    "standard_name": "Tepung terigu dalam saus/kaldu instan",
+    "category": "perhatian",
+    "name_variant": "Tepung terigu dalam kaldu instan"
+  },
+  {
+    "ingredient_id": 78,
+    "standard_name": "Kecap asin (mengandung gandum fermentasi)",
+    "category": "perhatian",
+    "name_variant": "Kecap asin (mengandung gandum fermentasi)"
+  },
+  {
+    "ingredient_id": 78,
+    "standard_name": "Kecap asin (mengandung gandum fermentasi)",
+    "category": "perhatian",
+    "name_variant": "Soy sauce (wheat-fermented)"
+  },
+  {
+    "ingredient_id": 78,
+    "standard_name": "Kecap asin (mengandung gandum fermentasi)",
+    "category": "perhatian",
+    "name_variant": "Kecap asin"
+  },
+  {
+    "ingredient_id": 78,
+    "standard_name": "Kecap asin (mengandung gandum fermentasi)",
+    "category": "perhatian",
+    "name_variant": "Soy sauce"
+  },
+  {
+    "ingredient_id": 79,
+    "standard_name": "Tepung panir (breadcrumb) berbahan gandum",
+    "category": "hindari",
+    "name_variant": "Tepung panir (breadcrumb) berbahan gandum"
+  },
+  {
+    "ingredient_id": 79,
+    "standard_name": "Tepung panir (breadcrumb) berbahan gandum",
+    "category": "hindari",
+    "name_variant": "Wheat breadcrumbs"
+  },
+  {
+    "ingredient_id": 79,
+    "standard_name": "Tepung panir (breadcrumb) berbahan gandum",
+    "category": "hindari",
+    "name_variant": "Tepung panir berbahan gandum"
+  },
+  {
+    "ingredient_id": 79,
+    "standard_name": "Tepung panir (breadcrumb) berbahan gandum",
+    "category": "hindari",
+    "name_variant": "Tepung panir"
+  },
+  {
+    "ingredient_id": 79,
+    "standard_name": "Tepung panir (breadcrumb) berbahan gandum",
+    "category": "hindari",
+    "name_variant": "Breadcrumb"
+  },
+  {
+    "ingredient_id": 79,
+    "standard_name": "Tepung panir (breadcrumb) berbahan gandum",
+    "category": "hindari",
+    "name_variant": "Breadcrumbs"
+  },
+  {
+    "ingredient_id": 80,
+    "standard_name": "Susu bubuk full cream",
+    "category": "hindari",
+    "name_variant": "Susu bubuk full cream"
+  },
+  {
+    "ingredient_id": 80,
+    "standard_name": "Susu bubuk full cream",
+    "category": "hindari",
+    "name_variant": "Full cream milk powder"
+  },
+  {
+    "ingredient_id": 80,
+    "standard_name": "Susu bubuk full cream",
+    "category": "hindari",
+    "name_variant": "Milk powder"
+  },
+  {
+    "ingredient_id": 80,
+    "standard_name": "Susu bubuk full cream",
+    "category": "hindari",
+    "name_variant": "Susu bubuk"
+  },
+  {
+    "ingredient_id": 81,
+    "standard_name": "Yogurt (susu sapi)",
+    "category": "hindari",
+    "name_variant": "Yogurt (susu sapi)"
+  },
+  {
+    "ingredient_id": 81,
+    "standard_name": "Yogurt (susu sapi)",
+    "category": "hindari",
+    "name_variant": "Yogurt (dairy-based)"
+  },
+  {
+    "ingredient_id": 81,
+    "standard_name": "Yogurt (susu sapi)",
+    "category": "hindari",
+    "name_variant": "Yogurt"
+  },
+  {
+    "ingredient_id": 81,
+    "standard_name": "Yogurt (susu sapi)",
+    "category": "hindari",
+    "name_variant": "Yoghurt"
+  },
+  {
+    "ingredient_id": 82,
+    "standard_name": "Mentega / Butter",
+    "category": "hindari",
+    "name_variant": "Mentega / Butter"
+  },
+  {
+    "ingredient_id": 82,
+    "standard_name": "Mentega / Butter",
+    "category": "hindari",
+    "name_variant": "Butter"
+  },
+  {
+    "ingredient_id": 82,
+    "standard_name": "Mentega / Butter",
+    "category": "hindari",
+    "name_variant": "Mentega"
+  },
+  {
+    "ingredient_id": 83,
+    "standard_name": "Krim / Whipped cream",
+    "category": "hindari",
+    "name_variant": "Krim / Whipped cream"
+  },
+  {
+    "ingredient_id": 83,
+    "standard_name": "Krim / Whipped cream",
+    "category": "hindari",
+    "name_variant": "Cream / whipped cream"
+  },
+  {
+    "ingredient_id": 83,
+    "standard_name": "Krim / Whipped cream",
+    "category": "hindari",
+    "name_variant": "Krim"
+  },
+  {
+    "ingredient_id": 83,
+    "standard_name": "Krim / Whipped cream",
+    "category": "hindari",
+    "name_variant": "Cream"
+  },
+  {
+    "ingredient_id": 83,
+    "standard_name": "Krim / Whipped cream",
+    "category": "hindari",
+    "name_variant": "Whipped cream"
+  },
+  {
+    "ingredient_id": 84,
+    "standard_name": "Kalsium kaseinat",
+    "category": "hindari",
+    "name_variant": "Kalsium kaseinat"
+  },
+  {
+    "ingredient_id": 84,
+    "standard_name": "Kalsium kaseinat",
+    "category": "hindari",
+    "name_variant": "Calcium caseinate"
+  },
+  {
+    "ingredient_id": 85,
+    "standard_name": "Rennet casein",
+    "category": "hindari",
+    "name_variant": "Rennet casein"
+  },
+  {
+    "ingredient_id": 86,
+    "standard_name": "Laktosa",
+    "category": "perhatian",
+    "name_variant": "Laktosa"
+  },
+  {
+    "ingredient_id": 86,
+    "standard_name": "Laktosa",
+    "category": "perhatian",
+    "name_variant": "Lactose"
+  },
+  {
+    "ingredient_id": 87,
+    "standard_name": "Laktalbumin",
+    "category": "hindari",
+    "name_variant": "Laktalbumin"
+  },
+  {
+    "ingredient_id": 87,
+    "standard_name": "Laktalbumin",
+    "category": "hindari",
+    "name_variant": "Lactalbumin"
+  },
+  {
+    "ingredient_id": 88,
+    "standard_name": "Susu kental manis",
+    "category": "hindari",
+    "name_variant": "Susu kental manis"
+  },
+  {
+    "ingredient_id": 88,
+    "standard_name": "Susu kental manis",
+    "category": "hindari",
+    "name_variant": "Sweetened condensed milk"
+  },
+  {
+    "ingredient_id": 89,
+    "standard_name": "Margarin (mengandung whey/susu)",
+    "category": "perhatian",
+    "name_variant": "Margarin (mengandung whey/susu)"
+  },
+  {
+    "ingredient_id": 89,
+    "standard_name": "Margarin (mengandung whey/susu)",
+    "category": "perhatian",
+    "name_variant": "Margarine containing whey/milk solids"
+  },
+  {
+    "ingredient_id": 89,
+    "standard_name": "Margarin (mengandung whey/susu)",
+    "category": "perhatian",
+    "name_variant": "Margarin"
+  },
+  {
+    "ingredient_id": 89,
+    "standard_name": "Margarin (mengandung whey/susu)",
+    "category": "perhatian",
+    "name_variant": "Margarine"
+  },
+  {
+    "ingredient_id": 90,
+    "standard_name": "Krimer non-dairy (berpotensi mengandung kaseinat)",
+    "category": "perhatian",
+    "name_variant": "Krimer non-dairy (berpotensi mengandung kaseinat)"
+  },
+  {
+    "ingredient_id": 90,
+    "standard_name": "Krimer non-dairy (berpotensi mengandung kaseinat)",
+    "category": "perhatian",
+    "name_variant": "Non-dairy creamer (may contain caseinate)"
+  },
+  {
+    "ingredient_id": 90,
+    "standard_name": "Krimer non-dairy (berpotensi mengandung kaseinat)",
+    "category": "perhatian",
+    "name_variant": "Krimer non-dairy"
+  },
+  {
+    "ingredient_id": 90,
+    "standard_name": "Krimer non-dairy (berpotensi mengandung kaseinat)",
+    "category": "perhatian",
+    "name_variant": "Non-dairy creamer"
+  },
+  {
+    "ingredient_id": 91,
+    "standard_name": "Ragi terhidrolisis (autolyzed yeast)",
+    "category": "perhatian",
+    "name_variant": "Ragi terhidrolisis (autolyzed yeast)"
+  },
+  {
+    "ingredient_id": 91,
+    "standard_name": "Ragi terhidrolisis (autolyzed yeast)",
+    "category": "perhatian",
+    "name_variant": "Autolyzed yeast"
+  },
+  {
+    "ingredient_id": 91,
+    "standard_name": "Ragi terhidrolisis (autolyzed yeast)",
+    "category": "perhatian",
+    "name_variant": "Ragi terhidrolisis"
+  },
+  {
+    "ingredient_id": 92,
+    "standard_name": "Protein nabati terhidrolisis (HVP)",
+    "category": "perhatian",
+    "name_variant": "Protein nabati terhidrolisis (HVP)"
+  },
+  {
+    "ingredient_id": 92,
+    "standard_name": "Protein nabati terhidrolisis (HVP)",
+    "category": "perhatian",
+    "name_variant": "Hydrolyzed vegetable protein (HVP)"
+  },
+  {
+    "ingredient_id": 92,
+    "standard_name": "Protein nabati terhidrolisis (HVP)",
+    "category": "perhatian",
+    "name_variant": "Protein nabati terhidrolisis"
+  },
+  {
+    "ingredient_id": 92,
+    "standard_name": "Protein nabati terhidrolisis (HVP)",
+    "category": "perhatian",
+    "name_variant": "Hydrolyzed vegetable protein"
+  },
+  {
+    "ingredient_id": 92,
+    "standard_name": "Protein nabati terhidrolisis (HVP)",
+    "category": "perhatian",
+    "name_variant": "HVP"
+  },
+  {
+    "ingredient_id": 93,
+    "standard_name": "Protein terhidrolisis lain (HPP)",
+    "category": "perhatian",
+    "name_variant": "Protein terhidrolisis lain (HPP)"
+  },
+  {
+    "ingredient_id": 93,
+    "standard_name": "Protein terhidrolisis lain (HPP)",
+    "category": "perhatian",
+    "name_variant": "Hydrolyzed plant protein"
+  },
+  {
+    "ingredient_id": 93,
+    "standard_name": "Protein terhidrolisis lain (HPP)",
+    "category": "perhatian",
+    "name_variant": "Protein terhidrolisis lain"
+  },
+  {
+    "ingredient_id": 93,
+    "standard_name": "Protein terhidrolisis lain (HPP)",
+    "category": "perhatian",
+    "name_variant": "HPP"
+  },
+  {
+    "ingredient_id": 94,
+    "standard_name": "Pati termodifikasi (sumber tidak disebutkan)",
+    "category": "perhatian",
+    "name_variant": "Pati termodifikasi (sumber tidak disebutkan)"
+  },
+  {
+    "ingredient_id": 94,
+    "standard_name": "Pati termodifikasi (sumber tidak disebutkan)",
+    "category": "perhatian",
+    "name_variant": "Modified food starch (unspecified source)"
+  },
+  {
+    "ingredient_id": 94,
+    "standard_name": "Pati termodifikasi (sumber tidak disebutkan)",
+    "category": "perhatian",
+    "name_variant": "Pati termodifikasi"
+  },
+  {
+    "ingredient_id": 94,
+    "standard_name": "Pati termodifikasi (sumber tidak disebutkan)",
+    "category": "perhatian",
+    "name_variant": "Modified food starch"
+  },
+  {
+    "ingredient_id": 94,
+    "standard_name": "Pati termodifikasi (sumber tidak disebutkan)",
+    "category": "perhatian",
+    "name_variant": "Modified starch"
+  },
+  {
+    "ingredient_id": 95,
+    "standard_name": "Pewarna karamel",
+    "category": "perhatian",
+    "name_variant": "Pewarna karamel"
+  },
+  {
+    "ingredient_id": 95,
+    "standard_name": "Pewarna karamel",
+    "category": "perhatian",
+    "name_variant": "Caramel color"
+  },
+  {
+    "ingredient_id": 95,
+    "standard_name": "Pewarna karamel",
+    "category": "perhatian",
+    "name_variant": "Caramel colour"
+  },
+  {
+    "ingredient_id": 95,
+    "standard_name": "Pewarna karamel",
+    "category": "perhatian",
+    "name_variant": "Karamel"
+  },
+  {
+    "ingredient_id": 95,
+    "standard_name": "Pewarna karamel",
+    "category": "perhatian",
+    "name_variant": "E150a"
+  },
+  {
+    "ingredient_id": 95,
+    "standard_name": "Pewarna karamel",
+    "category": "perhatian",
+    "name_variant": "INS 150a"
+  },
+  {
+    "ingredient_id": 95,
+    "standard_name": "Pewarna karamel",
+    "category": "perhatian",
+    "name_variant": "INS150a"
+  },
+  {
+    "ingredient_id": 95,
+    "standard_name": "Pewarna karamel",
+    "category": "perhatian",
+    "name_variant": "E150b"
+  },
+  {
+    "ingredient_id": 95,
+    "standard_name": "Pewarna karamel",
+    "category": "perhatian",
+    "name_variant": "INS 150b"
+  },
+  {
+    "ingredient_id": 95,
+    "standard_name": "Pewarna karamel",
+    "category": "perhatian",
+    "name_variant": "INS150b"
+  },
+  {
+    "ingredient_id": 95,
+    "standard_name": "Pewarna karamel",
+    "category": "perhatian",
+    "name_variant": "E150c"
+  },
+  {
+    "ingredient_id": 95,
+    "standard_name": "Pewarna karamel",
+    "category": "perhatian",
+    "name_variant": "INS 150c"
+  },
+  {
+    "ingredient_id": 95,
+    "standard_name": "Pewarna karamel",
+    "category": "perhatian",
+    "name_variant": "INS150c"
+  },
+  {
+    "ingredient_id": 95,
+    "standard_name": "Pewarna karamel",
+    "category": "perhatian",
+    "name_variant": "E150d"
+  },
+  {
+    "ingredient_id": 95,
+    "standard_name": "Pewarna karamel",
+    "category": "perhatian",
+    "name_variant": "INS 150d"
+  },
+  {
+    "ingredient_id": 95,
+    "standard_name": "Pewarna karamel",
+    "category": "perhatian",
+    "name_variant": "INS150d"
+  },
+  {
+    "ingredient_id": 96,
+    "standard_name": "Protein nabati tekstur (TVP)",
+    "category": "perhatian",
+    "name_variant": "Protein nabati tekstur (TVP)"
+  },
+  {
+    "ingredient_id": 96,
+    "standard_name": "Protein nabati tekstur (TVP)",
+    "category": "perhatian",
+    "name_variant": "Textured vegetable protein (TVP)"
+  },
+  {
+    "ingredient_id": 96,
+    "standard_name": "Protein nabati tekstur (TVP)",
+    "category": "perhatian",
+    "name_variant": "Protein nabati tekstur"
+  },
+  {
+    "ingredient_id": 96,
+    "standard_name": "Protein nabati tekstur (TVP)",
+    "category": "perhatian",
+    "name_variant": "Textured vegetable protein"
+  },
+  {
+    "ingredient_id": 96,
+    "standard_name": "Protein nabati tekstur (TVP)",
+    "category": "perhatian",
+    "name_variant": "TVP"
+  },
+  {
+    "ingredient_id": 97,
+    "standard_name": "Maltodekstrin (perlu cek sumber pati)",
+    "category": "perhatian",
+    "name_variant": "Maltodekstrin (perlu cek sumber pati)"
+  },
+  {
+    "ingredient_id": 97,
+    "standard_name": "Maltodekstrin (perlu cek sumber pati)",
+    "category": "perhatian",
+    "name_variant": "Maltodextrin (source may vary)"
+  },
+  {
+    "ingredient_id": 97,
+    "standard_name": "Maltodekstrin (perlu cek sumber pati)",
+    "category": "perhatian",
+    "name_variant": "Maltodekstrin"
+  },
+  {
+    "ingredient_id": 97,
+    "standard_name": "Maltodekstrin (perlu cek sumber pati)",
+    "category": "perhatian",
+    "name_variant": "Maltodextrin"
+  },
+  {
+    "ingredient_id": 97,
+    "standard_name": "Maltodekstrin (perlu cek sumber pati)",
+    "category": "perhatian",
+    "name_variant": "E1400"
+  },
+  {
+    "ingredient_id": 97,
+    "standard_name": "Maltodekstrin (perlu cek sumber pati)",
+    "category": "perhatian",
+    "name_variant": "INS 1400"
+  },
+  {
+    "ingredient_id": 97,
+    "standard_name": "Maltodekstrin (perlu cek sumber pati)",
+    "category": "perhatian",
+    "name_variant": "INS1400"
+  },
+  {
+    "ingredient_id": 98,
+    "standard_name": "Dekstrin",
+    "category": "perhatian",
+    "name_variant": "Dekstrin"
+  },
+  {
+    "ingredient_id": 98,
+    "standard_name": "Dekstrin",
+    "category": "perhatian",
+    "name_variant": "Dextrin"
+  },
+  {
+    "ingredient_id": 98,
+    "standard_name": "Dekstrin",
+    "category": "perhatian",
+    "name_variant": "E1400"
+  },
+  {
+    "ingredient_id": 98,
+    "standard_name": "Dekstrin",
+    "category": "perhatian",
+    "name_variant": "INS 1400"
+  },
+  {
+    "ingredient_id": 98,
+    "standard_name": "Dekstrin",
+    "category": "perhatian",
+    "name_variant": "INS1400"
+  },
+  {
+    "ingredient_id": 99,
+    "standard_name": "Perisa alami (natural flavor - sumber tidak spesifik)",
+    "category": "perhatian",
+    "name_variant": "Perisa alami (natural flavor - sumber tidak spesifik)"
+  },
+  {
+    "ingredient_id": 99,
+    "standard_name": "Perisa alami (natural flavor - sumber tidak spesifik)",
+    "category": "perhatian",
+    "name_variant": "Natural flavor (unspecified source)"
+  },
+  {
+    "ingredient_id": 99,
+    "standard_name": "Perisa alami (natural flavor - sumber tidak spesifik)",
+    "category": "perhatian",
+    "name_variant": "Perisa alami"
+  },
+  {
+    "ingredient_id": 99,
+    "standard_name": "Perisa alami (natural flavor - sumber tidak spesifik)",
+    "category": "perhatian",
+    "name_variant": "Natural flavor"
+  },
+  {
+    "ingredient_id": 99,
+    "standard_name": "Perisa alami (natural flavor - sumber tidak spesifik)",
+    "category": "perhatian",
+    "name_variant": "Natural flavour"
+  },
+  {
+    "ingredient_id": 100,
+    "standard_name": "Bumbu penyedap kaldu instan (kemungkinan HVP/gluten)",
+    "category": "perhatian",
+    "name_variant": "Bumbu penyedap kaldu instan (kemungkinan HVP/gluten)"
+  },
+  {
+    "ingredient_id": 100,
+    "standard_name": "Bumbu penyedap kaldu instan (kemungkinan HVP/gluten)",
+    "category": "perhatian",
+    "name_variant": "Instant bouillon/stock seasoning"
+  },
+  {
+    "ingredient_id": 100,
+    "standard_name": "Bumbu penyedap kaldu instan (kemungkinan HVP/gluten)",
+    "category": "perhatian",
+    "name_variant": "Bumbu penyedap kaldu instan"
+  },
+  {
+    "ingredient_id": 100,
+    "standard_name": "Bumbu penyedap kaldu instan (kemungkinan HVP/gluten)",
+    "category": "perhatian",
+    "name_variant": "Kaldu instan"
+  },
+  {
+    "ingredient_id": 100,
+    "standard_name": "Bumbu penyedap kaldu instan (kemungkinan HVP/gluten)",
+    "category": "perhatian",
+    "name_variant": "Instant bouillon"
+  },
+  {
+    "ingredient_id": 100,
+    "standard_name": "Bumbu penyedap kaldu instan (kemungkinan HVP/gluten)",
+    "category": "perhatian",
+    "name_variant": "Stock seasoning"
+  },
+  {
+    "ingredient_id": 101,
+    "standard_name": "Kuinolin Kuning",
+    "category": "hindari",
+    "name_variant": "Kuinolin Kuning"
+  },
+  {
+    "ingredient_id": 101,
+    "standard_name": "Kuinolin Kuning",
+    "category": "hindari",
+    "name_variant": "Quinoline Yellow"
+  },
+  {
+    "ingredient_id": 101,
+    "standard_name": "Kuinolin Kuning",
+    "category": "hindari",
+    "name_variant": "E104"
+  },
+  {
+    "ingredient_id": 101,
+    "standard_name": "Kuinolin Kuning",
+    "category": "hindari",
+    "name_variant": "INS 104"
+  },
+  {
+    "ingredient_id": 101,
+    "standard_name": "Kuinolin Kuning",
+    "category": "hindari",
+    "name_variant": "INS104"
+  },
+  {
+    "ingredient_id": 102,
+    "standard_name": "Merah Allura AC",
+    "category": "hindari",
+    "name_variant": "Merah Allura AC"
+  },
+  {
+    "ingredient_id": 102,
+    "standard_name": "Merah Allura AC",
+    "category": "hindari",
+    "name_variant": "Allura Red AC (FD&C Red No. 40)"
+  },
+  {
+    "ingredient_id": 102,
+    "standard_name": "Merah Allura AC",
+    "category": "hindari",
+    "name_variant": "Allura Red AC"
+  },
+  {
+    "ingredient_id": 102,
+    "standard_name": "Merah Allura AC",
+    "category": "hindari",
+    "name_variant": "Red 40"
+  },
+  {
+    "ingredient_id": 102,
+    "standard_name": "Merah Allura AC",
+    "category": "hindari",
+    "name_variant": "FD&C Red No. 40"
+  },
+  {
+    "ingredient_id": 102,
+    "standard_name": "Merah Allura AC",
+    "category": "hindari",
+    "name_variant": "E129"
+  },
+  {
+    "ingredient_id": 102,
+    "standard_name": "Merah Allura AC",
+    "category": "hindari",
+    "name_variant": "INS 129"
+  },
+  {
+    "ingredient_id": 102,
+    "standard_name": "Merah Allura AC",
+    "category": "hindari",
+    "name_variant": "INS129"
+  },
+  {
+    "ingredient_id": 103,
+    "standard_name": "Coklat HT",
+    "category": "perhatian",
+    "name_variant": "Coklat HT"
+  },
+  {
+    "ingredient_id": 103,
+    "standard_name": "Coklat HT",
+    "category": "perhatian",
+    "name_variant": "Brown HT"
+  },
+  {
+    "ingredient_id": 103,
+    "standard_name": "Coklat HT",
+    "category": "perhatian",
+    "name_variant": "E155"
+  },
+  {
+    "ingredient_id": 103,
+    "standard_name": "Coklat HT",
+    "category": "perhatian",
+    "name_variant": "INS 155"
+  },
+  {
+    "ingredient_id": 103,
+    "standard_name": "Coklat HT",
+    "category": "perhatian",
+    "name_variant": "INS155"
+  },
+  {
+    "ingredient_id": 104,
+    "standard_name": "Hijau S",
+    "category": "perhatian",
+    "name_variant": "Hijau S"
+  },
+  {
+    "ingredient_id": 104,
+    "standard_name": "Hijau S",
+    "category": "perhatian",
+    "name_variant": "Green S"
+  },
+  {
+    "ingredient_id": 104,
+    "standard_name": "Hijau S",
+    "category": "perhatian",
+    "name_variant": "E142"
+  },
+  {
+    "ingredient_id": 104,
+    "standard_name": "Hijau S",
+    "category": "perhatian",
+    "name_variant": "INS 142"
+  },
+  {
+    "ingredient_id": 104,
+    "standard_name": "Hijau S",
+    "category": "perhatian",
+    "name_variant": "INS142"
+  },
+  {
+    "ingredient_id": 105,
+    "standard_name": "Indigotin (Indigo carmine)",
+    "category": "perhatian",
+    "name_variant": "Indigotin (Indigo carmine)"
+  },
+  {
+    "ingredient_id": 105,
+    "standard_name": "Indigotin (Indigo carmine)",
+    "category": "perhatian",
+    "name_variant": "Indigotine"
+  },
+  {
+    "ingredient_id": 105,
+    "standard_name": "Indigotin (Indigo carmine)",
+    "category": "perhatian",
+    "name_variant": "Indigotin"
+  },
+  {
+    "ingredient_id": 105,
+    "standard_name": "Indigotin (Indigo carmine)",
+    "category": "perhatian",
+    "name_variant": "Indigo carmine"
+  },
+  {
+    "ingredient_id": 105,
+    "standard_name": "Indigotin (Indigo carmine)",
+    "category": "perhatian",
+    "name_variant": "E132"
+  },
+  {
+    "ingredient_id": 105,
+    "standard_name": "Indigotin (Indigo carmine)",
+    "category": "perhatian",
+    "name_variant": "INS 132"
+  },
+  {
+    "ingredient_id": 105,
+    "standard_name": "Indigotin (Indigo carmine)",
+    "category": "perhatian",
+    "name_variant": "INS132"
+  },
+  {
+    "ingredient_id": 106,
+    "standard_name": "Kalium Sorbat",
+    "category": "perhatian",
+    "name_variant": "Kalium Sorbat"
+  },
+  {
+    "ingredient_id": 106,
+    "standard_name": "Kalium Sorbat",
+    "category": "perhatian",
+    "name_variant": "Potassium Sorbate"
+  },
+  {
+    "ingredient_id": 106,
+    "standard_name": "Kalium Sorbat",
+    "category": "perhatian",
+    "name_variant": "E202"
+  },
+  {
+    "ingredient_id": 106,
+    "standard_name": "Kalium Sorbat",
+    "category": "perhatian",
+    "name_variant": "INS 202"
+  },
+  {
+    "ingredient_id": 106,
+    "standard_name": "Kalium Sorbat",
+    "category": "perhatian",
+    "name_variant": "INS202"
+  },
+  {
+    "ingredient_id": 107,
+    "standard_name": "Natrium Nitrat",
+    "category": "hindari",
+    "name_variant": "Natrium Nitrat"
+  },
+  {
+    "ingredient_id": 107,
+    "standard_name": "Natrium Nitrat",
+    "category": "hindari",
+    "name_variant": "Sodium Nitrate"
+  },
+  {
+    "ingredient_id": 107,
+    "standard_name": "Natrium Nitrat",
+    "category": "hindari",
+    "name_variant": "E251"
+  },
+  {
+    "ingredient_id": 107,
+    "standard_name": "Natrium Nitrat",
+    "category": "hindari",
+    "name_variant": "INS 251"
+  },
+  {
+    "ingredient_id": 107,
+    "standard_name": "Natrium Nitrat",
+    "category": "hindari",
+    "name_variant": "INS251"
+  },
+  {
+    "ingredient_id": 108,
+    "standard_name": "Asesulfam Kalium",
+    "category": "perhatian",
+    "name_variant": "Asesulfam Kalium"
+  },
+  {
+    "ingredient_id": 108,
+    "standard_name": "Asesulfam Kalium",
+    "category": "perhatian",
+    "name_variant": "Acesulfame Potassium"
+  },
+  {
+    "ingredient_id": 108,
+    "standard_name": "Asesulfam Kalium",
+    "category": "perhatian",
+    "name_variant": "Asesulfam K"
+  },
+  {
+    "ingredient_id": 108,
+    "standard_name": "Asesulfam Kalium",
+    "category": "perhatian",
+    "name_variant": "Acesulfame K"
+  },
+  {
+    "ingredient_id": 108,
+    "standard_name": "Asesulfam Kalium",
+    "category": "perhatian",
+    "name_variant": "E950"
+  },
+  {
+    "ingredient_id": 108,
+    "standard_name": "Asesulfam Kalium",
+    "category": "perhatian",
+    "name_variant": "INS 950"
+  },
+  {
+    "ingredient_id": 108,
+    "standard_name": "Asesulfam Kalium",
+    "category": "perhatian",
+    "name_variant": "INS950"
+  },
+  {
+    "ingredient_id": 109,
+    "standard_name": "Tersier-Butilhidrokuinon (TBHQ)",
+    "category": "hindari",
+    "name_variant": "Tersier-Butilhidrokuinon (TBHQ)"
+  },
+  {
+    "ingredient_id": 109,
+    "standard_name": "Tersier-Butilhidrokuinon (TBHQ)",
+    "category": "hindari",
+    "name_variant": "Tertiary Butylhydroquinone (TBHQ)"
+  },
+  {
+    "ingredient_id": 109,
+    "standard_name": "Tersier-Butilhidrokuinon (TBHQ)",
+    "category": "hindari",
+    "name_variant": "Tersier-Butilhidrokuinon"
+  },
+  {
+    "ingredient_id": 109,
+    "standard_name": "Tersier-Butilhidrokuinon (TBHQ)",
+    "category": "hindari",
+    "name_variant": "Tertiary Butylhydroquinone"
+  },
+  {
+    "ingredient_id": 109,
+    "standard_name": "Tersier-Butilhidrokuinon (TBHQ)",
+    "category": "hindari",
+    "name_variant": "TBHQ"
+  },
+  {
+    "ingredient_id": 109,
+    "standard_name": "Tersier-Butilhidrokuinon (TBHQ)",
+    "category": "hindari",
+    "name_variant": "Tersier butilhidrokuinon"
+  },
+  {
+    "ingredient_id": 109,
+    "standard_name": "Tersier-Butilhidrokuinon (TBHQ)",
+    "category": "hindari",
+    "name_variant": "E319"
+  },
+  {
+    "ingredient_id": 109,
+    "standard_name": "Tersier-Butilhidrokuinon (TBHQ)",
+    "category": "hindari",
+    "name_variant": "INS 319"
+  },
+  {
+    "ingredient_id": 109,
+    "standard_name": "Tersier-Butilhidrokuinon (TBHQ)",
+    "category": "hindari",
+    "name_variant": "INS319"
+  },
+  {
+    "ingredient_id": 110,
+    "standard_name": "Kalium Bromat",
+    "category": "hindari",
+    "name_variant": "Kalium Bromat"
+  },
+  {
+    "ingredient_id": 110,
+    "standard_name": "Kalium Bromat",
+    "category": "hindari",
+    "name_variant": "Potassium Bromate"
+  },
+  {
+    "ingredient_id": 111,
+    "standard_name": "Vanilin sintetis",
+    "category": "perhatian",
+    "name_variant": "Vanilin sintetis"
+  },
+  {
+    "ingredient_id": 111,
+    "standard_name": "Vanilin sintetis",
+    "category": "perhatian",
+    "name_variant": "Synthetic Vanillin"
+  },
+  {
+    "ingredient_id": 111,
+    "standard_name": "Vanilin sintetis",
+    "category": "perhatian",
+    "name_variant": "Vanilin"
+  },
+  {
+    "ingredient_id": 111,
+    "standard_name": "Vanilin sintetis",
+    "category": "perhatian",
+    "name_variant": "Vanillin"
+  },
+  {
+    "ingredient_id": 112,
+    "standard_name": "Pemanis buatan campuran (soft drink)",
+    "category": "perhatian",
+    "name_variant": "Pemanis buatan campuran (soft drink)"
+  },
+  {
+    "ingredient_id": 112,
+    "standard_name": "Pemanis buatan campuran (soft drink)",
+    "category": "perhatian",
+    "name_variant": "Artificial sweetener blends (soft drinks)"
+  },
+  {
+    "ingredient_id": 112,
+    "standard_name": "Pemanis buatan campuran (soft drink)",
+    "category": "perhatian",
+    "name_variant": "Pemanis buatan campuran"
+  },
+  {
+    "ingredient_id": 112,
+    "standard_name": "Pemanis buatan campuran (soft drink)",
+    "category": "perhatian",
+    "name_variant": "Artificial sweetener blends"
+  },
+  {
+    "ingredient_id": 113,
+    "standard_name": "Asam folat sintetis pada produk fortifikasi gandum",
+    "category": "perhatian",
+    "name_variant": "Asam folat sintetis pada produk fortifikasi gandum"
+  },
+  {
+    "ingredient_id": 113,
+    "standard_name": "Asam folat sintetis pada produk fortifikasi gandum",
+    "category": "perhatian",
+    "name_variant": "Synthetic folic acid (wheat-fortified products)"
+  },
+  {
+    "ingredient_id": 113,
+    "standard_name": "Asam folat sintetis pada produk fortifikasi gandum",
+    "category": "perhatian",
+    "name_variant": "Synthetic folic acid"
+  },
+  {
+    "ingredient_id": 114,
+    "standard_name": "Apel",
+    "category": "perhatian",
+    "name_variant": "Apel"
+  },
+  {
+    "ingredient_id": 114,
+    "standard_name": "Apel",
+    "category": "perhatian",
+    "name_variant": "Apple"
+  },
+  {
+    "ingredient_id": 115,
+    "standard_name": "Jeruk",
+    "category": "perhatian",
+    "name_variant": "Jeruk"
+  },
+  {
+    "ingredient_id": 115,
+    "standard_name": "Jeruk",
+    "category": "perhatian",
+    "name_variant": "Orange"
+  },
+  {
+    "ingredient_id": 116,
+    "standard_name": "Anggur",
+    "category": "perhatian",
+    "name_variant": "Anggur"
+  },
+  {
+    "ingredient_id": 116,
+    "standard_name": "Anggur",
+    "category": "perhatian",
+    "name_variant": "Grapes"
+  },
+  {
+    "ingredient_id": 116,
+    "standard_name": "Anggur",
+    "category": "perhatian",
+    "name_variant": "Grape"
+  },
+  {
+    "ingredient_id": 117,
+    "standard_name": "Stroberi/berry",
+    "category": "perhatian",
+    "name_variant": "Stroberi/berry"
+  },
+  {
+    "ingredient_id": 117,
+    "standard_name": "Stroberi/berry",
+    "category": "perhatian",
+    "name_variant": "Berries (strawberry, blueberry, raspberry)"
+  },
+  {
+    "ingredient_id": 117,
+    "standard_name": "Stroberi/berry",
+    "category": "perhatian",
+    "name_variant": "Berries"
+  },
+  {
+    "ingredient_id": 117,
+    "standard_name": "Stroberi/berry",
+    "category": "perhatian",
+    "name_variant": "Stroberi"
+  },
+  {
+    "ingredient_id": 117,
+    "standard_name": "Stroberi/berry",
+    "category": "perhatian",
+    "name_variant": "Berry"
+  },
+  {
+    "ingredient_id": 117,
+    "standard_name": "Stroberi/berry",
+    "category": "perhatian",
+    "name_variant": "Strawberry"
+  },
+  {
+    "ingredient_id": 117,
+    "standard_name": "Stroberi/berry",
+    "category": "perhatian",
+    "name_variant": "Blueberry"
+  },
+  {
+    "ingredient_id": 117,
+    "standard_name": "Stroberi/berry",
+    "category": "perhatian",
+    "name_variant": "Raspberry"
+  },
+  {
+    "ingredient_id": 118,
+    "standard_name": "Ceri",
+    "category": "perhatian",
+    "name_variant": "Ceri"
+  },
+  {
+    "ingredient_id": 118,
+    "standard_name": "Ceri",
+    "category": "perhatian",
+    "name_variant": "Cherries"
+  },
+  {
+    "ingredient_id": 118,
+    "standard_name": "Ceri",
+    "category": "perhatian",
+    "name_variant": "Cherry"
+  },
+  {
+    "ingredient_id": 119,
+    "standard_name": "Aprikot",
+    "category": "perhatian",
+    "name_variant": "Aprikot"
+  },
+  {
+    "ingredient_id": 119,
+    "standard_name": "Aprikot",
+    "category": "perhatian",
+    "name_variant": "Apricot"
+  },
+  {
+    "ingredient_id": 120,
+    "standard_name": "Plum",
+    "category": "perhatian",
+    "name_variant": "Plum"
+  },
+  {
+    "ingredient_id": 120,
+    "standard_name": "Plum",
+    "category": "perhatian",
+    "name_variant": "Plums"
+  },
+  {
+    "ingredient_id": 121,
+    "standard_name": "Kismis",
+    "category": "perhatian",
+    "name_variant": "Kismis"
+  },
+  {
+    "ingredient_id": 121,
+    "standard_name": "Kismis",
+    "category": "perhatian",
+    "name_variant": "Raisins"
+  },
+  {
+    "ingredient_id": 121,
+    "standard_name": "Kismis",
+    "category": "perhatian",
+    "name_variant": "Raisin"
+  },
+  {
+    "ingredient_id": 122,
+    "standard_name": "Prune",
+    "category": "perhatian",
+    "name_variant": "Prune"
+  },
+  {
+    "ingredient_id": 122,
+    "standard_name": "Prune",
+    "category": "perhatian",
+    "name_variant": "Prunes"
+  },
+  {
+    "ingredient_id": 123,
+    "standard_name": "Almond",
+    "category": "perhatian",
+    "name_variant": "Almond"
+  },
+  {
+    "ingredient_id": 123,
+    "standard_name": "Almond",
+    "category": "perhatian",
+    "name_variant": "Almonds"
+  },
+  {
+    "ingredient_id": 124,
+    "standard_name": "Kacang tanah",
+    "category": "perhatian",
+    "name_variant": "Kacang tanah"
+  },
+  {
+    "ingredient_id": 124,
+    "standard_name": "Kacang tanah",
+    "category": "perhatian",
+    "name_variant": "Peanuts"
+  },
+  {
+    "ingredient_id": 124,
+    "standard_name": "Kacang tanah",
+    "category": "perhatian",
+    "name_variant": "Peanut"
+  },
+  {
+    "ingredient_id": 125,
+    "standard_name": "Tomat",
+    "category": "perhatian",
+    "name_variant": "Tomat"
+  },
+  {
+    "ingredient_id": 125,
+    "standard_name": "Tomat",
+    "category": "perhatian",
+    "name_variant": "Tomatoes"
+  },
+  {
+    "ingredient_id": 125,
+    "standard_name": "Tomat",
+    "category": "perhatian",
+    "name_variant": "Tomato"
+  },
+  {
+    "ingredient_id": 126,
+    "standard_name": "Mentimun (dengan kulit)",
+    "category": "perhatian",
+    "name_variant": "Mentimun (dengan kulit)"
+  },
+  {
+    "ingredient_id": 126,
+    "standard_name": "Mentimun (dengan kulit)",
+    "category": "perhatian",
+    "name_variant": "Cucumbers"
+  },
+  {
+    "ingredient_id": 126,
+    "standard_name": "Mentimun (dengan kulit)",
+    "category": "perhatian",
+    "name_variant": "Mentimun"
+  },
+  {
+    "ingredient_id": 126,
+    "standard_name": "Mentimun (dengan kulit)",
+    "category": "perhatian",
+    "name_variant": "Cucumber"
+  },
+  {
+    "ingredient_id": 127,
+    "standard_name": "Acar (pickles)",
+    "category": "perhatian",
+    "name_variant": "Acar (pickles)"
+  },
+  {
+    "ingredient_id": 127,
+    "standard_name": "Acar (pickles)",
+    "category": "perhatian",
+    "name_variant": "Pickles"
+  },
+  {
+    "ingredient_id": 127,
+    "standard_name": "Acar (pickles)",
+    "category": "perhatian",
+    "name_variant": "Acar"
+  },
+  {
+    "ingredient_id": 127,
+    "standard_name": "Acar (pickles)",
+    "category": "perhatian",
+    "name_variant": "Pickle"
+  },
+  {
+    "ingredient_id": 128,
+    "standard_name": "Paprika hijau/cabai",
+    "category": "perhatian",
+    "name_variant": "Paprika hijau/cabai"
+  },
+  {
+    "ingredient_id": 128,
+    "standard_name": "Paprika hijau/cabai",
+    "category": "perhatian",
+    "name_variant": "Green peppers / hot peppers"
+  },
+  {
+    "ingredient_id": 128,
+    "standard_name": "Paprika hijau/cabai",
+    "category": "perhatian",
+    "name_variant": "Paprika hijau"
+  },
+  {
+    "ingredient_id": 128,
+    "standard_name": "Paprika hijau/cabai",
+    "category": "perhatian",
+    "name_variant": "Cabai"
+  },
+  {
+    "ingredient_id": 128,
+    "standard_name": "Paprika hijau/cabai",
+    "category": "perhatian",
+    "name_variant": "Green peppers"
+  },
+  {
+    "ingredient_id": 128,
+    "standard_name": "Paprika hijau/cabai",
+    "category": "perhatian",
+    "name_variant": "Hot peppers"
+  },
+  {
+    "ingredient_id": 129,
+    "standard_name": "Kacang polong (peas)",
+    "category": "perhatian",
+    "name_variant": "Kacang polong (peas)"
+  },
+  {
+    "ingredient_id": 129,
+    "standard_name": "Kacang polong (peas)",
+    "category": "perhatian",
+    "name_variant": "Peas"
+  },
+  {
+    "ingredient_id": 129,
+    "standard_name": "Kacang polong (peas)",
+    "category": "perhatian",
+    "name_variant": "Kacang polong"
+  },
+  {
+    "ingredient_id": 130,
+    "standard_name": "Melon",
+    "category": "perhatian",
+    "name_variant": "Melon"
+  },
+  {
+    "ingredient_id": 130,
+    "standard_name": "Melon",
+    "category": "perhatian",
+    "name_variant": "Melons"
+  },
+  {
+    "ingredient_id": 131,
+    "standard_name": "Blewah/nektarin/persik",
+    "category": "perhatian",
+    "name_variant": "Blewah/nektarin/persik"
+  },
+  {
+    "ingredient_id": 131,
+    "standard_name": "Blewah/nektarin/persik",
+    "category": "perhatian",
+    "name_variant": "Nectarines / Peaches"
+  },
+  {
+    "ingredient_id": 131,
+    "standard_name": "Blewah/nektarin/persik",
+    "category": "perhatian",
+    "name_variant": "Blewah"
+  },
+  {
+    "ingredient_id": 131,
+    "standard_name": "Blewah/nektarin/persik",
+    "category": "perhatian",
+    "name_variant": "Nektarin"
+  },
+  {
+    "ingredient_id": 131,
+    "standard_name": "Blewah/nektarin/persik",
+    "category": "perhatian",
+    "name_variant": "Persik"
+  },
+  {
+    "ingredient_id": 131,
+    "standard_name": "Blewah/nektarin/persik",
+    "category": "perhatian",
+    "name_variant": "Nectarine"
+  },
+  {
+    "ingredient_id": 131,
+    "standard_name": "Blewah/nektarin/persik",
+    "category": "perhatian",
+    "name_variant": "Peach"
+  },
+  {
+    "ingredient_id": 132,
+    "standard_name": "Jeruk bali (grapefruit)",
+    "category": "perhatian",
+    "name_variant": "Jeruk bali (grapefruit)"
+  },
+  {
+    "ingredient_id": 132,
+    "standard_name": "Jeruk bali (grapefruit)",
+    "category": "perhatian",
+    "name_variant": "Grapefruit"
+  },
+  {
+    "ingredient_id": 132,
+    "standard_name": "Jeruk bali (grapefruit)",
+    "category": "perhatian",
+    "name_variant": "Jeruk bali"
+  },
+  {
+    "ingredient_id": 133,
+    "standard_name": "Lemon",
+    "category": "perhatian",
+    "name_variant": "Lemon"
+  },
+  {
+    "ingredient_id": 134,
+    "standard_name": "Kecap tomat / saus tomat (ketchup)",
+    "category": "perhatian",
+    "name_variant": "Kecap tomat / saus tomat (ketchup)"
+  },
+  {
+    "ingredient_id": 134,
+    "standard_name": "Kecap tomat / saus tomat (ketchup)",
+    "category": "perhatian",
+    "name_variant": "Ketchup / tomato sauce"
+  },
+  {
+    "ingredient_id": 134,
+    "standard_name": "Kecap tomat / saus tomat (ketchup)",
+    "category": "perhatian",
+    "name_variant": "Kecap tomat / saus tomat"
+  },
+  {
+    "ingredient_id": 134,
+    "standard_name": "Kecap tomat / saus tomat (ketchup)",
+    "category": "perhatian",
+    "name_variant": "Kecap tomat"
+  },
+  {
+    "ingredient_id": 134,
+    "standard_name": "Kecap tomat / saus tomat (ketchup)",
+    "category": "perhatian",
+    "name_variant": "Saus tomat"
+  },
+  {
+    "ingredient_id": 134,
+    "standard_name": "Kecap tomat / saus tomat (ketchup)",
+    "category": "perhatian",
+    "name_variant": "Ketchup"
+  },
+  {
+    "ingredient_id": 134,
+    "standard_name": "Kecap tomat / saus tomat (ketchup)",
+    "category": "perhatian",
+    "name_variant": "Tomato sauce"
+  },
+  {
+    "ingredient_id": 135,
+    "standard_name": "Madu",
+    "category": "perhatian",
+    "name_variant": "Madu"
+  },
+  {
+    "ingredient_id": 135,
+    "standard_name": "Madu",
+    "category": "perhatian",
+    "name_variant": "Honey"
+  },
+  {
+    "ingredient_id": 136,
+    "standard_name": "Kopi",
+    "category": "perhatian",
+    "name_variant": "Kopi"
+  },
+  {
+    "ingredient_id": 136,
+    "standard_name": "Kopi",
+    "category": "perhatian",
+    "name_variant": "Coffee"
+  },
+  {
+    "ingredient_id": 137,
+    "standard_name": "Teh",
+    "category": "perhatian",
+    "name_variant": "Teh"
+  },
+  {
+    "ingredient_id": 137,
+    "standard_name": "Teh",
+    "category": "perhatian",
+    "name_variant": "Tea"
+  },
+  {
+    "ingredient_id": 138,
+    "standard_name": "Cuka apel/anggur (cider/wine vinegar)",
+    "category": "perhatian",
+    "name_variant": "Cuka apel/anggur (cider/wine vinegar)"
+  },
+  {
+    "ingredient_id": 138,
+    "standard_name": "Cuka apel/anggur (cider/wine vinegar)",
+    "category": "perhatian",
+    "name_variant": "Cider / wine vinegar"
+  },
+  {
+    "ingredient_id": 138,
+    "standard_name": "Cuka apel/anggur (cider/wine vinegar)",
+    "category": "perhatian",
+    "name_variant": "Cuka apel/anggur"
+  },
+  {
+    "ingredient_id": 138,
+    "standard_name": "Cuka apel/anggur (cider/wine vinegar)",
+    "category": "perhatian",
+    "name_variant": "Cuka apel"
+  },
+  {
+    "ingredient_id": 138,
+    "standard_name": "Cuka apel/anggur (cider/wine vinegar)",
+    "category": "perhatian",
+    "name_variant": "Cuka anggur"
+  },
+  {
+    "ingredient_id": 138,
+    "standard_name": "Cuka apel/anggur (cider/wine vinegar)",
+    "category": "perhatian",
+    "name_variant": "Cider vinegar"
+  },
+  {
+    "ingredient_id": 138,
+    "standard_name": "Cuka apel/anggur (cider/wine vinegar)",
+    "category": "perhatian",
+    "name_variant": "Wine vinegar"
+  },
+  {
+    "ingredient_id": 139,
+    "standard_name": "Bumbu rempah umumnya (paprika bubuk, thyme, kari)",
+    "category": "perhatian",
+    "name_variant": "Bumbu rempah umumnya (paprika bubuk, thyme, kari)"
+  },
+  {
+    "ingredient_id": 139,
+    "standard_name": "Bumbu rempah umumnya (paprika bubuk, thyme, kari)",
+    "category": "perhatian",
+    "name_variant": "Most herbs/spices (paprika, thyme, curry powder)"
+  },
+  {
+    "ingredient_id": 139,
+    "standard_name": "Bumbu rempah umumnya (paprika bubuk, thyme, kari)",
+    "category": "perhatian",
+    "name_variant": "Bumbu rempah umumnya"
+  },
+  {
+    "ingredient_id": 139,
+    "standard_name": "Bumbu rempah umumnya (paprika bubuk, thyme, kari)",
+    "category": "perhatian",
+    "name_variant": "Most herbs/spices"
+  },
+  {
+    "ingredient_id": 139,
+    "standard_name": "Bumbu rempah umumnya (paprika bubuk, thyme, kari)",
+    "category": "perhatian",
+    "name_variant": "Bumbu rempah"
+  },
+  {
+    "ingredient_id": 139,
+    "standard_name": "Bumbu rempah umumnya (paprika bubuk, thyme, kari)",
+    "category": "perhatian",
+    "name_variant": "Paprika bubuk"
+  },
+  {
+    "ingredient_id": 139,
+    "standard_name": "Bumbu rempah umumnya (paprika bubuk, thyme, kari)",
+    "category": "perhatian",
+    "name_variant": "Thyme"
+  },
+  {
+    "ingredient_id": 139,
+    "standard_name": "Bumbu rempah umumnya (paprika bubuk, thyme, kari)",
+    "category": "perhatian",
+    "name_variant": "Kari"
+  },
+  {
+    "ingredient_id": 139,
+    "standard_name": "Bumbu rempah umumnya (paprika bubuk, thyme, kari)",
+    "category": "perhatian",
+    "name_variant": "Curry powder"
+  },
+  {
+    "ingredient_id": 140,
+    "standard_name": "Cengkeh (cloves)",
+    "category": "perhatian",
+    "name_variant": "Cengkeh (cloves)"
+  },
+  {
+    "ingredient_id": 140,
+    "standard_name": "Cengkeh (cloves)",
+    "category": "perhatian",
+    "name_variant": "Cloves"
+  },
+  {
+    "ingredient_id": 140,
+    "standard_name": "Cengkeh (cloves)",
+    "category": "perhatian",
+    "name_variant": "Cengkeh"
+  },
+  {
+    "ingredient_id": 140,
+    "standard_name": "Cengkeh (cloves)",
+    "category": "perhatian",
+    "name_variant": "Clove"
+  },
+  {
+    "ingredient_id": 141,
+    "standard_name": "Bubuk cabai (chili powder)",
+    "category": "perhatian",
+    "name_variant": "Bubuk cabai (chili powder)"
+  },
+  {
+    "ingredient_id": 141,
+    "standard_name": "Bubuk cabai (chili powder)",
+    "category": "perhatian",
+    "name_variant": "Chili powder"
+  },
+  {
+    "ingredient_id": 141,
+    "standard_name": "Bubuk cabai (chili powder)",
+    "category": "perhatian",
+    "name_variant": "Bubuk cabai"
+  },
+  {
+    "ingredient_id": 142,
+    "standard_name": "Minyak gandapura (oil of wintergreen)",
+    "category": "hindari",
+    "name_variant": "Minyak gandapura (oil of wintergreen)"
+  },
+  {
+    "ingredient_id": 142,
+    "standard_name": "Minyak gandapura (oil of wintergreen)",
+    "category": "hindari",
+    "name_variant": "Oil of wintergreen"
+  },
+  {
+    "ingredient_id": 142,
+    "standard_name": "Minyak gandapura (oil of wintergreen)",
+    "category": "hindari",
+    "name_variant": "Minyak gandapura"
+  },
+  {
+    "ingredient_id": 143,
+    "standard_name": "Beras putih",
+    "category": "aman",
+    "name_variant": "Beras putih"
+  },
+  {
+    "ingredient_id": 143,
+    "standard_name": "Beras putih",
+    "category": "aman",
+    "name_variant": "White rice"
+  },
+  {
+    "ingredient_id": 143,
+    "standard_name": "Beras putih",
+    "category": "aman",
+    "name_variant": "Beras"
+  },
+  {
+    "ingredient_id": 143,
+    "standard_name": "Beras putih",
+    "category": "aman",
+    "name_variant": "Rice"
+  },
+  {
+    "ingredient_id": 144,
+    "standard_name": "Beras merah/cokelat",
+    "category": "aman",
+    "name_variant": "Beras merah/cokelat"
+  },
+  {
+    "ingredient_id": 144,
+    "standard_name": "Beras merah/cokelat",
+    "category": "aman",
+    "name_variant": "Brown rice"
+  },
+  {
+    "ingredient_id": 144,
+    "standard_name": "Beras merah/cokelat",
+    "category": "aman",
+    "name_variant": "Beras merah"
+  },
+  {
+    "ingredient_id": 144,
+    "standard_name": "Beras merah/cokelat",
+    "category": "aman",
+    "name_variant": "Beras cokelat"
+  },
+  {
+    "ingredient_id": 145,
+    "standard_name": "Jagung (segar)",
+    "category": "aman",
+    "name_variant": "Jagung (segar)"
+  },
+  {
+    "ingredient_id": 145,
+    "standard_name": "Jagung (segar)",
+    "category": "aman",
+    "name_variant": "Corn (fresh)"
+  },
+  {
+    "ingredient_id": 145,
+    "standard_name": "Jagung (segar)",
+    "category": "aman",
+    "name_variant": "Jagung"
+  },
+  {
+    "ingredient_id": 145,
+    "standard_name": "Jagung (segar)",
+    "category": "aman",
+    "name_variant": "Corn"
+  },
+  {
+    "ingredient_id": 146,
+    "standard_name": "Kentang",
+    "category": "aman",
+    "name_variant": "Kentang"
+  },
+  {
+    "ingredient_id": 146,
+    "standard_name": "Kentang",
+    "category": "aman",
+    "name_variant": "Potato"
+  },
+  {
+    "ingredient_id": 147,
+    "standard_name": "Ubi jalar",
+    "category": "aman",
+    "name_variant": "Ubi jalar"
+  },
+  {
+    "ingredient_id": 147,
+    "standard_name": "Ubi jalar",
+    "category": "aman",
+    "name_variant": "Sweet potato"
+  },
+  {
+    "ingredient_id": 148,
+    "standard_name": "Singkong / ubi kayu",
+    "category": "aman",
+    "name_variant": "Singkong / ubi kayu"
+  },
+  {
+    "ingredient_id": 148,
+    "standard_name": "Singkong / ubi kayu",
+    "category": "aman",
+    "name_variant": "Cassava"
+  },
+  {
+    "ingredient_id": 148,
+    "standard_name": "Singkong / ubi kayu",
+    "category": "aman",
+    "name_variant": "Singkong"
+  },
+  {
+    "ingredient_id": 148,
+    "standard_name": "Singkong / ubi kayu",
+    "category": "aman",
+    "name_variant": "Ubi kayu"
+  },
+  {
+    "ingredient_id": 149,
+    "standard_name": "Quinoa",
+    "category": "aman",
+    "name_variant": "Quinoa"
+  },
+  {
+    "ingredient_id": 150,
+    "standard_name": "Sorgum",
+    "category": "aman",
+    "name_variant": "Sorgum"
+  },
+  {
+    "ingredient_id": 150,
+    "standard_name": "Sorgum",
+    "category": "aman",
+    "name_variant": "Sorghum"
+  },
+  {
+    "ingredient_id": 151,
+    "standard_name": "Millet",
+    "category": "aman",
+    "name_variant": "Millet"
+  },
+  {
+    "ingredient_id": 152,
+    "standard_name": "Soba / Buckwheat murni (100%)",
+    "category": "aman",
+    "name_variant": "Soba / Buckwheat murni (100%)"
+  },
+  {
+    "ingredient_id": 152,
+    "standard_name": "Soba / Buckwheat murni (100%)",
+    "category": "aman",
+    "name_variant": "Buckwheat (pure, 100%)"
+  },
+  {
+    "ingredient_id": 152,
+    "standard_name": "Soba / Buckwheat murni (100%)",
+    "category": "aman",
+    "name_variant": "Soba / Buckwheat murni"
+  },
+  {
+    "ingredient_id": 152,
+    "standard_name": "Soba / Buckwheat murni (100%)",
+    "category": "aman",
+    "name_variant": "Buckwheat"
+  },
+  {
+    "ingredient_id": 152,
+    "standard_name": "Soba / Buckwheat murni (100%)",
+    "category": "aman",
+    "name_variant": "Soba"
+  },
+  {
+    "ingredient_id": 153,
+    "standard_name": "Daging sapi segar (tanpa olahan)",
+    "category": "aman",
+    "name_variant": "Daging sapi segar (tanpa olahan)"
+  },
+  {
+    "ingredient_id": 153,
+    "standard_name": "Daging sapi segar (tanpa olahan)",
+    "category": "aman",
+    "name_variant": "Fresh beef (unprocessed)"
+  },
+  {
+    "ingredient_id": 153,
+    "standard_name": "Daging sapi segar (tanpa olahan)",
+    "category": "aman",
+    "name_variant": "Daging sapi segar"
+  },
+  {
+    "ingredient_id": 153,
+    "standard_name": "Daging sapi segar (tanpa olahan)",
+    "category": "aman",
+    "name_variant": "Fresh beef"
+  },
+  {
+    "ingredient_id": 154,
+    "standard_name": "Daging ayam segar (tanpa olahan)",
+    "category": "aman",
+    "name_variant": "Daging ayam segar (tanpa olahan)"
+  },
+  {
+    "ingredient_id": 154,
+    "standard_name": "Daging ayam segar (tanpa olahan)",
+    "category": "aman",
+    "name_variant": "Fresh chicken (unprocessed)"
+  },
+  {
+    "ingredient_id": 154,
+    "standard_name": "Daging ayam segar (tanpa olahan)",
+    "category": "aman",
+    "name_variant": "Daging ayam segar"
+  },
+  {
+    "ingredient_id": 154,
+    "standard_name": "Daging ayam segar (tanpa olahan)",
+    "category": "aman",
+    "name_variant": "Fresh chicken"
+  },
+  {
+    "ingredient_id": 155,
+    "standard_name": "Ikan segar",
+    "category": "aman",
+    "name_variant": "Ikan segar"
+  },
+  {
+    "ingredient_id": 155,
+    "standard_name": "Ikan segar",
+    "category": "aman",
+    "name_variant": "Fresh fish"
+  },
+  {
+    "ingredient_id": 156,
+    "standard_name": "Telur",
+    "category": "aman",
+    "name_variant": "Telur"
+  },
+  {
+    "ingredient_id": 156,
+    "standard_name": "Telur",
+    "category": "aman",
+    "name_variant": "Eggs"
+  },
+  {
+    "ingredient_id": 156,
+    "standard_name": "Telur",
+    "category": "aman",
+    "name_variant": "Egg"
+  },
+  {
+    "ingredient_id": 157,
+    "standard_name": "Kacang-kacangan (kacang merah, kacang hijau, dll)",
+    "category": "aman",
+    "name_variant": "Kacang-kacangan (kacang merah, kacang hijau, dll)"
+  },
+  {
+    "ingredient_id": 157,
+    "standard_name": "Kacang-kacangan (kacang merah, kacang hijau, dll)",
+    "category": "aman",
+    "name_variant": "Legumes/beans (kidney beans, mung beans, etc.)"
+  },
+  {
+    "ingredient_id": 157,
+    "standard_name": "Kacang-kacangan (kacang merah, kacang hijau, dll)",
+    "category": "aman",
+    "name_variant": "Kacang-kacangan"
+  },
+  {
+    "ingredient_id": 157,
+    "standard_name": "Kacang-kacangan (kacang merah, kacang hijau, dll)",
+    "category": "aman",
+    "name_variant": "Legumes/beans"
+  },
+  {
+    "ingredient_id": 157,
+    "standard_name": "Kacang-kacangan (kacang merah, kacang hijau, dll)",
+    "category": "aman",
+    "name_variant": "Kacang merah"
+  },
+  {
+    "ingredient_id": 157,
+    "standard_name": "Kacang-kacangan (kacang merah, kacang hijau, dll)",
+    "category": "aman",
+    "name_variant": "Kacang hijau"
+  },
+  {
+    "ingredient_id": 157,
+    "standard_name": "Kacang-kacangan (kacang merah, kacang hijau, dll)",
+    "category": "aman",
+    "name_variant": "Kidney beans"
+  },
+  {
+    "ingredient_id": 157,
+    "standard_name": "Kacang-kacangan (kacang merah, kacang hijau, dll)",
+    "category": "aman",
+    "name_variant": "Mung beans"
+  },
+  {
+    "ingredient_id": 158,
+    "standard_name": "Tahu (kedelai murni)",
+    "category": "aman",
+    "name_variant": "Tahu (kedelai murni)"
+  },
+  {
+    "ingredient_id": 158,
+    "standard_name": "Tahu (kedelai murni)",
+    "category": "aman",
+    "name_variant": "Tofu (pure soy)"
+  },
+  {
+    "ingredient_id": 158,
+    "standard_name": "Tahu (kedelai murni)",
+    "category": "aman",
+    "name_variant": "Tahu"
+  },
+  {
+    "ingredient_id": 158,
+    "standard_name": "Tahu (kedelai murni)",
+    "category": "aman",
+    "name_variant": "Tofu"
+  },
+  {
+    "ingredient_id": 159,
+    "standard_name": "Tempe (kedelai murni)",
+    "category": "aman",
+    "name_variant": "Tempe (kedelai murni)"
+  },
+  {
+    "ingredient_id": 159,
+    "standard_name": "Tempe (kedelai murni)",
+    "category": "aman",
+    "name_variant": "Tempeh (pure soy)"
+  },
+  {
+    "ingredient_id": 159,
+    "standard_name": "Tempe (kedelai murni)",
+    "category": "aman",
+    "name_variant": "Tempe"
+  },
+  {
+    "ingredient_id": 159,
+    "standard_name": "Tempe (kedelai murni)",
+    "category": "aman",
+    "name_variant": "Tempeh"
+  },
+  {
+    "ingredient_id": 160,
+    "standard_name": "Alpukat",
+    "category": "aman",
+    "name_variant": "Alpukat"
+  },
+  {
+    "ingredient_id": 160,
+    "standard_name": "Alpukat",
+    "category": "aman",
+    "name_variant": "Avocado"
+  },
+  {
+    "ingredient_id": 161,
+    "standard_name": "Artichoke",
+    "category": "aman",
+    "name_variant": "Artichoke"
+  },
+  {
+    "ingredient_id": 162,
+    "standard_name": "Asparagus",
+    "category": "aman",
+    "name_variant": "Asparagus"
+  },
+  {
+    "ingredient_id": 163,
+    "standard_name": "Kecambah alfalfa",
+    "category": "aman",
+    "name_variant": "Kecambah alfalfa"
+  },
+  {
+    "ingredient_id": 163,
+    "standard_name": "Kecambah alfalfa",
+    "category": "aman",
+    "name_variant": "Alfalfa sprouts"
+  },
+  {
+    "ingredient_id": 164,
+    "standard_name": "Rebung",
+    "category": "aman",
+    "name_variant": "Rebung"
+  },
+  {
+    "ingredient_id": 164,
+    "standard_name": "Rebung",
+    "category": "aman",
+    "name_variant": "Bamboo shoots"
+  },
+  {
+    "ingredient_id": 165,
+    "standard_name": "Tauge (bean sprouts)",
+    "category": "aman",
+    "name_variant": "Tauge (bean sprouts)"
+  },
+  {
+    "ingredient_id": 165,
+    "standard_name": "Tauge (bean sprouts)",
+    "category": "aman",
+    "name_variant": "Bean sprouts"
+  },
+  {
+    "ingredient_id": 165,
+    "standard_name": "Tauge (bean sprouts)",
+    "category": "aman",
+    "name_variant": "Tauge"
+  },
+  {
+    "ingredient_id": 166,
+    "standard_name": "Bit (beetroot)",
+    "category": "aman",
+    "name_variant": "Bit (beetroot)"
+  },
+  {
+    "ingredient_id": 166,
+    "standard_name": "Bit (beetroot)",
+    "category": "aman",
+    "name_variant": "Beets"
+  },
+  {
+    "ingredient_id": 166,
+    "standard_name": "Bit (beetroot)",
+    "category": "aman",
+    "name_variant": "Bit"
+  },
+  {
+    "ingredient_id": 166,
+    "standard_name": "Bit (beetroot)",
+    "category": "aman",
+    "name_variant": "Beetroot"
+  },
+  {
+    "ingredient_id": 167,
+    "standard_name": "Brokoli",
+    "category": "aman",
+    "name_variant": "Brokoli"
+  },
+  {
+    "ingredient_id": 167,
+    "standard_name": "Brokoli",
+    "category": "aman",
+    "name_variant": "Broccoli"
+  },
+  {
+    "ingredient_id": 168,
+    "standard_name": "Kubis Brussel",
+    "category": "aman",
+    "name_variant": "Kubis Brussel"
+  },
+  {
+    "ingredient_id": 168,
+    "standard_name": "Kubis Brussel",
+    "category": "aman",
+    "name_variant": "Brussels sprouts"
+  },
+  {
+    "ingredient_id": 169,
+    "standard_name": "Kubis / kol",
+    "category": "aman",
+    "name_variant": "Kubis / kol"
+  },
+  {
+    "ingredient_id": 169,
+    "standard_name": "Kubis / kol",
+    "category": "aman",
+    "name_variant": "Cabbage"
+  },
+  {
+    "ingredient_id": 169,
+    "standard_name": "Kubis / kol",
+    "category": "aman",
+    "name_variant": "Kubis"
+  },
+  {
+    "ingredient_id": 169,
+    "standard_name": "Kubis / kol",
+    "category": "aman",
+    "name_variant": "Kol"
+  },
+  {
+    "ingredient_id": 170,
+    "standard_name": "Wortel",
+    "category": "aman",
+    "name_variant": "Wortel"
+  },
+  {
+    "ingredient_id": 170,
+    "standard_name": "Wortel",
+    "category": "aman",
+    "name_variant": "Carrot"
+  },
+  {
+    "ingredient_id": 171,
+    "standard_name": "Seledri",
+    "category": "aman",
+    "name_variant": "Seledri"
+  },
+  {
+    "ingredient_id": 171,
+    "standard_name": "Seledri",
+    "category": "aman",
+    "name_variant": "Celery"
+  },
+  {
+    "ingredient_id": 172,
+    "standard_name": "Selada",
+    "category": "aman",
+    "name_variant": "Selada"
+  },
+  {
+    "ingredient_id": 172,
+    "standard_name": "Selada",
+    "category": "aman",
+    "name_variant": "Lettuce"
+  },
+  {
+    "ingredient_id": 173,
+    "standard_name": "Bayam (dalam jumlah wajar)",
+    "category": "perhatian",
+    "name_variant": "Bayam (dalam jumlah wajar)"
+  },
+  {
+    "ingredient_id": 173,
+    "standard_name": "Bayam (dalam jumlah wajar)",
+    "category": "perhatian",
+    "name_variant": "Spinach (moderate amount)"
+  },
+  {
+    "ingredient_id": 173,
+    "standard_name": "Bayam (dalam jumlah wajar)",
+    "category": "perhatian",
+    "name_variant": "Bayam"
+  },
+  {
+    "ingredient_id": 173,
+    "standard_name": "Bayam (dalam jumlah wajar)",
+    "category": "perhatian",
+    "name_variant": "Spinach"
+  },
+  {
+    "ingredient_id": 174,
+    "standard_name": "Pisang",
+    "category": "aman",
+    "name_variant": "Pisang"
+  },
+  {
+    "ingredient_id": 174,
+    "standard_name": "Pisang",
+    "category": "aman",
+    "name_variant": "Banana"
+  },
+  {
+    "ingredient_id": 175,
+    "standard_name": "Pir (dikupas)",
+    "category": "aman",
+    "name_variant": "Pir (dikupas)"
+  },
+  {
+    "ingredient_id": 175,
+    "standard_name": "Pir (dikupas)",
+    "category": "aman",
+    "name_variant": "Pear (peeled)"
+  },
+  {
+    "ingredient_id": 175,
+    "standard_name": "Pir (dikupas)",
+    "category": "aman",
+    "name_variant": "Pir"
+  },
+  {
+    "ingredient_id": 175,
+    "standard_name": "Pir (dikupas)",
+    "category": "aman",
+    "name_variant": "Pear"
+  },
+  {
+    "ingredient_id": 176,
+    "standard_name": "Semangka",
+    "category": "aman",
+    "name_variant": "Semangka"
+  },
+  {
+    "ingredient_id": 176,
+    "standard_name": "Semangka",
+    "category": "aman",
+    "name_variant": "Watermelon"
+  },
+  {
+    "ingredient_id": 177,
+    "standard_name": "Pepaya",
+    "category": "aman",
+    "name_variant": "Pepaya"
+  },
+  {
+    "ingredient_id": 177,
+    "standard_name": "Pepaya",
+    "category": "aman",
+    "name_variant": "Papaya"
+  },
+  {
+    "ingredient_id": 178,
+    "standard_name": "Mangga",
+    "category": "aman",
+    "name_variant": "Mangga"
+  },
+  {
+    "ingredient_id": 178,
+    "standard_name": "Mangga",
+    "category": "aman",
+    "name_variant": "Mango"
+  },
+  {
+    "ingredient_id": 179,
+    "standard_name": "Santan / susu kelapa",
+    "category": "aman",
+    "name_variant": "Santan / susu kelapa"
+  },
+  {
+    "ingredient_id": 179,
+    "standard_name": "Santan / susu kelapa",
+    "category": "aman",
+    "name_variant": "Coconut milk"
+  },
+  {
+    "ingredient_id": 179,
+    "standard_name": "Santan / susu kelapa",
+    "category": "aman",
+    "name_variant": "Santan"
+  },
+  {
+    "ingredient_id": 179,
+    "standard_name": "Santan / susu kelapa",
+    "category": "aman",
+    "name_variant": "Susu kelapa"
+  },
+  {
+    "ingredient_id": 180,
+    "standard_name": "Susu beras",
+    "category": "aman",
+    "name_variant": "Susu beras"
+  },
+  {
+    "ingredient_id": 180,
+    "standard_name": "Susu beras",
+    "category": "aman",
+    "name_variant": "Rice milk"
+  },
+  {
+    "ingredient_id": 181,
+    "standard_name": "Susu almond (tanpa perisa buatan)",
+    "category": "aman",
+    "name_variant": "Susu almond (tanpa perisa buatan)"
+  },
+  {
+    "ingredient_id": 181,
+    "standard_name": "Susu almond (tanpa perisa buatan)",
+    "category": "aman",
+    "name_variant": "Almond milk (unflavored, no artificial additives)"
+  },
+  {
+    "ingredient_id": 181,
+    "standard_name": "Susu almond (tanpa perisa buatan)",
+    "category": "aman",
+    "name_variant": "Susu almond"
+  },
+  {
+    "ingredient_id": 181,
+    "standard_name": "Susu almond (tanpa perisa buatan)",
+    "category": "aman",
+    "name_variant": "Almond milk"
+  },
+  {
+    "ingredient_id": 182,
+    "standard_name": "Susu kedelai murni",
+    "category": "aman",
+    "name_variant": "Susu kedelai murni"
+  },
+  {
+    "ingredient_id": 182,
+    "standard_name": "Susu kedelai murni",
+    "category": "aman",
+    "name_variant": "Pure soy milk"
+  },
+  {
+    "ingredient_id": 182,
+    "standard_name": "Susu kedelai murni",
+    "category": "aman",
+    "name_variant": "Susu kedelai"
+  },
+  {
+    "ingredient_id": 182,
+    "standard_name": "Susu kedelai murni",
+    "category": "aman",
+    "name_variant": "Soy milk"
+  },
+  {
+    "ingredient_id": 183,
+    "standard_name": "Susu oat bersertifikat bebas gluten",
+    "category": "perhatian",
+    "name_variant": "Susu oat bersertifikat bebas gluten"
+  },
+  {
+    "ingredient_id": 183,
+    "standard_name": "Susu oat bersertifikat bebas gluten",
+    "category": "perhatian",
+    "name_variant": "Oat milk (certified gluten-free)"
+  },
+  {
+    "ingredient_id": 183,
+    "standard_name": "Susu oat bersertifikat bebas gluten",
+    "category": "perhatian",
+    "name_variant": "Oat milk"
+  },
+  {
+    "ingredient_id": 183,
+    "standard_name": "Susu oat bersertifikat bebas gluten",
+    "category": "perhatian",
+    "name_variant": "Susu oat"
+  },
+  {
+    "ingredient_id": 184,
+    "standard_name": "Tepung kelapa",
+    "category": "aman",
+    "name_variant": "Tepung kelapa"
+  },
+  {
+    "ingredient_id": 184,
+    "standard_name": "Tepung kelapa",
+    "category": "aman",
+    "name_variant": "Coconut flour"
+  },
+  {
+    "ingredient_id": 185,
+    "standard_name": "Tepung kacang almond",
+    "category": "aman",
+    "name_variant": "Tepung kacang almond"
+  },
+  {
+    "ingredient_id": 185,
+    "standard_name": "Tepung kacang almond",
+    "category": "aman",
+    "name_variant": "Almond flour"
+  },
+  {
+    "ingredient_id": 185,
+    "standard_name": "Tepung kacang almond",
+    "category": "aman",
+    "name_variant": "Tepung almond"
+  },
+  {
+    "ingredient_id": 186,
+    "standard_name": "Tepung garut (arrowroot)",
+    "category": "aman",
+    "name_variant": "Tepung garut (arrowroot)"
+  },
+  {
+    "ingredient_id": 186,
+    "standard_name": "Tepung garut (arrowroot)",
+    "category": "aman",
+    "name_variant": "Arrowroot flour"
+  },
+  {
+    "ingredient_id": 186,
+    "standard_name": "Tepung garut (arrowroot)",
+    "category": "aman",
+    "name_variant": "Tepung garut"
+  },
+  {
+    "ingredient_id": 186,
+    "standard_name": "Tepung garut (arrowroot)",
+    "category": "aman",
+    "name_variant": "Arrowroot"
+  },
+  {
+    "ingredient_id": 187,
+    "standard_name": "Air mineral",
+    "category": "aman",
+    "name_variant": "Air mineral"
+  },
+  {
+    "ingredient_id": 187,
+    "standard_name": "Air mineral",
+    "category": "aman",
+    "name_variant": "Mineral water"
+  },
+  {
+    "ingredient_id": 188,
+    "standard_name": "Suplemen kalsium (atas anjuran dokter)",
+    "category": "aman",
+    "name_variant": "Suplemen kalsium (atas anjuran dokter)"
+  },
+  {
+    "ingredient_id": 188,
+    "standard_name": "Suplemen kalsium (atas anjuran dokter)",
+    "category": "aman",
+    "name_variant": "Calcium supplement (as advised by physician)"
+  },
+  {
+    "ingredient_id": 188,
+    "standard_name": "Suplemen kalsium (atas anjuran dokter)",
+    "category": "aman",
+    "name_variant": "Suplemen kalsium"
+  },
+  {
+    "ingredient_id": 188,
+    "standard_name": "Suplemen kalsium (atas anjuran dokter)",
+    "category": "aman",
+    "name_variant": "Calcium supplement"
+  },
+  {
+    "ingredient_id": 189,
+    "standard_name": "Suplemen vitamin D (atas anjuran dokter)",
+    "category": "aman",
+    "name_variant": "Suplemen vitamin D (atas anjuran dokter)"
+  },
+  {
+    "ingredient_id": 189,
+    "standard_name": "Suplemen vitamin D (atas anjuran dokter)",
+    "category": "aman",
+    "name_variant": "Vitamin D supplement (as advised by physician)"
+  },
+  {
+    "ingredient_id": 189,
+    "standard_name": "Suplemen vitamin D (atas anjuran dokter)",
+    "category": "aman",
+    "name_variant": "Suplemen vitamin D"
+  },
+  {
+    "ingredient_id": 189,
+    "standard_name": "Suplemen vitamin D (atas anjuran dokter)",
+    "category": "aman",
+    "name_variant": "Vitamin D supplement"
+  },
+  {
+    "ingredient_id": 190,
+    "standard_name": "Minyak ikan / Omega-3",
+    "category": "aman",
+    "name_variant": "Minyak ikan / Omega-3"
+  },
+  {
+    "ingredient_id": 190,
+    "standard_name": "Minyak ikan / Omega-3",
+    "category": "aman",
+    "name_variant": "Fish oil / Omega-3"
+  },
+  {
+    "ingredient_id": 190,
+    "standard_name": "Minyak ikan / Omega-3",
+    "category": "aman",
+    "name_variant": "Minyak ikan"
+  },
+  {
+    "ingredient_id": 190,
+    "standard_name": "Minyak ikan / Omega-3",
+    "category": "aman",
+    "name_variant": "Omega-3"
+  },
+  {
+    "ingredient_id": 190,
+    "standard_name": "Minyak ikan / Omega-3",
+    "category": "aman",
+    "name_variant": "Fish oil"
+  },
+  {
+    "ingredient_id": 191,
+    "standard_name": "Minyak sawit / Minyak kelapa sawit (termasuk minyak olein kelapa sawit, minyak goreng sawit)",
+    "category": "aman",
+    "name_variant": "Minyak sawit / Minyak kelapa sawit (termasuk minyak olein kelapa sawit, minyak goreng sawit)"
+  },
+  {
+    "ingredient_id": 191,
+    "standard_name": "Minyak sawit / Minyak kelapa sawit (termasuk minyak olein kelapa sawit, minyak goreng sawit)",
+    "category": "aman",
+    "name_variant": "Palm oil / palm olein (incl. cooking palm oil)"
+  },
+  {
+    "ingredient_id": 191,
+    "standard_name": "Minyak sawit / Minyak kelapa sawit (termasuk minyak olein kelapa sawit, minyak goreng sawit)",
+    "category": "aman",
+    "name_variant": "Minyak sawit / Minyak kelapa sawit"
+  },
+  {
+    "ingredient_id": 191,
+    "standard_name": "Minyak sawit / Minyak kelapa sawit (termasuk minyak olein kelapa sawit, minyak goreng sawit)",
+    "category": "aman",
+    "name_variant": "Palm oil / palm olein"
+  },
+  {
+    "ingredient_id": 191,
+    "standard_name": "Minyak sawit / Minyak kelapa sawit (termasuk minyak olein kelapa sawit, minyak goreng sawit)",
+    "category": "aman",
+    "name_variant": "Minyak sawit"
+  },
+  {
+    "ingredient_id": 191,
+    "standard_name": "Minyak sawit / Minyak kelapa sawit (termasuk minyak olein kelapa sawit, minyak goreng sawit)",
+    "category": "aman",
+    "name_variant": "Minyak kelapa sawit"
+  },
+  {
+    "ingredient_id": 191,
+    "standard_name": "Minyak sawit / Minyak kelapa sawit (termasuk minyak olein kelapa sawit, minyak goreng sawit)",
+    "category": "aman",
+    "name_variant": "Minyak olein kelapa sawit"
+  },
+  {
+    "ingredient_id": 191,
+    "standard_name": "Minyak sawit / Minyak kelapa sawit (termasuk minyak olein kelapa sawit, minyak goreng sawit)",
+    "category": "aman",
+    "name_variant": "Minyak goreng sawit"
+  },
+  {
+    "ingredient_id": 191,
+    "standard_name": "Minyak sawit / Minyak kelapa sawit (termasuk minyak olein kelapa sawit, minyak goreng sawit)",
+    "category": "aman",
+    "name_variant": "Palm oil"
+  },
+  {
+    "ingredient_id": 191,
+    "standard_name": "Minyak sawit / Minyak kelapa sawit (termasuk minyak olein kelapa sawit, minyak goreng sawit)",
+    "category": "aman",
+    "name_variant": "Palm olein"
+  },
+  {
+    "ingredient_id": 191,
+    "standard_name": "Minyak sawit / Minyak kelapa sawit (termasuk minyak olein kelapa sawit, minyak goreng sawit)",
+    "category": "aman",
+    "name_variant": "Cooking palm oil"
+  },
+  {
+    "ingredient_id": 192,
+    "standard_name": "Minyak kanola",
+    "category": "aman",
+    "name_variant": "Minyak kanola"
+  },
+  {
+    "ingredient_id": 192,
+    "standard_name": "Minyak kanola",
+    "category": "aman",
+    "name_variant": "Canola oil"
+  },
+  {
+    "ingredient_id": 193,
+    "standard_name": "Biji bunga matahari",
+    "category": "aman",
+    "name_variant": "Biji bunga matahari"
+  },
+  {
+    "ingredient_id": 193,
+    "standard_name": "Biji bunga matahari",
+    "category": "aman",
+    "name_variant": "Sunflower seeds"
+  },
+  {
+    "ingredient_id": 193,
+    "standard_name": "Biji bunga matahari",
+    "category": "aman",
+    "name_variant": "Sunflower seed"
+  },
+  {
+    "ingredient_id": 194,
+    "standard_name": "Biji labu",
+    "category": "aman",
+    "name_variant": "Biji labu"
+  },
+  {
+    "ingredient_id": 194,
+    "standard_name": "Biji labu",
+    "category": "aman",
+    "name_variant": "Pumpkin seeds"
+  },
+  {
+    "ingredient_id": 194,
+    "standard_name": "Biji labu",
+    "category": "aman",
+    "name_variant": "Pumpkin seed"
+  },
+  {
+    "ingredient_id": 195,
+    "standard_name": "Biji rami (flaxseed)",
+    "category": "aman",
+    "name_variant": "Biji rami (flaxseed)"
+  },
+  {
+    "ingredient_id": 195,
+    "standard_name": "Biji rami (flaxseed)",
+    "category": "aman",
+    "name_variant": "Flaxseed"
+  },
+  {
+    "ingredient_id": 195,
+    "standard_name": "Biji rami (flaxseed)",
+    "category": "aman",
+    "name_variant": "Biji rami"
+  },
+  {
+    "ingredient_id": 196,
+    "standard_name": "Biji chia",
+    "category": "aman",
+    "name_variant": "Biji chia"
+  },
+  {
+    "ingredient_id": 196,
+    "standard_name": "Biji chia",
+    "category": "aman",
+    "name_variant": "Chia seeds"
+  },
+  {
+    "ingredient_id": 196,
+    "standard_name": "Biji chia",
+    "category": "aman",
+    "name_variant": "Chia seed"
+  },
+  {
+    "ingredient_id": 197,
+    "standard_name": "Kacang koro",
+    "category": "aman",
+    "name_variant": "Kacang koro"
+  },
+  {
+    "ingredient_id": 197,
+    "standard_name": "Kacang koro",
+    "category": "aman",
+    "name_variant": "Jack bean / koro bean"
+  },
+  {
+    "ingredient_id": 197,
+    "standard_name": "Kacang koro",
+    "category": "aman",
+    "name_variant": "Jack bean"
+  },
+  {
+    "ingredient_id": 197,
+    "standard_name": "Kacang koro",
+    "category": "aman",
+    "name_variant": "Koro bean"
+  },
+  {
+    "ingredient_id": 198,
+    "standard_name": "Kacang mede (cashew)",
+    "category": "perhatian",
+    "name_variant": "Kacang mede (cashew)"
+  },
+  {
+    "ingredient_id": 198,
+    "standard_name": "Kacang mede (cashew)",
+    "category": "perhatian",
+    "name_variant": "Cashew nuts"
+  },
+  {
+    "ingredient_id": 198,
+    "standard_name": "Kacang mede (cashew)",
+    "category": "perhatian",
+    "name_variant": "Kacang mede"
+  },
+  {
+    "ingredient_id": 198,
+    "standard_name": "Kacang mede (cashew)",
+    "category": "perhatian",
+    "name_variant": "Kacang mete"
+  },
+  {
+    "ingredient_id": 198,
+    "standard_name": "Kacang mede (cashew)",
+    "category": "perhatian",
+    "name_variant": "Cashew"
+  },
+  {
+    "ingredient_id": 199,
+    "standard_name": "Kacang pistachio",
+    "category": "perhatian",
+    "name_variant": "Kacang pistachio"
+  },
+  {
+    "ingredient_id": 199,
+    "standard_name": "Kacang pistachio",
+    "category": "perhatian",
+    "name_variant": "Pistachio nuts"
+  },
+  {
+    "ingredient_id": 199,
+    "standard_name": "Kacang pistachio",
+    "category": "perhatian",
+    "name_variant": "Pistachio"
+  },
+  {
+    "ingredient_id": 200,
+    "standard_name": "Kacang walnut",
+    "category": "perhatian",
+    "name_variant": "Kacang walnut"
+  },
+  {
+    "ingredient_id": 200,
+    "standard_name": "Kacang walnut",
+    "category": "perhatian",
+    "name_variant": "Walnuts"
+  },
+  {
+    "ingredient_id": 200,
+    "standard_name": "Kacang walnut",
+    "category": "perhatian",
+    "name_variant": "Walnut"
+  },
+  {
+    "ingredient_id": 201,
+    "standard_name": "Kacang macadamia",
+    "category": "perhatian",
+    "name_variant": "Kacang macadamia"
+  },
+  {
+    "ingredient_id": 201,
+    "standard_name": "Kacang macadamia",
+    "category": "perhatian",
+    "name_variant": "Macadamia nuts"
+  },
+  {
+    "ingredient_id": 201,
+    "standard_name": "Kacang macadamia",
+    "category": "perhatian",
+    "name_variant": "Macadamia"
+  },
+  {
+    "ingredient_id": 202,
+    "standard_name": "Amonium bikarbonat",
+    "category": "aman",
+    "name_variant": "Amonium bikarbonat"
+  },
+  {
+    "ingredient_id": 202,
+    "standard_name": "Amonium bikarbonat",
+    "category": "aman",
+    "name_variant": "Ammonium bicarbonate"
+  },
+  {
+    "ingredient_id": 202,
+    "standard_name": "Amonium bikarbonat",
+    "category": "aman",
+    "name_variant": "E503(ii)"
+  },
+  {
+    "ingredient_id": 202,
+    "standard_name": "Amonium bikarbonat",
+    "category": "aman",
+    "name_variant": "INS 503(ii)"
+  },
+  {
+    "ingredient_id": 202,
+    "standard_name": "Amonium bikarbonat",
+    "category": "aman",
+    "name_variant": "INS503(ii)"
+  },
+  {
+    "ingredient_id": 203,
+    "standard_name": "Natrium bikarbonat (soda kue)",
+    "category": "aman",
+    "name_variant": "Natrium bikarbonat (soda kue)"
+  },
+  {
+    "ingredient_id": 203,
+    "standard_name": "Natrium bikarbonat (soda kue)",
+    "category": "aman",
+    "name_variant": "Sodium bicarbonate (baking soda)"
+  },
+  {
+    "ingredient_id": 203,
+    "standard_name": "Natrium bikarbonat (soda kue)",
+    "category": "aman",
+    "name_variant": "Natrium bikarbonat"
+  },
+  {
+    "ingredient_id": 203,
+    "standard_name": "Natrium bikarbonat (soda kue)",
+    "category": "aman",
+    "name_variant": "Sodium bicarbonate"
+  },
+  {
+    "ingredient_id": 203,
+    "standard_name": "Natrium bikarbonat (soda kue)",
+    "category": "aman",
+    "name_variant": "Soda kue"
+  },
+  {
+    "ingredient_id": 203,
+    "standard_name": "Natrium bikarbonat (soda kue)",
+    "category": "aman",
+    "name_variant": "Baking soda"
+  },
+  {
+    "ingredient_id": 203,
+    "standard_name": "Natrium bikarbonat (soda kue)",
+    "category": "aman",
+    "name_variant": "E500(i)"
+  },
+  {
+    "ingredient_id": 203,
+    "standard_name": "Natrium bikarbonat (soda kue)",
+    "category": "aman",
+    "name_variant": "INS 500(i)"
+  },
+  {
+    "ingredient_id": 203,
+    "standard_name": "Natrium bikarbonat (soda kue)",
+    "category": "aman",
+    "name_variant": "INS500(i)"
+  },
+  {
+    "ingredient_id": 204,
+    "standard_name": "Antikempal silikon dioksida",
+    "category": "aman",
+    "name_variant": "Antikempal silikon dioksida"
+  },
+  {
+    "ingredient_id": 204,
+    "standard_name": "Antikempal silikon dioksida",
+    "category": "aman",
+    "name_variant": "Silicon dioxide (anti-caking agent)"
+  },
+  {
+    "ingredient_id": 204,
+    "standard_name": "Antikempal silikon dioksida",
+    "category": "aman",
+    "name_variant": "Silicon dioxide"
+  },
+  {
+    "ingredient_id": 204,
+    "standard_name": "Antikempal silikon dioksida",
+    "category": "aman",
+    "name_variant": "Silikon dioksida"
+  },
+  {
+    "ingredient_id": 204,
+    "standard_name": "Antikempal silikon dioksida",
+    "category": "aman",
+    "name_variant": "E551"
+  },
+  {
+    "ingredient_id": 204,
+    "standard_name": "Antikempal silikon dioksida",
+    "category": "aman",
+    "name_variant": "INS 551"
+  },
+  {
+    "ingredient_id": 204,
+    "standard_name": "Antikempal silikon dioksida",
+    "category": "aman",
+    "name_variant": "INS551"
+  },
+  {
+    "ingredient_id": 205,
+    "standard_name": "Baking powder (kemasan komersial)",
+    "category": "perhatian",
+    "name_variant": "Baking powder (kemasan komersial)"
+  },
+  {
+    "ingredient_id": 205,
+    "standard_name": "Baking powder (kemasan komersial)",
+    "category": "perhatian",
+    "name_variant": "Baking powder (commercial blend)"
+  },
+  {
+    "ingredient_id": 205,
+    "standard_name": "Baking powder (kemasan komersial)",
+    "category": "perhatian",
+    "name_variant": "Baking powder"
+  },
+  {
+    "ingredient_id": 206,
+    "standard_name": "Sukrosa",
+    "category": "aman",
+    "name_variant": "Sukrosa"
+  },
+  {
+    "ingredient_id": 206,
+    "standard_name": "Sukrosa",
+    "category": "aman",
+    "name_variant": "Sucrose"
+  },
+  {
+    "ingredient_id": 207,
+    "standard_name": "Gula merah / Gula palem / Gula aren / Gula lontar / Gula tebu / Gula sorgum",
+    "category": "aman",
+    "name_variant": "Gula merah / Gula palem / Gula aren / Gula lontar / Gula tebu / Gula sorgum"
+  },
+  {
+    "ingredient_id": 207,
+    "standard_name": "Gula merah / Gula palem / Gula aren / Gula lontar / Gula tebu / Gula sorgum",
+    "category": "aman",
+    "name_variant": "Palm sugar / coconut sugar / cane sugar / sorghum sugar (unrefined sugar variants)"
+  },
+  {
+    "ingredient_id": 207,
+    "standard_name": "Gula merah / Gula palem / Gula aren / Gula lontar / Gula tebu / Gula sorgum",
+    "category": "aman",
+    "name_variant": "Palm sugar / coconut sugar / cane sugar / sorghum sugar"
+  },
+  {
+    "ingredient_id": 207,
+    "standard_name": "Gula merah / Gula palem / Gula aren / Gula lontar / Gula tebu / Gula sorgum",
+    "category": "aman",
+    "name_variant": "Gula merah"
+  },
+  {
+    "ingredient_id": 207,
+    "standard_name": "Gula merah / Gula palem / Gula aren / Gula lontar / Gula tebu / Gula sorgum",
+    "category": "aman",
+    "name_variant": "Gula palem"
+  },
+  {
+    "ingredient_id": 207,
+    "standard_name": "Gula merah / Gula palem / Gula aren / Gula lontar / Gula tebu / Gula sorgum",
+    "category": "aman",
+    "name_variant": "Gula aren"
+  },
+  {
+    "ingredient_id": 207,
+    "standard_name": "Gula merah / Gula palem / Gula aren / Gula lontar / Gula tebu / Gula sorgum",
+    "category": "aman",
+    "name_variant": "Gula lontar"
+  },
+  {
+    "ingredient_id": 207,
+    "standard_name": "Gula merah / Gula palem / Gula aren / Gula lontar / Gula tebu / Gula sorgum",
+    "category": "aman",
+    "name_variant": "Gula tebu"
+  },
+  {
+    "ingredient_id": 207,
+    "standard_name": "Gula merah / Gula palem / Gula aren / Gula lontar / Gula tebu / Gula sorgum",
+    "category": "aman",
+    "name_variant": "Gula sorgum"
+  },
+  {
+    "ingredient_id": 207,
+    "standard_name": "Gula merah / Gula palem / Gula aren / Gula lontar / Gula tebu / Gula sorgum",
+    "category": "aman",
+    "name_variant": "Palm sugar"
+  },
+  {
+    "ingredient_id": 207,
+    "standard_name": "Gula merah / Gula palem / Gula aren / Gula lontar / Gula tebu / Gula sorgum",
+    "category": "aman",
+    "name_variant": "Coconut sugar"
+  },
+  {
+    "ingredient_id": 207,
+    "standard_name": "Gula merah / Gula palem / Gula aren / Gula lontar / Gula tebu / Gula sorgum",
+    "category": "aman",
+    "name_variant": "Cane sugar"
+  },
+  {
+    "ingredient_id": 207,
+    "standard_name": "Gula merah / Gula palem / Gula aren / Gula lontar / Gula tebu / Gula sorgum",
+    "category": "aman",
+    "name_variant": "Sorghum sugar"
+  },
+  {
+    "ingredient_id": 208,
+    "standard_name": "Manitol",
+    "category": "aman",
+    "name_variant": "Manitol"
+  },
+  {
+    "ingredient_id": 208,
+    "standard_name": "Manitol",
+    "category": "aman",
+    "name_variant": "Mannitol"
+  },
+  {
+    "ingredient_id": 208,
+    "standard_name": "Manitol",
+    "category": "aman",
+    "name_variant": "E421"
+  },
+  {
+    "ingredient_id": 208,
+    "standard_name": "Manitol",
+    "category": "aman",
+    "name_variant": "INS 421"
+  },
+  {
+    "ingredient_id": 208,
+    "standard_name": "Manitol",
+    "category": "aman",
+    "name_variant": "INS421"
+  },
+  {
+    "ingredient_id": 209,
+    "standard_name": "Ragi (baker's yeast, murni)",
+    "category": "aman",
+    "name_variant": "Ragi (baker's yeast, murni)"
+  },
+  {
+    "ingredient_id": 209,
+    "standard_name": "Ragi (baker's yeast, murni)",
+    "category": "aman",
+    "name_variant": "Baker's yeast (plain)"
+  },
+  {
+    "ingredient_id": 209,
+    "standard_name": "Ragi (baker's yeast, murni)",
+    "category": "aman",
+    "name_variant": "Ragi"
+  },
+  {
+    "ingredient_id": 209,
+    "standard_name": "Ragi (baker's yeast, murni)",
+    "category": "aman",
+    "name_variant": "Baker's yeast"
+  },
+  {
+    "ingredient_id": 210,
+    "standard_name": "Rumput laut",
+    "category": "aman",
+    "name_variant": "Rumput laut"
+  },
+  {
+    "ingredient_id": 210,
+    "standard_name": "Rumput laut",
+    "category": "aman",
+    "name_variant": "Seaweed / kelp"
+  },
+  {
+    "ingredient_id": 210,
+    "standard_name": "Rumput laut",
+    "category": "aman",
+    "name_variant": "Seaweed"
+  },
+  {
+    "ingredient_id": 210,
+    "standard_name": "Rumput laut",
+    "category": "aman",
+    "name_variant": "Kelp"
+  },
+  {
+    "ingredient_id": 211,
+    "standard_name": "Bawang putih & bawang merah (segar/bubuk)",
+    "category": "aman",
+    "name_variant": "Bawang putih & bawang merah (segar/bubuk)"
+  },
+  {
+    "ingredient_id": 211,
+    "standard_name": "Bawang putih & bawang merah (segar/bubuk)",
+    "category": "aman",
+    "name_variant": "Garlic & onion (fresh/powder)"
+  },
+  {
+    "ingredient_id": 211,
+    "standard_name": "Bawang putih & bawang merah (segar/bubuk)",
+    "category": "aman",
+    "name_variant": "Bawang putih & bawang merah"
+  },
+  {
+    "ingredient_id": 211,
+    "standard_name": "Bawang putih & bawang merah (segar/bubuk)",
+    "category": "aman",
+    "name_variant": "Garlic & onion"
+  },
+  {
+    "ingredient_id": 211,
+    "standard_name": "Bawang putih & bawang merah (segar/bubuk)",
+    "category": "aman",
+    "name_variant": "Bawang putih"
+  },
+  {
+    "ingredient_id": 211,
+    "standard_name": "Bawang putih & bawang merah (segar/bubuk)",
+    "category": "aman",
+    "name_variant": "Bawang merah"
+  },
+  {
+    "ingredient_id": 211,
+    "standard_name": "Bawang putih & bawang merah (segar/bubuk)",
+    "category": "aman",
+    "name_variant": "Garlic"
+  },
+  {
+    "ingredient_id": 211,
+    "standard_name": "Bawang putih & bawang merah (segar/bubuk)",
+    "category": "aman",
+    "name_variant": "Onion"
+  },
+  {
+    "ingredient_id": 211,
+    "standard_name": "Bawang putih & bawang merah (segar/bubuk)",
+    "category": "aman",
+    "name_variant": "Bubuk bawang putih"
+  },
+  {
+    "ingredient_id": 211,
+    "standard_name": "Bawang putih & bawang merah (segar/bubuk)",
+    "category": "aman",
+    "name_variant": "Bubuk bawang merah"
+  },
+  {
+    "ingredient_id": 211,
+    "standard_name": "Bawang putih & bawang merah (segar/bubuk)",
+    "category": "aman",
+    "name_variant": "Garlic powder"
+  },
+  {
+    "ingredient_id": 211,
+    "standard_name": "Bawang putih & bawang merah (segar/bubuk)",
+    "category": "aman",
+    "name_variant": "Onion powder"
+  },
+  {
+    "ingredient_id": 212,
+    "standard_name": "Askorbil palmitat",
+    "category": "aman",
+    "name_variant": "Askorbil palmitat"
+  },
+  {
+    "ingredient_id": 212,
+    "standard_name": "Askorbil palmitat",
+    "category": "aman",
+    "name_variant": "Ascorbyl palmitate"
+  },
+  {
+    "ingredient_id": 212,
+    "standard_name": "Askorbil palmitat",
+    "category": "aman",
+    "name_variant": "E304"
+  },
+  {
+    "ingredient_id": 212,
+    "standard_name": "Askorbil palmitat",
+    "category": "aman",
+    "name_variant": "INS 304"
+  },
+  {
+    "ingredient_id": 212,
+    "standard_name": "Askorbil palmitat",
+    "category": "aman",
+    "name_variant": "INS304"
+  },
+  {
+    "ingredient_id": 213,
+    "standard_name": "Nisin",
+    "category": "aman",
+    "name_variant": "Nisin"
+  },
+  {
+    "ingredient_id": 213,
+    "standard_name": "Nisin",
+    "category": "aman",
+    "name_variant": "E234"
+  },
+  {
+    "ingredient_id": 213,
+    "standard_name": "Nisin",
+    "category": "aman",
+    "name_variant": "INS 234"
+  },
+  {
+    "ingredient_id": 213,
+    "standard_name": "Nisin",
+    "category": "aman",
+    "name_variant": "INS234"
+  },
+  {
+    "ingredient_id": 214,
+    "standard_name": "Premiks vitamin B kompleks (B1, B2, B6, B12)",
+    "category": "aman",
+    "name_variant": "Premiks vitamin B kompleks (B1, B2, B6, B12)"
+  },
+  {
+    "ingredient_id": 214,
+    "standard_name": "Premiks vitamin B kompleks (B1, B2, B6, B12)",
+    "category": "aman",
+    "name_variant": "B-complex vitamin premix (B1, B2, B6, B12)"
+  },
+  {
+    "ingredient_id": 214,
+    "standard_name": "Premiks vitamin B kompleks (B1, B2, B6, B12)",
+    "category": "aman",
+    "name_variant": "Premiks vitamin B kompleks"
+  },
+  {
+    "ingredient_id": 214,
+    "standard_name": "Premiks vitamin B kompleks (B1, B2, B6, B12)",
+    "category": "aman",
+    "name_variant": "B-complex vitamin premix"
+  },
+  {
+    "ingredient_id": 215,
+    "standard_name": "Ekstrak ragi (yeast extract)",
+    "category": "perhatian",
+    "name_variant": "Ekstrak ragi (yeast extract)"
+  },
+  {
+    "ingredient_id": 215,
+    "standard_name": "Ekstrak ragi (yeast extract)",
+    "category": "perhatian",
+    "name_variant": "Yeast extract"
+  },
+  {
+    "ingredient_id": 215,
+    "standard_name": "Ekstrak ragi (yeast extract)",
+    "category": "perhatian",
+    "name_variant": "Ekstrak ragi"
+  },
+  {
+    "ingredient_id": 216,
+    "standard_name": "Pengemulsi / Penstabil / Pengental nabati (sumber tidak spesifik)",
+    "category": "perhatian",
+    "name_variant": "Pengemulsi / Penstabil / Pengental nabati (sumber tidak spesifik)"
+  },
+  {
+    "ingredient_id": 216,
+    "standard_name": "Pengemulsi / Penstabil / Pengental nabati (sumber tidak spesifik)",
+    "category": "perhatian",
+    "name_variant": "Vegetable emulsifier / stabilizer / thickener (unspecified source)"
+  },
+  {
+    "ingredient_id": 216,
+    "standard_name": "Pengemulsi / Penstabil / Pengental nabati (sumber tidak spesifik)",
+    "category": "perhatian",
+    "name_variant": "Pengemulsi / Penstabil / Pengental nabati"
+  },
+  {
+    "ingredient_id": 216,
+    "standard_name": "Pengemulsi / Penstabil / Pengental nabati (sumber tidak spesifik)",
+    "category": "perhatian",
+    "name_variant": "Vegetable emulsifier / stabilizer / thickener"
+  },
+  {
+    "ingredient_id": 216,
+    "standard_name": "Pengemulsi / Penstabil / Pengental nabati (sumber tidak spesifik)",
+    "category": "perhatian",
+    "name_variant": "Pengemulsi nabati"
+  },
+  {
+    "ingredient_id": 216,
+    "standard_name": "Pengemulsi / Penstabil / Pengental nabati (sumber tidak spesifik)",
+    "category": "perhatian",
+    "name_variant": "Penstabil nabati"
+  },
+  {
+    "ingredient_id": 216,
+    "standard_name": "Pengemulsi / Penstabil / Pengental nabati (sumber tidak spesifik)",
+    "category": "perhatian",
+    "name_variant": "Pengental nabati"
+  },
+  {
+    "ingredient_id": 216,
+    "standard_name": "Pengemulsi / Penstabil / Pengental nabati (sumber tidak spesifik)",
+    "category": "perhatian",
+    "name_variant": "Vegetable emulsifier"
+  },
+  {
+    "ingredient_id": 216,
+    "standard_name": "Pengemulsi / Penstabil / Pengental nabati (sumber tidak spesifik)",
+    "category": "perhatian",
+    "name_variant": "Vegetable stabilizer"
+  },
+  {
+    "ingredient_id": 216,
+    "standard_name": "Pengemulsi / Penstabil / Pengental nabati (sumber tidak spesifik)",
+    "category": "perhatian",
+    "name_variant": "Vegetable thickener"
+  },
+  {
+    "ingredient_id": 217,
+    "standard_name": "Susu skim bubuk",
+    "category": "hindari",
+    "name_variant": "Susu skim bubuk"
+  },
+  {
+    "ingredient_id": 217,
+    "standard_name": "Susu skim bubuk",
+    "category": "hindari",
+    "name_variant": "Skim milk powder"
+  },
+  {
+    "ingredient_id": 218,
+    "standard_name": "Krimer susu bubuk / Padatan susu (milk solids)",
+    "category": "hindari",
+    "name_variant": "Krimer susu bubuk / Padatan susu (milk solids)"
+  },
+  {
+    "ingredient_id": 218,
+    "standard_name": "Krimer susu bubuk / Padatan susu (milk solids)",
+    "category": "hindari",
+    "name_variant": "Milk-based creamer powder / milk solids"
+  },
+  {
+    "ingredient_id": 218,
+    "standard_name": "Krimer susu bubuk / Padatan susu (milk solids)",
+    "category": "hindari",
+    "name_variant": "Krimer susu bubuk / Padatan susu"
+  },
+  {
+    "ingredient_id": 218,
+    "standard_name": "Krimer susu bubuk / Padatan susu (milk solids)",
+    "category": "hindari",
+    "name_variant": "Krimer susu bubuk"
+  },
+  {
+    "ingredient_id": 218,
+    "standard_name": "Krimer susu bubuk / Padatan susu (milk solids)",
+    "category": "hindari",
+    "name_variant": "Padatan susu"
+  },
+  {
+    "ingredient_id": 218,
+    "standard_name": "Krimer susu bubuk / Padatan susu (milk solids)",
+    "category": "hindari",
+    "name_variant": "Milk-based creamer powder"
+  },
+  {
+    "ingredient_id": 218,
+    "standard_name": "Krimer susu bubuk / Padatan susu (milk solids)",
+    "category": "hindari",
+    "name_variant": "Milk solids"
+  },
+  {
+    "ingredient_id": 219,
+    "standard_name": "Enzim protease dari gandum dan kedelai (bahan penolong)",
+    "category": "hindari",
+    "name_variant": "Enzim protease dari gandum dan kedelai (bahan penolong)"
+  },
+  {
+    "ingredient_id": 219,
+    "standard_name": "Enzim protease dari gandum dan kedelai (bahan penolong)",
+    "category": "hindari",
+    "name_variant": "Protease enzyme processing aid derived from wheat and soy"
+  },
+  {
+    "ingredient_id": 219,
+    "standard_name": "Enzim protease dari gandum dan kedelai (bahan penolong)",
+    "category": "hindari",
+    "name_variant": "Enzim protease dari gandum dan kedelai"
+  },
+  {
+    "ingredient_id": 220,
+    "standard_name": "Air berkarbonasi / Bahan pengkarbonasi karbon dioksida (CO2)",
+    "category": "aman",
+    "name_variant": "Air berkarbonasi / Bahan pengkarbonasi karbon dioksida (CO2)"
+  },
+  {
+    "ingredient_id": 220,
+    "standard_name": "Air berkarbonasi / Bahan pengkarbonasi karbon dioksida (CO2)",
+    "category": "aman",
+    "name_variant": "Carbonated water / carbon dioxide carbonating agent"
+  },
+  {
+    "ingredient_id": 220,
+    "standard_name": "Air berkarbonasi / Bahan pengkarbonasi karbon dioksida (CO2)",
+    "category": "aman",
+    "name_variant": "Air berkarbonasi / Bahan pengkarbonasi karbon dioksida"
+  },
+  {
+    "ingredient_id": 220,
+    "standard_name": "Air berkarbonasi / Bahan pengkarbonasi karbon dioksida (CO2)",
+    "category": "aman",
+    "name_variant": "Air berkarbonasi"
+  },
+  {
+    "ingredient_id": 220,
+    "standard_name": "Air berkarbonasi / Bahan pengkarbonasi karbon dioksida (CO2)",
+    "category": "aman",
+    "name_variant": "Karbon dioksida"
+  },
+  {
+    "ingredient_id": 220,
+    "standard_name": "Air berkarbonasi / Bahan pengkarbonasi karbon dioksida (CO2)",
+    "category": "aman",
+    "name_variant": "CO2"
+  },
+  {
+    "ingredient_id": 220,
+    "standard_name": "Air berkarbonasi / Bahan pengkarbonasi karbon dioksida (CO2)",
+    "category": "aman",
+    "name_variant": "Carbonated water"
+  },
+  {
+    "ingredient_id": 220,
+    "standard_name": "Air berkarbonasi / Bahan pengkarbonasi karbon dioksida (CO2)",
+    "category": "aman",
+    "name_variant": "Carbon dioxide"
+  },
+  {
+    "ingredient_id": 220,
+    "standard_name": "Air berkarbonasi / Bahan pengkarbonasi karbon dioksida (CO2)",
+    "category": "aman",
+    "name_variant": "E290"
+  },
+  {
+    "ingredient_id": 220,
+    "standard_name": "Air berkarbonasi / Bahan pengkarbonasi karbon dioksida (CO2)",
+    "category": "aman",
+    "name_variant": "INS 290"
+  },
+  {
+    "ingredient_id": 220,
+    "standard_name": "Air berkarbonasi / Bahan pengkarbonasi karbon dioksida (CO2)",
+    "category": "aman",
+    "name_variant": "INS290"
+  },
+  {
+    "ingredient_id": 221,
+    "standard_name": "Air kelapa / Konsentrat air kelapa",
+    "category": "aman",
+    "name_variant": "Air kelapa / Konsentrat air kelapa"
+  },
+  {
+    "ingredient_id": 221,
+    "standard_name": "Air kelapa / Konsentrat air kelapa",
+    "category": "aman",
+    "name_variant": "Coconut water / coconut water concentrate"
+  },
+  {
+    "ingredient_id": 221,
+    "standard_name": "Air kelapa / Konsentrat air kelapa",
+    "category": "aman",
+    "name_variant": "Air kelapa"
+  },
+  {
+    "ingredient_id": 221,
+    "standard_name": "Air kelapa / Konsentrat air kelapa",
+    "category": "aman",
+    "name_variant": "Konsentrat air kelapa"
+  },
+  {
+    "ingredient_id": 221,
+    "standard_name": "Air kelapa / Konsentrat air kelapa",
+    "category": "aman",
+    "name_variant": "Coconut water"
+  },
+  {
+    "ingredient_id": 221,
+    "standard_name": "Air kelapa / Konsentrat air kelapa",
+    "category": "aman",
+    "name_variant": "Coconut water concentrate"
+  },
+  {
+    "ingredient_id": 222,
+    "standard_name": "Asam fosfat (pengatur keasaman)",
+    "category": "aman",
+    "name_variant": "Asam fosfat (pengatur keasaman)"
+  },
+  {
+    "ingredient_id": 222,
+    "standard_name": "Asam fosfat (pengatur keasaman)",
+    "category": "aman",
+    "name_variant": "Phosphoric acid"
+  },
+  {
+    "ingredient_id": 222,
+    "standard_name": "Asam fosfat (pengatur keasaman)",
+    "category": "aman",
+    "name_variant": "Asam fosfat"
+  },
+  {
+    "ingredient_id": 222,
+    "standard_name": "Asam fosfat (pengatur keasaman)",
+    "category": "aman",
+    "name_variant": "E338"
+  },
+  {
+    "ingredient_id": 222,
+    "standard_name": "Asam fosfat (pengatur keasaman)",
+    "category": "aman",
+    "name_variant": "INS 338"
+  },
+  {
+    "ingredient_id": 222,
+    "standard_name": "Asam fosfat (pengatur keasaman)",
+    "category": "aman",
+    "name_variant": "INS338"
+  },
+  {
+    "ingredient_id": 223,
+    "standard_name": "Dikalium fosfat / Kalium fosfat",
+    "category": "aman",
+    "name_variant": "Dikalium fosfat / Kalium fosfat"
+  },
+  {
+    "ingredient_id": 223,
+    "standard_name": "Dikalium fosfat / Kalium fosfat",
+    "category": "aman",
+    "name_variant": "Dipotassium phosphate / Potassium phosphate"
+  },
+  {
+    "ingredient_id": 223,
+    "standard_name": "Dikalium fosfat / Kalium fosfat",
+    "category": "aman",
+    "name_variant": "Dikalium fosfat"
+  },
+  {
+    "ingredient_id": 223,
+    "standard_name": "Dikalium fosfat / Kalium fosfat",
+    "category": "aman",
+    "name_variant": "Kalium fosfat"
+  },
+  {
+    "ingredient_id": 223,
+    "standard_name": "Dikalium fosfat / Kalium fosfat",
+    "category": "aman",
+    "name_variant": "Dipotassium phosphate"
+  },
+  {
+    "ingredient_id": 223,
+    "standard_name": "Dikalium fosfat / Kalium fosfat",
+    "category": "aman",
+    "name_variant": "Potassium phosphate"
+  },
+  {
+    "ingredient_id": 223,
+    "standard_name": "Dikalium fosfat / Kalium fosfat",
+    "category": "aman",
+    "name_variant": "E340"
+  },
+  {
+    "ingredient_id": 223,
+    "standard_name": "Dikalium fosfat / Kalium fosfat",
+    "category": "aman",
+    "name_variant": "INS 340"
+  },
+  {
+    "ingredient_id": 223,
+    "standard_name": "Dikalium fosfat / Kalium fosfat",
+    "category": "aman",
+    "name_variant": "INS340"
+  },
+  {
+    "ingredient_id": 224,
+    "standard_name": "Kalium karbonat",
+    "category": "aman",
+    "name_variant": "Kalium karbonat"
+  },
+  {
+    "ingredient_id": 224,
+    "standard_name": "Kalium karbonat",
+    "category": "aman",
+    "name_variant": "Potassium carbonate"
+  },
+  {
+    "ingredient_id": 224,
+    "standard_name": "Kalium karbonat",
+    "category": "aman",
+    "name_variant": "E501"
+  },
+  {
+    "ingredient_id": 224,
+    "standard_name": "Kalium karbonat",
+    "category": "aman",
+    "name_variant": "INS 501"
+  },
+  {
+    "ingredient_id": 224,
+    "standard_name": "Kalium karbonat",
+    "category": "aman",
+    "name_variant": "INS501"
+  },
+  {
+    "ingredient_id": 225,
+    "standard_name": "Kalsium laktat",
+    "category": "aman",
+    "name_variant": "Kalsium laktat"
+  },
+  {
+    "ingredient_id": 225,
+    "standard_name": "Kalsium laktat",
+    "category": "aman",
+    "name_variant": "Calcium lactate"
+  },
+  {
+    "ingredient_id": 225,
+    "standard_name": "Kalsium laktat",
+    "category": "aman",
+    "name_variant": "E327"
+  },
+  {
+    "ingredient_id": 225,
+    "standard_name": "Kalsium laktat",
+    "category": "aman",
+    "name_variant": "INS 327"
+  },
+  {
+    "ingredient_id": 225,
+    "standard_name": "Kalsium laktat",
+    "category": "aman",
+    "name_variant": "INS327"
+  },
+  {
+    "ingredient_id": 226,
+    "standard_name": "Magnesium karbonat / Magnesium klorida",
+    "category": "aman",
+    "name_variant": "Magnesium karbonat / Magnesium klorida"
+  },
+  {
+    "ingredient_id": 226,
+    "standard_name": "Magnesium karbonat / Magnesium klorida",
+    "category": "aman",
+    "name_variant": "Magnesium carbonate / Magnesium chloride"
+  },
+  {
+    "ingredient_id": 226,
+    "standard_name": "Magnesium karbonat / Magnesium klorida",
+    "category": "aman",
+    "name_variant": "Magnesium karbonat"
+  },
+  {
+    "ingredient_id": 226,
+    "standard_name": "Magnesium karbonat / Magnesium klorida",
+    "category": "aman",
+    "name_variant": "Magnesium klorida"
+  },
+  {
+    "ingredient_id": 226,
+    "standard_name": "Magnesium karbonat / Magnesium klorida",
+    "category": "aman",
+    "name_variant": "Magnesium carbonate"
+  },
+  {
+    "ingredient_id": 226,
+    "standard_name": "Magnesium karbonat / Magnesium klorida",
+    "category": "aman",
+    "name_variant": "Magnesium chloride"
+  },
+  {
+    "ingredient_id": 226,
+    "standard_name": "Magnesium karbonat / Magnesium klorida",
+    "category": "aman",
+    "name_variant": "E504"
+  },
+  {
+    "ingredient_id": 226,
+    "standard_name": "Magnesium karbonat / Magnesium klorida",
+    "category": "aman",
+    "name_variant": "INS 504"
+  },
+  {
+    "ingredient_id": 226,
+    "standard_name": "Magnesium karbonat / Magnesium klorida",
+    "category": "aman",
+    "name_variant": "INS504"
+  },
+  {
+    "ingredient_id": 226,
+    "standard_name": "Magnesium karbonat / Magnesium klorida",
+    "category": "aman",
+    "name_variant": "E511"
+  },
+  {
+    "ingredient_id": 226,
+    "standard_name": "Magnesium karbonat / Magnesium klorida",
+    "category": "aman",
+    "name_variant": "INS 511"
+  },
+  {
+    "ingredient_id": 226,
+    "standard_name": "Magnesium karbonat / Magnesium klorida",
+    "category": "aman",
+    "name_variant": "INS511"
+  },
+  {
+    "ingredient_id": 227,
+    "standard_name": "Natrium karboksimetil selulosa (Na-CMC)",
+    "category": "aman",
+    "name_variant": "Natrium karboksimetil selulosa (Na-CMC)"
+  },
+  {
+    "ingredient_id": 227,
+    "standard_name": "Natrium karboksimetil selulosa (Na-CMC)",
+    "category": "aman",
+    "name_variant": "Sodium carboxymethyl cellulose"
+  },
+  {
+    "ingredient_id": 227,
+    "standard_name": "Natrium karboksimetil selulosa (Na-CMC)",
+    "category": "aman",
+    "name_variant": "Natrium karboksimetil selulosa"
+  },
+  {
+    "ingredient_id": 227,
+    "standard_name": "Natrium karboksimetil selulosa (Na-CMC)",
+    "category": "aman",
+    "name_variant": "Na-CMC"
+  },
+  {
+    "ingredient_id": 227,
+    "standard_name": "Natrium karboksimetil selulosa (Na-CMC)",
+    "category": "aman",
+    "name_variant": "CMC"
+  },
+  {
+    "ingredient_id": 227,
+    "standard_name": "Natrium karboksimetil selulosa (Na-CMC)",
+    "category": "aman",
+    "name_variant": "E466"
+  },
+  {
+    "ingredient_id": 227,
+    "standard_name": "Natrium karboksimetil selulosa (Na-CMC)",
+    "category": "aman",
+    "name_variant": "INS 466"
+  },
+  {
+    "ingredient_id": 227,
+    "standard_name": "Natrium karboksimetil selulosa (Na-CMC)",
+    "category": "aman",
+    "name_variant": "INS466"
+  },
+  {
+    "ingredient_id": 228,
+    "standard_name": "Sekuestran kalsium dinatrium EDTA",
+    "category": "aman",
+    "name_variant": "Sekuestran kalsium dinatrium EDTA"
+  },
+  {
+    "ingredient_id": 228,
+    "standard_name": "Sekuestran kalsium dinatrium EDTA",
+    "category": "aman",
+    "name_variant": "Calcium disodium EDTA (sequestrant)"
+  },
+  {
+    "ingredient_id": 228,
+    "standard_name": "Sekuestran kalsium dinatrium EDTA",
+    "category": "aman",
+    "name_variant": "Calcium disodium EDTA"
+  },
+  {
+    "ingredient_id": 228,
+    "standard_name": "Sekuestran kalsium dinatrium EDTA",
+    "category": "aman",
+    "name_variant": "Kalsium dinatrium EDTA"
+  },
+  {
+    "ingredient_id": 228,
+    "standard_name": "Sekuestran kalsium dinatrium EDTA",
+    "category": "aman",
+    "name_variant": "E385"
+  },
+  {
+    "ingredient_id": 228,
+    "standard_name": "Sekuestran kalsium dinatrium EDTA",
+    "category": "aman",
+    "name_variant": "INS 385"
+  },
+  {
+    "ingredient_id": 228,
+    "standard_name": "Sekuestran kalsium dinatrium EDTA",
+    "category": "aman",
+    "name_variant": "INS385"
+  },
+  {
+    "ingredient_id": 229,
+    "standard_name": "Zinc oxide / Zinc (fortifikasi mineral)",
+    "category": "aman",
+    "name_variant": "Zinc oxide / Zinc (fortifikasi mineral)"
+  },
+  {
+    "ingredient_id": 229,
+    "standard_name": "Zinc oxide / Zinc (fortifikasi mineral)",
+    "category": "aman",
+    "name_variant": "Zinc oxide / Zinc (mineral fortification)"
+  },
+  {
+    "ingredient_id": 229,
+    "standard_name": "Zinc oxide / Zinc (fortifikasi mineral)",
+    "category": "aman",
+    "name_variant": "Zinc oxide / Zinc"
+  },
+  {
+    "ingredient_id": 229,
+    "standard_name": "Zinc oxide / Zinc (fortifikasi mineral)",
+    "category": "aman",
+    "name_variant": "Zinc oxide"
+  },
+  {
+    "ingredient_id": 229,
+    "standard_name": "Zinc oxide / Zinc (fortifikasi mineral)",
+    "category": "aman",
+    "name_variant": "Zinc"
+  },
+  {
+    "ingredient_id": 229,
+    "standard_name": "Zinc oxide / Zinc (fortifikasi mineral)",
+    "category": "aman",
+    "name_variant": "E314i"
+  },
+  {
+    "ingredient_id": 229,
+    "standard_name": "Zinc oxide / Zinc (fortifikasi mineral)",
+    "category": "aman",
+    "name_variant": "INS 314i"
+  },
+  {
+    "ingredient_id": 229,
+    "standard_name": "Zinc oxide / Zinc (fortifikasi mineral)",
+    "category": "aman",
+    "name_variant": "INS314i"
+  },
+  {
+    "ingredient_id": 230,
+    "standard_name": "Gom gelan (gellan gum)",
+    "category": "aman",
+    "name_variant": "Gom gelan (gellan gum)"
+  },
+  {
+    "ingredient_id": 230,
+    "standard_name": "Gom gelan (gellan gum)",
+    "category": "aman",
+    "name_variant": "Gellan gum"
+  },
+  {
+    "ingredient_id": 230,
+    "standard_name": "Gom gelan (gellan gum)",
+    "category": "aman",
+    "name_variant": "Gom gelan"
+  },
+  {
+    "ingredient_id": 230,
+    "standard_name": "Gom gelan (gellan gum)",
+    "category": "aman",
+    "name_variant": "E418"
+  },
+  {
+    "ingredient_id": 230,
+    "standard_name": "Gom gelan (gellan gum)",
+    "category": "aman",
+    "name_variant": "INS 418"
+  },
+  {
+    "ingredient_id": 230,
+    "standard_name": "Gom gelan (gellan gum)",
+    "category": "aman",
+    "name_variant": "INS418"
+  },
+  {
+    "ingredient_id": 231,
+    "standard_name": "Metil selulosa / Karboksi metil selulosa",
+    "category": "aman",
+    "name_variant": "Metil selulosa / Karboksi metil selulosa"
+  },
+  {
+    "ingredient_id": 231,
+    "standard_name": "Metil selulosa / Karboksi metil selulosa",
+    "category": "aman",
+    "name_variant": "Methylcellulose / Carboxymethyl cellulose"
+  },
+  {
+    "ingredient_id": 231,
+    "standard_name": "Metil selulosa / Karboksi metil selulosa",
+    "category": "aman",
+    "name_variant": "Metil selulosa"
+  },
+  {
+    "ingredient_id": 231,
+    "standard_name": "Metil selulosa / Karboksi metil selulosa",
+    "category": "aman",
+    "name_variant": "Karboksi metil selulosa"
+  },
+  {
+    "ingredient_id": 231,
+    "standard_name": "Metil selulosa / Karboksi metil selulosa",
+    "category": "aman",
+    "name_variant": "Methylcellulose"
+  },
+  {
+    "ingredient_id": 231,
+    "standard_name": "Metil selulosa / Karboksi metil selulosa",
+    "category": "aman",
+    "name_variant": "Carboxymethyl cellulose"
+  },
+  {
+    "ingredient_id": 231,
+    "standard_name": "Metil selulosa / Karboksi metil selulosa",
+    "category": "aman",
+    "name_variant": "E461"
+  },
+  {
+    "ingredient_id": 231,
+    "standard_name": "Metil selulosa / Karboksi metil selulosa",
+    "category": "aman",
+    "name_variant": "INS 461"
+  },
+  {
+    "ingredient_id": 231,
+    "standard_name": "Metil selulosa / Karboksi metil selulosa",
+    "category": "aman",
+    "name_variant": "INS461"
+  },
+  {
+    "ingredient_id": 231,
+    "standard_name": "Metil selulosa / Karboksi metil selulosa",
+    "category": "aman",
+    "name_variant": "E465"
+  },
+  {
+    "ingredient_id": 231,
+    "standard_name": "Metil selulosa / Karboksi metil selulosa",
+    "category": "aman",
+    "name_variant": "INS 465"
+  },
+  {
+    "ingredient_id": 231,
+    "standard_name": "Metil selulosa / Karboksi metil selulosa",
+    "category": "aman",
+    "name_variant": "INS465"
+  },
+  {
+    "ingredient_id": 232,
+    "standard_name": "Polidekstrosa",
+    "category": "aman",
+    "name_variant": "Polidekstrosa"
+  },
+  {
+    "ingredient_id": 232,
+    "standard_name": "Polidekstrosa",
+    "category": "aman",
+    "name_variant": "Polydextrose"
+  },
+  {
+    "ingredient_id": 232,
+    "standard_name": "Polidekstrosa",
+    "category": "aman",
+    "name_variant": "E1200"
+  },
+  {
+    "ingredient_id": 232,
+    "standard_name": "Polidekstrosa",
+    "category": "aman",
+    "name_variant": "INS 1200"
+  },
+  {
+    "ingredient_id": 232,
+    "standard_name": "Polidekstrosa",
+    "category": "aman",
+    "name_variant": "INS1200"
+  },
+  {
+    "ingredient_id": 233,
+    "standard_name": "Konnyaku bubuk",
+    "category": "aman",
+    "name_variant": "Konnyaku bubuk"
+  },
+  {
+    "ingredient_id": 233,
+    "standard_name": "Konnyaku bubuk",
+    "category": "aman",
+    "name_variant": "Konjac powder"
+  },
+  {
+    "ingredient_id": 233,
+    "standard_name": "Konnyaku bubuk",
+    "category": "aman",
+    "name_variant": "Konnyaku"
+  },
+  {
+    "ingredient_id": 233,
+    "standard_name": "Konnyaku bubuk",
+    "category": "aman",
+    "name_variant": "Konjac"
+  },
+  {
+    "ingredient_id": 234,
+    "standard_name": "Nata de coco",
+    "category": "aman",
+    "name_variant": "Nata de coco"
+  },
+  {
+    "ingredient_id": 234,
+    "standard_name": "Nata de coco",
+    "category": "aman",
+    "name_variant": "Nata de coco (coconut gel)"
+  },
+  {
+    "ingredient_id": 234,
+    "standard_name": "Nata de coco",
+    "category": "aman",
+    "name_variant": "Coconut gel"
+  },
+  {
+    "ingredient_id": 235,
+    "standard_name": "Ester asam lemak sukrosa (pengemulsi)",
+    "category": "perhatian",
+    "name_variant": "Ester asam lemak sukrosa (pengemulsi)"
+  },
+  {
+    "ingredient_id": 235,
+    "standard_name": "Ester asam lemak sukrosa (pengemulsi)",
+    "category": "perhatian",
+    "name_variant": "Sucrose esters of fatty acids (emulsifier)"
+  },
+  {
+    "ingredient_id": 235,
+    "standard_name": "Ester asam lemak sukrosa (pengemulsi)",
+    "category": "perhatian",
+    "name_variant": "Ester asam lemak sukrosa"
+  },
+  {
+    "ingredient_id": 235,
+    "standard_name": "Ester asam lemak sukrosa (pengemulsi)",
+    "category": "perhatian",
+    "name_variant": "Sucrose esters of fatty acids"
+  },
+  {
+    "ingredient_id": 235,
+    "standard_name": "Ester asam lemak sukrosa (pengemulsi)",
+    "category": "perhatian",
+    "name_variant": "E473"
+  },
+  {
+    "ingredient_id": 235,
+    "standard_name": "Ester asam lemak sukrosa (pengemulsi)",
+    "category": "perhatian",
+    "name_variant": "INS 473"
+  },
+  {
+    "ingredient_id": 235,
+    "standard_name": "Ester asam lemak sukrosa (pengemulsi)",
+    "category": "perhatian",
+    "name_variant": "INS473"
+  },
+  {
+    "ingredient_id": 236,
+    "standard_name": "Antibuih (sumber tidak spesifik)",
+    "category": "perhatian",
+    "name_variant": "Antibuih (sumber tidak spesifik)"
+  },
+  {
+    "ingredient_id": 236,
+    "standard_name": "Antibuih (sumber tidak spesifik)",
+    "category": "perhatian",
+    "name_variant": "Antifoaming agent (unspecified source)"
+  },
+  {
+    "ingredient_id": 236,
+    "standard_name": "Antibuih (sumber tidak spesifik)",
+    "category": "perhatian",
+    "name_variant": "Antibuih"
+  },
+  {
+    "ingredient_id": 236,
+    "standard_name": "Antibuih (sumber tidak spesifik)",
+    "category": "perhatian",
+    "name_variant": "Antifoaming agent"
+  },
+  {
+    "ingredient_id": 237,
+    "standard_name": "Popping boba (komposisi tidak spesifik)",
+    "category": "perhatian",
+    "name_variant": "Popping boba (komposisi tidak spesifik)"
+  },
+  {
+    "ingredient_id": 237,
+    "standard_name": "Popping boba (komposisi tidak spesifik)",
+    "category": "perhatian",
+    "name_variant": "Popping boba (unspecified composition)"
+  },
+  {
+    "ingredient_id": 237,
+    "standard_name": "Popping boba (komposisi tidak spesifik)",
+    "category": "perhatian",
+    "name_variant": "Popping boba"
+  },
+  {
+    "ingredient_id": 238,
+    "standard_name": "Sweet modulator (bahan tidak spesifik)",
+    "category": "perhatian",
+    "name_variant": "Sweet modulator (bahan tidak spesifik)"
+  },
+  {
+    "ingredient_id": 238,
+    "standard_name": "Sweet modulator (bahan tidak spesifik)",
+    "category": "perhatian",
+    "name_variant": "Sweet modulator/flavor enhancer (unspecified)"
+  },
+  {
+    "ingredient_id": 238,
+    "standard_name": "Sweet modulator (bahan tidak spesifik)",
+    "category": "perhatian",
+    "name_variant": "Sweet modulator"
+  },
+  {
+    "ingredient_id": 238,
+    "standard_name": "Sweet modulator (bahan tidak spesifik)",
+    "category": "perhatian",
+    "name_variant": "Sweet modulator/flavor enhancer"
+  },
+  {
+    "ingredient_id": 238,
+    "standard_name": "Sweet modulator (bahan tidak spesifik)",
+    "category": "perhatian",
+    "name_variant": "Flavor enhancer"
+  },
+  {
+    "ingredient_id": 239,
+    "standard_name": "Pemanis alami glikosida steviol (Stevia)",
+    "category": "aman",
+    "name_variant": "Pemanis alami glikosida steviol (Stevia)"
+  },
+  {
+    "ingredient_id": 239,
+    "standard_name": "Pemanis alami glikosida steviol (Stevia)",
+    "category": "aman",
+    "name_variant": "Steviol glycosides (Stevia)"
+  },
+  {
+    "ingredient_id": 239,
+    "standard_name": "Pemanis alami glikosida steviol (Stevia)",
+    "category": "aman",
+    "name_variant": "Pemanis alami glikosida steviol"
+  },
+  {
+    "ingredient_id": 239,
+    "standard_name": "Pemanis alami glikosida steviol (Stevia)",
+    "category": "aman",
+    "name_variant": "Steviol glycosides"
+  },
+  {
+    "ingredient_id": 239,
+    "standard_name": "Pemanis alami glikosida steviol (Stevia)",
+    "category": "aman",
+    "name_variant": "Stevia"
+  },
+  {
+    "ingredient_id": 239,
+    "standard_name": "Pemanis alami glikosida steviol (Stevia)",
+    "category": "aman",
+    "name_variant": "Glikosida steviol"
+  },
+  {
+    "ingredient_id": 239,
+    "standard_name": "Pemanis alami glikosida steviol (Stevia)",
+    "category": "aman",
+    "name_variant": "E960"
+  },
+  {
+    "ingredient_id": 239,
+    "standard_name": "Pemanis alami glikosida steviol (Stevia)",
+    "category": "aman",
+    "name_variant": "INS 960"
+  },
+  {
+    "ingredient_id": 239,
+    "standard_name": "Pemanis alami glikosida steviol (Stevia)",
+    "category": "aman",
+    "name_variant": "INS960"
+  },
+  {
+    "ingredient_id": 240,
+    "standard_name": "Sorbitol (pemanis)",
+    "category": "aman",
+    "name_variant": "Sorbitol (pemanis)"
+  },
+  {
+    "ingredient_id": 240,
+    "standard_name": "Sorbitol (pemanis)",
+    "category": "aman",
+    "name_variant": "Sorbitol"
+  },
+  {
+    "ingredient_id": 240,
+    "standard_name": "Sorbitol (pemanis)",
+    "category": "aman",
+    "name_variant": "E420"
+  },
+  {
+    "ingredient_id": 240,
+    "standard_name": "Sorbitol (pemanis)",
+    "category": "aman",
+    "name_variant": "INS 420"
+  },
+  {
+    "ingredient_id": 240,
+    "standard_name": "Sorbitol (pemanis)",
+    "category": "aman",
+    "name_variant": "INS420"
+  },
+  {
+    "ingredient_id": 241,
+    "standard_name": "Monk fruit (pemanis alami)",
+    "category": "aman",
+    "name_variant": "Monk fruit (pemanis alami)"
+  },
+  {
+    "ingredient_id": 241,
+    "standard_name": "Monk fruit (pemanis alami)",
+    "category": "aman",
+    "name_variant": "Monk fruit sweetener"
+  },
+  {
+    "ingredient_id": 241,
+    "standard_name": "Monk fruit (pemanis alami)",
+    "category": "aman",
+    "name_variant": "Monk fruit"
+  },
+  {
+    "ingredient_id": 242,
+    "standard_name": "Lemak susu",
+    "category": "hindari",
+    "name_variant": "Lemak susu"
+  },
+  {
+    "ingredient_id": 242,
+    "standard_name": "Lemak susu",
+    "category": "hindari",
+    "name_variant": "Milk fat"
+  },
+  {
+    "ingredient_id": 243,
+    "standard_name": "Kultur bakteri yogurt (Lactobacillus, Streptococcus thermophilus)",
+    "category": "perhatian",
+    "name_variant": "Kultur bakteri yogurt (Lactobacillus, Streptococcus thermophilus)"
+  },
+  {
+    "ingredient_id": 243,
+    "standard_name": "Kultur bakteri yogurt (Lactobacillus, Streptococcus thermophilus)",
+    "category": "perhatian",
+    "name_variant": "Yogurt starter culture bacteria"
+  },
+  {
+    "ingredient_id": 243,
+    "standard_name": "Kultur bakteri yogurt (Lactobacillus, Streptococcus thermophilus)",
+    "category": "perhatian",
+    "name_variant": "Kultur bakteri yogurt"
+  },
+  {
+    "ingredient_id": 244,
+    "standard_name": "Kafein",
+    "category": "aman",
+    "name_variant": "Kafein"
+  },
+  {
+    "ingredient_id": 244,
+    "standard_name": "Kafein",
+    "category": "aman",
+    "name_variant": "Caffeine"
+  },
+  {
+    "ingredient_id": 245,
+    "standard_name": "Guarana / Ekstrak ginseng",
+    "category": "aman",
+    "name_variant": "Guarana / Ekstrak ginseng"
+  },
+  {
+    "ingredient_id": 245,
+    "standard_name": "Guarana / Ekstrak ginseng",
+    "category": "aman",
+    "name_variant": "Guarana / Ginseng extract"
+  },
+  {
+    "ingredient_id": 245,
+    "standard_name": "Guarana / Ekstrak ginseng",
+    "category": "aman",
+    "name_variant": "Guarana"
+  },
+  {
+    "ingredient_id": 245,
+    "standard_name": "Guarana / Ekstrak ginseng",
+    "category": "aman",
+    "name_variant": "Ekstrak ginseng"
+  },
+  {
+    "ingredient_id": 245,
+    "standard_name": "Guarana / Ekstrak ginseng",
+    "category": "aman",
+    "name_variant": "Ginseng extract"
+  },
+  {
+    "ingredient_id": 246,
+    "standard_name": "Ekstrak bunga (safflower, krisantemum, mawar, melati)",
+    "category": "aman",
+    "name_variant": "Ekstrak bunga (safflower, krisantemum, mawar, melati)"
+  },
+  {
+    "ingredient_id": 246,
+    "standard_name": "Ekstrak bunga (safflower, krisantemum, mawar, melati)",
+    "category": "aman",
+    "name_variant": "Flower extracts (safflower, chrysanthemum, rose, jasmine)"
+  },
+  {
+    "ingredient_id": 246,
+    "standard_name": "Ekstrak bunga (safflower, krisantemum, mawar, melati)",
+    "category": "aman",
+    "name_variant": "Ekstrak bunga"
+  },
+  {
+    "ingredient_id": 246,
+    "standard_name": "Ekstrak bunga (safflower, krisantemum, mawar, melati)",
+    "category": "aman",
+    "name_variant": "Flower extracts"
+  },
+  {
+    "ingredient_id": 246,
+    "standard_name": "Ekstrak bunga (safflower, krisantemum, mawar, melati)",
+    "category": "aman",
+    "name_variant": "Ekstrak safflower"
+  },
+  {
+    "ingredient_id": 246,
+    "standard_name": "Ekstrak bunga (safflower, krisantemum, mawar, melati)",
+    "category": "aman",
+    "name_variant": "Ekstrak krisantemum"
+  },
+  {
+    "ingredient_id": 246,
+    "standard_name": "Ekstrak bunga (safflower, krisantemum, mawar, melati)",
+    "category": "aman",
+    "name_variant": "Ekstrak mawar"
+  },
+  {
+    "ingredient_id": 246,
+    "standard_name": "Ekstrak bunga (safflower, krisantemum, mawar, melati)",
+    "category": "aman",
+    "name_variant": "Ekstrak melati"
+  },
+  {
+    "ingredient_id": 247,
+    "standard_name": "Hop",
+    "category": "aman",
+    "name_variant": "Hop"
+  },
+  {
+    "ingredient_id": 247,
+    "standard_name": "Hop",
+    "category": "aman",
+    "name_variant": "Hops"
+  },
+  {
+    "ingredient_id": 248,
+    "standard_name": "Daun cincau / Cincau",
+    "category": "aman",
+    "name_variant": "Daun cincau / Cincau"
+  },
+  {
+    "ingredient_id": 248,
+    "standard_name": "Daun cincau / Cincau",
+    "category": "aman",
+    "name_variant": "Grass jelly leaf / Cincau"
+  },
+  {
+    "ingredient_id": 248,
+    "standard_name": "Daun cincau / Cincau",
+    "category": "aman",
+    "name_variant": "Daun cincau"
+  },
+  {
+    "ingredient_id": 248,
+    "standard_name": "Daun cincau / Cincau",
+    "category": "aman",
+    "name_variant": "Cincau"
+  },
+  {
+    "ingredient_id": 248,
+    "standard_name": "Daun cincau / Cincau",
+    "category": "aman",
+    "name_variant": "Grass jelly leaf"
+  },
+  {
+    "ingredient_id": 249,
+    "standard_name": "Ekstrak sarang burung",
+    "category": "aman",
+    "name_variant": "Ekstrak sarang burung"
+  },
+  {
+    "ingredient_id": 249,
+    "standard_name": "Ekstrak sarang burung",
+    "category": "aman",
+    "name_variant": "Bird's nest extract"
+  },
+  {
+    "ingredient_id": 250,
+    "standard_name": "Rempah Indonesia lain (jahe, kunyit, kencur)",
+    "category": "aman",
+    "name_variant": "Rempah Indonesia lain (jahe, kunyit, kencur)"
+  },
+  {
+    "ingredient_id": 250,
+    "standard_name": "Rempah Indonesia lain (jahe, kunyit, kencur)",
+    "category": "aman",
+    "name_variant": "Other Indonesian spices (ginger, turmeric, kencur/aromatic ginger)"
+  },
+  {
+    "ingredient_id": 250,
+    "standard_name": "Rempah Indonesia lain (jahe, kunyit, kencur)",
+    "category": "aman",
+    "name_variant": "Rempah Indonesia lain"
+  },
+  {
+    "ingredient_id": 250,
+    "standard_name": "Rempah Indonesia lain (jahe, kunyit, kencur)",
+    "category": "aman",
+    "name_variant": "Other Indonesian spices"
+  },
+  {
+    "ingredient_id": 250,
+    "standard_name": "Rempah Indonesia lain (jahe, kunyit, kencur)",
+    "category": "aman",
+    "name_variant": "Jahe"
+  },
+  {
+    "ingredient_id": 250,
+    "standard_name": "Rempah Indonesia lain (jahe, kunyit, kencur)",
+    "category": "aman",
+    "name_variant": "Kunyit"
+  },
+  {
+    "ingredient_id": 250,
+    "standard_name": "Rempah Indonesia lain (jahe, kunyit, kencur)",
+    "category": "aman",
+    "name_variant": "Kencur"
+  },
+  {
+    "ingredient_id": 250,
+    "standard_name": "Rempah Indonesia lain (jahe, kunyit, kencur)",
+    "category": "aman",
+    "name_variant": "Ginger"
+  },
+  {
+    "ingredient_id": 250,
+    "standard_name": "Rempah Indonesia lain (jahe, kunyit, kencur)",
+    "category": "aman",
+    "name_variant": "Turmeric"
+  },
+  {
+    "ingredient_id": 250,
+    "standard_name": "Rempah Indonesia lain (jahe, kunyit, kencur)",
+    "category": "aman",
+    "name_variant": "Aromatic ginger"
+  },
+  {
+    "ingredient_id": 251,
+    "standard_name": "Licorice",
+    "category": "aman",
+    "name_variant": "Licorice"
+  },
+  {
+    "ingredient_id": 252,
+    "standard_name": "Buah tropis lain (nanas, leci, delima, kurma, jambu biji, kola, asam jawa)",
+    "category": "aman",
+    "name_variant": "Buah tropis lain (nanas, leci, delima, kurma, jambu biji, kola, asam jawa)"
+  },
+  {
+    "ingredient_id": 252,
+    "standard_name": "Buah tropis lain (nanas, leci, delima, kurma, jambu biji, kola, asam jawa)",
+    "category": "aman",
+    "name_variant": "Other tropical fruits (pineapple, lychee, pomegranate, dates, guava, kola nut, tamarind)"
+  },
+  {
+    "ingredient_id": 252,
+    "standard_name": "Buah tropis lain (nanas, leci, delima, kurma, jambu biji, kola, asam jawa)",
+    "category": "aman",
+    "name_variant": "Buah tropis lain"
+  },
+  {
+    "ingredient_id": 252,
+    "standard_name": "Buah tropis lain (nanas, leci, delima, kurma, jambu biji, kola, asam jawa)",
+    "category": "aman",
+    "name_variant": "Other tropical fruits"
+  },
+  {
+    "ingredient_id": 252,
+    "standard_name": "Buah tropis lain (nanas, leci, delima, kurma, jambu biji, kola, asam jawa)",
+    "category": "aman",
+    "name_variant": "Nanas"
+  },
+  {
+    "ingredient_id": 252,
+    "standard_name": "Buah tropis lain (nanas, leci, delima, kurma, jambu biji, kola, asam jawa)",
+    "category": "aman",
+    "name_variant": "Leci"
+  },
+  {
+    "ingredient_id": 252,
+    "standard_name": "Buah tropis lain (nanas, leci, delima, kurma, jambu biji, kola, asam jawa)",
+    "category": "aman",
+    "name_variant": "Delima"
+  },
+  {
+    "ingredient_id": 252,
+    "standard_name": "Buah tropis lain (nanas, leci, delima, kurma, jambu biji, kola, asam jawa)",
+    "category": "aman",
+    "name_variant": "Kurma"
+  },
+  {
+    "ingredient_id": 252,
+    "standard_name": "Buah tropis lain (nanas, leci, delima, kurma, jambu biji, kola, asam jawa)",
+    "category": "aman",
+    "name_variant": "Jambu biji"
+  },
+  {
+    "ingredient_id": 252,
+    "standard_name": "Buah tropis lain (nanas, leci, delima, kurma, jambu biji, kola, asam jawa)",
+    "category": "aman",
+    "name_variant": "Kola"
+  },
+  {
+    "ingredient_id": 252,
+    "standard_name": "Buah tropis lain (nanas, leci, delima, kurma, jambu biji, kola, asam jawa)",
+    "category": "aman",
+    "name_variant": "Asam jawa"
+  },
+  {
+    "ingredient_id": 252,
+    "standard_name": "Buah tropis lain (nanas, leci, delima, kurma, jambu biji, kola, asam jawa)",
+    "category": "aman",
+    "name_variant": "Pineapple"
+  },
+  {
+    "ingredient_id": 252,
+    "standard_name": "Buah tropis lain (nanas, leci, delima, kurma, jambu biji, kola, asam jawa)",
+    "category": "aman",
+    "name_variant": "Lychee"
+  },
+  {
+    "ingredient_id": 252,
+    "standard_name": "Buah tropis lain (nanas, leci, delima, kurma, jambu biji, kola, asam jawa)",
+    "category": "aman",
+    "name_variant": "Pomegranate"
+  },
+  {
+    "ingredient_id": 252,
+    "standard_name": "Buah tropis lain (nanas, leci, delima, kurma, jambu biji, kola, asam jawa)",
+    "category": "aman",
+    "name_variant": "Dates"
+  },
+  {
+    "ingredient_id": 252,
+    "standard_name": "Buah tropis lain (nanas, leci, delima, kurma, jambu biji, kola, asam jawa)",
+    "category": "aman",
+    "name_variant": "Guava"
+  },
+  {
+    "ingredient_id": 252,
+    "standard_name": "Buah tropis lain (nanas, leci, delima, kurma, jambu biji, kola, asam jawa)",
+    "category": "aman",
+    "name_variant": "Kola nut"
+  },
+  {
+    "ingredient_id": 252,
+    "standard_name": "Buah tropis lain (nanas, leci, delima, kurma, jambu biji, kola, asam jawa)",
+    "category": "aman",
+    "name_variant": "Tamarind"
+  },
+  {
+    "ingredient_id": 253,
+    "standard_name": "Klorofilin tembaga kompleks",
+    "category": "aman",
+    "name_variant": "Klorofilin tembaga kompleks"
+  },
+  {
+    "ingredient_id": 253,
+    "standard_name": "Klorofilin tembaga kompleks",
+    "category": "aman",
+    "name_variant": "Copper chlorophyllin complex"
+  },
+  {
+    "ingredient_id": 253,
+    "standard_name": "Klorofilin tembaga kompleks",
+    "category": "aman",
+    "name_variant": "E141"
+  },
+  {
+    "ingredient_id": 253,
+    "standard_name": "Klorofilin tembaga kompleks",
+    "category": "aman",
+    "name_variant": "INS 141"
+  },
+  {
+    "ingredient_id": 253,
+    "standard_name": "Klorofilin tembaga kompleks",
+    "category": "aman",
+    "name_variant": "INS141"
+  },
+  {
+    "ingredient_id": 254,
+    "standard_name": "Karmin / Anato (pewarna alami)",
+    "category": "aman",
+    "name_variant": "Karmin / Anato (pewarna alami)"
+  },
+  {
+    "ingredient_id": 254,
+    "standard_name": "Karmin / Anato (pewarna alami)",
+    "category": "aman",
+    "name_variant": "Carmine (cochineal) / Annatto (natural color)"
+  },
+  {
+    "ingredient_id": 254,
+    "standard_name": "Karmin / Anato (pewarna alami)",
+    "category": "aman",
+    "name_variant": "Karmin / Anato"
+  },
+  {
+    "ingredient_id": 254,
+    "standard_name": "Karmin / Anato (pewarna alami)",
+    "category": "aman",
+    "name_variant": "Carmine / Annatto"
+  },
+  {
+    "ingredient_id": 254,
+    "standard_name": "Karmin / Anato (pewarna alami)",
+    "category": "aman",
+    "name_variant": "Karmin"
+  },
+  {
+    "ingredient_id": 254,
+    "standard_name": "Karmin / Anato (pewarna alami)",
+    "category": "aman",
+    "name_variant": "Anato"
+  },
+  {
+    "ingredient_id": 254,
+    "standard_name": "Karmin / Anato (pewarna alami)",
+    "category": "aman",
+    "name_variant": "Carmine"
+  },
+  {
+    "ingredient_id": 254,
+    "standard_name": "Karmin / Anato (pewarna alami)",
+    "category": "aman",
+    "name_variant": "Cochineal"
+  },
+  {
+    "ingredient_id": 254,
+    "standard_name": "Karmin / Anato (pewarna alami)",
+    "category": "aman",
+    "name_variant": "Annatto"
+  },
+  {
+    "ingredient_id": 254,
+    "standard_name": "Karmin / Anato (pewarna alami)",
+    "category": "aman",
+    "name_variant": "E120"
+  },
+  {
+    "ingredient_id": 254,
+    "standard_name": "Karmin / Anato (pewarna alami)",
+    "category": "aman",
+    "name_variant": "INS 120"
+  },
+  {
+    "ingredient_id": 254,
+    "standard_name": "Karmin / Anato (pewarna alami)",
+    "category": "aman",
+    "name_variant": "INS120"
+  },
+  {
+    "ingredient_id": 254,
+    "standard_name": "Karmin / Anato (pewarna alami)",
+    "category": "aman",
+    "name_variant": "E160b"
+  },
+  {
+    "ingredient_id": 254,
+    "standard_name": "Karmin / Anato (pewarna alami)",
+    "category": "aman",
+    "name_variant": "INS 160b"
+  },
+  {
+    "ingredient_id": 254,
+    "standard_name": "Karmin / Anato (pewarna alami)",
+    "category": "aman",
+    "name_variant": "INS160b"
+  },
+  {
+    "ingredient_id": 255,
+    "standard_name": "Vitamin A dan D3 (fortifikasi minuman)",
+    "category": "aman",
+    "name_variant": "Vitamin A dan D3 (fortifikasi minuman)"
+  },
+  {
+    "ingredient_id": 255,
+    "standard_name": "Vitamin A dan D3 (fortifikasi minuman)",
+    "category": "aman",
+    "name_variant": "Vitamin A and D3 (beverage fortification)"
+  },
+  {
+    "ingredient_id": 255,
+    "standard_name": "Vitamin A dan D3 (fortifikasi minuman)",
+    "category": "aman",
+    "name_variant": "Vitamin A dan D3"
+  },
+  {
+    "ingredient_id": 255,
+    "standard_name": "Vitamin A dan D3 (fortifikasi minuman)",
+    "category": "aman",
+    "name_variant": "Vitamin A and D3"
+  },
+  {
+    "ingredient_id": 255,
+    "standard_name": "Vitamin A dan D3 (fortifikasi minuman)",
+    "category": "aman",
+    "name_variant": "Vitamin A"
+  },
+  {
+    "ingredient_id": 255,
+    "standard_name": "Vitamin A dan D3 (fortifikasi minuman)",
+    "category": "aman",
+    "name_variant": "Vitamin D3"
+  },
+  {
+    "ingredient_id": 256,
+    "standard_name": "Kolagen sapi",
+    "category": "aman",
+    "name_variant": "Kolagen sapi"
+  },
+  {
+    "ingredient_id": 256,
+    "standard_name": "Kolagen sapi",
+    "category": "aman",
+    "name_variant": "Bovine collagen"
+  }
+]

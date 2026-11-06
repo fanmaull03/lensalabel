@@ -1,0 +1,112 @@
+{
+  "status": "frozen",
+  "threshold": 75,
+  "weights": {
+    "levenshtein": 0.3333333333333333,
+    "jaro_winkler": 0.3333333333333333,
+    "ngram": 0.3333333333333333
+  },
+  "length_penalty": {
+    "formula": "(min_length / max_length) ** exponent",
+    "exponent": 0.8
+  },
+  "max_ocr_width": 1500,
+  "adaptive_threshold": false,
+  "preprocessing_order": [
+    "grayscale",
+    "blur",
+    "CLAHE",
+    "deskew"
+  ],
+  "kb_version": "v2",
+  "kb_path": "evaluation/results/kb_v2_phase2/kb_v2_review.json",
+  "kb_sha256": "6e6489bdffe80cc4032dcf82ed9b396a0e00912d516a8353996aff250e3527f8",
+  "calibration_gt_path": "dataset/ground_truth/calibration_ingredients_gt_v2_2.json",
+  "calibration_gt_sha256": "bc872686eaf9c0e004425bbc1d77a52ca48c38ad2583c8965410e3c0d0d28135",
+  "evaluation_gt_path": "evaluation/ground_truth/evaluation_gt_final.json",
+  "evaluation_gt_sha256": "f172b7db13e8e713b27669829ff69931916e46faeaa3f84b5872bb6c264eec88",
+  "commit_hash": "01a212c18e93623fce14c6dd90882c28d0a73295",
+  "working_tree_clean_at_creation": true,
+  "blocked_pairs": [
+    [
+      "kalium",
+      "kalsium"
+    ],
+    [
+      "carbonate",
+      "carbonated"
+    ],
+    [
+      "citrate",
+      "nitrate"
+    ],
+    [
+      "guaran",
+      "guarana"
+    ],
+    [
+      "kafein",
+      "kasein"
+    ],
+    [
+      "nitrat",
+      "nitrit"
+    ],
+    [
+      "nitrat",
+      "sitrat"
+    ],
+    [
+      "nitrate",
+      "nitrite"
+    ],
+    [
+      "baking",
+      "caking"
+    ],
+    [
+      "sweetened",
+      "sweetener"
+    ],
+    [
+      "lembaga",
+      "tembaga"
+    ],
+    [
+      "jelai",
+      "selai"
+    ],
+    [
+      "goat",
+      "oat"
+    ],
+    [
+      "laktosa",
+      "laktat"
+    ]
+  ],
+  "calibration_grid_provenance": {
+    "path": "evaluation/calibration_grid_v2_2_provenance.json",
+    "sha256": "249fc409e23631b125554db559558c38296d57cc83b15187462c674fb2734544",
+    "aggregate_summary_path": "evaluation/calibration_grid_v2_2_summary.csv",
+    "aggregate_summary_sha256": "e49a35f86a129b89df1dd495cdb928525151d599e61f04acbc1b93c39b65f183",
+    "comparison_path": "evaluation/calibration_grid_v2_2_comparison.csv",
+    "comparison_sha256": "ad40a9f6404e6b826991d7cc9bb7a05688a3d0289fa71111c5812bba69f0dfe8",
+    "selected_config": "width_1500_adaptive_off",
+    "selected_threshold": 75,
+    "selection_reason": "F1 0.7589 berjarak 0.0073 dari maksimum 0.7662; konfigurasi 1500/OFF lebih cepat (2.667 vs 3.922 detik/foto)."
+  },
+  "frozen_inputs_clean_at_creation": true,
+  "environment_versions": {
+    "python": "3.12.6",
+    "easyocr": "1.7.2",
+    "torch": "2.13.0",
+    "opencv_python_headless": "5.0.0.93",
+    "opencv_python": null,
+    "opencv_contrib_python": null,
+    "opencv_runtime": "5.0.0",
+    "opencv_module_path": "D:\\Kulyeah\\SKRIPSI\\project\\lensalabel\\backend\\.venv\\Lib\\site-packages\\cv2\\__init__.py"
+  },
+  "transcripts_sha256": "e24534f1bdac9d2d73c6f486467eb9ae6bf97c8657cb9175fc24b016c8ef831d",
+  "frozen_at_utc": "2026-10-12T12:17:19.016103+00:00"
+}

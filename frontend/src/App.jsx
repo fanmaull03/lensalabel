@@ -1,5 +1,5 @@
 // Root component - routing antar pages
-import { BrowserRouter, NavLink, Route, Routes, useLocation } from "react-router-dom";
+import { BrowserRouter, Navigate, NavLink, Route, Routes, useLocation } from "react-router-dom";
 import UploadPage from "./pages/UploadPage";
 import ResultPage from "./pages/ResultPage";
 import GfcfEducationPage from "./pages/GfcfEducationPage";
@@ -17,6 +17,8 @@ function AnimatedRoutes() {
         <Route path="/hasil" element={<ResultPage />} />
         <Route path="/edukasi" element={<GfcfEducationPage />} />
         <Route path="/tentang" element={<AboutPage />} />
+        {/* URL tak dikenal jangan merender layar kosong */}
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </div>
   );

@@ -1,0 +1,8 @@
+# EasyOCR dan RapidFuzz mengikuti versi workspace. Torch/torchvision memakai
+# pasangan bawaan runtime Colab; versi aktual dicatat di hasil eksperimen.
+easyocr==1.7.2
+rapidfuzz==3.14.5
+SQLAlchemy>=2.0,<2.1
+opencv-python-headless==5.0.0.93
+Pillow>=10
+jiwer>=3,<5

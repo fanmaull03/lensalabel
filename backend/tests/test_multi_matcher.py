@@ -1,5 +1,6 @@
 import pytest
 
+from app.classifier.rule_based import classify_product
 from app.matching.fuzzy_matcher import composite_score, match_token, match_token_many
 
 
@@ -79,8 +80,14 @@ def test_shared_head_requires_both_entries_and_abstains_on_negation():
     assert not positive("Dinatrium Inosinat dan Guanilat free", entries)
 
 
-def test_unknown_policy_stays_at_token_level():
+def test_unknown_fragment_beside_matched_ingredient_is_reported():
     assert not match_token_many("unreadable", [])[0].matched
-    result = match_token_many("Garam xyzzy", kb("Garam"))
-    assert len(result) == 1 and result[0].matched
+    result = match_token_many("Garam bahanasing", kb("Garam"))
+    assert [(m.matched, m.token) for m in result] == [
+        (True, "Garam bahanasing"), (False, "bahanasing")
+    ]
+    assert classify_product(result)["verdict"] == "perlu_verifikasi"
+    assert [(m.matched, m.token) for m in match_token_many("Garam 10% dan", kb("Garam"))] == [
+        (True, "Garam 10% dan")
+    ]
     assert not any(m.matched for m in match_token_many("xyzzy", kb("Garam")))

@@ -4,20 +4,44 @@
 // pipeline /identify tidak berubah.
 import { useEffect, useRef, useState } from "react";
 import logo from "../assets/lensalabel_logo.png";
+import { cameraCrop } from "../utils/cameraCrop";
 
 export default function CameraCapture({ onCapture, onCancel }) {
   const videoRef = useRef(null);
   const streamRef = useRef(null);
   const fileRef = useRef(null);
+  const guideRef = useRef(null);
   const [facing, setFacing] = useState("environment");
   const [denied, setDenied] = useState(false);
+  const [preview, setPreview] = useState(null);
+  const [captureError, setCaptureError] = useState("");
+
+  // Revoke blob URL preview sebelumnya setiap kali URL berubah, dan pastikan
+  // URL terakhir ikut dilepas saat unmount (ref diisi URL aktif). Dependensi
+  // harus preview?.url, bukan objek preview — objek yang sama bisa menampung
+  // URL yang sudah mati setelah cleanup berjalan.
+  const previewUrlRef = useRef(null);
+  useEffect(() => {
+    previewUrlRef.current = preview?.url ?? null;
+    return () => {
+      if (preview?.url) URL.revokeObjectURL(preview.url);
+    };
+  }, [preview?.url]);
+  useEffect(() => () => {
+    if (previewUrlRef.current) URL.revokeObjectURL(previewUrlRef.current);
+  }, []);
 
   useEffect(() => {
     let active = true;
     async function start() {
+      setDenied(false);
       try {
         const stream = await navigator.mediaDevices.getUserMedia({
-          video: { facingMode: facing },
+          video: {
+            facingMode: { ideal: facing },
+            width: { ideal: 1920 },
+            height: { ideal: 1080 },
+          },
           audio: false,
         });
         if (!active) {
@@ -42,13 +66,42 @@ export default function CameraCapture({ onCapture, onCancel }) {
 
   function shoot() {
     const video = videoRef.current;
-    if (!video || !video.videoWidth) return;
+    const guide = guideRef.current;
+    if (!video?.videoWidth || !video.videoHeight || !guide) {
+      setCaptureError("Kamera belum siap. Coba beberapa saat lagi.");
+      return;
+    }
+    const crop = cameraCrop(
+      { width: video.videoWidth, height: video.videoHeight },
+      video.getBoundingClientRect(), guide.getBoundingClientRect(),
+    );
+    if (crop.width < 400 || crop.height < 300) {
+      setCaptureError("Resolusi kamera terlalu rendah untuk membaca komposisi. Gunakan foto dari galeri.");
+      return;
+    }
+    setCaptureError("");
     const canvas = document.createElement("canvas");
-    canvas.width = video.videoWidth;
-    canvas.height = video.videoHeight;
-    canvas.getContext("2d").drawImage(video, 0, 0);
+    canvas.width = crop.width;
+    canvas.height = crop.height;
+    try {
+      canvas.getContext("2d").drawImage(
+        video, crop.x, crop.y, crop.width, crop.height, 0, 0, crop.width, crop.height,
+      );
+    } catch {
+      // Koordinat crop di luar frame video (layout viewport ekstrem): jangan
+      // biarkan exception mentah mematikan shutter tanpa pesan.
+      setCaptureError("Gagal memotong area foto. Coba ambil ulang.");
+      return;
+    }
     canvas.toBlob(
-      (blob) => blob && onCapture(new File([blob], "kamera.jpg", { type: "image/jpeg" })),
+      (blob) => blob
+        ? setPreview({
+          file: new File([blob], "kamera.jpg", { type: "image/jpeg" }),
+          url: URL.createObjectURL(blob),
+          width: crop.width,
+          height: crop.height,
+        })
+        : setCaptureError("Foto gagal dibuat. Coba ambil ulang."),
       "image/jpeg",
       0.92,
     );
@@ -85,7 +138,9 @@ export default function CameraCapture({ onCapture, onCancel }) {
         <div className="mx-4 mt-4 flex items-center gap-2 rounded-2xl border border-white/25 bg-navy-base/40 px-4 py-3 text-white backdrop-blur-xl">
           <img src={logo} alt="" className="h-6 w-6 flex-none object-contain" />
           <p className="text-sm leading-snug">
-            Posisikan <b>daftar komposisi</b> di dalam bingkai
+            {preview ? "Periksa apakah semua tulisan terbaca jelas" : <>
+              Posisikan <b>seluruh daftar komposisi</b> di dalam bingkai
+            </>}
           </p>
           <button
             type="button"
@@ -97,7 +152,7 @@ export default function CameraCapture({ onCapture, onCancel }) {
         </div>
 
         {/* viewfinder tengah */}
-        <div className="flex flex-1 items-center justify-center p-6">
+        <div className="flex min-h-0 flex-1 items-center justify-center p-6">
           {denied ? (
             <div className="max-w-xs rounded-2xl border border-white/25 bg-navy-base/50 p-6 text-center text-white backdrop-blur-xl">
               <p className="font-display text-lg font-bold">Kamera tidak bisa diakses</p>
@@ -107,20 +162,28 @@ export default function CameraCapture({ onCapture, onCancel }) {
               </p>
             </div>
           ) : (
-            <div className="relative h-44 w-64">
+            <div ref={guideRef} className="relative h-full w-full max-w-lg">
+              {preview && <img src={preview.url} alt="Pratinjau foto komposisi" className="h-full w-full object-contain" />}
               <span className="absolute left-0 top-0 h-7 w-7 rounded-tl-lg border-l-[3px] border-t-[3px] border-white" />
               <span className="absolute right-0 top-0 h-7 w-7 rounded-tr-lg border-r-[3px] border-t-[3px] border-white" />
               <span className="absolute bottom-0 left-0 h-7 w-7 rounded-bl-lg border-b-[3px] border-l-[3px] border-white" />
               <span className="absolute bottom-0 right-0 h-7 w-7 rounded-br-lg border-b-[3px] border-r-[3px] border-white" />
-              <div className="absolute left-1/2 top-1/2 flex h-14 w-14 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border-2 border-gold shadow-[0_0_18px_rgba(242,185,77,0.6)]">
+              {!preview && <div className="absolute left-1/2 top-1/2 flex h-14 w-14 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border-2 border-gold shadow-[0_0_18px_rgba(242,185,77,0.6)]">
                 <span className="h-2 w-2 rounded-full bg-gold shadow-[0_0_9px_#F2B94D]" />
-              </div>
+              </div>}
             </div>
           )}
         </div>
 
+        {captureError && <p role="alert" className="px-6 pb-3 text-center text-sm text-white">{captureError}</p>}
+        {preview && <p className="px-6 pb-3 text-center text-xs text-white/75">Foto {preview.width} × {preview.height} piksel</p>}
         {/* kontrol bawah: galeri · shutter · flip */}
-        <div className="flex items-center justify-between px-8 pb-10">
+        {preview ? (
+          <div className="flex gap-3 px-6 pb-10">
+            <button type="button" onClick={() => setPreview(null)} className="glass flex-1 rounded-2xl px-4 py-4 font-semibold text-white">Ambil Ulang</button>
+            <button type="button" onClick={() => onCapture(preview.file)} className="flex-1 rounded-2xl bg-accent-blue px-4 py-4 font-semibold text-white">Gunakan Foto</button>
+          </div>
+        ) : <div className="flex items-center justify-between px-8 pb-10">
           <button
             type="button"
             onClick={() => fileRef.current?.click()}
@@ -154,7 +217,7 @@ export default function CameraCapture({ onCapture, onCancel }) {
               <path d="M4 12a8 8 0 0 1 13-6l3 2M20 12a8 8 0 0 1-13 6l-3-2" />
             </svg>
           </button>
-        </div>
+        </div>}
       </div>
     </div>
   );

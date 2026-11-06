@@ -74,12 +74,14 @@ def test_c_preserves_first_match_even_in_a_later_token():
     normal=match_composition_guarded(raw,entries,threshold=100)
     guarded=match_composition_guarded(raw,entries,threshold=100,secondary_panel_guard=True)
     # First token starts with Gula; the first winner of token 2 is Garam by KB order.
-    assert len(normal)==4 and len(guarded)==2
-    assert guarded==[normal[0],normal[2]]
+    normal_matched=[match for match in normal if match.matched]
+    guarded_matched=[match for match in guarded if match.matched]
+    assert len(normal_matched)==4 and len(guarded_matched)==2
+    assert guarded_matched==[normal_matched[0],normal_matched[2]]
 
 
 def test_joined_spelling_only_creates_review_candidates():
-    joined_spelling_review_rows = pytest.importorskip("evaluation.calibration_annotations").joined_spelling_review_rows
+    from evaluation.calibration_annotations import joined_spelling_review_rows
     entries=kb('Beta carotene','Sodium caseinate','E 160a')
     assert len(joined_spelling_review_rows('x','Betacarotene Natural',[],entries))==1
     assert not joined_spelling_review_rows('x','Beta,carotene',[],entries)

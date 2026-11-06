@@ -30,7 +30,7 @@ export default function ResultList({ result, onSelect }) {
                     : { name: item.standard_name, category: key, matched: item.matched_window, score: item.score, terdekat: null };
                 return (
                   <IngredientBadge
-                    key={i}
+                    key={`${key}-${detail.name}-${i}`}
                     name={detail.name}
                     category={key}
                     detail={

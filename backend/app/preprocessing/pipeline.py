@@ -57,10 +57,16 @@ def deskew(gray: np.ndarray) -> np.ndarray:
         return gray
 
     largest = max(contours, key=cv2.contourArea)
+    # Rentang sudut minAreaRect bergantung versi OpenCV: OpenCV 4.x lama
+    # mengembalikan [0, 90), OpenCV 4.5+ hingga 5.x mengembalikan [-90, 0).
+    # Normalisasi ke (-45, 45] membuat interpretasinya versi-agnostik: nilai
+    # hasil pemetaan adalah kemiringan sejati kontur, positif = miring ke kanan.
+    # Tanpa normalisasi, foto yang tegak dengan sudut mentah -90 (umum di
+    # OpenCV 5) akan dirotasi -90 derajat dan membalik label menjadi vertikal.
     angle = cv2.minAreaRect(largest)[-1]
-    if angle < -45:
+    while angle <= -45:
         angle += 90
-    elif angle > 45:
+    while angle > 45:
         angle -= 90
 
     # Lewati rotasi jika sudut kemiringan mendekati 0 (<0.5 derajat)

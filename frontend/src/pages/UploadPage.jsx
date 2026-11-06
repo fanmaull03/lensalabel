@@ -30,11 +30,23 @@ export default function UploadPage() {
   const navigate = useNavigate();
   const location = useLocation();
   const fileRef = useRef(null);
+  const mountedRef = useRef(true);
   // ResultPage (verdict Tidak Terbaca) mengarahkan ke sini dengan state.manual.
   const [mode, setMode] = useState(location.state?.manual ? "manual" : "idle"); // idle | camera | manual
   const [loading, setLoading] = useState(false);
   const [elapsed, setElapsed] = useState(0);
   const [error, setError] = useState(null);
+
+  // location.state berubah tanpa remount kalau pathname sama (mis. tombol back
+  // browser), jadi state.manual disinkronkan ke mode lewat efek, bukan hanya
+  // dibaca sekali di useState.
+  useEffect(() => {
+    setMode(location.state?.manual ? "manual" : "idle");
+  }, [location.state]);
+
+  useEffect(() => () => {
+    mountedRef.current = false;
+  }, []);
 
   useEffect(() => {
     if (!loading) return;
@@ -45,6 +57,7 @@ export default function UploadPage() {
 
   // Jalankan satu request identify (foto atau manual) dengan penanganan sama.
   async function run(promise) {
+    if (loading) return; // abaikan submit ganda saat request masih berjalan
     setMode("idle");
     setError(null);
     setLoading(true);
@@ -52,13 +65,25 @@ export default function UploadPage() {
       const result = await promise;
       navigate("/hasil", { state: result });
     } catch (err) {
-      setError(err.message);
+      // Jalur sukses me-remount halaman (AnimatedRoutes key=pathname); guard
+      // supaya setState tidak menembak komponen yang sudah unmount.
+      if (mountedRef.current) setError(err.message);
     } finally {
-      setLoading(false);
+      if (mountedRef.current) setLoading(false);
     }
   }
 
-  const handleFile = (file) => run(identifyPackage(file));
+  // Batas sama dengan backend (MAX_UPLOAD_BYTES). Ditolak di sini supaya foto
+  // galeri besar gagal instan, bukan setelah menunggu upload penuh.
+  const MAX_UPLOAD_BYTES = 10 * 1024 * 1024;
+  const handleFile = (file) => {
+    if (file.size > MAX_UPLOAD_BYTES) {
+      setMode("idle");
+      setError("Ukuran foto melebihi 10 MB. Pilih foto lain atau kirim foto hasil kamera.");
+      return;
+    }
+    run(identifyPackage(file));
+  };
   const handleManual = (text) => run(identifyManual(text));
 
   if (mode === "camera") {
@@ -248,7 +273,7 @@ function ManualEntry({ onSubmit, onCancel }) {
           </div>
           <div className="flex flex-wrap gap-2">
             {items.map((it, i) => (
-              <span key={i} className="glass rounded-full px-3 py-1.5 text-sm text-white">
+              <span key={`${it}-${i}`} className="glass rounded-full px-3 py-1.5 text-sm text-white">
                 {it}
               </span>
             ))}

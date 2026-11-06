@@ -1,0 +1,229 @@
+{
+  "run_label": "calibration_grid_v2_2_rescored",
+  "method": "Menggunakan ulang hasil match 40 foto x 7 threshold dari grid v2.1 setelah verifikasi byte-per-byte bahwa teks OCR setiap foto/konfigurasi sama dengan ocr_ablation_detail.csv Colab bersih; tidak mengulang OCR atau matcher. Ini sah karena matcher, KB, dan blokir pasangan tidak berubah sejak grid sumber. GT v2.2 dipakai untuk menghitung ulang TP/FP/FN, metrik, bootstrap CI, dan pilihan threshold.",
+  "split": "40 foto kalibrasi saja",
+  "selection_rule_threshold": "F1 total tertinggi; bila selisih <0,01 pilih recall Hindari lebih tinggi",
+  "selection_rule_configuration": "F1 tertinggi pada threshold terpilih; bila selisih <0,01 pilih waktu OCR/foto lebih rendah",
+  "selected_config": "width_1500_adaptive_off",
+  "selected_threshold": 75,
+  "selected_f1": 0.7589158345221114,
+  "selection_reason": "F1 maksimum 0.7662 pada 2000/OFF/70; 1500/OFF/75 berselisih 0.0073 (<0.01) dan waktu OCR rata-rata lebih rendah (2.667 vs 3.922 detik/foto).",
+  "provenance": {
+    "gt_path": "dataset/ground_truth/calibration_ingredients_gt_v2_2.json",
+    "gt_sha256": "bc872686eaf9c0e004425bbc1d77a52ca48c38ad2583c8965410e3c0d0d28135",
+    "kb_path": "evaluation/results/kb_v2_phase2/kb_v2_review.json",
+    "kb_sha256": "6e6489bdffe80cc4032dcf82ed9b396a0e00912d516a8353996aff250e3527f8",
+    "blocked_pairs_path": "backend/app/matching/chemical_pair_blocks.json",
+    "blocked_pairs_sha256": "07be54e6d503462ce1d0aa70c3e8b09bbffbbeb099bc14d74c7fdafc97269f2e",
+    "ocr_detail_path": "evaluation/results/calibration_ocr_ablation/ocr_ablation_detail.csv",
+    "ocr_detail_sha256": "ead7dfd852c28b75097fb0cdab5295ecf10232efca122c6df3c0ea86c989d129",
+    "ocr_rows": 240,
+    "ocr_runtime": {
+      "easyocr_version": "1.7.2",
+      "torch_version": "2.11.0+cu130",
+      "opencv_headless_version": "5.0.0.93",
+      "opencv_runtime_version": "5.0.0"
+    },
+    "matcher_path": "backend/app/matching/fuzzy_matcher.py",
+    "matcher_sha256": "289686a7a8a0bdf3528cfde1605b8c3633f8e82e29a752fb1c737390f5c2af13",
+    "matcher_last_change_commit": "c4ef443876fa99eedd0387af88db0900e394ce51",
+    "blocks_last_change_commit": "c4ef443876fa99eedd0387af88db0900e394ce51",
+    "rescore_commit": "198efe74a1c605e0366027803a154cf4f28adcaf",
+    "source_grids": [
+      {
+        "config_key": "width_1500_adaptive_off",
+        "grid_detail": "evaluation/results/grid_width_1500_adaptive_off_gt_v2_1/grid_detail.csv",
+        "grid_detail_sha256": "bbca84237ee15aeeb73a03d8dc151cf732c3585c337db56cda4bd05919d339de",
+        "grid_metadata_sha256": "dcb88a0a9cdc530748784074f2cdd507c81546e8049abec2559fc9ba0aa3c21f"
+      },
+      {
+        "config_key": "width_2000_adaptive_off",
+        "grid_detail": "evaluation/results/grid_width_2000_adaptive_off_gt_v2_1/grid_detail.csv",
+        "grid_detail_sha256": "58c6799e56359e7af186514b8ed42613e7a9e63b741a4dcc11b66b09b33bfbf9",
+        "grid_metadata_sha256": "8cea20d878060e6375c40edae13d3fed4f4d26c0a7c01fc72da904c9c207f8b1"
+      },
+      {
+        "config_key": "width_1000_adaptive_off",
+        "grid_detail": "evaluation/results/grid_width_1000_adaptive_off_gt_v2_1/grid_detail.csv",
+        "grid_detail_sha256": "0cb358c37812b86214f6fc93e89b651265d0c44d21551a95fcc2dff05af10e5a",
+        "grid_metadata_sha256": "46df6aca1e1f6b9ddcf141214d2898d3c209d2760e0702f27bb0f8ad52cae8a9"
+      },
+      {
+        "config_key": "width_1000_adaptive_on",
+        "grid_detail": "evaluation/results/grid_width_1000_adaptive_on_gt_v2_1/grid_detail.csv",
+        "grid_detail_sha256": "4082ec62413bb1ad9a219b9810aacdc701d60b83985f419c273773b6ddc1d1a2",
+        "grid_metadata_sha256": "9ce796c4fc7a3b5c5a9595ca050a65457b584caf7efa0c40ce1c0ebd0d2b69c4"
+      },
+      {
+        "config_key": "width_1500_adaptive_on",
+        "grid_detail": "evaluation/results/grid_width_1500_adaptive_on_gt_v2_1/grid_detail.csv",
+        "grid_detail_sha256": "8a7dec2b14b49208d8eda2683a04e9c7a754b4b315d546ccfb27595f0ea6a38c",
+        "grid_metadata_sha256": "660e6de8be23678adb5e2106358c1e95de6c2b7cc47989f185e119edad4b5de1"
+      },
+      {
+        "config_key": "width_2000_adaptive_on",
+        "grid_detail": "evaluation/results/grid_width_2000_adaptive_on_gt_v2_1/grid_detail.csv",
+        "grid_detail_sha256": "791ed2a337742d60fdb4bd4a54071b9ea8d4e1c3d78e99df343ba8b1e205eb44",
+        "grid_metadata_sha256": "5a6491afb03994368b7f08e8af25e789d04534a8229f672dadc7d35a3482ffc8"
+      }
+    ],
+    "kb_last_change_commit": "182d28cb8c1ec738253da252d1827a8462cdf9ce",
+    "rescore_script_sha256": "008229a86ad6069c7fdc8cc837f39b023786fff73089ed1db8f49dad56b6c618",
+    "grid_script_sha256": "c914981726065c9164923a188f08ee69e684ffb7274e951b630ab5187fc43080",
+    "metrics_script_sha256": "75d875cff40cb30353268f303e426b6fdb941e94e9134a2591126a270c49bff8"
+  },
+  "results": [
+    {
+      "config_key": "width_1500_adaptive_off",
+      "max_ocr_width": 1500,
+      "adaptive_threshold": false,
+      "threshold": 75,
+      "precision": 0.8471337579617835,
+      "recall": 0.6873385012919897,
+      "f1": 0.7589158345221114,
+      "f1_ci95_low": 0.6915158481847044,
+      "f1_ci95_high": 0.8192595479030551,
+      "recall_hindari": 0.6052631578947368,
+      "ocr_seconds_per_photo": 2.666555919999985,
+      "baseline_threshold": 75,
+      "baseline_f1": 0.7589,
+      "delta_threshold": 0,
+      "delta_f1": 1.5834522111402016e-05,
+      "output_dir": "evaluation/results/grid_width_1500_adaptive_off_gt_v2_2",
+      "outputs": {
+        "grid_summary.csv": "7699dc3e41d7c684c9568c21fedda5a0cb3b061a11ebd69e7848ebc0fdd22d26",
+        "grid_detail.csv": "08e299607674f3bdb485b4a2690dc127b60d665706cb9b06c50fe9d8f0da87cf",
+        "bootstrap_ci.csv": "cbe2e1bc4d41bd0eb537e4ce016013aac741b05007250e709b9aabe8664cd54e",
+        "provisional_run_metadata.json": "6ef97e42f26c5cad3d4e25c9a5c6beb3c204d180d1ff5e862673ae0af01765c2"
+      }
+    },
+    {
+      "config_key": "width_2000_adaptive_off",
+      "max_ocr_width": 2000,
+      "adaptive_threshold": false,
+      "threshold": 70,
+      "precision": 0.7837837837837838,
+      "recall": 0.7493540051679587,
+      "f1": 0.7661822985468957,
+      "f1_ci95_low": 0.7097653830270494,
+      "f1_ci95_high": 0.8195594820628923,
+      "recall_hindari": 0.631578947368421,
+      "ocr_seconds_per_photo": 3.922274850099927,
+      "baseline_threshold": 70,
+      "baseline_f1": 0.7662,
+      "delta_threshold": 0,
+      "delta_f1": -1.7701453104312925e-05,
+      "output_dir": "evaluation/results/grid_width_2000_adaptive_off_gt_v2_2",
+      "outputs": {
+        "grid_summary.csv": "404359aca90498910490132c146fb51d2d49c104376dfeb8fd1db65bd8e0fdb0",
+        "grid_detail.csv": "e6c06cc1786a6d926228ce91bd9cb962d477b99dcd1f75da3268b0b37ad7d64c",
+        "bootstrap_ci.csv": "04e9d30b5e1783155637a80639ef5ced82ef975b1de35bee726debc8c66f3116",
+        "provisional_run_metadata.json": "7df5c13664488bc7497a0b318bdbdf6616854d08638cee6107cdb3d221886d18"
+      }
+    },
+    {
+      "config_key": "width_1000_adaptive_off",
+      "max_ocr_width": 1000,
+      "adaptive_threshold": false,
+      "threshold": 75,
+      "precision": 0.8581081081081081,
+      "recall": 0.6563307493540051,
+      "f1": 0.7437774524158125,
+      "f1_ci95_low": 0.6655597120271032,
+      "f1_ci95_high": 0.8055619771025978,
+      "recall_hindari": 0.5789473684210527,
+      "ocr_seconds_per_photo": 1.9938478641999722,
+      "baseline_threshold": 75,
+      "baseline_f1": 0.7438,
+      "delta_threshold": 0,
+      "delta_f1": -2.2547584187515568e-05,
+      "output_dir": "evaluation/results/grid_width_1000_adaptive_off_gt_v2_2",
+      "outputs": {
+        "grid_summary.csv": "896c923a67dd060859e14f06fd8cdcaeed290103e1f369a60e7b248467604f6d",
+        "grid_detail.csv": "ce830c5259b9c27b93496c91762a361b8307035b61c3eeb1e3ea08f3f46c53de",
+        "bootstrap_ci.csv": "73098473148be7a4a2a22e0df3e5157664a532f581bd3572e2e8872a23749f5b",
+        "provisional_run_metadata.json": "bda85ba1c7519cea8b56de7aaa53ad48f68fe8d591b17a6bb6a14573f30321e2"
+      }
+    },
+    {
+      "config_key": "width_1000_adaptive_on",
+      "max_ocr_width": 1000,
+      "adaptive_threshold": true,
+      "threshold": 65,
+      "precision": 0.6945337620578779,
+      "recall": 0.5581395348837209,
+      "f1": 0.6189111747851003,
+      "f1_ci95_low": 0.5323815521433423,
+      "f1_ci95_high": 0.7049755059443117,
+      "recall_hindari": 0.631578947368421,
+      "ocr_seconds_per_photo": 1.6337196952249655,
+      "baseline_threshold": 65,
+      "baseline_f1": 0.6189,
+      "delta_threshold": 0,
+      "delta_f1": 1.1174785100265261e-05,
+      "output_dir": "evaluation/results/grid_width_1000_adaptive_on_gt_v2_2",
+      "outputs": {
+        "grid_summary.csv": "15bf59d8793cc236f4fb9949fd6b9ef083ebd7be9ed28ebaaa4a0e116b9f969c",
+        "grid_detail.csv": "3bbdded84960af339480e87e89a7f76eeffe7e0cb9c1b583c1714cf3883b79b1",
+        "bootstrap_ci.csv": "e8c07893e46e95a626b15d6c19fa75479138634728d8bd5df212695eaff43996",
+        "provisional_run_metadata.json": "84ab1ee8d60075aff2cba201a63f65b7362229fa26bac5183135c44f7685e357"
+      }
+    },
+    {
+      "config_key": "width_1500_adaptive_on",
+      "max_ocr_width": 1500,
+      "adaptive_threshold": true,
+      "threshold": 70,
+      "precision": 0.7827715355805244,
+      "recall": 0.5400516795865633,
+      "f1": 0.6391437308868502,
+      "f1_ci95_low": 0.5617263937505336,
+      "f1_ci95_high": 0.7074309291404296,
+      "recall_hindari": 0.5,
+      "ocr_seconds_per_photo": 2.723411814400015,
+      "baseline_threshold": 70,
+      "baseline_f1": 0.6391,
+      "delta_threshold": 0,
+      "delta_f1": 4.373088685016846e-05,
+      "output_dir": "evaluation/results/grid_width_1500_adaptive_on_gt_v2_2",
+      "outputs": {
+        "grid_summary.csv": "9a5ba7c8d73415921622881cc74ecbfb6fab94ff20e643b4708eb3b0b58e9285",
+        "grid_detail.csv": "ec4fdc0b5c5e7083087c2a55fd477c87ee0ccc017b93d6b77c1e17004714634c",
+        "bootstrap_ci.csv": "49313816982dbe742e45e2d6ebf81520a5511b4667d0d590cfa80c6b84756d5b",
+        "provisional_run_metadata.json": "021507a10a6522cf3ae0a80f690f68080c01e57c99b33bf63d78c3bc6db9e877"
+      }
+    },
+    {
+      "config_key": "width_2000_adaptive_on",
+      "max_ocr_width": 2000,
+      "adaptive_threshold": true,
+      "threshold": 65,
+      "precision": 0.693939393939394,
+      "recall": 0.5917312661498708,
+      "f1": 0.6387726638772665,
+      "f1_ci95_low": 0.5592437802544187,
+      "f1_ci95_high": 0.711572841464804,
+      "recall_hindari": 0.5263157894736842,
+      "ocr_seconds_per_photo": 3.988829611050005,
+      "baseline_threshold": 65,
+      "baseline_f1": 0.6388,
+      "delta_threshold": 0,
+      "delta_f1": -2.7336122733534474e-05,
+      "output_dir": "evaluation/results/grid_width_2000_adaptive_on_gt_v2_2",
+      "outputs": {
+        "grid_summary.csv": "c26e33e7812050f92abd5de88b164b2880e605ea88240264cec7b37b85a9793b",
+        "grid_detail.csv": "208a46c9a640dee994119e44e5e1a3ed6d0a083ef4002fbee6eea4cd05714b5a",
+        "bootstrap_ci.csv": "e20309aa26510857a51736953375c719e333ec8c050c7bbfd3178fe62bace30a",
+        "provisional_run_metadata.json": "4a8b30fc5cd42633c87e59c2b0cd85db9974e3b4d78d42d83f6421b3b9721f27"
+      }
+    }
+  ],
+  "aggregate_summary_path": "evaluation/calibration_grid_v2_2_summary.csv",
+  "aggregate_summary_sha256": "e49a35f86a129b89df1dd495cdb928525151d599e61f04acbc1b93c39b65f183",
+  "comparison_csv_path": "evaluation/calibration_grid_v2_2_comparison.csv",
+  "comparison_csv_sha256": "ad40a9f6404e6b826991d7cc9bb7a05688a3d0289fa71111c5812bba69f0dfe8",
+  "rescore_runtime": {
+    "interpreter": "D:\\Kulyeah\\SKRIPSI\\project\\lensalabel\\backend\\.venv\\Scripts\\python.exe",
+    "python": "3.12.6"
+  }
+}

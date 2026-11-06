@@ -7,6 +7,7 @@ import { Link, Navigate, useLocation } from "react-router-dom";
 import ResultList from "../components/ResultList";
 import ScanErrorState from "../components/ScanErrorState";
 import { CATEGORY_STYLES } from "../components/IngredientBadge";
+import { findCompositionHighlights } from "../utils/compositionHighlights";
 
 // 5 status verdict dari classifier (rule_based.py), masing-masing warna beda.
 // className di bawah JANGAN diubah (lihat docs/notes/design_tokens.md) —
@@ -38,7 +39,7 @@ const VERDICT_CONFIG = {
     className: "bg-orange-500",
     iconColor: "text-orange-500",
     icon: "warn",
-    description: "Bahan yang terbaca tergolong aman, tapi ada bagian komposisi yang tidak dikenali sistem. Periksa label aslinya.",
+    description: "Hasil belum cukup pasti. Periksa teks komposisi dan label asli sebelum memutuskan.",
   },
   tidak_terbaca: {
     label: "Tidak Terbaca",
@@ -71,6 +72,7 @@ export default function ResultPage() {
   if (!result) return <Navigate to="/" replace />;
 
   const verdict = VERDICT_CONFIG[result.verdict] ?? VERDICT_CONFIG.tidak_terbaca;
+  const isManual = result.input_source === "manual";
   const counts = {
     aman: (result.aman ?? []).length,
     perhatian: (result.perhatian ?? []).length,
@@ -78,7 +80,7 @@ export default function ResultPage() {
   };
 
   // Foto tak terbaca: pakai STATE ERROR, bukan daftar kosong yang membingungkan.
-  if (result.verdict === "tidak_terbaca") {
+  if (result.verdict === "tidak_terbaca" && !isManual) {
     return (
       <div className="font-sans">
         <ScanErrorState
@@ -86,6 +88,7 @@ export default function ResultPage() {
           message="Sistem tidak menemukan komposisi pada foto ini. Coba foto ulang dengan pencahayaan lebih terang dan pastikan tulisan komposisi terbaca jelas."
         >
           <div className="space-y-3">
+            {result.raw_text?.trim() && <CompositionPanel result={result} />}
             <Link
               to="/"
               className="flex w-full items-center justify-center rounded-2xl border border-white/35 bg-gradient-to-b from-accent-blue to-accent-blue-link px-6 py-3 font-display font-semibold text-white shadow-[0_10px_26px_rgba(47,111,235,0.5)] transition duration-200 hover:brightness-110 active:scale-[.98]"
@@ -122,7 +125,9 @@ export default function ResultPage() {
           </div>
         </div>
         <p className="mt-4 rounded-xl border border-white/20 bg-white/15 px-4 py-3 text-sm leading-relaxed">
-          {verdict.description}
+          {isManual && result.verdict === "tidak_terbaca"
+            ? "Tidak ada bahan yang dapat dianalisis dari teks yang Anda masukkan."
+            : verdict.description}
         </p>
       </div>
 
@@ -133,20 +138,24 @@ export default function ResultPage() {
         <Counter value={counts.hindari} label="Hindari" color="text-red-300" />
       </div>
 
-      {result.raw_text?.trim() && <OcrPanel result={result} />}
+      <CompositionPanel result={result} />
 
       <div>
         <h2 className="mb-2 text-sm font-semibold uppercase tracking-wide text-white/60">
           Rincian Bahan
         </h2>
         <ResultList result={result} onSelect={setSelected} />
+        {result.verdict === "tidak_terbaca" && (
+          <p className="text-sm text-white/75">Belum ada bahan yang dapat ditampilkan.</p>
+        )}
       </div>
 
       <Link
         to="/"
+        state={isManual ? { manual: true } : undefined}
         className="block w-full rounded-2xl border border-white/35 bg-gradient-to-b from-accent-blue to-accent-blue-link px-6 py-3 text-center font-display font-semibold text-white shadow-[0_10px_26px_rgba(47,111,235,0.5)] transition duration-200 hover:brightness-110 active:scale-[.98]"
       >
-        Periksa Foto Lain
+        {isManual ? "Periksa Bahan Lain" : "Periksa Foto Lain"}
       </Link>
 
       {selected && <DetailModal item={selected} onClose={() => setSelected(null)} />}
@@ -163,32 +172,65 @@ function Counter({ value, label, color }) {
   );
 }
 
-// Panel "Teks Terbaca": raw_text OCR asli, sorot potongan yang benar dinilai.
-function OcrPanel({ result }) {
-  return (
-    <div>
-      <h2 className="mb-2 text-sm font-semibold uppercase tracking-wide text-white/60">Teks Terbaca</h2>
-      <div className="glass-white rounded-2xl p-4 text-sm leading-relaxed shadow-xl">
-        {highlight(result.raw_text, result)}
-      </div>
-    </div>
-  );
+function compositionStatus(result) {
+  if (result.input_source === "manual") {
+    return "Ini teks yang Anda masukkan dan dipakai untuk analisis bahan.";
+  }
+  if (result.input_source !== "photo") {
+    return "Status penanda tidak tersedia untuk hasil ini.";
+  }
+  if (result.opening_marker_found === true && result.closing_marker_found === true) {
+    return "Penanda komposisi dan penanda akhir ditemukan. Analisis memakai teks dari penanda komposisi hingga sebelum penanda akhir.";
+  }
+  if (result.opening_marker_found === true && result.closing_marker_found === false) {
+    return "Penanda akhir tidak ditemukan. Analisis memakai teks dari penanda komposisi sampai akhir teks terbaca.";
+  }
+  if (result.opening_marker_found === false) {
+    return "Penanda komposisi tidak ditemukan. Analisis memakai seluruh teks terbaca; periksa hasilnya pada label asli.";
+  }
+  return "Status penanda tidak tersedia untuk hasil ini.";
 }
 
-function highlight(text, result) {
-  const terms = [
-    ...(result.hindari ?? []).map((b) => ({ w: b.matched_window, cls: "bg-red-100 text-red-700 font-semibold" })),
-    ...(result.perhatian ?? []).map((b) => ({ w: b.matched_window, cls: "bg-amber-100 text-amber-700 font-semibold" })),
-  ].filter((t) => t.w);
-  if (terms.length === 0) return text;
+function CompositionPanel({ result }) {
+  const text = result.composition_text;
+  const highlights = findCompositionHighlights(text, result);
+  const highlightStyles = {
+    hindari: "bg-red-100 text-red-800",
+    perhatian: "bg-amber-100 text-amber-900",
+    aman: "bg-emerald-100 text-emerald-800",
+  };
+  const fragments = [];
+  if (typeof text === "string") {
+    let position = 0;
+    for (const { start, end, category } of highlights) {
+      fragments.push(text.slice(position, start));
+      fragments.push(
+        <mark key={`${start}-${end}`} className={`box-decoration-clone rounded-sm px-0.5 font-semibold ${highlightStyles[category]}`}>
+          {text.slice(start, end)}
+        </mark>
+      );
+      position = end;
+    }
+    fragments.push(text.slice(position));
+  }
 
-  const escape = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-  const re = new RegExp(`(${terms.map((t) => escape(t.w)).join("|")})`, "gi");
-  const clsFor = (frag) => terms.find((t) => t.w.toLowerCase() === frag.toLowerCase())?.cls;
-  return text.split(re).map((frag, i) => {
-    const cls = clsFor(frag);
-    return cls ? <mark key={i} className={`rounded px-1 ${cls}`}>{frag}</mark> : frag;
-  });
+  return (
+    <section className="min-w-0 space-y-3">
+      <h2 className="font-display text-base font-semibold text-white">Teks komposisi yang dianalisis</h2>
+      <div className="glass-white min-w-0 rounded-2xl p-4 shadow-xl">
+        <p className="text-sm leading-relaxed text-slate-600">{compositionStatus(result)}</p>
+        <p className="mt-3 whitespace-pre-wrap break-words text-sm leading-relaxed text-navy-base [overflow-wrap:anywhere]">{typeof text === "string" ? fragments : "Teks yang dianalisis belum tersedia untuk hasil ini."}</p>
+      </div>
+      {typeof result.raw_text === "string" && (
+        <details className="glass-white min-w-0 rounded-2xl shadow-xl">
+          <summary className="flex min-h-11 cursor-pointer items-center px-4 py-3 text-sm font-semibold text-navy-base">
+            {result.input_source === "photo" ? "Lihat teks OCR lengkap" : "Lihat teks masukan lengkap"}
+          </summary>
+          <p className="max-h-72 overflow-y-auto whitespace-pre-wrap break-words border-t border-navy-base/10 px-4 py-3 text-sm leading-relaxed text-slate-700 [overflow-wrap:anywhere]">{result.raw_text}</p>
+        </details>
+      )}
+    </section>
+  );
 }
 
 // DETAIL (desain DETAIL) — hanya data asli: nama, badge kategori, teks terbaca,

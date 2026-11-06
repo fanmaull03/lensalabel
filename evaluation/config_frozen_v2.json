@@ -1,0 +1,147 @@
+{
+  "status": "frozen",
+  "supersedes": {
+    "path": "evaluation/config_frozen.json",
+    "sha256": "6f04865dd02fe7122a93ad6c6a0b32223f059205758bfb1b793477fe7426dd80",
+    "max_ocr_width": 1500,
+    "threshold": 75,
+    "reason": "GT evaluasi diselaraskan ke KB v2 dan kode pasca-perbaikan dipakai ulang; kalibrasi ulang mengubah konfigurasi terpilih."
+  },
+  "threshold": 75,
+  "weights": {
+    "levenshtein": 0.3333333333333333,
+    "jaro_winkler": 0.3333333333333333,
+    "ngram": 0.3333333333333333
+  },
+  "length_penalty": {
+    "formula": "(min_length / max_length) ** exponent",
+    "exponent": 0.8
+  },
+  "max_ocr_width": 1500,
+  "adaptive_threshold": false,
+  "preprocessing_order": [
+    "grayscale",
+    "blur",
+    "CLAHE",
+    "deskew"
+  ],
+  "kb_version": "v2",
+  "kb_path": "evaluation/results/kb_v2_phase2/kb_v2_review.json",
+  "kb_sha256": "6e6489bdffe80cc4032dcf82ed9b396a0e00912d516a8353996aff250e3527f8",
+  "calibration_gt_path": "dataset/ground_truth/calibration_ingredients_gt_v2_2.json",
+  "calibration_gt_sha256": "bc872686eaf9c0e004425bbc1d77a52ca48c38ad2583c8965410e3c0d0d28135",
+  "evaluation_gt_path": "evaluation/ground_truth/evaluation_gt_kb_v2_final.json",
+  "evaluation_gt_sha256": "43c8245d68e9ab38e5dabef386d56dd2f1f5099a4a00df9a969d25467dd2ccc3",
+  "evaluation_gt_notes": "Nama bahan kanonis KB v2; satu anotasi Licorice pada melengkung_096 dikecualikan atas keputusan ahli.",
+  "blocked_pairs": [
+    [
+      "kalium",
+      "kalsium"
+    ],
+    [
+      "carbonate",
+      "carbonated"
+    ],
+    [
+      "citrate",
+      "nitrate"
+    ],
+    [
+      "guaran",
+      "guarana"
+    ],
+    [
+      "kafein",
+      "kasein"
+    ],
+    [
+      "nitrat",
+      "nitrit"
+    ],
+    [
+      "nitrat",
+      "sitrat"
+    ],
+    [
+      "nitrate",
+      "nitrite"
+    ],
+    [
+      "baking",
+      "caking"
+    ],
+    [
+      "sweetened",
+      "sweetener"
+    ],
+    [
+      "lembaga",
+      "tembaga"
+    ],
+    [
+      "jelai",
+      "selai"
+    ],
+    [
+      "goat",
+      "oat"
+    ],
+    [
+      "laktosa",
+      "laktat"
+    ]
+  ],
+  "calibration_grid": {
+    "config_key": "width_1500_adaptive_off",
+    "threshold": 75,
+    "precision": 0.8503184713375797,
+    "recall": 0.689922480620155,
+    "f1": 0.761768901569187,
+    "f1_ci95_low": 0.693369155432964,
+    "f1_ci95_high": 0.821729462112948,
+    "recall_hindari": 0.6052631578947368,
+    "ocr_seconds_per_photo": 2.667,
+    "threshold_reason": "Threshold 75 memiliki F1 maksimum 0.7618; recall Hindari 0.6053 dipakai sebagai pemecah seri.",
+    "max_f1_across_configs": 0.7704485488126649,
+    "near_best_configs": [
+      "width_1500_adaptive_off",
+      "width_2000_adaptive_off"
+    ],
+    "tie_break_applied": true,
+    "selection_rule": "F1 tingkat bahan tertinggi; bila selisih F1 antarkonfigurasi < 0,01, pilih waktu OCR per foto yang lebih rendah",
+    "threshold_rule": "F1 maksimum per konfigurasi; tie-break recall Hindari bila selisih < 0,01"
+  },
+  "transcripts_sha256": "e24534f1bdac9d2d73c6f486467eb9ae6bf97c8657cb9175fc24b016c8ef831d",
+  "freeze_inputs_sha256": {
+    "backend/app/matching/fuzzy_matcher.py": "00acb27e393cf6135e522f7894ad818880cc18a06ad0efcbc7fda59a7d18db2f",
+    "backend/app/matching/pair_blocks.py": "bc89658fc2d22c0824d1f15461087d1d58c551d039036cf3239c3b364d8f8af4",
+    "backend/app/matching/chemical_pair_blocks.json": "07be54e6d503462ce1d0aa70c3e8b09bbffbbeb099bc14d74c7fdafc97269f2e",
+    "backend/app/matching/secondary_guards.py": "af74be35f8eed2b28d56fee89b42a6cd22267f19287d073a35ac3bfb9d7faa6b",
+    "backend/app/classifier/rule_based.py": "5ac0bc603dff9c6f17be7073ca174a893c418d45e795c6ad1033f196cb4abdbf",
+    "backend/app/tokenizer/tokenizer.py": "de2e61b08993e315b7d87429bb9c150eee8073233eb15306810c699ed3cd7c08",
+    "backend/app/ocr/reader.py": "3464154581626629006d12c00076420a69bd564ddc022d1200f8e108eccb95f6",
+    "backend/app/preprocessing/pipeline.py": "d878ca4ff0668396330df2d0e64b89083153c012912c12d628c2cfabea13d5bd",
+    "backend/app/api/routes_identify.py": "d43de1922606a7b2160141e3bec0b697202a6292fa20fc2cf5816a97051b8a81",
+    "evaluation/results/kb_v2_phase2/kb_v2_review.json": "6e6489bdffe80cc4032dcf82ed9b396a0e00912d516a8353996aff250e3527f8",
+    "dataset/ground_truth/calibration_ingredients_gt_v2_2.json": "bc872686eaf9c0e004425bbc1d77a52ca48c38ad2583c8965410e3c0d0d28135",
+    "evaluation/ground_truth/evaluation_gt_kb_v2_final.json": "43c8245d68e9ab38e5dabef386d56dd2f1f5099a4a00df9a969d25467dd2ccc3",
+    "dataset/ground_truth/transcripts.csv": "e24534f1bdac9d2d73c6f486467eb9ae6bf97c8657cb9175fc24b016c8ef831d",
+    "dataset/photo_manifest.csv": "8de42569b96d8324f4f7584d87c5b17a5df129938e0907cf416f6d7c8631be16",
+    "evaluation/splits/evaluation_set.csv": "dab5e007a03e6a36763a865d5ed23b07d6efbc42428c335fa1e6644c91f2052c",
+    "evaluation/splits/calibration_set.csv": "e7f58ede51234b930dc40f40523bb7592034d283b3a283d1c79b01f957434ee7",
+    "evaluation/build_eval_gt_kb_v2_aligned.py": "41f9d0812441544a2db14bf72359e86c91a55b9eba4be5a3ecbc146f4b04e7e2",
+    "evaluation/validate_gt_kb_alignment.py": "3d0e321b53c10a529761c1e7a929d10b1d6eeae7226b2b12c1874a7a53c8e04a",
+    "evaluation/run_calibration_grid_v2.py": "c914981726065c9164923a188f08ee69e684ffb7274e951b630ab5187fc43080",
+    "evaluation/colab_evaluate_160_ocr.py": "8fa6eebf87f73082d3c8ae6455028cdc2d11aa65dfca34530b6daa91bd52e352",
+    "evaluation/run_evaluate_160_parallel.py": "b28e3e90d90f1b8ea4308f3710c92206e13c90b54388f26dc8d090aef44380f3",
+    "evaluation/evaluate_160_metrics.py": "75d875cff40cb30353268f303e426b6fdb941e94e9134a2591126a270c49bff8",
+    "evaluation/analyze_post_evaluation.py": "b047a67bfc64559d52654f0a324b7836b99c1f67b3a5392ba01bf3a2846af6d7",
+    "evaluation/package_final_evaluation_assets.py": "7e086b4c141a25ff29b6cb76e91e91473aeb084f3fe34e47ebd405ba77f1bcc2"
+  },
+  "created_at_utc": "2026-10-31T11:21:00.325064+00:00",
+  "git_head_at_creation": "4ab76560d9e663ff1ebaeed8fd7d600f80af122f",
+  "pending_steps": [
+    "Jalankan ulang OCR 160 foto dengan konfigurasi width_1500_adaptive_off di Colab.",
+    "Regenerasi prediksi, metrik, analisis, dan aset BAB IV."
+  ]
+}

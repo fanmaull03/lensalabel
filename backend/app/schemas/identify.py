@@ -6,6 +6,8 @@ tidak ada penerjemahan bentuk data di tengah jalan yang bisa jadi sumber bug.
 
 from __future__ import annotations
 
+from typing import Literal
+
 from pydantic import BaseModel, Field
 
 
@@ -45,9 +47,24 @@ class IdentifyResponse(BaseModel):
     perhatian: list[BahanCocok] = []
     hindari: list[BahanCocok] = []
     tidak_dikenali: list[BahanTidakDikenali] = []
-    raw_text: str = Field(description="Teks mentah hasil OCR, untuk debugging.")
+    raw_text: str = Field(description="Teks sebelum ekstraksi: OCR foto atau input manual.")
+    composition_text: str | None = Field(
+        default=None, description="Teks hasil ekstraksi yang diberikan ke tokenizer."
+    )
+    opening_marker_found: bool | None = Field(
+        default=None, description="Status penanda pembuka pada foto; null untuk input manual."
+    )
+    closing_marker_found: bool | None = Field(
+        default=None, description="Status penanda penutup; null jika tidak diperiksa."
+    )
+    input_source: Literal["photo", "manual"] | None = Field(
+        default=None, description="Sumber teks: foto atau input manual."
+    )
 
 
 class HealthResponse(BaseModel):
     status: str
     database: str
+    kb_version: str | None = None
+    kb_hash: str | None = None
+    config_hash: str | None = None

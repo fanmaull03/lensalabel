@@ -11,7 +11,7 @@ venv/
 .coverage
 htmlcov/
 
-# Env dan kredensial lokal tidak masuk repo deploy.
+# Env (rahasia: DB password dll). .env.example tetap ikut.
 .env
 .env.local
 .env.*.local
@@ -42,6 +42,17 @@ evaluation/results/*
 !evaluation/results/.gitkeep
 dataset/debug_output/*
 !dataset/debug_output/.gitkeep
+
+# Research artifacts: keep local only, share via Google Drive (see Lampiran 6).
+# Never commit expert-interview material or per-photo evaluation outputs.
+evaluation/results/
+!evaluation/results/.gitkeep
+
+# Transcript (photo-adjacent research data; raw text of packaging labels)
+dataset/ground_truth/transcripts.csv
+
+# IDE/tooling session state
+.zcode/
 
 # Local-only, sensitive, archival, or generated material
 Microsoft/
@@ -75,20 +86,15 @@ dataset/ground_truth/transcripts_melengkung.xlsx
 evaluation/ground_truth/*.xlsx
 proposals/
 
-# Berkas riset dan rahasia dikecualikan dari repo deploy.
-**/.env*
-dataset/
-evaluation/
-archive/
-docs/evaluation/
-docs/lembar_KB/
-docs/proposal/
+# Naskah laporan (Word) disimpan di luar repositori
+docs/notes/*.docx
+
+# panel foto label (artefak penelitian)
+docs/evaluation/raw_photos_4_panel.png
+docs/evaluation/raw_photos_language_4_panel.png
+
+# artefak laporan dan desain lokal
 docs/notes/
 
-# Format dokumen dan foto penelitian tidak masuk repo deploy.
-*.pdf
-*.docx
-*.xlsx
-*.zip
-*.jpg
-*.jpeg
+# ground truth evaluasi (artefak penelitian; dibagikan via Drive)
+evaluation/ground_truth/

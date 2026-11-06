@@ -27,6 +27,7 @@ from sqlalchemy.orm import Session, selectinload
 
 from app.db.models import Ingredient
 from app.matching.pair_blocks import is_forbidden_pair
+from app.matching.secondary_guards import filter_secondary_matches
 
 # --- Knob kalibrasi ---------------------------------------------------------
 # PLACEHOLDER AWAL, BELUM DIKALIBRASI SECARA EMPIRIS. Bobot sengaja dimulai
@@ -42,6 +43,23 @@ THRESHOLD = 75.0  # skor komposit minimal supaya token dianggap cocok
 NGRAM_SIZE = 2    # bigram karakter
 
 _WORD_RE = re.compile(r"[\w]+(?:-[\w]+)?", re.UNICODE)
+# Kata boilerplate label yang bukan bahan: konjungsi + instruksi/penanda umum
+# kemasan. Dipakai untuk menyaring leftover unmatched supaya tidak dianggap
+# bahan tak dikenal (lihat match_token_many).
+_LABEL_BOILERPLATE_WORDS = {
+    # konjungsi (daftar asli)
+    "dan", "and", "dengan", "with", "serta",
+    # instruksi penyimpanan/penyajian
+    "simpan", "suhu", "ruang", "sejuk", "kering", "terhindar", "hindarkan",
+    "gunakan", "digunakan", "sebelum", "baik", "tanggal", "kedaluwarsa",
+    "expired", "exp", "best", "before",
+    # penanda produksi/regulasi
+    "diproduksi", "produksi", "diproses", "oleh", "untuk", "netto", "net",
+    "berat", "isi", "bersih", "halal", "bpom", "kemasan", "produk",
+    # satuan & label gizi yang sering bocor ke token bahan
+    "gram", "ml", "liter", "saji", "sajian", "energi", "total", "gizi",
+    "takaran", "akg",
+}
 _NEGATION_WORDS = {"bebas", "tanpa", "non"}
 _NEGATION_PHRASES = {
     ("bebas",),
@@ -344,34 +362,70 @@ _SHARED_HEAD_RE = re.compile(
 
 @lru_cache(maxsize=65536)
 def _many_score(a: str, b: str, weight_items: tuple, length_penalty_exponent: float = 0.8) -> float:
-    return composite_score(a, b, dict(weight_items), length_penalty_exponent)
+    return composite_score(a, b, _weight_map(weight_items), length_penalty_exponent)
+
+
+@lru_cache(maxsize=32)
+def _weight_map(weight_items: tuple) -> dict:
+    return dict(weight_items)
+
+
+@lru_cache(maxsize=4096)
+def _variant_widths(variant: str) -> tuple[int, ...]:
+    word_count = len(variant.split())
+    return tuple({w for w in (word_count - 1, word_count, word_count + 1) if w >= 1})
+
+
+@lru_cache(maxsize=250_000)
+def _cached_forbidden_pair(observed: str, variant: str) -> bool:
+    return is_forbidden_pair(observed, variant)
+
+
+def _score_can_reach_threshold(a: str, b: str, threshold: float, exponent: float) -> bool:
+    """Safe length-only upper bound: no similarity component can exceed 100."""
+    longest = max(len(a), len(b))
+    if longest == 0:
+        return threshold <= 0
+    ratio = min(len(a), len(b)) / longest
+    maximum = round(100.0 * ratio**exponent, 2)
+    return maximum >= threshold
 
 
 @lru_cache(maxsize=2048)
 def _best_fragment(token: str, left: int, right: int, variants: tuple, weight_items: tuple,
-                   length_penalty_exponent: float = 0.8):
+                   length_penalty_exponent: float = 0.8, threshold: float = THRESHOLD):
     fragment = token[left:right]
     words = list(re.finditer(r"\S+", fragment))
+    all_widths = sorted({width for variant in variants for width in _variant_widths(variant)})
+    windows_by_width = {
+        width: tuple(
+            (" ".join(word[0] for word in words[offset:offset + width]),
+             left + words[offset].start(), left + words[offset + width - 1].end())
+            for offset in range(len(words) - width + 1)
+        )
+        for width in all_widths
+    }
     best = None
     for index, variant in enumerate(variants):
         window = fragment
-        value = _many_score(fragment.lower(), variant.lower(), weight_items, length_penalty_exponent)
-        if is_forbidden_pair(fragment, variant):
+        if _score_can_reach_threshold(fragment, variant, threshold, length_penalty_exponent):
+            value = _many_score(fragment.lower(), variant.lower(), weight_items, length_penalty_exponent)
+        else:
+            value = -1.0
+        if _cached_forbidden_pair(fragment, variant):
             value = -1.0
         start, end = left, right
-        count = len(variant.split())
-        widths = {w for w in (count - 1, count, count + 1) if w >= 1}
-        for width in widths:
-            for offset in range(len(words) - width + 1):
-                selected = words[offset:offset + width]
-                candidate_window = " ".join(w[0] for w in selected)
-                if is_forbidden_pair(candidate_window, variant):
+        for width in _variant_widths(variant):
+            for candidate_window, candidate_start, candidate_end in windows_by_width[width]:
+                if _cached_forbidden_pair(candidate_window, variant):
+                    continue
+                if not _score_can_reach_threshold(candidate_window, variant, threshold, length_penalty_exponent):
                     continue
                 candidate_score = _many_score(candidate_window.lower(), variant.lower(), weight_items,
                                               length_penalty_exponent)
                 if candidate_score > value:
                     window, value = candidate_window, candidate_score
-                    start, end = left + selected[0].start(), left + selected[-1].end()
+                    start, end = candidate_start, candidate_end
         candidate = (value, window, start, end, index, "window", None)
         if best is None or (value, len(_words(window))) > (best[0], len(_words(best[1]))):
             best = candidate
@@ -429,7 +483,7 @@ def match_token_many(
                             index, "shared_head", phrase.span('head')))
 
     def best_candidate(left: int, right: int):
-        best = _best_fragment(token, left, right, variants, weight_items, length_penalty_exponent)
+        best = _best_fragment(token, left, right, variants, weight_items, length_penalty_exponent, threshold)
         for candidate in virtual:
             if left <= candidate[2] and candidate[3] <= right:
                 if best is None or (candidate[0], len(_words(candidate[1])), -candidate[4]) > (
@@ -438,11 +492,12 @@ def match_token_many(
                     best = candidate
         return best
 
-    def result(candidate, accepted: bool) -> MatchResult:
+    def result(candidate, accepted: bool, source_text: str | None = None) -> MatchResult:
         value, window, start, end, index, source, head = candidate
         entry = knowledge_base[index]
         return MatchResult(
-            token=token, matched=accepted, score=value, matched_window=window,
+            token=source_text if source_text is not None else token,
+            matched=accepted, score=value, matched_window=window,
             matched_variant=entry["name_variant"],
             ingredient_id=entry["ingredient_id"] if accepted else None,
             standard_name=entry["standard_name"] if accepted else None,
@@ -460,7 +515,7 @@ def match_token_many(
             else:
                 remaining.extend(((left, start), (end, right)))
         fragments = remaining
-        output.append(MatchResult(token=token, matched=False, score=0.0,
+        output.append(MatchResult(token=token[start:end], matched=False, score=0.0,
                                   matched_window=token[start:end], span_start=start,
                                   span_end=end, match_source="shared_head_negation_abstained"))
     while fragments:
@@ -474,10 +529,10 @@ def match_token_many(
                 continue
             candidate = best_candidate(left, right)
             if candidate is None:
-                output.append(MatchResult(token=token, matched=False, score=0.0,
+                output.append(MatchResult(token=token[left:right], matched=False, score=0.0,
                                           span_start=left, span_end=right))
             elif candidate[0] < threshold:
-                output.append(result(candidate, False))
+                output.append(result(candidate, False, token[left:right].strip()))
             else:
                 choices.append((candidate, left, right))
         if not choices:
@@ -490,11 +545,20 @@ def match_token_many(
         output.append(result(chosen, accepted))
         fragments = [(a, b) for candidate, a, b in choices if (a, b) != (left, right)]
         fragments.extend(((left, chosen[2]), (chosen[3], right)))
-    # Preserve the classifier's token-level unknown policy: an already matched
-    # token did not turn unknown because it also contained qualifiers or noise.
     accepted = [match for match in output if match.matched]
-    from app.matching.secondary_guards import filter_secondary_matches
+    if accepted:
+        # Keep unreadable words beside a matched ingredient visible to the
+        # classifier, but drop pure label boilerplate. Kata-kata ini bukan
+        # bahan dan hampir pasti tidak ada di KB; kalau dibiarkan, leftover
+        # mereka masuk `tidak_dikenali` dan menurunkan verdict "aman" ke
+        # "perlu_verifikasi" padahal semua bahan sudah ter-match.
+        leftovers = [match for match in output if not match.matched and any(
+            len(word) >= 3 and any(char.isalpha() for char in word)
+            for word in re.findall(r"\w+", match.token.lower())
+            if word not in _LABEL_BOILERPLATE_WORDS
+        )]
+        output = accepted + leftovers
     return filter_secondary_matches(
-        accepted or output or [MatchResult(token=token, matched=False, score=0.0)],
+        output or [MatchResult(token=token, matched=False, score=0.0)],
         minimum_score=secondary_min_score, full_coverage=secondary_full_coverage,
     )
